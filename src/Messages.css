@@ -1,0 +1,27 @@
+.msgs{
+  background-color:lightblue;
+  border-radius:10px;
+  width:60%;
+  height:50px;
+  margin-top:10px;
+  text-align: left;
+}
+
+.sender{
+  text-align: left;
+  margin-bottom:0;
+  margin-top:25px;
+}
+
+.senderDark{
+  color:black !important;
+}
+
+.message_div{
+  margin-top:25px;
+}
+
+.user{
+  background-color: lightpink;
+  margin-left:auto;
+}
