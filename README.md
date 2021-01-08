@@ -23,6 +23,7 @@ I am Writing down the Dependencies for beginners, so that they can look into it 
 
 * [Twitter](https://twitter.com/bahldhairya)
 * [Medium](https://medium.com/@dhairyabahl5)
+* [Gmail](dhairyabahl5@gmail.com)
 
 ## Show your support
 
