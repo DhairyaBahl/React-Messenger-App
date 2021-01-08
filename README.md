@@ -19,5 +19,5 @@ I am Writing down the Dependencies for beginners, so that they can look into it 
 
 ## Connect with me
 
-[Twitter](https://twitter.com/bahldhairya)
-[Medium](https://medium.com/@dhairyabahl5)
+* [Twitter](https://twitter.com/bahldhairya)
+* [Medium](https://medium.com/@dhairyabahl5)
