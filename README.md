@@ -24,4 +24,4 @@ I am Writing down the Dependencies for beginners, so that they can look into it 
 
 ## Show your support
 
-Give a https://github.githubassets.com/images/icons/emoji/unicode/2b50.png if you like the app.
+Give a ![star image](https://github.githubassets.com/images/icons/emoji/unicode/2b50.png) if you like the app.
