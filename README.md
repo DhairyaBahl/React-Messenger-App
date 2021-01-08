@@ -24,4 +24,4 @@ I am Writing down the Dependencies for beginners, so that they can look into it 
 
 ## Show your support
 
-Give a Give a ⭐ if you like this web-app.
+Give a ⭐ if you like this web-app.
