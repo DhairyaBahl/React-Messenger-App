@@ -1,4 +1,6 @@
-# ![React Logo](https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png)      React-Messenger-App
+# React-Messenger-App
+![logo](https://miro.medium.com/max/3176/1*h-xRzZOCHk8jTlEa8M42GA.png)
+##
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)    [![forthebadge](https://forthebadge.com/images/badges/made-with-crayons.svg)](https://forthebadge.com)    [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
 This is a Messenger App, made with react, styled with the help of material-ui and deployed with the help of firebase.
