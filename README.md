@@ -45,5 +45,5 @@ Anybody can contribute to this project. Just take an issue, give your ideas, wor
 ## 2. What are the steps to make my first contribution ?
 Kindly refer to the contributing.md file. All the contributing guidelines are written over there.
 
-## 3. Is there any need to assign myself to the issue before working on the issue ?
+## 3. Is there any need to assign myself to the issue before starting to work on the issue ?
 It is better to wait until you are assigned to the issue. Although if you are sure that no-one is working on the issue then you can start working on the issue.
