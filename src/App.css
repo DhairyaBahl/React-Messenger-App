@@ -68,7 +68,7 @@ flex:1;
   background-color:black!important;
 }
 
-.dark_input:-input-placeholder{
+.dark_input{
   color:white;
 }
 

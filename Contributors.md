@@ -1,4 +1,5 @@
 This file contains names of the contributors.
 
 Dhairyabahl <Dhairyabahl5@gmail.com> <br/>
-Jwright707 <kfcpcc@gmail.com>
+Jwright707 <kfcpcc@gmail.com> <br/>
+Pekebyte <pedrom@pekebyte.com>
