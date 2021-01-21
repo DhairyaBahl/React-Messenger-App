@@ -42,10 +42,12 @@ function App() {
   const theme=(event)=>{
     if(dark===false)
     {
+      document.body.classList.add('dark-bg');
       setDark(true);
     }
     else
     {
+      document.body.classList.remove('dark-bg');
       setDark(false);
     }
   }
