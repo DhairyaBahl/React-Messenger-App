@@ -2,16 +2,22 @@
   background-color:lightblue;
   border-radius:10px;
   width:60%;
-  height:50px;
+  height:fit-content;
   margin-top:10px;
   text-align: left;
   padding: 15px;
+  font-family: 'Hind Madurai', sans-serif;
+  font-size: 1.1rem;
 }
 
 .sender{
+  font-family: 'Fjord One', serif;
+  font-size: 1.2rem;
   text-align: left;
   margin-bottom:0;
   margin-top:25px;
+  margin-left: 10px;
+  text-transform: capitalize;
 }
 
 .senderDark{
@@ -25,9 +31,15 @@
 .user{
   background-color: lightpink;
   margin-left:auto;
+  margin-right: 10px;
 }
 
 .guest{
   margin-left: 10px;
 }
 
+.time-stamp{
+  text-align: right;
+  margin: 0;
+  color: rgb(126, 126, 126)
+}
