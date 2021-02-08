@@ -29,7 +29,7 @@ function App() {
 
   const endRef=useRef(null);
 
-  const newMessage=(event)=>{
+  const newMessage= (event)=>{
     event.preventDefault();
     //setMessages([...messages,{message:input,username:username}]);
     if(input!=="")
@@ -72,7 +72,7 @@ function App() {
       <div >
         <br/><br/><br/><br/><br/>
         {
-          messages.map(message=><Messages messages={message} username={username} dark={dark} />)
+          messages.map(message=><Messages messages={message} username={username} dark={dark} key={genKey()}/>)
         }
         <div ref={endRef} />
         <br/><br/><br/><br/><br/>
@@ -88,5 +88,13 @@ function App() {
     </div>
   );
 }
+
+// keys generator:- every new call to this function will give numbs like 0,1,2,3....
+const genKey = (function (){
+  var keyCode = 0
+  return function incKey(){
+    return keyCode++;
+  }
+})();
 
 export default App;
