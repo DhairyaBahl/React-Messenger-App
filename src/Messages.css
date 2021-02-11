@@ -1,7 +1,8 @@
 .msgs{
   background-color:lightblue;
   border-radius:10px;
-  width:60%;
+  max-width:60%;
+  width: fit-content;
   height:fit-content;
   margin-top:10px;
   text-align: left;
