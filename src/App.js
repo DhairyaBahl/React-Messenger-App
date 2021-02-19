@@ -1,9 +1,8 @@
 import './App.css';
-import {useState,useEffect,useRef} from 'react';
+import {useState,useEffect} from 'react';
 import {Button, Input,FormControl} from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4"
 import SendIcon from '@material-ui/icons/Send'
-//import {IconButton} from '@material-ui/core'
 import logo from './logo.png';
 import Messages from './Messages.js'
 import db from "./firebase.js"
@@ -15,19 +14,12 @@ function App() {
   const [messages,setMessages]=useState([]);
   const [username,setUsername]=useState("");
   const [dark,setDark]=useState(false);
-  const scrollToBottom=()=>{
-    endRef.current.scrollIntoView({behaviour:"smooth"})
-  }
-
-  useEffect(scrollToBottom,[]);
 
   useEffect(()=>{
     setUsername(prompt("Kindly Enter Your Name"));
   },[])
 
   useEffect(()=>{db.collection('messages').orderBy("timestamp","asc").onSnapshot(snapshot=>setMessages(snapshot.docs.map(doc=>doc.data())))},[])
-
-  const endRef=useRef(null);
 
   const newMessage= (event)=>{
     event.preventDefault();
@@ -65,7 +57,7 @@ function App() {
   return (
     <div className="App">
       <nav className={`NavBar ${dark?"BlackNavBar":""}`} >
-        <Button variant="contained" className="dark" onClick={theme} ><span style={{fontWeight:"bold",fontSize:"20px"}} ></span><Brightness4Icon /></Button>
+        <Button variant="contained" className="dark" onClick={theme} ><Brightness4Icon /></Button>
         <h1 className="messenger" ><span className={`${dark?"blackName":""} `} style={{color:"orange"}}>Mess</span><span className={`${dark?"blackName":""} `}  style={{color:"deeppink"}} >enger</span></h1>
         <img className="Logo" src={logo} alt="messenger-logo" />
       </nav>
@@ -74,7 +66,7 @@ function App() {
         {
           messages.map(message=><Messages messages={message} username={username} dark={dark} key={genKey()}/>)
         }
-        <div ref={endRef} />
+        <div />
         <br/><br/><br/><br/><br/>
       </div>
       <footer className={`${dark?"footer_dark":""}`} >
