@@ -1,5 +1,5 @@
 import './App.css';
-import {useState,useEffect} from 'react';
+import {useState,useEffect,useRef} from 'react';
 import {Button, Input,FormControl} from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4"
 import SendIcon from '@material-ui/icons/Send'
@@ -14,12 +14,19 @@ function App() {
   const [messages,setMessages]=useState([]);
   const [username,setUsername]=useState("");
   const [dark,setDark]=useState(false);
+  const messagesEndRef=useRef(null);
 
   useEffect(()=>{
     setUsername(prompt("Kindly Enter Your Name"));
   },[])
 
   useEffect(()=>{db.collection('messages').orderBy("timestamp","asc").onSnapshot(snapshot=>setMessages(snapshot.docs.map(doc=>doc.data())))},[])
+
+  useEffect(() => { scrollToBottom() }, [messages]);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "auto" })
+  }
 
   const newMessage= (event)=>{
     event.preventDefault();
@@ -30,6 +37,8 @@ function App() {
     }
     setInput("");
   }
+
+  
 
   const theme=(event)=>{
     if(dark===false)
@@ -61,7 +70,7 @@ function App() {
         <h1 className="messenger" ><span className={`${dark?"blackName":""} `} style={{color:"orange"}}>Mess</span><span className={`${dark?"blackName":""} `}  style={{color:"deeppink"}} >enger</span></h1>
         <img className="Logo" src={logo} alt="messenger-logo" />
       </nav>
-      <div >
+      <div className="scroll" >
         <br/><br/><br/><br/><br/>
         {
           messages.map(message=><Messages messages={message} username={username} dark={dark} key={genKey()}/>)
@@ -69,6 +78,7 @@ function App() {
         <div />
         <br/><br/><br/><br/><br/>
       </div>
+      <div ref={messagesEndRef} />
       <footer className={`${dark?"footer_dark":""}`} >
         <form>
           <FormControl>
