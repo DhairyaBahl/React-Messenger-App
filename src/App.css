@@ -2,82 +2,81 @@
   text-align: center;
 }
 
-.Logo{
-  width:50px;
-  position:fixed;
-  right:70px;
-  top:25px;
+.Logo {
+  width: 50px;
+  position: fixed;
+  right: 70px;
+  top: 25px;
 }
 
-::placeholder{
+::placeholder {
   font-weight: bold;
-  color:white;
-  opacity:1;
+  color: white;
+  opacity: 1;
 }
 
-.NavBar{
-  background-color:#014293;
-  width:100%;
-  border-bottom:2px solid black;
-  height:100px;
-  position:fixed;
-  top:0px;
+.NavBar {
+  background-color: #014293;
+  width: 100%;
+  border-bottom: 2px solid black;
+  height: 100px;
+  position: fixed;
+  top: 0px;
 }
 
-input{
+input {
   background-color: black;
   line-height: 30px;
-  width:250px;
+  width: 250px;
 }
 
-.messenger{
-  display:inline-block;
-  position:fixed;
-  top:0px;
-  left:30px;
+.messenger {
+  display: inline-block;
+  position: fixed;
+  top: 0px;
+  left: 30px;
   font-weight: bold;
   font-size: 40px;
 }
 
-.dark{
-position:fixed;
-top:0px;
-right:-150px;
-outline: none;
-}
-
-footer{
+.dark {
   position: fixed;
-  bottom:0;
-  height:10%;
-  width:100%;
+  top: 0px;
+  right: -150px;
+  outline: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 10%;
+  width: 100%;
   background-color: #014293;
-  border-top:2px solid black;
+  border-top: 2px solid black;
 }
 
-.input{
-margin-top:10px;
-flex:1;
+.input {
+  margin-top: 10px;
+  flex: 1;
 }
 
-.blackName{
-  color:white !important;
+.blackName {
+  color: white !important;
 }
 
-.BlackNavBar{
-  background-color:black!important;
+.BlackNavBar {
+  background-color: black !important;
 }
 
-.dark_input{
-  color:white;
+.dark_input {
+  color: white;
 }
 
-.footer_dark{
+.footer_dark {
   background-color: black;
 }
 
-
-.iconButton{
-  top:10px;
-  left:10px;
+.iconButton {
+  top: 10px;
+  left: 10px;
 }
