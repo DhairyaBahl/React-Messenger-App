@@ -66,6 +66,7 @@ flex:1;
 
 .BlackNavBar{
   background-color:black!important;
+  border-bottom:2px solid white;
 }
 
 .dark_input{
