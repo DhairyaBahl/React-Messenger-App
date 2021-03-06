@@ -8,6 +8,7 @@ import Messages from './Messages.js'
 import db from "./firebase.js"
 import firebase from "firebase";
 
+
 function App() {
 
   const [input,setInput]=useState("");
@@ -67,7 +68,7 @@ function App() {
     <div className="App">
       <nav className={`NavBar ${dark?"BlackNavBar":""}`} >
         <Button variant="contained" className="dark" onClick={theme} ><Brightness4Icon /></Button>
-        <h1 className="messenger" ><span className={`${dark?"blackName":""} `} style={{color:"orange"}}>Mess</span><span className={`${dark?"blackName":""} `}  style={{color:"deeppink"}} >enger</span></h1>
+        <h1 className="messenger" ><span className={`${dark?"blackName":""} `} style={{color:"orange"}}>Howz</span><span className={`${dark?"blackName":""} `}  style={{color:"deeppink"}} >app</span></h1>
         <img className="Logo" src={logo} alt="messenger-logo" />
       </nav>
       <div className="scroll" >
