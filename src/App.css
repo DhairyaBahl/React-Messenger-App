@@ -66,7 +66,7 @@ flex:1;
 
 .BlackNavBar{
   background-color:black!important;
-  border-bottom:2px solid white;
+  border-bottom:1px solid white;
 }
 
 .dark_input{
@@ -75,7 +75,7 @@ flex:1;
 
 .footer_dark{
   background-color: black;
-  border-top:2px solid white;
+  border-top:1px solid white;
 }
 
 
