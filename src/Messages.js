@@ -5,7 +5,7 @@ function Messages(props){
   const isUser=props.messages.username===props.username;
   return (
     <div className="message_div" >
-      <h5 className={`sender ${props.dark?"senderDark":""}`} >{`${isUser?"":props.messages.username===null?"unknown user":props.messages.username}`}</h5>
+      <h5 className={`sender ${props.dark?"senderDark":""}`} >{`${isUser?"":props.messages.username===null?"Unknown user":props.messages.username}`}</h5>
       <div className={`msgs ${isUser?"user":"guest"} `} >
         {props.messages.message}
         <p className="time-stamp">{giveTimePassed(props.messages.timestamp)}</p>
@@ -16,7 +16,7 @@ function Messages(props){
 
 function giveTimePassed(timestamp){
   if(!timestamp){
-    return "just now"
+    return "just now";
   }
   // time difference in millisec
   var timeDiff = new Date() - timestamp.toDate();
