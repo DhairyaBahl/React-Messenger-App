@@ -31,6 +31,11 @@
   margin-top:25px;
 }
 
+.read-or-hide {
+  color: rgb(87, 85, 85);
+  cursor: pointer;
+}
+
 .user{
   background-color: lightpink;
   margin-left:auto;

@@ -1,5 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Messages.css';
+
+const ReadMore = ({ children, length = 180 }) => {
+  const text = children;
+  const [isReadMore, setIsReadMore] = useState(true);
+  const toggleReadMore = () => {
+    setIsReadMore(!isReadMore);
+  };
+  if (text.length < length) {
+    return <p>{text}</p>;
+  }
+  return (
+    <p className="text">
+      {isReadMore ? text.slice(0, 150) : text}
+      <span onClick={toggleReadMore} className="read-or-hide">
+        {isReadMore ? " ...read more" : " show less"}
+      </span>
+    </p>
+  );
+};
 
 function Messages(props){
   const isUser=props.messages.username===props.username;
@@ -7,7 +26,7 @@ function Messages(props){
     <div className="message_div" >
       <h5 className={`sender ${props.dark?"senderDark":""}`} >{`${isUser?"":props.messages.username===null?"Unknown user":props.messages.username}`}</h5>
       <div className={`msgs ${isUser?"user":"guest"} `} >
-        {props.messages.message}
+      <ReadMore>{props.messages.message}</ReadMore>
         <p className="time-stamp">{giveTimePassed(props.messages.timestamp)}</p>
       </div>
     </div>
