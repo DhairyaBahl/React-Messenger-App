@@ -6,13 +6,6 @@ body{
   background-attachment: fixed;
 }
 
-.Logo{
-  width:50px;
-  position:fixed;
-  right:70px;
-  top:25px;
-}
-
 ::placeholder{
   font-weight: bold;
   color:white;
@@ -25,7 +18,20 @@ body{
   border-bottom:2px solid black;
   height:100px;
   position:fixed;
+  display: flex;
+  justify-content: space-between;
   top:0px;
+}
+
+.NavBar div.flex1 {
+  display: flex;
+  width: 50vw;
+  margin: 1%;
+}
+
+.NavBar div.flex2 {
+  align-self: center;
+  margin: 1%;
 }
 
 input{
@@ -35,19 +41,9 @@ input{
 }
 
 .messenger{
-  display:inline-block;
-  position:fixed;
-  top:0px;
-  left:30px;
   font-weight: bold;
   font-size: 40px;
-}
-
-.dark{
-position:fixed;
-top:0px;
-right:-150px;
-outline: none;
+  margin: .25em;
 }
 
 footer{
