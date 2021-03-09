@@ -38,7 +38,7 @@ function App() {
     setInput("");
   }
 
-  
+
 
   const theme=(event)=>{
     if(dark===false)
@@ -66,9 +66,14 @@ function App() {
   return (
     <div className="App">
       <nav className={`NavBar ${dark?"BlackNavBar":""}`} >
-        <Button variant="contained" className="dark" onClick={theme} ><Brightness4Icon /></Button>
-        <h1 className="messenger" ><span className={`${dark?"blackName":""} `} style={{color:"orange"}}>Mess</span><span className={`${dark?"blackName":""} `}  style={{color:"deeppink"}} >enger</span></h1>
-        <img className="Logo" src={logo} alt="messenger-logo" />
+        <div className="flex1">
+          <img className="Logo" src={logo} alt="messenger-logo" />
+          <h1 className="messenger" ><span className={`${dark?"blackName":""} `}
+          style={{color:"orange"}}>Mess</span><span className={`${dark?"blackName":""} `}  style={{color:"deeppink"}} >enger</span></h1>
+        </div>
+        <div className="flex2">
+          <Button title="toggle Dark Mode" variant="contained" className="dark" onClick={theme} ><Brightness4Icon /></Button>
+        </div>
       </nav>
       <div className="scroll" >
         <br/><br/><br/><br/><br/>
