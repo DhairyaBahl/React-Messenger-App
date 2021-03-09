@@ -2,82 +2,115 @@
   text-align: center;
 }
 
-.Logo{
-  width:50px;
-  position:fixed;
-  right:70px;
-  top:25px;
+.Logo {
+  width: 50px;
+  position: fixed;
+  right: 70px;
+  top: 25px;
 }
 
-::placeholder{
-  font-weight: bold;
-  color:white;
-  opacity:1;
+::placeholder {
+  color: white;
+  opacity: 1;
 }
 
-.NavBar{
-  background-color:#014293;
-  width:100%;
-  border-bottom:2px solid black;
-  height:100px;
-  position:fixed;
-  top:0px;
+.NavBar {
+  background-color: #014293;
+  width: 100%;
+  border-bottom: 2px solid black;
+  height: 100px;
+  position: fixed;
+  top: 0px;
 }
 
-input{
+input {
   background-color: black;
   line-height: 30px;
-  width:250px;
+  width: 250px;
 }
 
-.messenger{
-  display:inline-block;
-  position:fixed;
-  top:0px;
-  left:30px;
+.messenger {
+  display: inline-block;
+  position: fixed;
+  top: 0px;
+  left: 30px;
   font-weight: bold;
   font-size: 40px;
 }
 
-.dark{
-position:fixed;
-top:0px;
-right:-150px;
-outline: none;
-}
-
-footer{
+.dark {
   position: fixed;
-  bottom:0;
-  height:10%;
-  width:100%;
+  top: 0px;
+  right: -150px;
+  outline: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 10%;
+  width: 100%;
   background-color: #014293;
-  border-top:2px solid black;
+  border-top: 2px solid black;
 }
 
-.input{
-margin-top:10px;
-flex:1;
+.input {
+  margin-top: 10px;
+  flex: 1;
 }
 
-.blackName{
-  color:white !important;
+.blackName {
+  color: white !important;
 }
 
-.BlackNavBar{
-  background-color:black!important;
+.BlackNavBar {
+  background-color: black !important;
 }
 
-.dark_input{
-  color:white;
+.footer {
+  justify-items: center;
+  display: flex;
+
+  justify-content: center;
 }
 
-.footer_dark{
+.footer_dark {
   background-color: black;
 }
 
+.iconButton {
+  top: 0px;
+  left: 50px;
+}
+.text-Bar {
+  width: 80vw;
+}
 
-.iconButton{
-  top:10px;
-  left:10px;
+.text-Bar-text {
+  background-color: green;
+  /* color: white; */
+  height: 100px;
+  border-radius: 20px;
+}
+
+.text-form {
+  width: 60%;
+  height: 50px;
+  align-content: center;
+  margin-top: 1vh;
+  border-radius: 20px;
+  background-color: #8ec6e6;
+}
+.text-form-dark {
+  width: 60%;
+  height: 50px;
+  align-content: center;
+  margin-top: 1vh;
+  border-radius: 20px;
+  background-color: #a3a3a3;
+}
+
+.text-formControl {
+  width: 80%;
+  /* background-color: pink; */
 }
