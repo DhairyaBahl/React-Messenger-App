@@ -1,11 +1,15 @@
 # React-Messenger-App
 ![logo](https://miro.medium.com/max/3176/1*h-xRzZOCHk8jTlEa8M42GA.png)
 ##
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)    [![forthebadge](https://forthebadge.com/images/badges/made-with-crayons.svg)](https://forthebadge.com)    [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)    [![forthebadge](https://forthebadge.com/images/badges/made-with-crayons.svg)](https://forthebadge.com)    [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
 This is a Messenger App, made with react, styled with the help of material-ui and deployed with the help of firebase.
 
 Here is the link to the deployed app :- https://mui-message.firebaseapp.com
+
+### We are now part of GSSoC 2021 !
+[![GSSoC](https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png)](https://gssoc.girlscript.tech)
+We got accepted for the GSSoc 2021 and activelty looking for new participants,please feel free to ask questions in the discussion section of this repository and if you want to be our mentor please mention in the discussion.
 
 ## Motive
 
