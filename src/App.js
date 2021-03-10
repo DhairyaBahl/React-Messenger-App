@@ -1,20 +1,28 @@
 import './App.css';
-import {useState,useEffect,useRef} from 'react';
+import {useState,useEffect,useRef, createRef} from 'react';
 import {Button, Input,FormControl} from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4"
 import SendIcon from '@material-ui/icons/Send'
 import logo from './logo.png';
+import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import Messages from './Messages.js'
 import db from "./firebase.js"
 import firebase from "firebase";
+import Emoji from'./emojis/emojiscomponents';
+import Picker from 'emoji-picker-react';
+
 // I have to make changes
 function App() {
 
   const [input,setInput]=useState("");
+  const inputRef=createRef();
   const [messages,setMessages]=useState([]);
   const [username,setUsername]=useState("");
   const [dark,setDark]=useState(false);
+  const[showEmojis,setShowEmojis]=useState(null);
+  const [chosenEmoji, setChosenEmoji] = useState(null);
   const messagesEndRef=useRef(null);
+  const[cursorPosition,setCursorPosition]=useState();
 
   useEffect(()=>{
     setUsername(prompt("Kindly Enter Your Name"));
@@ -23,11 +31,26 @@ function App() {
   useEffect(()=>{db.collection('messages').orderBy("timestamp","asc").onSnapshot(snapshot=>setMessages(snapshot.docs.map(doc=>doc.data())))},[])
 
   useEffect(() => { scrollToBottom() }, [messages]);
-
+  useEffect(()=>{
+    messagesEndRef.current.selectionEnd=cursorPosition;
+  
+  },[cursorPosition]);
+  
+const handleChange=e=>{
+  setMessages(e.target.value);
+}
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "auto" })
-  }
-
+  };
+const pickEmoji=(e,{emoji})=>{
+  const ref=messagesEndRef.current;
+  ref.focus();
+  const start=messages.substring(0,ref.selectionStart);
+  const end=messages.substring(ref.selectionStart);
+  const text=start+emoji+end;
+  setMessages(text);
+  setCursorPosition(start.length+emoji.length);
+};
   const newMessage= (event)=>{
     event.preventDefault();
     //setMessages([...messages,{message:input,username:username}]);
@@ -37,10 +60,16 @@ function App() {
     }
     setInput("");
   }
+  const handleShowEmojis=()=>{
+    messagesEndRef.current.focus();
+setShowEmojis(!showEmojis);
+  };
 
 
 
   const theme=(event)=>{
+    
+    //add multicolr themes
     if(dark===false)
     {
       document.body.classList.add('dark-bg');
@@ -72,6 +101,7 @@ function App() {
           style={{color:"orange"}}>Mess</span><span className={`${dark?"blackName":""} `}  style={{color:"deeppink"}} >enger</span></h1>
         </div>
         <div className="flex2">
+          {/* Add multiple themes */}
           <Button title="toggle Dark Mode" variant="contained" className="dark" onClick={theme} ><Brightness4Icon /></Button>
         </div>
       </nav>
@@ -88,8 +118,24 @@ function App() {
         <form>
           <FormControl>
             {but}
+           
           </FormControl>
-          <Button className="iconButton" onClick={newMessage} type="submit" variant="contained" color="primary" > <SendIcon /></Button>
+         {/* emoji picker button */}
+         <Button className="iconButton" onClick={newMessage} type="submit" variant="contained" color="primary" > <SendIcon /></Button>
+        <div className="local-message">
+         
+          <div>
+            {
+              <div className={`emoji-list ${!showEmojis && 'hidden'}`}>
+                <Emoji pickEmoji={pickEmoji}/>
+                </div>
+            }
+          </div>
+        </div>
+       
+           <InsertEmoticonIcon onClick={handleShowEmojis}/>
+     
+          
         </form>
       </footer>
     </div>
