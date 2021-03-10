@@ -2,25 +2,25 @@
   text-align: center;
 }
 
-body{
+body {
   background-attachment: fixed;
 }
 
-::placeholder{
+::placeholder {
   font-weight: bold;
-  color:white;
-  opacity:1;
+  color: white;
+  opacity: 1;
 }
 
-.NavBar{
-  background-color:#014293;
-  width:100%;
-  border-bottom:2px solid black;
-  height:100px;
-  position:fixed;
+.NavBar {
+  background-color: #014293;
+  width: 100%;
+  border-bottom: 2px solid black;
+  height: 100px;
+  position: fixed;
   display: flex;
   justify-content: space-between;
-  top:0px;
+  top: 0px;
 }
 
 .NavBar div.flex1 {
@@ -34,50 +34,88 @@ body{
   margin: 1%;
 }
 
-input{
+input {
   background-color: black;
   line-height: 30px;
-  width:250px;
+  width: 250px;
 }
 
-.messenger{
+.messenger {
   font-weight: bold;
   font-size: 40px;
-  margin: .25em;
+  margin: 0.25em;
 }
 
-footer{
+footer {
   position: fixed;
-  bottom:0;
-  height:10%;
-  width:100%;
+  bottom: 0;
+  height: 10%;
+  width: 100%;
   background-color: #014293;
-  border-top:2px solid black;
+  border-top: 2px solid black;
 }
 
-.input{
-margin-top:10px;
-flex:1;
+.footer {
+  justify-items: center;
+  display: flex;
+
+  justify-content: center;
 }
 
-.blackName{
-  color:white !important;
+.input {
+  margin-top: 10px;
+  flex: 1;
 }
 
-.BlackNavBar{
-  background-color:black!important;
+.blackName {
+  color: white !important;
 }
 
-.dark_input{
-  color:white;
+.BlackNavBar {
+  background-color: black !important;
 }
 
-.footer_dark{
+.dark_input {
+  color: white;
+}
+
+.footer_dark {
   background-color: black;
 }
 
+.iconButton {
+  top: 0px;
+  left: 50px;
+}
+.text-Bar {
+  width: 80vw;
+}
 
-.iconButton{
-  top:10px;
-  left:10px;
+.text-Bar-text {
+  background-color: green;
+  /* color: white; */
+  height: 100px;
+  border-radius: 20px;
+}
+
+.text-form {
+  width: 60%;
+  height: 50px;
+  align-content: center;
+  margin-top: 1vh;
+  border-radius: 20px;
+  background-color: #8ec6e6;
+}
+.text-form-dark {
+  width: 60%;
+  height: 50px;
+  align-content: center;
+  margin-top: 1vh;
+  border-radius: 20px;
+  background-color: #a3a3a3;
+}
+
+.text-formControl {
+  width: 80%;
+  /* background-color: pink; */
 }
