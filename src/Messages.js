@@ -28,6 +28,9 @@ function Messages(props){
       <div className={`msgs ${isUser?"user":"guest"} `} >
       <ReadMore>{props.messages.message}</ReadMore>
         <p className="time-stamp">{giveTimePassed(props.messages.timestamp)}</p>
+      <div className={`msgs ${isUser?"user":"guest"} ${props.dark?"msgsDark":""} `} >
+        {props.messages.message}
+        <p className={`time-stamp ${props.dark?"time-stampDark":""}`}>{giveTimePassed(props.messages.timestamp)}</p>
       </div>
     </div>
   )
