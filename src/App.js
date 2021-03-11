@@ -48,56 +48,58 @@ function App() {
     setInput("");
   };
 
-  const theme = (event) => {
-    if (dark === false) {
-      document.body.classList.add("dark-bg");
+  
+  const theme=(event)=>{
+    if(dark===false)
+    {
+      document.body.classList.add('dark-bg');
       setDark(true);
-    } else {
-      document.body.classList.remove("dark-bg");
+    }
+    else
+    {
+      document.body.classList.remove('dark-bg');
       setDark(false);
     }
-  };
+  }
 
   let but;
-  if (dark) {
-    but = (
-      <input
-        className={`input ${dark ? "dark_input" : ""}`}
-        placeholder="Write Your Message"
-        value={input}
-        onChange={(event) => setInput(event.target.value)}
-      />
-    );
-  } else {
-    but = (
-      <Input
-        className={`input ${dark ? "dark_input" : ""}`}
-        placeholder="Write Your Message"
-        value={input}
-        onChange={(event) => setInput(event.target.value)}
-      />
-    );
-  }
+  but=<input className={`input ${dark?"dark_input":"light_input"}`} placeholder="Write Your Message" value={input} onChange={event=>setInput(event.target.value)} />
+  // if(dark)
+  // {
+  //   but=<input className={`input ${dark?"dark_input":""}`} placeholder="Write Your Message" value={input} onChange={event=>setInput(event.target.value)} />
+  // }
+  // else
+  // {
+  //   but=<Input className={`input ${dark?"dark_input":""}`} placeholder="Write Your Message" value={input} onChange={event=>setInput(event.target.value)} />
+  // }
+
 
   return (
     <div className="App">
       <nav className={`NavBar ${dark ? "BlackNavBar" : ""}`}>
         <div className="flex1">
           <img className="Logo" src={logo} alt="messenger-logo" />
-          <h1 className="messenger">
-            <span
-              className={`${dark ? "blackName" : ""} `}
-              style={{ color: "orange" }}
-            >
-              Mess
-            </span>
-            <span
-              className={`${dark ? "blackName" : ""} `}
-              style={{ color: "deeppink" }}
-            >
-              enger
-            </span>
-          </h1>
+
+//           <h1 className="messenger">
+//             <span
+//               className={`${dark ? "blackName" : ""} `}
+//               style={{ color: "orange" }}
+//             >
+//               Mess
+//             </span>
+//             <span
+//               className={`${dark ? "blackName" : ""} `}
+//               style={{ color: "deeppink" }}
+//             >
+//               enger
+//             </span>
+//           </h1>
+
+          {/*<h1 className="messenger" ><span className={`${dark?"blackName":""} `}
+          style={{color:"orange"}}>Mess</span><span className={`${dark?"blackName":""} `}  style={{color:"deeppink"}} >enger</span></h1>*/}
+          <h1 className={`messenger ${dark?"blackName":""}`}>
+          Messenger</h1>
+
         </div>
         <div className="flex2">
           <Button
@@ -143,6 +145,7 @@ function App() {
             />
           </FormControl>
 
+
           <IconButton
             aria-label="submit"
             className="iconButton"
@@ -153,6 +156,9 @@ function App() {
           >
             <SendIcon fontSize="large" />
           </IconButton>
+
+          <Button className="iconButton" onClick={newMessage} type="submit" variant="contained" > <SendIcon /></Button>
+
         </form>
       </footer>
     </div>

@@ -6,6 +6,7 @@ body {
   background-attachment: fixed;
 }
 
+
 ::placeholder {
   font-weight: bold;
   color: white;
@@ -18,6 +19,7 @@ body {
   border-bottom: 2px solid black;
   height: 100px;
   position: fixed;
+
   display: flex;
   justify-content: space-between;
   top: 0px;
@@ -34,6 +36,7 @@ body {
   margin: 1%;
 }
 
+
 input {
   background-color: black;
   line-height: 30px;
@@ -48,11 +51,13 @@ input {
 
 footer {
   position: fixed;
+
   bottom: 0;
   height: 10%;
   width: 100%;
   background-color: #014293;
   border-top: 2px solid black;
+
 }
 
 .footer {
@@ -61,6 +66,7 @@ footer {
 
   justify-content: center;
 }
+
 
 .input {
   margin-top: 10px;
@@ -118,4 +124,4 @@ footer {
 .text-formControl {
   width: 80%;
   /* background-color: pink; */
-}
+
