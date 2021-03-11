@@ -6,14 +6,24 @@ body{
   background-attachment: fixed;
 }
 
+.messenger {
+  background: -webkit-linear-gradient(45deg, rgba(255,166,10,1) 24%, rgba(255,0,224,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blackName {
+  color: black;
+}
+
 ::placeholder{
   font-weight: bold;
-  color:white;
   opacity:1;
+  color: black;
 }
 
 .NavBar{
-  background-color:#014293;
+  background-color:rgb(0, 50, 77);
   width:100%;
   border-bottom:2px solid black;
   height:100px;
@@ -35,9 +45,16 @@ body{
 }
 
 input{
-  background-color: black;
-  line-height: 30px;
+  line-height: 25px;
   width:250px;
+  border-radius: 30px;
+  outline-width: 0;
+  padding: 10px;
+  border: 1px solid white;
+}
+
+.dark_input{
+  background-color: rgb(140, 140, 140);
 }
 
 .messenger{
@@ -51,7 +68,8 @@ footer{
   bottom:0;
   height:10%;
   width:100%;
-  background-color: #014293;
+  /* background-color: #014293; */
+  background-color: rgb(0, 50, 77);
   border-top:2px solid black;
 }
 
@@ -60,24 +78,15 @@ margin-top:10px;
 flex:1;
 }
 
-.blackName{
-  color:white !important;
-}
-
 .BlackNavBar{
   background-color:black!important;
-}
-
-.dark_input{
-  color:white;
 }
 
 .footer_dark{
   background-color: black;
 }
 
-
 .iconButton{
-  top:10px;
+  top:15px;
   left:10px;
 }
