@@ -68,7 +68,7 @@ function App() {
     <div className="App">
       <nav className={`NavBar ${dark?"BlackNavBar":""}`} >
         <div className="flex1">
-          <img className="Logo" src={logo} alt="messenger-logo" />
+          <img className="Logo"  aspect-ratio="1/1" height="auto" width="82px"  src={logo} alt="messenger-logo" />
           {/*<h1 className="messenger" ><span className={`${dark?"blackName":""} `}
           style={{color:"orange"}}>Mess</span><span className={`${dark?"blackName":""} `}  style={{color:"deeppink"}} >enger</span></h1>*/}
           <h1 className={`messenger ${dark?"blackName":""}`}>
