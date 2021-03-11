@@ -2,12 +2,16 @@
   text-align: center;
 }
 
-body{
+body {
   background-attachment: fixed;
 }
 
 .messenger {
-  background: -webkit-linear-gradient(45deg, rgba(255,166,10,1) 24%, rgba(255,0,224,1) 100%);
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 166, 10, 1) 24%,
+    rgba(255, 0, 224, 1) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -16,21 +20,21 @@ body{
   color: black;
 }
 
-::placeholder{
+::placeholder {
   font-weight: bold;
-  opacity:1;
+  opacity: 1;
   color: black;
 }
 
-.NavBar{
-  background-color:rgb(0, 50, 77);
-  width:100%;
-  border-bottom:2px solid black;
-  height:100px;
-  position:fixed;
+.NavBar {
+  background-color: rgb(0, 50, 77);
+  width: 100%;
+  border-bottom: 2px solid black;
+  height: 100px;
+  position: fixed;
   display: flex;
   justify-content: space-between;
-  top:0px;
+  top: 0px;
 }
 
 .NavBar div.flex1 {
@@ -44,49 +48,50 @@ body{
   margin: 1%;
 }
 
-input{
+input {
   line-height: 25px;
-  width:250px;
+  min-width: 500px;
+  width: 50vw;
   border-radius: 30px;
   outline-width: 0;
   padding: 10px;
   border: 1px solid white;
 }
 
-.dark_input{
+.dark_input {
   background-color: rgb(140, 140, 140);
 }
 
-.messenger{
+.messenger {
   font-weight: bold;
   font-size: 40px;
-  margin: .25em;
+  margin: 0.25em;
 }
 
-footer{
+footer {
   position: fixed;
-  bottom:0;
-  height:10%;
-  width:100%;
+  bottom: 0;
+  height: 10%;
+  width: 100%;
   /* background-color: #014293; */
   background-color: rgb(0, 50, 77);
-  border-top:2px solid black;
+  border-top: 2px solid black;
 }
 
-.input{
-margin-top:10px;
-flex:1;
+.input {
+  margin-top: 10px;
+  flex: 1;
 }
 
-.BlackNavBar{
-  background-color:black!important;
+.BlackNavBar {
+  background-color: black !important;
 }
 
-.footer_dark{
+.footer_dark {
   background-color: black;
 }
 
-.iconButton{
-  top:15px;
-  left:10px;
+.iconButton {
+  top: 15px;
+  left: 10px;
 }
