@@ -1,0 +1,115 @@
+.chatroom {
+    flex: 0.7;
+    /* background-color: lightsalmon; */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chatroom__header {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    /* justify-content: space-between; */
+    border-bottom: 1px solid rgb(241, 240, 240);
+  }
+  
+  .chatroom__headerinfoleft {
+    flex: 1;
+    padding-left: 15px;
+  }
+  
+  .chatroom__headerinfoleft > p {
+    color: gray;
+  }
+  
+  .chatroom__header__inforight {
+    display: flex;
+    align-items: center;
+    min-width: 80px;
+  }
+  
+  .chatroom__body {
+    flex: 1;
+    background-image: url("https://preview.redd.it/qwd83nc4xxf41.jpg?width=640&crop=smart&auto=webp&s=e82767fdf47158e80604f407ce4938e44afc6c25") !important;
+    background-repeat: repeat;
+    padding: 25px;
+    overflow-y: scroll;
+    background-position: center;
+  }
+  
+  .chatroom__message {
+    position: relative;
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgb(243, 240, 240);
+    border-radius: 15px;
+    
+    width: fit-content;
+    margin-top: 25px;
+  }
+  
+  .chatroom__username {
+    position: absolute;
+    top: -15px;
+    font-weight: bold;
+    font-size: xx-small;
+  }
+  
+  .chatroom__messagetimestamp {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: xx-small;
+    color: black;
+  }
+  
+  .chatroom__messagerecierver {
+    margin-left: auto;
+    background-color: rgb(139, 141, 253);
+  }
+  
+  /* last div */
+  .chatroom__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 55px;
+    border-top: 1px solid rgb(223, 222, 222);
+  }
+  
+  .chatroom__footer > form {
+    flex: 1;
+    display: flex;
+  }
+  
+  .chatroom__footer > form > input {
+    flex: 1;
+    border-radius: 50px;
+    padding: 15px;
+    border: none;
+    width: 90%;
+  }
+  
+  .chatroom__footer > form > button {
+    border: none;
+    background-color: rgb(88, 91, 255);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+  }
+  
+  .chatroom__footer > form > input:focus {
+    outline-width: 0;
+  }
+  .chatroom__footer > form > button:focus {
+    outline-width: 0;
+  }
+  /* .chatroom__footer > form > button {
+    display: none;
+  } */
+  
+  .chatroom__footer > .MuiSvgIcon-root {
+    padding: 10px;
+    color: gray;
+  }
+  

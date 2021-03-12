@@ -1,0 +1,60 @@
+.sidebar {
+    flex: 0.3;
+    /* flex-direction: column; */
+    flex-direction: column;
+    display: flex;
+  }
+  
+  .sidebar__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-right: 1px solid lightgray;
+    background-color: rgb(88, 91, 255);
+    padding: 15px;
+  }
+  
+  .sidebar__headerright {
+    display: flex;
+    /* align-items: center; */
+    cursor: pointer;
+    justify-content: space-between;
+    min-width: 7vw;
+    margin-left: 7px;
+  }
+  
+  .siebar__search {
+    display: flex;
+    background-color: rgb(250, 243, 243);
+    height: 40px;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .sidebar__searchcontainer {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 35px;
+    border-radius: 999px;
+    align-items: center;
+  }
+  
+  .sidebar__searchcontainer > input {
+    width: 80%;
+    border: none;
+    margin-left: 15px;
+    color: gray;
+  }
+  .sidebar__searchcontainer > .MuiSvgIcon-root {
+    margin-left: 15px;
+    color: gray;
+    font-size: 18px !important;
+  }
+  
+  .sidebar__chhatsGroups {
+    flex: 1;
+    background-color: white;
+    overflow-y: scroll;
+  }
+  
