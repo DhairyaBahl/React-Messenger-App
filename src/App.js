@@ -16,22 +16,22 @@ function App() {
         <Login />
       ) : (
         <div className="app__container">
-          {/* <div className="app__backgroundpart"> */}
+         
           <Router>
-            {/* sidebar */}
+            
             <Sideroom />
             <Switch>
               <Route path="/rooms/:roomid">
-                {/* chat */}
+               
                 <Chatroom />
               </Route>
               <Route path="/">
                 <Chatroom />
-                {/* <h1>Home Screen</h1> */}
+             
               </Route>
             </Switch>
           </Router>
-          {/* </div> */}
+         
         </div>
       )}
     </div>

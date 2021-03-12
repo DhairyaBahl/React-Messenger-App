@@ -2,10 +2,8 @@ import React, { useState, useEffect } from "react";
 import firebase from "firebase";
 import "./Chatroom.css";
 import { Avatar } from "@material-ui/core";
-import SearchIcon from "@material-ui/icons/Search";
 import SendIcon from "@material-ui/icons/Send";
-import AttachFileIcon from "@material-ui/icons/AttachFile";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
+
 import SentimentVerySatisfiedIcon from "@material-ui/icons/SentimentVerySatisfied";
 import MicIcon from "@material-ui/icons/Mic";
 import { useParams } from "react-router-dom";
@@ -62,15 +60,12 @@ function Chatroom() {
           </p>
         </div>
         <div className="chatroom__header__inforight">
-          <SearchIcon />
-          <AttachFileIcon />
-          <MoreVertIcon />
+         
         </div>
       </div>
       <div className="chatroom__body">
         {message.map((message) => (
           <p
-            // message background functionality
             className={`chatroom__message ${
               message.name === user.displayName && `chatroom__messagerecierver`
             }`}

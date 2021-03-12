@@ -30,7 +30,6 @@ function Chats({ addChat, id, name }) {
     const chatName = prompt("Enter A name");
 
     if (chatName) {
-      //Here this will add the new chat room doc
       database.collection("rooms").add({
         name: chatName,
       });

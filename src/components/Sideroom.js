@@ -48,7 +48,7 @@ function Sideroom() {
       <div className="sidebar__chhatsGroups">
         <Chats addChat />
         {rooms.map((room) => (
-          <Chats key={room.id} id={room.id} name={room.data.name} password={room.data.password} />
+          <Chats key={room.id} id={room.id} name={room.data.name}  />
         ))}
       </div>
     </div>
