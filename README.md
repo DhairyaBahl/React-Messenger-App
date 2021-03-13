@@ -52,3 +52,17 @@ Kindly refer to the contributing.md file. All the contributing guidelines are wr
 
 ## 3. Is there any need to assign myself to the issue before starting to work on the issue ?
 It is better to wait until you are assigned to the issue. Although if you are sure that no-one is working on the issue then you can start working on the issue.
+
+<h2>Contributors:</h2>
+
+### Credits goes to these people:✨
+
+<table>
+	<tr>
+		<td>
+  <a href="https://github.com/DhairyaBahl/React-Messenger-App/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=DhairyaBahl/React-Messenger-App" />
+</a>
+		</td>
+	</tr>
+</table>
