@@ -25,11 +25,8 @@ function Messages(props){
   return (
     <div className="message_div" >
       <h5 className={`sender ${props.dark?"senderDark":""}`} >{`${isUser?"":props.messages.username===null?"Unknown user":props.messages.username}`}</h5>
-      <div className={`msgs ${isUser?"user":"guest"} `} >
-      <ReadMore>{props.messages.message}</ReadMore>
-        <p className="time-stamp">{giveTimePassed(props.messages.timestamp)}</p>
       <div className={`msgs ${isUser?"user":"guest"} ${props.dark?"msgsDark":""} `} >
-        {props.messages.message}
+      <ReadMore>{props.messages.message}</ReadMore>
         <p className={`time-stamp ${props.dark?"time-stampDark":""}`}>{giveTimePassed(props.messages.timestamp)}</p>
       </div>
     </div>
