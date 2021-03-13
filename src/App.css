@@ -111,10 +111,12 @@ footer {
 
 .BlackNavBar {
   background-color: black !important;
+  border-bottom: 1px solid white;
 }
 
 .footer_dark {
   background-color: black;
+  border-top: 1px solid white;
 }
 
 .iconButton {
