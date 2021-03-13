@@ -8,6 +8,7 @@
   min-width: 200px;
   margin-top: 10px;
   text-align: left;
+  word-wrap:break-word;
   padding: 15px;
   font-family: "Hind Madurai", sans-serif;
   font-weight: bold;
