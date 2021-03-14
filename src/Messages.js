@@ -30,7 +30,7 @@ function Messages(props){
         <p className={`time-stamp ${props.dark?"time-stampDark":""}`}>{giveTimePassed(props.messages.timestamp)}</p>
       </div>
     </div>
-  )
+  );
 }
 
 function giveTimePassed(timestamp){
