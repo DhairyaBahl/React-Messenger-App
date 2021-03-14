@@ -1,4 +1,4 @@
-.msgs {
+/*.msgs {
   background: rgba(255, 255, 255, 0.6);
   border: 3px solid rgb(0, 0, 0);
   border-radius: 10px;
@@ -76,4 +76,59 @@
 
 .time-stampDark {
   color: white;
+}*/
+
+/*NEW*/
+
+.msgs {
+  background-color: lightblue;
+  border-radius: 10px;
+  max-width: 60%;
+  width: fit-content;
+  height: fit-content;
+  min-width: 200px;
+  margin-top: 10px;
+  text-align: left;
+  padding: 15px;
+  font-family: "Hind Madurai", sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem; 
+}
+
+.sender {
+  font-family: "Fjord One", serif;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-bottom: 0;
+  margin-top: 25px;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+
+.senderDark {
+  color: white !important;
+}
+
+.message_div {
+  margin-top: 25px;
+}
+
+.user {
+  background-color: lightpink;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.guest {
+  margin-left: 10px;
+}
+
+.time-stamp {
+  font-style: italic;
+  font-family: Montserrat;
+  font-size: 14px;
+  letter-spacing: 0.01rem;
+  text-align: right;
+  margin: 0;
+  color: rgb(126, 126, 126);
 }
