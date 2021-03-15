@@ -98,6 +98,7 @@
   font-family: "Hind Madurai", sans-serif;
   font-weight: bold;
   font-size: 1.1rem; 
+  word-wrap: break-word;
 }
 
 .msgs:hover {
