@@ -5,6 +5,7 @@ import Brightness4Icon from "@material-ui/icons/Brightness4";
 import SendIcon from "@material-ui/icons/Send";
 import logo from "./logo.png";
 import Messages from "./Messages.js";
+import WelcomeDialogBox from './WelcomeDialogBox'
 import db from "./firebase.js";
 import firebase from "firebase";
 
@@ -12,11 +13,12 @@ function App() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [username, setUsername] = useState("");
+  const [openWelcomeDialogBox,setOpenWelcomeDialogBox]=useState(false)
   const [dark, setDark] = useState(false);
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
-    setUsername(prompt("Kindly Enter Your Name"));
+    setOpenWelcomeDialogBox(true)
   }, []);
 
   useEffect(() => {
@@ -132,6 +134,7 @@ function App() {
           </Button>
         </form>
       </footer>
+      <WelcomeDialogBox open={openWelcomeDialogBox} close={()=>setOpenWelcomeDialogBox(false)} setUsername={setUsername}/>
     </div>
   );
 }
