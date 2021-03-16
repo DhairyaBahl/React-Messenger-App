@@ -5,13 +5,13 @@ import Navigation from "./navigation";
 import { LogBox } from "react-native";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAVjsJFNHh5D3rGib3e2TAACbXKwqeCdUU",
-  authDomain: "gssoc-messenger.firebaseapp.com",
-  projectId: "gssoc-messenger",
-  storageBucket: "gssoc-messenger.appspot.com",
-  messagingSenderId: "792499487270",
-  appId: "1:792499487270:web:ea13ab4b0fbf997f41dce7",
-  measurementId: "G-N7WPBFY6CS",
+  apiKey: "Place your Project Api key here",
+  authDomain: "Place your authDomain here",
+  projectId: "Place your projectId here",
+  storageBucket: "Place your storage bucket here",
+  messagingSenderId: "Place your messaging sender ID here",
+  appId: "Place your app id here",
+  measurementId: "Place your measurement ID here",
 };
 
 LogBox.ignoreLogs(["Setting a timer"]);
