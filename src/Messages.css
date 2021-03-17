@@ -145,3 +145,10 @@
   margin: 0;
   color: rgb(126, 126, 126);
 }
+.read-or-hide{
+  color: rgb(100, 100, 100);
+  cursor: pointer;
+}
+.read-or-hide:hover{
+  color: rgb(50, 50, 150);
+}
