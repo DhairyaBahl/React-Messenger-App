@@ -4,7 +4,7 @@ import { Button } from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import logo from "./logo.png";
 import Messages from "./Messages.js";
-import WelcomeDialogBox from './WelcomeDialogBox'
+import WelcomeDialogBox from "./WelcomeDialogBox";
 import db from "./firebase.js";
 import firebase from "firebase";
 
@@ -12,12 +12,12 @@ function App() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [username, setUsername] = useState("");
-  const [openWelcomeDialogBox,setOpenWelcomeDialogBox]=useState(false)
+  const [openWelcomeDialogBox, setOpenWelcomeDialogBox] = useState(false);
   const [dark, setDark] = useState(false);
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
-    setOpenWelcomeDialogBox(true)
+    setOpenWelcomeDialogBox(true);
   }, []);
 
   useEffect(() => {
@@ -38,11 +38,12 @@ function App() {
 
   const newMessage = (event) => {
     event.preventDefault();
-    if (input !== "") {
+    //setMessages([...messages,{message:input,username:username}]);
+    if (input.trim() !== "") {
       db.collection("messages").add({
         username: username,
         message: input,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
       });
     }
     setInput("");
