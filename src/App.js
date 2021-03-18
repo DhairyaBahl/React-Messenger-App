@@ -5,6 +5,7 @@ import Brightness4Icon from "@material-ui/icons/Brightness4";
 // import SendIcon from "@material-ui/icons/Send";
 import logo from "./logo.png";
 import Messages from "./Messages.js";
+import WelcomeDialogBox from './WelcomeDialogBox'
 import db from "./firebase.js";
 import firebase from "firebase";
 
@@ -13,10 +14,12 @@ function App() {
   const [messages, setMessages] = useState([]);
   const [username, setUsername] = useState("");
   const [dark, setDark] = useState(false);  
+  const [openWelcomeDialogBox,setOpenWelcomeDialogBox]=useState(false)
+  const [dark, setDark] = useState(false);
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
-    setUsername(prompt("Kindly Enter Your Name"));
+    setOpenWelcomeDialogBox(true)
   }, []);
 
   useEffect(() => {
@@ -80,7 +83,7 @@ function App() {
     <div className="App">
       <nav className={`NavBar ${dark ? "BlackNavBar" : ""}`}>
         <div className="flex1">
-          <img className="Logo" src={logo} alt="messenger-logo" />
+          <img className="Logo"  aspect-ratio="1/1" height="auto" width="82px"  src={logo} alt="messenger-logo" />
           {/*<h1 className="messenger" ><span className={`${dark?"blackName":""} `}
           style={{color:"orange"}}>Mess</span><span className={`${dark?"blackName":""} `}  style={{color:"deeppink"}} >enger</span></h1>*/}
           <h1 className={`messenger ${dark ? "blackName" : ""}`}>Messenger</h1>
@@ -156,7 +159,14 @@ function App() {
             {" "}
             <SendIcon />
           </Button>
-        </form> */}
+        </form> */
+        </form>
+      </footer>
+      <WelcomeDialogBox open={openWelcomeDialogBox} close={()=>setOpenWelcomeDialogBox(false)} setUsername={setUsername}/>
+    </div>
+  );
+}
+
 
 // keys generator:- every new call to this function will give numbs like 0,1,2,3....
 const genKey = (function () {

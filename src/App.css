@@ -16,6 +16,7 @@ body {
     rgba(255, 166, 10, 1) 24%,
     rgba(255, 0, 224, 1) 100%
   );
+  align-self: center;    
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -66,12 +67,37 @@ input {
   background-color: rgb(140, 140, 140);
 }
 
-.messenger {
-  font-weight: bold;
-  font-size: 40px;
-  margin: 0.25em;
+@media(max-width: 350px){
+  .Logo{
+    width: auto;
+    height: 50px;
+    align-self: center;
+  }
 }
 
+.messenger {
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0.25em;
+}
+
+@media(min-width: 500px){
+  .messenger {
+    font-size: 40px;
+  }
+}
+
+@media(max-width: 500px) {
+  .messenger{
+    font-size: 35px;    
+  }
+}
+
+@media(max-width: 350px) {
+  .messenger{
+    font-size: 20px;    
+  }
+}
 footer {
   position: fixed;
   bottom: 0;
@@ -91,10 +117,13 @@ footer {
 
 .BlackNavBar {
   background-color: black !important;
+  border-bottom: 1px solid white;
 }
 
 .footer_dark {
   color: black;
+  background-color: black;
+  border-top: 1px solid white;
 }
 
 .iconButton {
