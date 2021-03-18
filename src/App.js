@@ -1,8 +1,9 @@
 import "./App.css";
 import { useState, useEffect, useRef } from "react";
-import { Button } from "@material-ui/core";
+import { Button, FormControl } from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import logo from "./logo.png";
+import SendIcon from "@material-ui/icons/Send";
 import Messages from "./Messages.js";
 import WelcomeDialogBox from "./WelcomeDialogBox";
 import db from "./firebase.js";
@@ -59,11 +60,28 @@ function App() {
     }
   };
 
+  let but;
+  but = (
+    <input
+      className={`input ${dark ? "dark_input" : "light_input"}`}
+      placeholder="Write Your Message"
+      value={input}
+      onChange={(event) => setInput(event.target.value)}
+    />
+  );
+
   return (
     <div className="App">
       <nav className={`NavBar ${dark ? "BlackNavBar" : ""}`}>
         <div className="flex1">
-          <img className="Logo"  aspect-ratio="1/1" height="auto" width="82px"  src={logo} alt="messenger-logo" />
+          <img
+            className="Logo"
+            aspect-ratio="1/1"
+            height="auto"
+            width="82px"
+            src={logo}
+            alt="messenger-logo"
+          />
           <h1 className={`messenger ${dark ? "blackName" : ""}`}>Messenger</h1>
         </div>
         <div className="flex2">
@@ -78,7 +96,11 @@ function App() {
         </div>
       </nav>
       <div className="scroll">
-        <br /><br /><br /><br /><br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         {messages.map((message) => (
           <Messages
             messages={message}
@@ -88,54 +110,61 @@ function App() {
           />
         ))}
         <div />
-        <br /><br /><br /><br /><br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
       <div ref={messagesEndRef} />
       <div className="div__footer">
-      <footer className={`${dark ? "footer_dark" : ""}`}>
-        <div className="content__footer">
-          <div className="sendNewMessage">
-            <button className={`addfiles ${dark ? "darkButton" : ""}`}>
-              <i className="fa fa-plus"></i>
-            </button>
-            <input
-              className={`input ${dark ? "dark_input" : "light_input"}`}
-              type="text"
-              placeholder="Type a message"
-              onChange={(event) => setInput(event.target.value)}
-              value={input}
-            />
-          <button className={`btnsend ${dark ? "darkButtonSend" : ""}`} id="sendMsgBtn" type="submit"
-            variant="contained" onClick={newMessage}>
-            <i className="fa fa-paper-plane"></i>
-          </button>
-        </div>
-      </div> 
-      </footer>
+        <footer className={`${dark ? "footer_dark" : ""}`}>
+          <div className="content__footer">
+            <div className="sendNewMessage">
+              <button className={`addfiles ${dark ? "darkButton" : ""}`}>
+                <i className="fa fa-plus"></i>
+              </button>
+              <input
+                className={`input ${dark ? "dark_input" : "light_input"}`}
+                type="text"
+                placeholder="Type a message"
+                onChange={(event) => setInput(event.target.value)}
+                value={input}
+              />
+              <button
+                className={`btnsend ${dark ? "darkButtonSend" : ""}`}
+                id="sendMsgBtn"
+                type="submit"
+                variant="contained"
+                onClick={newMessage}
+              >
+                <i className="fa fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+
+          <form>
+            <FormControl>{but}</FormControl>
+            <Button
+              className="iconButton"
+              onClick={newMessage}
+              type="submit"
+              variant="contained"
+            >
+              {" "}
+              <SendIcon />
+            </Button>
+          </form>
+        </footer>
+        <WelcomeDialogBox
+          open={openWelcomeDialogBox}
+          close={() => setOpenWelcomeDialogBox(false)}
+          setUsername={setUsername}
+        />
       </div>
     </div>
   );
 }
-
-<form>
-          <FormControl>{but}</FormControl>
-          <Button
-            className="iconButton"
-            onClick={newMessage}
-            type="submit"
-            variant="contained"
-          >
-            {" "}
-            <SendIcon />
-          </Button>
-</form>
-{
-      <WelcomeDialogBox open={openWelcomeDialogBox} close={()=>setOpenWelcomeDialogBox(false)} setUsername={setUsername}/>
-}
-      </div>
-  );
-}
-
 
 // keys generator:- every new call to this function will give numbs like 0,1,2,3....
 const genKey = (function () {
