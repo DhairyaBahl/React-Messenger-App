@@ -4,12 +4,14 @@ import { Button, FormControl } from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import logo from "./logo.png";
 import SendIcon from "@material-ui/icons/Send";
+import CircularProgress from '@material-ui/core/CircularProgress';
 import Messages from "./Messages.js";
 import WelcomeDialogBox from "./WelcomeDialogBox";
 import db from "./firebase.js";
 import firebase from "firebase";
 
 function App() {
+  const [loading,setLoading]=useState(false)
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [username, setUsername] = useState("");
@@ -22,11 +24,14 @@ function App() {
   }, []);
 
   useEffect(() => {
+    setLoading(true)
+    console.log("setting true",loading)
     db.collection("messages")
       .orderBy("timestamp", "asc")
-      .onSnapshot((snapshot) =>
-        setMessages(snapshot.docs.map((doc) => doc.data()))
-      );
+      .onSnapshot((snapshot) =>{
+        setMessages(snapshot.docs.map((doc) => doc.data()));
+        setLoading(false)
+      });
   }, []);
 
   useEffect(() => {
@@ -95,73 +100,78 @@ function App() {
           </Button>
         </div>
       </nav>
-      <div className="scroll">
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        {messages.map((message) => (
-          <Messages
-            messages={message}
-            username={username}
-            dark={dark}
-            key={genKey()}
-          />
-        ))}
-        <div />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-      </div>
-      <div ref={messagesEndRef} />
-      <div className="div__footer">
-        <footer className={`${dark ? "footer_dark" : ""}`}>
-          <div className="content__footer">
-            <div className="sendNewMessage">
-              <button className={`addfiles ${dark ? "darkButton" : ""}`}>
-                <i className="fa fa-plus"></i>
-              </button>
-              <input
-                className={`input ${dark ? "dark_input" : "light_input"}`}
-                type="text"
-                placeholder="Type a message"
-                onChange={(event) => setInput(event.target.value)}
-                value={input}
+      {
+          loading?<CircularProgress className="loading"/>:
+          <>
+          <div className="scroll">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            {messages.map((message) => (
+              <Messages
+                messages={message}
+                username={username}
+                dark={dark}
+                key={genKey()}
               />
-              <button
-                className={`btnsend ${dark ? "darkButtonSend" : ""}`}
-                id="sendMsgBtn"
-                type="submit"
-                variant="contained"
-                onClick={newMessage}
-              >
-                <i className="fa fa-paper-plane"></i>
-              </button>
-            </div>
+            ))}
+            <div />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
           </div>
+          <div ref={messagesEndRef} />
+          <div className="div__footer">
+            <footer className={`${dark ? "footer_dark" : ""}`}>
+              <div className="content__footer">
+                <div className="sendNewMessage">
+                  <button className={`addfiles ${dark ? "darkButton" : ""}`}>
+                    <i className="fa fa-plus"></i>
+                  </button>
+                  <input
+                    className={`input ${dark ? "dark_input" : "light_input"}`}
+                    type="text"
+                    placeholder="Type a message"
+                    onChange={(event) => setInput(event.target.value)}
+                    value={input}
+                  />
+                  <button
+                    className={`btnsend ${dark ? "darkButtonSend" : ""}`}
+                    id="sendMsgBtn"
+                    type="submit"
+                    variant="contained"
+                    onClick={newMessage}
+                  >
+                    <i className="fa fa-paper-plane"></i>
+                  </button>
+                </div>
+              </div>
 
-          <form>
-            <FormControl>{but}</FormControl>
-            <Button
-              className="iconButton"
-              onClick={newMessage}
-              type="submit"
-              variant="contained"
-            >
-              {" "}
-              <SendIcon />
-            </Button>
-          </form>
-        </footer>
-        <WelcomeDialogBox
-          open={openWelcomeDialogBox}
-          close={() => setOpenWelcomeDialogBox(false)}
-          setUsername={setUsername}
-        />
-      </div>
+              <form>
+                <FormControl>{but}</FormControl>
+                <Button
+                  className="iconButton"
+                  onClick={newMessage}
+                  type="submit"
+                  variant="contained"
+                >
+                  {" "}
+                  <SendIcon />
+                </Button>
+              </form>
+            </footer>
+            <WelcomeDialogBox
+              open={openWelcomeDialogBox}
+              close={() => setOpenWelcomeDialogBox(false)}
+              setUsername={setUsername}
+            />
+          </div>
+        </>
+      }
     </div>
   );
 }
