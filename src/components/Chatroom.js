@@ -40,6 +40,7 @@ function Chatroom() {
     database.collection("rooms").doc(roomid).collection("messages").add({
       message: input,
       name: user.displayName,
+      sendEmail:user.email,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       
     });
@@ -49,7 +50,7 @@ function Chatroom() {
   return (
     <div className="chatroom">
       <div className="chatroom__header">
-        <Avatar />
+        <Avatar alt={roomname} src="/"/>
         <div className="chatroom__headerinfoleft">
           <h3>{roomname}</h3>
           <p>
@@ -67,7 +68,7 @@ function Chatroom() {
         {message.map((message) => (
           <p
             className={`chatroom__message ${
-              message.name === user.displayName && `chatroom__messagerecierver`
+              message.sendEmail === user.email && `chatroom__messagerecierver`
             }`}
           >
             <span className="chatroom__username">{message.name}</span>
