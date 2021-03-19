@@ -1,6 +1,5 @@
 .sidebar {
     flex: 0.3;
-    /* flex-direction: column; */
     flex-direction: column;
     display: flex;
   }
@@ -16,7 +15,6 @@
   
   .sidebar__headerright {
     display: flex;
-    /* align-items: center; */
     cursor: pointer;
     justify-content: space-between;
     min-width: 7vw;
