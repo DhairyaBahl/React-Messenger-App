@@ -6,12 +6,9 @@ import { database } from "../firebase";
 import { Link } from "react-router-dom";
 
 function Chats({ addChat, id, name }) {
-  const [avatars, setavatars] = useState("");
+
   const [messages, setmessages] = useState("");
 
-  useEffect(() => {
-    setavatars(Math.floor(Math.random() * 5000));
-  }, []);
 
   useEffect(() => {
     if (id) {
@@ -39,7 +36,7 @@ function Chats({ addChat, id, name }) {
   return !addChat ? (
     <Link to={`/rooms/${id}`}>
       <div className="chats">
-        <Avatar src={`https://avatars.dicebear.com/api/human/${avatars}.svg`} />
+        <Avatar alt={name} src="/" />
         <div className="chats__info">
           <h3>{name}</h3>
           <p>{messages[0]?.message}</p>
