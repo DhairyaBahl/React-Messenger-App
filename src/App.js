@@ -73,7 +73,7 @@ function App() {
       value={input}
       onChange={(event) => setInput(event.target.value)}
     />
-  );
+  ); 
 
   return (
     <div className="App">
