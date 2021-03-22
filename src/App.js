@@ -10,20 +10,30 @@ import db from "./firebase.js"
 import firebase from "firebase";
 import Emoji from'./emojis/emojiscomponents';
 import Picker from 'emoji-picker-react';
+import './switcher.css';
 
 // I have to make changes
 function App() {
 
+  const[colorTheme,setColorTheme]=useState('theme-white');
   const [input,setInput]=useState("");
   const inputRef=createRef();
   const [messages,setMessages]=useState([]);
   const [username,setUsername]=useState("");
   const [dark,setDark]=useState(false);
-  const[showEmojis,setShowEmojis]=useState(null);
+  const[showEmojis,setShowEmojis]=useState(false);
   const [chosenEmoji, setChosenEmoji] = useState(null);
   const messagesEndRef=useRef(null);
   const[cursorPosition,setCursorPosition]=useState();
 
+
+  useEffect(()=>{
+const currentThemeColor=localStorage.getItem('theme-color');
+if(currentThemeColor){
+  setColorTheme(currentThemeColor);
+}
+
+  },[])
   useEffect(()=>{
     setUsername(prompt("Kindly Enter Your Name"));
   },[])
@@ -48,7 +58,7 @@ const pickEmoji=(e,{emoji})=>{
   const start=messages.substring(0,ref.selectionStart);
   const end=messages.substring(ref.selectionStart);
   const text=start+emoji+end;
-  setMessages(text);
+  setMessages(emoji);
   setCursorPosition(start.length+emoji.length);
 };
   const newMessage= (event)=>{
@@ -92,17 +102,43 @@ setShowEmojis(!showEmojis);
     but=<Input className={`input ${dark?"dark_input":""}`} placeholder="Write Your Message" value={input} onChange={event=>setInput(event.target.value)} />
   }
 
+  const handleClick=(themec)=>{
+setColorTheme(themec);
+localStorage.setItem('theme-color',themec)
+  }
+
   return (
-    <div className="App">
+    <div className={`App ${colorTheme}`}>
+    
+     
       <nav className={`NavBar ${dark?"BlackNavBar":""}`} >
         <div className="flex1">
           <img className="Logo" src={logo} alt="messenger-logo" />
+          
           <h1 className="messenger" ><span className={`${dark?"blackName":""} `}
           style={{color:"orange"}}>Mess</span><span className={`${dark?"blackName":""} `}  style={{color:"deeppink"}} >enger</span></h1>
         </div>
         <div className="flex2">
           {/* Add multiple themes */}
           <Button title="toggle Dark Mode" variant="contained" className="dark" onClick={theme} ><Brightness4Icon /></Button>
+          <div className='theme-options'>
+       <div id='theme-pink'
+       onClick={()=>handleClick('theme-pink')}
+       />
+        <div id='theme-white'
+       onClick={()=>handleClick('theme-white')}
+       />
+       <div id='theme-orange'
+        onClick={()=>handleClick('theme-orange')}/>
+
+       <div id='theme-purple'
+       onClick={()=>handleClick('theme-purple')}
+       />
+       <div id='theme-green'
+       onClick={()=>handleClick('theme-green')}/>
+
+
+     </div>
         </div>
       </nav>
       <div className="scroll" >
@@ -115,28 +151,36 @@ setShowEmojis(!showEmojis);
       </div>
       <div ref={messagesEndRef} />
       <footer className={`${dark?"footer_dark":""}`} >
+      
+      {
+              // <div className={`emoji-list ${!showEmojis && 'hidden'}`}>
+              //   <Emoji pickEmoji={pickEmoji}/>
+              //   </div>
+            }
+          
+          <div>
+            {/* <div className="emoji-icon">
+            <InsertEmoticonIcon onClick={handleShowEmojis}/>
+            </div> */}
         <form>
+        
           <FormControl>
             {but}
            
           </FormControl>
          {/* emoji picker button */}
          <Button className="iconButton" onClick={newMessage} type="submit" variant="contained" color="primary" > <SendIcon /></Button>
-        <div className="local-message">
+   
          
-          <div>
-            {
-              <div className={`emoji-list ${!showEmojis && 'hidden'}`}>
-                <Emoji pickEmoji={pickEmoji}/>
-                </div>
-            }
-          </div>
-        </div>
+          
+            
        
-           <InsertEmoticonIcon onClick={handleShowEmojis}/>
+       
+           
      
           
         </form>
+        </div>
       </footer>
     </div>
   );

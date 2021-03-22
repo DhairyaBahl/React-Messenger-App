@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+
+body {
+  background-color: aqua;
+  color: beige;
+  padding: 0;
+  height: 100vh;
+}
+.theme-options {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  text-align: right;
+  padding: 20px 0;
+  background-color: #fff;
+}
+.theme-options div {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin: 2px 10px;
+  border: 1px solid black;
+  display: inline-block;
+  opacity: 0.5;
+}
+.theme-options  #theme-pink {
+  background-color: pink;
+
+}
+.theme-options  #theme-orange {
+  background-color: orange;
+}
+.theme-options  #theme-purple {
+  background-color: purple;
+}
+.theme-options  #theme-green {
+  background-color: green;
+}
+.theme-options  #theme-white {
+  background-color: white;
+}
+
+.App.theme-pink {
+  background-color: brown;
+}
+.App.theme-pink .scroll {
+  background-color:pink;
+  
+}
+.App.theme-purple {
+  background-color: brown;
+}
+.App.theme-purple .scroll {
+  background-color:violet;
+}
+.App.theme-white{
+  background-color:white;
+}
+.App.theme-white .scroll {
+  background-image:url("https://i.redd.it/qwd83nc4xxf41.jpg");
+}
+.App.theme-orange {
+  background-color: brown;
+}
+.App.theme-orange .scroll {
+  background-color:orange;
+}
+.App.theme-green {
+  background-color: brown;
+}
+.App.theme-green .scroll {
+  background-color:green;
+}
