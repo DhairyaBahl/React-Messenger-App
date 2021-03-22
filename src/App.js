@@ -65,16 +65,6 @@ function App() {
     }
   };
 
-  let but;
-  but = (
-    <input
-      className={`input ${dark ? "dark_input" : "light_input"}`}
-      placeholder="Write Your Message"
-      value={input}
-      onChange={(event) => setInput(event.target.value)}
-    />
-  ); 
-
   return (
     <div className="App">
       <nav className={`NavBar ${dark ? "BlackNavBar" : ""}`}>
@@ -150,19 +140,6 @@ function App() {
                   </button>
                 </div>
               </div>
-
-              <form>
-                <FormControl>{but}</FormControl>
-                <Button
-                  className="iconButton"
-                  onClick={newMessage}
-                  type="submit"
-                  variant="contained"
-                >
-                  {" "}
-                  <SendIcon />
-                </Button>
-              </form>
             </footer>
             <WelcomeDialogBox
               open={openWelcomeDialogBox}
