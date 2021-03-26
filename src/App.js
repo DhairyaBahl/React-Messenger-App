@@ -1,11 +1,11 @@
 import "./App.css";
 import { useState, useEffect, useRef } from "react";
-import { Button, FormControl } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import logo from "./logo.png";
-import SendIcon from "@material-ui/icons/Send";
+
 import CircularProgress from '@material-ui/core/CircularProgress';
-import Messages from "./Messages.js";
+import Messages from "./components/messages/Messages.js";
 import WelcomeDialogBox from "./WelcomeDialogBox";
 import db from "./firebase.js";
 import firebase from "firebase";
@@ -64,16 +64,6 @@ function App() {
       setDark(false);
     }
   };
-
-  let but;
-  but = (
-    <input
-      className={`input ${dark ? "dark_input" : "light_input"}`}
-      placeholder="Write Your Message"
-      value={input}
-      onChange={(event) => setInput(event.target.value)}
-    />
-  );
 
   return (
     <div className="App">
@@ -150,19 +140,6 @@ function App() {
                   </button>
                 </div>
               </div>
-
-              <form>
-                <FormControl>{but}</FormControl>
-                <Button
-                  className="iconButton"
-                  onClick={newMessage}
-                  type="submit"
-                  variant="contained"
-                >
-                  {" "}
-                  <SendIcon />
-                </Button>
-              </form>
             </footer>
             <WelcomeDialogBox
               open={openWelcomeDialogBox}
