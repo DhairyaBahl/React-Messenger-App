@@ -1,15 +1,11 @@
 # React-Messenger-App
 ![logo](https://miro.medium.com/max/3176/1*h-xRzZOCHk8jTlEa8M42GA.png)
 ##
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)    [![forthebadge](https://forthebadge.com/images/badges/made-with-crayons.svg)](https://forthebadge.com)    [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)    [![forthebadge](https://forthebadge.com/images/badges/made-with-crayons.svg)](https://forthebadge.com)    [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
 This is a Messenger App, made with react, styled with the help of material-ui and deployed with the help of firebase.
 
 Here is the link to the deployed app :- https://mui-message.firebaseapp.com
-
-### We are now part of GSSoC 2021 !
-[![GSSoC](https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png)](https://gssoc.girlscript.tech)
-We got accepted for the GSSoc 2021 and activelty looking for new participants,please feel free to ask questions in the discussion section of this repository and if you want to be our mentor please mention in the discussion.
 
 ## Motive
 
@@ -36,7 +32,6 @@ I am Writing down the Dependencies for beginners, so that they can look into it 
 * [Twitter](https://twitter.com/bahldhairya)
 * [Medium](https://medium.com/@dhairyabahl5)
 * [Gmail](dhairyabahl5@gmail.com)
-* [LinkedIn](https://www.linkedin.com/in/dhairya-bahl)
 
 ## Show your support
 
@@ -52,17 +47,3 @@ Kindly refer to the contributing.md file. All the contributing guidelines are wr
 
 ## 3. Is there any need to assign myself to the issue before starting to work on the issue ?
 It is better to wait until you are assigned to the issue. Although if you are sure that no-one is working on the issue then you can start working on the issue.
-
-<h2>Contributors:</h2>
-
-### Credits goes to these people:✨
-
-<table>
-	<tr>
-		<td>
-  <a href="https://github.com/DhairyaBahl/React-Messenger-App/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=DhairyaBahl/React-Messenger-App" />
-</a>
-		</td>
-	</tr>
-</table>
