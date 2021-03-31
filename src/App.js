@@ -55,6 +55,13 @@ function App() {
     setInput("");
   };
 
+  const handleKeyPress = (event) => {
+    //it triggers by pressing the enter key
+    if (event.key === 'Enter') {
+      newMessage(event);
+    }
+  };
+
   const theme = (event) => {
     if (dark === false) {
       document.body.classList.add("dark-bg");
@@ -138,6 +145,7 @@ function App() {
                     placeholder="Type a message"
                     onChange={(event) => setInput(event.target.value)}
                     value={input}
+                    onKeyPress={handleKeyPress}
                   />
                   <button
                     className={`btnsend ${dark ? "darkButtonSend" : ""}`}
