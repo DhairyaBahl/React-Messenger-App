@@ -16,7 +16,7 @@ body {
     rgba(255, 166, 10, 1) 24%,
     rgba(255, 0, 224, 1) 100%
   );
-  align-self: center;    
+  align-self: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -66,8 +66,8 @@ input {
 .dark_input {
   background-color: rgb(140, 140, 140);
 }
-.loading{
-  position:fixed;
+.loading {
+  position: fixed;
   z-index: 1;
   left: 0;
   right: 0;
@@ -76,8 +76,8 @@ input {
   margin: auto;
 }
 
-@media(max-width: 350px){
-  .Logo{
+@media (max-width: 350px) {
+  .Logo {
     width: auto;
     height: 50px;
     align-self: center;
@@ -85,33 +85,33 @@ input {
 }
 
 .messenger {
-    font-weight: bold;
-    font-size: 40px;
-    margin: 0.25em;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0.25em;
 }
 
-@media(min-width: 500px){
+@media (min-width: 500px) {
   .messenger {
     font-size: 40px;
   }
 }
 
-@media(max-width: 500px) {
-  .messenger{
-    font-size: 35px;    
+@media (max-width: 500px) {
+  .messenger {
+    font-size: 35px;
   }
 }
 
-@media(max-width: 350px) {
-  .messenger{
-    font-size: 20px;    
+@media (max-width: 350px) {
+  .messenger {
+    font-size: 20px;
   }
 }
 footer {
   position: fixed;
   bottom: 0;
   padding-bottom: 5px;
-  height: 11.5%;
+  height: 13.5%;
   width: 100%;
 
   /* background-color: #014293; */
@@ -120,8 +120,9 @@ footer {
 }
 .input {
   margin-top: 7px;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   flex: 1;
+  font-size: medium;
 }
 
 .BlackNavBar {
@@ -188,4 +189,3 @@ footer {
   background-color: rgb(0, 50, 77);
   color: #fff;
 }
-
