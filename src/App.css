@@ -17,7 +17,7 @@ body {
     rgba(255, 0, 224, 1) 100%
   );
   align-self: center;
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
