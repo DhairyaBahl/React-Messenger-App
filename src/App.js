@@ -10,7 +10,11 @@ import db from "./firebase.js"
 import firebase from "firebase";
 import Emoji from'./emojis/emojiscomponents';
 import Picker from 'emoji-picker-react';
+import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutlined';
 import './switcher.css';
+
+
+
 
 // I have to make changes
 function App() {
@@ -25,6 +29,7 @@ function App() {
   const [chosenEmoji, setChosenEmoji] = useState(null);
   const messagesEndRef=useRef(null);
   const[cursorPosition,setCursorPosition]=useState();
+  
 
 
   useEffect(()=>{
@@ -61,6 +66,7 @@ const pickEmoji=(e,{emoji})=>{
   setMessages(emoji);
   setCursorPosition(start.length+emoji.length);
 };
+
   const newMessage= (event)=>{
     event.preventDefault();
     //setMessages([...messages,{message:input,username:username}]);
@@ -91,6 +97,18 @@ setShowEmojis(!showEmojis);
       setDark(false);
     }
   }
+  let check=true;
+  const colorstheme=()=>{
+if(document.getElementById("theme-options")&& check==true)
+    {check=false;
+      document.getElementById("theme-options").style.visibility = "visible";
+  }
+  else if(document.getElementById("theme-options")&& check==false)
+{
+  check=true;
+      document.getElementById("theme-options").style.visibility = "hidden";
+}
+}
 
   let but;
   if(dark)
@@ -118,17 +136,22 @@ localStorage.setItem('theme-color',themec)
           <h1 className="messenger" ><span className={`${dark?"blackName":""} `}
           style={{color:"orange"}}>Mess</span><span className={`${dark?"blackName":""} `}  style={{color:"deeppink"}} >enger</span></h1>
         </div>
-        <div className="flex2">
-          {/* Add multiple themes */}
-          <Button title="toggle Dark Mode" variant="contained" className="dark" onClick={theme} ><Brightness4Icon /></Button>
-          <div className='theme-options'>
-       <div id='theme-pink'
+       
+         
+    <Button id="themebtn" title="Click for various theme color"className="btntheme" onClick={colorstheme} >< ArrowForwardIosOutlinedIcon/></Button>
+        
+          <div id='theme-options'>
+          
+         
+          <Button title="toggle Dark Mode"  className="dark" onClick={theme} ><Brightness4Icon /></Button>
+    
+       <div id='theme-pink' 
        onClick={()=>handleClick('theme-pink')}
        />
-        <div id='theme-white'
+        <div id='theme-white' title="original"
        onClick={()=>handleClick('theme-white')}
        />
-       <div id='theme-orange'
+       <div id='theme-orange' title="orange"
         onClick={()=>handleClick('theme-orange')}/>
 
        <div id='theme-purple'
@@ -139,7 +162,7 @@ localStorage.setItem('theme-color',themec)
 
 
      </div>
-        </div>
+        
       </nav>
       <div className="scroll" >
         <br/><br/><br/><br/><br/>

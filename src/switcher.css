@@ -4,44 +4,55 @@
 html {
   height: 100%;
 }
-
+#themebtn{
+  background-color: tomato;
+ position: relative;
+}
+.dropdowndiv{
+position: relative;
+}
 body {
   background-color: aqua;
   color: beige;
   padding: 0;
   height: 100vh;
 }
-.theme-options {
+#theme-options {
   width: auto;
+  
   height: auto;
   margin: 0 auto;
   text-align: right;
   padding: 20px 0;
-  background-color: #fff;
+  background-color: transparent;
+  opacity: 70%;
+  visibility: hidden;
 }
-.theme-options div {
+#theme-options div {
   width: 20px;
   height: 20px;
   border-radius: 4px;
+  cursor: grab;
   margin: 2px 10px;
-  border: 1px solid black;
+  border: 2px solid black;
   display: inline-block;
-  opacity: 0.5;
+  
 }
-.theme-options  #theme-pink {
-  background-color: pink;
+#theme-options  #theme-pink {
+
+  background-color:rgb(202, 39, 66);
 
 }
-.theme-options  #theme-orange {
+#theme-options  #theme-orange {
   background-color: orange;
 }
-.theme-options  #theme-purple {
+#theme-options  #theme-purple {
   background-color: purple;
 }
-.theme-options  #theme-green {
+#theme-options  #theme-green {
   background-color: green;
 }
-.theme-options  #theme-white {
+#theme-options  #theme-white {
   background-color: white;
 }
 
