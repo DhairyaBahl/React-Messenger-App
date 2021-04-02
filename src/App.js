@@ -138,7 +138,7 @@ localStorage.setItem('theme-color',themec)
         </div>
        
          
-    <Button id="themebtn" title="Click for various theme color"className="btntheme" onClick={colorstheme} >< ArrowForwardIosOutlinedIcon/></Button>
+  
         
           <div id='theme-options'>
           
@@ -162,7 +162,7 @@ localStorage.setItem('theme-color',themec)
 
 
      </div>
-        
+     <Button id="themebtn" title="Click for various theme color"className="btntheme" onClick={colorstheme} >< ArrowForwardIosOutlinedIcon/></Button>
       </nav>
       <div className="scroll" >
         <br/><br/><br/><br/><br/>
