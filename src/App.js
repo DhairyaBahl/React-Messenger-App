@@ -12,6 +12,7 @@ import Emoji from'./emojis/emojiscomponents';
 import Picker from 'emoji-picker-react';
 import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutlined';
 import './switcher.css';
+import ArrowLeftRoundedIcon from '@material-ui/icons/ArrowLeftRounded';
 
 
 
@@ -139,30 +140,42 @@ localStorage.setItem('theme-color',themec)
        
          
   
-        
+       
           <div id='theme-options'>
+        
+          <Button id="blackbtn" title="toggle Dark Mode"  className="dark" onClick={theme} ><Brightness4Icon /></Button>
           
-         
-          <Button title="toggle Dark Mode"  className="dark" onClick={theme} ><Brightness4Icon /></Button>
-    
+          <table>
+
+         <tr>
+           
+            <th>
        <div id='theme-pink' 
        onClick={()=>handleClick('theme-pink')}
-       />
-        <div id='theme-white' title="original"
+       /></th>
+        <th><div id='theme-white' title="original"
        onClick={()=>handleClick('theme-white')}
-       />
+       /></th>
+      <th>
        <div id='theme-orange' title="orange"
         onClick={()=>handleClick('theme-orange')}/>
-
+</th>
+    <th>
        <div id='theme-purple'
        onClick={()=>handleClick('theme-purple')}
        />
+</th>
+<th>
        <div id='theme-green'
        onClick={()=>handleClick('theme-green')}/>
+</th>
+</tr>
 
+
+</table>
 
      </div>
-     <Button id="themebtn" title="Click for various theme color"className="btntheme" onClick={colorstheme} >< ArrowForwardIosOutlinedIcon/></Button>
+     <Button id="themebtn" title="Click for various theme color"className="btntheme" onClick={colorstheme} ><ArrowLeftRoundedIcon/>Click</Button>
       </nav>
       <div className="scroll" >
         <br/><br/><br/><br/><br/>
