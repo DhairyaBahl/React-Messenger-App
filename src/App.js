@@ -8,8 +8,8 @@ import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import Messages from './Messages.js'
 import db from "./firebase.js"
 import firebase from "firebase";
-import Emoji from'./emojis/emojiscomponents';
-import Picker from 'emoji-picker-react';
+
+
 import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutlined';
 import './switcher.css';
 import ArrowLeftRoundedIcon from '@material-ui/icons/ArrowLeftRounded';
@@ -77,10 +77,7 @@ const pickEmoji=(e,{emoji})=>{
     }
     setInput("");
   }
-  const handleShowEmojis=()=>{
-    messagesEndRef.current.focus();
-setShowEmojis(!showEmojis);
-  };
+ 
 
 
 
