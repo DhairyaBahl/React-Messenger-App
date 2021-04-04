@@ -1,11 +1,11 @@
 import "./App.css";
 import { useState, useEffect, useRef } from "react";
-import { Button, FormControl } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import logo from "./logo.png";
-import SendIcon from "@material-ui/icons/Send";
+
 import CircularProgress from '@material-ui/core/CircularProgress';
-import Messages from "./Messages.js";
+import Messages from "./components/messages/Messages.js";
 import WelcomeDialogBox from "./WelcomeDialogBox";
 import db from "./firebase.js";
 import firebase from "firebase";
