@@ -17,7 +17,7 @@ import ArrowLeftRoundedIcon from '@material-ui/icons/ArrowLeftRounded';
 
 
 
-// I have to make changes
+
 function App() {
 
   const[colorTheme,setColorTheme]=useState('theme-white');
@@ -83,7 +83,6 @@ const pickEmoji=(e,{emoji})=>{
 
   const theme=(event)=>{
     
-    //add multicolr themes
     if(dark===false)
     {
       document.body.classList.add('dark-bg');
@@ -122,7 +121,7 @@ if(document.getElementById("theme-options")&& check==true)
 setColorTheme(themec);
 localStorage.setItem('theme-color',themec)
   }
-
+//multicolor themes asdded
   return (
     <div className={`App ${colorTheme}`}>
     
@@ -136,7 +135,7 @@ localStorage.setItem('theme-color',themec)
         </div>
        
          
-  
+      
        
           <div id='theme-options'>
         
