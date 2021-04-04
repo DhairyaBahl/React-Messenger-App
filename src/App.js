@@ -4,13 +4,13 @@ import {Button, Input,FormControl} from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4"
 import SendIcon from '@material-ui/icons/Send'
 import logo from './logo.png';
-import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
+
 import Messages from './Messages.js'
 import db from "./firebase.js"
 import firebase from "firebase";
 
 
-import ArrowForwardIosOutlinedIcon from '@material-ui/icons/ArrowForwardIosOutlined';
+
 import './switcher.css';
 import ArrowLeftRoundedIcon from '@material-ui/icons/ArrowLeftRounded';
 
@@ -26,8 +26,7 @@ function App() {
   const [messages,setMessages]=useState([]);
   const [username,setUsername]=useState("");
   const [dark,setDark]=useState(false);
-  const[showEmojis,setShowEmojis]=useState(false);
-  const [chosenEmoji, setChosenEmoji] = useState(null);
+ 
   const messagesEndRef=useRef(null);
   const[cursorPosition,setCursorPosition]=useState();
   
@@ -58,15 +57,7 @@ const handleChange=e=>{
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "auto" })
   };
-const pickEmoji=(e,{emoji})=>{
-  const ref=messagesEndRef.current;
-  ref.focus();
-  const start=messages.substring(0,ref.selectionStart);
-  const end=messages.substring(ref.selectionStart);
-  const text=start+emoji+end;
-  setMessages(emoji);
-  setCursorPosition(start.length+emoji.length);
-};
+
 
   const newMessage= (event)=>{
     event.preventDefault();
