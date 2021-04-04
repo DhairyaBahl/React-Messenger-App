@@ -121,7 +121,7 @@ if(document.getElementById("theme-options")&& check==true)
 setColorTheme(themec);
 localStorage.setItem('theme-color',themec)
   }
-//multicolor themes asdded
+//multicolor themes added here
   return (
     <div className={`App ${colorTheme}`}>
     
