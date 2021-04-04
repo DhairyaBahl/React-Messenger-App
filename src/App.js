@@ -150,7 +150,7 @@ localStorage.setItem('theme-color',themec)
          <tr>
            
             <th>
-       <div id='theme-pink' 
+       <div id='theme-pink' title="dark pink"
        onClick={()=>handleClick('theme-pink')}
        /></th>
         <th><div id='theme-white' title="original"
@@ -161,21 +161,23 @@ localStorage.setItem('theme-color',themec)
         onClick={()=>handleClick('theme-orange')}/>
 </th>
     <th>
-       <div id='theme-purple'
+       <div id='theme-purple' title="purple"
        onClick={()=>handleClick('theme-purple')}
        />
 </th>
 <th>
-       <div id='theme-green'
+       <div id='theme-green' title="green"
        onClick={()=>handleClick('theme-green')}/>
 </th>
 </tr>
 
 
+
+
 </table>
 
      </div>
-     <Button id="themebtn" title="Click for various theme color"className="btntheme" onClick={colorstheme} ><ArrowLeftRoundedIcon/>Click</Button>
+     <Button id="themebtn" title="Click for various theme color"className="btntheme" onClick={colorstheme} ><ArrowLeftRoundedIcon/><br></br>Theme Store</Button>
       </nav>
       <div className="scroll" >
         <br/><br/><br/><br/><br/>
@@ -188,16 +190,10 @@ localStorage.setItem('theme-color',themec)
       <div ref={messagesEndRef} />
       <footer className={`${dark?"footer_dark":""}`} >
       
-      {
-              // <div className={`emoji-list ${!showEmojis && 'hidden'}`}>
-              //   <Emoji pickEmoji={pickEmoji}/>
-              //   </div>
-            }
+      
           
           <div>
-            {/* <div className="emoji-icon">
-            <InsertEmoticonIcon onClick={handleShowEmojis}/>
-            </div> */}
+          
         <form>
         
           <FormControl>
