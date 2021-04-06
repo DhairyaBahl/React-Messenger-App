@@ -1,0 +1,155 @@
+/*.msgs {
+  background: rgba(255, 255, 255, 0.6);
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  max-width: 60%;
+  width: fit-content;
+  height: fit-content;
+  min-width: 200px;
+  margin-top: 10px;
+  text-align: left;
+  word-wrap:break-word;
+  padding: 15px;
+  font-family: "Hind Madurai", sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.sender {
+  font-family: "Fjord One", serif;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-bottom: 0;
+  margin-top: 25px;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+
+.msgsDark {
+  background: rgba(255, 255, 255, 0.5);
+  border: 4px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  max-width: 60%;
+  width: fit-content;
+  height: fit-content;
+  min-width: 200px;
+  margin-top: 10px;
+  text-align: left;
+  padding: 15px;
+  font-family: "Hind Madurai", sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.senderDark {
+  color: white !important;
+}
+
+.message_div {
+  margin-top: 25px;
+}
+
+.read-or-hide {
+  color: rgb(87, 85, 85);
+  cursor: pointer;
+}
+
+.user {
+  background-color: rgba(255, 179, 179, 0.5);
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.guest {
+  margin-left: 10px;
+}
+
+.time-stamp {
+  font-style: italic;
+  font-family: Montserrat;
+  font-size: 14px;
+  letter-spacing: 0.01rem;
+  text-align: right;
+  margin: 0;
+  color: rgb(126, 126, 126);
+}
+
+.time-stampDark {
+  color: white;
+}*/
+
+/*NEW*/
+
+.msgs {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-color: lightblue;
+  border-radius: 10px;
+  max-width: 60%;
+  width: fit-content;
+  height: fit-content;
+  min-width: 200px;
+  margin-top: 10px;
+  text-align: left;
+  padding: 15px;
+  font-family: "Hind Madurai", sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem; 
+  word-wrap: break-word;
+}
+
+.msgs:hover {
+  box-shadow: 0px 0px 20px rgb(245, 125, 143);
+}
+
+.sender {
+  font-family: "Fjord One", serif;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-bottom: 0;
+  margin-top: 25px;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+
+.senderDark {
+  color: white !important;
+}
+
+.message_div {
+  margin-top: 25px;
+}
+
+.user {
+  background-color: lightpink;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.user:hover {
+  box-shadow: 0px 0px 20px rgb(67, 188, 228);
+}
+
+.guest {
+  margin-left: 10px;
+}
+
+.time-stamp {
+  font-style: italic;
+  font-family: Montserrat;
+  font-size: 14px;
+  letter-spacing: 0.01rem;
+  text-align: right;
+  margin: 0;
+  color: rgb(126, 126, 126);
+}
+.read-or-hide{
+  color: rgb(100, 100, 100);
+  cursor: pointer;
+}
+.read-or-hide:hover{
+  color: rgb(50, 50, 150);
+}
