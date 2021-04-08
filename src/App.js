@@ -4,14 +4,14 @@ import { Button } from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import logo from "./logo.png";
 
-import CircularProgress from '@material-ui/core/CircularProgress';
+import CircularProgress from "@material-ui/core/CircularProgress";
 import Messages from "./components/messages/Messages.js";
 import WelcomeDialogBox from "./WelcomeDialogBox";
 import db from "./firebase.js";
 import firebase from "firebase";
 
 function App() {
-  const [loading,setLoading]=useState(false)
+  const [loading, setLoading] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [username, setUsername] = useState("");
@@ -24,13 +24,13 @@ function App() {
   }, []);
 
   useEffect(() => {
-    setLoading(true)
-    console.log("setting true",loading)
+    setLoading(true);
+    console.log("setting true", loading);
     db.collection("messages")
       .orderBy("timestamp", "asc")
-      .onSnapshot((snapshot) =>{
+      .onSnapshot((snapshot) => {
         setMessages(snapshot.docs.map((doc) => doc.data()));
-        setLoading(false)
+        setLoading(false);
       });
   }, []);
 
@@ -39,7 +39,8 @@ function App() {
   }, [messages]);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
+    if (messagesEndRef.current)
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const newMessage = (event) => {
@@ -57,7 +58,7 @@ function App() {
 
   const handleKeyPress = (event) => {
     //it triggers by pressing the enter key
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       newMessage(event);
     }
   };
@@ -97,9 +98,10 @@ function App() {
           </Button>
         </div>
       </nav>
-      {
-          loading?<CircularProgress className="loading"/>:
-          <>
+      {loading ? (
+        <CircularProgress className="loading" />
+      ) : (
+        <>
           <div className="scroll">
             <br />
             <br />
@@ -156,7 +158,7 @@ function App() {
             />
           </div>
         </>
-      }
+      )}
     </div>
   );
 }
