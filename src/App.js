@@ -1,25 +1,17 @@
-
-import './App.css';
-import {useState,useEffect,useRef, createRef} from 'react';
-import {Button, Input,FormControl} from "@material-ui/core";
-import Brightness4Icon from "@material-ui/icons/Brightness4"
-import SendIcon from '@material-ui/icons/Send'
-
-
-
-
-
-
-
-
+import "./App.css";
+import { useState, useEffect, useRef } from "react";
+import { Button } from "@material-ui/core";
+import Brightness4Icon from "@material-ui/icons/Brightness4";
 import logo from "./logo.png";
 
 import CircularProgress from '@material-ui/core/CircularProgress';
-//import Messages from "./components/messages/Messages.js";
-//import WelcomeDialogBox from "./WelcomeDialogBox";
+import Messages from "./components/messages/Messages.js";
+import WelcomeDialogBox from "./WelcomeDialogBox";
 import db from "./firebase.js";
-
 import firebase from "firebase";
+import './switcher.css';
+import ArrowLeftRoundedIcon from '@material-ui/icons/ArrowLeftRounded';
+
 
 
 
@@ -37,33 +29,12 @@ function App() {
   const [username, setUsername] = useState("");
   const [openWelcomeDialogBox, setOpenWelcomeDialogBox] = useState(false);
   const [dark, setDark] = useState(false);
-  const messagesEndRef = useRef(null);
-
-
   const[colorTheme,setColorTheme]=useState('theme-white');
- 
-  const inputRef=createRef();
-  
-  
-  
-
-
-
-  useEffect(()=>{
-const currentThemeColor=localStorage.getItem('theme-color');
-if(currentThemeColor){
-  setColorTheme(currentThemeColor);
-}
-
-  },[])
-  useEffect(()=>{
-    setUsername(prompt("Kindly Enter Your Name"));
-  },[])
+  const messagesEndRef = useRef(null);
 
   useEffect(() => {
     setOpenWelcomeDialogBox(true);
   }, []);
-
 
   useEffect(() => {
     setLoading(true)
@@ -75,7 +46,13 @@ if(currentThemeColor){
         setLoading(false)
       });
   }, []);
-
+  useEffect(()=>{
+    const currentThemeColor=localStorage.getItem('theme-color');
+    if(currentThemeColor){
+      setColorTheme(currentThemeColor);
+    }
+    
+      },[]);
 
   useEffect(() => {
     scrollToBottom();
@@ -96,21 +73,23 @@ if(currentThemeColor){
       });
     }
     setInput("");
+  };
 
-
-
+  const handleKeyPress = (event) => {
+    //it triggers by pressing the enter key
+    if (event.key === 'Enter') {
+      newMessage(event);
+    }
   };
 
   const theme = (event) => {
     if (dark === false) {
       document.body.classList.add("dark-bg");
-
       setDark(true);
     } else {
       document.body.classList.remove("dark-bg");
       setDark(false);
     }
-// <<<<<<< KamalAK
   };
   let check=true;
   const colorstheme=()=>{
@@ -123,28 +102,14 @@ if(document.getElementById("theme-options")&& check==true)
   check=true;
       document.getElementById("theme-options").style.visibility = "hidden";
 }
-}
+};
 
-  let but;
-  if(dark)
-  {
-    but=<input className={`input ${dark?"dark_input":""}`} placeholder="Write Your Message" value={input} onChange={event=>setInput(event.target.value)} />
-  }
-  else
-  {
-    but=<Input className={`input ${dark?"dark_input":""}`} placeholder="Write Your Message" value={input} onChange={event=>setInput(event.target.value)} />
-  }
-
-
-  const handleClick=(themec)=>{
-setColorTheme(themec);
-localStorage.setItem('theme-color',themec)
-  }
-//multicolor themes added here
+const handleClick=(themec)=>{
+  setColorTheme(themec);
+  localStorage.setItem('theme-color',themec)
+    };
   return (
-// <<<<<<< KamalAK
-     <div className={`App ${colorTheme}`}>
-    
+    <div className={`App ${colorTheme}`}>
       <nav className={`NavBar ${dark ? "BlackNavBar" : ""}`}>
         <div className="flex1">
           <img
@@ -157,8 +122,7 @@ localStorage.setItem('theme-color',themec)
           />
           <h1 className={`messenger ${dark ? "blackName" : ""}`}>Messenger</h1>
         </div>
-        
- <div id='theme-options'>
+        <div id='theme-options'>
         
           <Button id="blackbtn" title="toggle Dark Mode"  className="dark" onClick={theme} ><Brightness4Icon /></Button>
           
@@ -205,14 +169,14 @@ localStorage.setItem('theme-color',themec)
             <br />
             <br />
             <br />
-            {/* {messages.map((message) => (
-              // <Messages
-              //   messages={message}
-              //   username={username}
-              //   dark={dark}
-              //   key={genKey()}
-              // />
-            ))} */}
+            {messages.map((message) => (
+              <Messages
+                messages={message}
+                username={username}
+                dark={dark}
+                key={genKey()}
+              />
+            ))}
             <div />
             <br />
             <br />
@@ -234,6 +198,7 @@ localStorage.setItem('theme-color',themec)
                     placeholder="Type a message"
                     onChange={(event) => setInput(event.target.value)}
                     value={input}
+                    onKeyPress={handleKeyPress}
                   />
                   <button
                     className={`btnsend ${dark ? "darkButtonSend" : ""}`}
@@ -247,15 +212,14 @@ localStorage.setItem('theme-color',themec)
                 </div>
               </div>
             </footer>
-            {/* <WelcomeDialogBox
+            <WelcomeDialogBox
               open={openWelcomeDialogBox}
               close={() => setOpenWelcomeDialogBox(false)}
               setUsername={setUsername}
-            /> */}
+            />
           </div>
         </>
       }
-{/* //>>>>>>> master */}
     </div>
   );
 }
