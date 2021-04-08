@@ -13,15 +13,6 @@ import './switcher.css';
 import ArrowLeftRoundedIcon from '@material-ui/icons/ArrowLeftRounded';
 
 
-
-
-import './switcher.css';
-import ArrowLeftRoundedIcon from '@material-ui/icons/ArrowLeftRounded';
-
-
-
-
-
 function App() {
   const [loading,setLoading]=useState(false)
   const [input, setInput] = useState("");
