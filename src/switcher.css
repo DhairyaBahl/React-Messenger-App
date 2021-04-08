@@ -9,7 +9,7 @@
   background-color: blanchedalmond;
   border-radius: 50%;
   height: 50px;
-  width: 50px;
+  width: 30px;
   display: inline;
   box-shadow: inset 0 5px 5px rgb(24, 24, 20), inset 0 -2px 2px rgba(22, 6, 6, 0.18);
   }
@@ -55,7 +55,7 @@
   
     
     padding: 2px 0;
-    background-color:transparent;
+  
     opacity: 70%;
     visibility: hidden;
   border-color: burlywood;
@@ -88,7 +88,13 @@
   
   }
   #theme-options  #theme-orange {
-    background-color: orange;
+    background-color: #6d695c;
+    background-image:
+    repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+    linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+    background-size: 10px 20px;
   }
   #theme-options  #theme-purple {
     background-color: purple;
@@ -122,21 +128,34 @@
         width: 100%;
         
     }
-    #blackbtn{height: 30px;width: 30px;}
+    #blackbtn{height: 30px;width: 2px;
+        border-radius: 40%;
+    background-color: cornsilk;
+position:relative;}
   }
   
   .App.theme-pink {
     background-color: brown;
   }
   .App.theme-pink .scroll {
-    background-color: #ff0040;
-    
+   
+    background-color: #99004d;
+    background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+    linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+    background-size: 13px, 29px, 37px, 53px;;
   }
   .App.theme-purple {
     background-color: brown;
   }
   .App.theme-purple .scroll {
-    background-color:	 #4d004d;
+    background-color: #6a0273;
+    background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+    linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+    background-size: 13px, 29px, 37px, 53px;;
   }
   .App.theme-white{
     background-color:white;
@@ -148,11 +167,22 @@
     background-color: brown;
   }
   .App.theme-orange .scroll {
-    background-color:orange;
+    background-color: #6d695c;
+    background-image:
+    repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+    linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+    background-size: 70px 120px;
   }
   .App.theme-green {
     background-color: brown;
   }
   .App.theme-green .scroll {
-    background-color:	 #00b300;
+    background-color: 	 #4d9900;
+background-image: linear-gradient(90deg, transparent 50%,
+  rgba(255,255,255,.5) 50%);
+background-size: 50px 50px;
+
+
   }
