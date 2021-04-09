@@ -83,7 +83,7 @@
 .msgs {
   background: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 1) 0%,
+    rgb(118, 120, 223) 0%,
     rgba(255, 255, 255, 0) 100%
   );
   background-color: lightblue;
@@ -112,11 +112,12 @@
   margin-bottom: 0;
   margin-top: 25px;
   margin-left: 10px;
+  color: black;
   text-transform: capitalize;
 }
 
 .senderDark {
-  color: white !important;
+  color: rgb(24, 15, 15) !important;
 }
 
 .message_div {
@@ -124,13 +125,13 @@
 }
 
 .user {
-  background-color: lightpink;
+  background-color: rgb(233, 236, 22);
   margin-left: auto;
   margin-right: 10px;
 }
 
 .user:hover {
-  box-shadow: 0px 0px 20px rgb(67, 188, 228);
+  box-shadow: 2px 2px 20px rgb(11, 69, 88);
 }
 
 .guest {

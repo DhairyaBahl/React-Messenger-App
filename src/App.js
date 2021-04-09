@@ -9,6 +9,9 @@ import Messages from "./components/messages/Messages.js";
 import WelcomeDialogBox from "./WelcomeDialogBox";
 import db from "./firebase.js";
 import firebase from "firebase";
+import './switcher.css';
+import ArrowLeftRoundedIcon from '@material-ui/icons/ArrowLeftRounded';
+
 
 function App() {
   const [loading,setLoading]=useState(false)
@@ -17,6 +20,7 @@ function App() {
   const [username, setUsername] = useState("");
   const [openWelcomeDialogBox, setOpenWelcomeDialogBox] = useState(false);
   const [dark, setDark] = useState(false);
+  const[colorTheme,setColorTheme]=useState('theme-white');
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
@@ -33,6 +37,13 @@ function App() {
         setLoading(false)
       });
   }, []);
+  useEffect(()=>{
+    const currentThemeColor=localStorage.getItem('theme-color');
+    if(currentThemeColor){
+      setColorTheme(currentThemeColor);
+    }
+    
+      },[]);
 
   useEffect(() => {
     scrollToBottom();
@@ -55,6 +66,13 @@ function App() {
     setInput("");
   };
 
+  const handleKeyPress = (event) => {
+    //it triggers by pressing the enter key
+    if (event.key === 'Enter') {
+      newMessage(event);
+    }
+  };
+
   const theme = (event) => {
     if (dark === false) {
       document.body.classList.add("dark-bg");
@@ -64,9 +82,25 @@ function App() {
       setDark(false);
     }
   };
+  let check=true;
+  const colorstheme=()=>{
+if(document.getElementById("theme-options")&& check==true)
+    {check=false;
+      document.getElementById("theme-options").style.visibility = "visible";
+  }
+  else if(document.getElementById("theme-options")&& check==false)
+{
+  check=true;
+      document.getElementById("theme-options").style.visibility = "hidden";
+}
+};
 
+const handleClick=(themec)=>{
+  setColorTheme(themec);
+  localStorage.setItem('theme-color',themec)
+    };
   return (
-    <div className="App">
+    <div className={`App ${colorTheme}`}>
       <nav className={`NavBar ${dark ? "BlackNavBar" : ""}`}>
         <div className="flex1">
           <img
@@ -79,16 +113,43 @@ function App() {
           />
           <h1 className={`messenger ${dark ? "blackName" : ""}`}>Messenger</h1>
         </div>
-        <div className="flex2">
-          <Button
-            title="toggle Dark Mode"
-            variant="contained"
-            className="dark"
-            onClick={theme}
-          >
-            <Brightness4Icon />
-          </Button>
-        </div>
+        <div id='theme-options'>
+        
+          <Button id="blackbtn" title="toggle Dark Mode"  className="dark" onClick={theme} ><Brightness4Icon /></Button>
+          
+          <table>
+
+         <tr>
+           
+            <th>
+       <div id='theme-pink' title="dark pink"
+       onClick={()=>handleClick('theme-pink')}
+       /></th>
+        <th><div id='theme-white' title="original"
+       onClick={()=>handleClick('theme-white')}
+       /></th>
+      <th>
+       <div id='theme-orange' title="orange"
+        onClick={()=>handleClick('theme-orange')}/>
+</th>
+    <th>
+       <div id='theme-purple' title="purple"
+       onClick={()=>handleClick('theme-purple')}
+       />
+</th>
+<th>
+       <div id='theme-green' title="green"
+       onClick={()=>handleClick('theme-green')}/>
+</th>
+</tr>
+
+
+
+
+</table>
+
+     </div>
+     <Button id="themebtn" title="Click for various theme color"className="btntheme" onClick={colorstheme} ><ArrowLeftRoundedIcon/><br></br>Theme Store</Button>
       </nav>
       {
           loading?<CircularProgress className="loading"/>:
@@ -128,6 +189,7 @@ function App() {
                     placeholder="Type a message"
                     onChange={(event) => setInput(event.target.value)}
                     value={input}
+                    onKeyPress={handleKeyPress}
                   />
                   <button
                     className={`btnsend ${dark ? "darkButtonSend" : ""}`}
