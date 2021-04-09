@@ -139,7 +139,7 @@ position:relative;}
   }
   .App.theme-pink .scroll {
    
-    background-color: #99004d;
+    background-color:#ffcce6;
     background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
     linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
     linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
@@ -150,7 +150,7 @@ position:relative;}
     background-color: brown;
   }
   .App.theme-purple .scroll {
-    background-color: #6a0273;
+    background-color: 	 #ecb3ff;
     background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
     linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
     linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
@@ -179,7 +179,7 @@ position:relative;}
     background-color: brown;
   }
   .App.theme-green .scroll {
-    background-color: 	 #4d9900;
+    background-color:  #b3ffb3	;
 background-image: linear-gradient(90deg, transparent 50%,
   rgba(255,255,255,.5) 50%);
 background-size: 50px 50px;
