@@ -55,8 +55,7 @@ body {
 
 input {
   line-height: 25px;
-  min-width: 500px;
-  width: 50vw;
+  width: 98%;
   border-radius: 30px;
   outline-width: 0;
   padding: 10px;
@@ -76,7 +75,7 @@ input {
   margin: auto;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 450px) {
   .Logo {
     width: auto;
     height: 50px;
@@ -118,9 +117,16 @@ footer {
   /* background-color: rgb(0, 50, 77); */
   /* border-top: 2px solid black; */
 }
+
+@media (max-width: 450px) {
+  footer {
+    width: 98%;
+  }
+}
+
 .input {
   margin-top: 7px;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   flex: 1;
 }
 
@@ -140,16 +146,19 @@ footer {
   left: 10px;
 }
 .content__footer {
-  margin: 0 auto;
-  padding-top: 7px;
+  margin: 0;
+  padding-top: 10px;
 }
 .sendNewMessage {
   background-color: #fff;
+  width: 98.5%;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
   padding: 10px;
   border-radius: 8px;
 }
+
 .sendNewMessage button {
   width: 36px;
   height: 36px;
@@ -165,6 +174,19 @@ footer {
   line-height: 36px;
   transition: all 0.3s cubic-bezier(0.88, 0.19, 0.37, 1.11);
 }
+
+@media (max-width: 864px) {
+  .sendNewMessage {
+    width: 97.5%;
+  }
+}
+
+/*@media (max-width: 450px) {
+  .sendNewMessage {
+    width: 90%;
+  }
+}*/
+
 .sendNewMessage > .darkButton {
   color: black !important;
 }
@@ -187,4 +209,11 @@ footer {
 #sendMsgBtn {
   background-color: rgb(0, 50, 77);
   color: #fff;
+}
+
+@media (max-width: 700px) {
+  .sendNewMessage {
+    width: 98.5%;
+    max-width: 700px;
+  }
 }
