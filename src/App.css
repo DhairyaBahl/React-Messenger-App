@@ -120,7 +120,12 @@ footer {
 
 @media (max-width: 450px) {
   footer {
-    width: 98%;
+    width: 99.6%;
+    margin: 0px 1px;
+  }
+  .content__footer {
+    padding-right: 16px;
+    padding-left: 3px;
   }
 }
 
@@ -177,7 +182,7 @@ footer {
 
 @media (max-width: 864px) {
   .sendNewMessage {
-    width: 97.5%;
+    width: 97%;
   }
 }
 
