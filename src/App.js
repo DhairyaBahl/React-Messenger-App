@@ -125,7 +125,11 @@ function App() {
       </nav>
       
       
-     {/* <nav className={`NavBar ${dark ? "BlackNavBar" : ""}`}>
+     {/* 
+     
+     //=================== old navbar ======================
+     
+     <nav className={`NavBar ${dark ? "BlackNavBar" : ""}`}>
         <div className="flex1">
           <img
             className="Logo"
@@ -147,7 +151,12 @@ function App() {
             <Brightness4Icon />
           </Button>
         </div>
-      </nav> */}
+      </nav> 
+      
+      //end of old navbar
+      
+      */}
+    
       {
           loading?<CircularProgress className="loading"/>:
           <>
@@ -221,34 +230,3 @@ const genKey = (function () {
 
 export default App;
 
-
-/*
-
-
-      <nav className={`NavBar ${dark ? "BlackNavBar" : ""}`}>
-        <div className="flex1">
-          <img
-            className="Logo"
-            aspect-ratio="1/1"
-            height="auto"
-            width="82px"
-            src={logo}
-            alt="messenger-logo"
-          />
-          <h1 className={`messenger ${dark ? "blackName" : ""}`}>Messenger</h1>
-        </div>
-        <div className="flex2">
-          <Button
-            title="toggle Dark Mode"
-            variant="contained"
-            className="dark"
-            onClick={theme}
-          >
-            <Brightness4Icon />
-          </Button>
-        </div>
-      </nav>
-
-
-
-*/
