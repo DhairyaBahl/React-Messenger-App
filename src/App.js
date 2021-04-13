@@ -176,7 +176,7 @@ const handleClick=(themec)=>{
             <br />
           </div>
           <div ref={messagesEndRef} />
-          <div className="div__footer">
+          {/* <div className="div__footer"> */}
             <footer className={`${dark ? "footer_dark" : ""}`}>
               <div className="content__footer">
                 <div className="sendNewMessage">
@@ -208,7 +208,7 @@ const handleClick=(themec)=>{
               close={() => setOpenWelcomeDialogBox(false)}
               setUsername={setUsername}
             />
-          </div>
+          {/* </div> */}
         </>
       }
     </div>

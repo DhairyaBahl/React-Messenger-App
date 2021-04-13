@@ -109,8 +109,9 @@ input {
 footer {
   position: fixed;
   bottom: 0;
-  padding-bottom: 5px;
-  height: 11.5%;
+  /* background-color:lightcyan; */
+  padding-bottom: 0;
+  height:9.5%;
   width: 100%;
 
   /* background-color: #014293; */
@@ -122,6 +123,7 @@ footer {
   footer {
     width: 99.6%;
     margin: 0px 1px;
+    height:11.5%;
   }
   .content__footer {
     padding-right: 16px;
@@ -141,9 +143,10 @@ footer {
 }
 
 .footer_dark {
-  color: black;
-  background-color: black;
-  border-top: 1px solid white;
+  color: white;
+  /* background-color: black; */
+  /* border-top: 1px solid white; */
+  padding-bottom:5px;
 }
 
 .iconButton {
@@ -151,14 +154,22 @@ footer {
   left: 10px;
 }
 .content__footer {
-  margin: 0;
-  padding-top: 10px;
+  /* margin: 0; */
+  padding-top:8px ;
+  padding-bottom: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin:0;
+  width: 100%;
 }
 .sendNewMessage {
   background-color: #fff;
-  width: 98.5%;
+  width: 60%;
   max-width: 1400px;
+  margin: 0 auto;
   display: flex;
+  height: 100%;
   justify-content: space-between;
   padding: 10px;
   border-radius: 8px;
@@ -193,11 +204,20 @@ footer {
 }*/
 
 .sendNewMessage > .darkButton {
+
+
+  /*  added by Sristi issue137 */
+  background-color: white !important;
   color: black !important;
 }
 .sendNewMessage > .darkButtonSend {
-  background-color: black !important;
+
+  /*  added by Sristi issue137 */
+  background-color: white !important;
+  background-color: white !important;
+  color:black  !important
 }
+
 .sendNewMessage button:hover {
   transform: scale(1.2);
 }
@@ -210,6 +230,18 @@ footer {
   background-color: transparent;
   border: none;
   outline: none;
+
+}
+
+
+
+.footer_dark .sendNewMessage
+{
+  background-color: black;
+}
+
+.footer_dark input,.footer_dark ::placeholder{
+  color:white;
 }
 #sendMsgBtn {
   background-color: rgb(0, 50, 77);
