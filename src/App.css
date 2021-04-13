@@ -1,7 +1,11 @@
 .App {
   text-align: center;
 }
-
+body {
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
 body {
   background-attachment: fixed;
 }
@@ -12,6 +16,7 @@ body {
     rgba(255, 166, 10, 1) 24%,
     rgba(255, 0, 224, 1) 100%
   );
+  align-self: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -36,7 +41,7 @@ body {
   justify-content: space-between;
   top: 0px;
 }
-
+/* rgb(0, 50, 77) */
 .NavBar div.flex1 {
   display: flex;
   width: 50vw;
@@ -50,8 +55,7 @@ body {
 
 input {
   line-height: 25px;
-  min-width: 500px;
-  width: 50vw;
+  width: 98%;
   border-radius: 30px;
   outline-width: 0;
   padding: 10px;
@@ -61,6 +65,23 @@ input {
 .dark_input {
   background-color: rgb(140, 140, 140);
 }
+.loading {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@media (max-width: 450px) {
+  .Logo {
+    width: auto;
+    height: 50px;
+    align-self: center;
+  }
+}
 
 .messenger {
   font-weight: bold;
@@ -68,30 +89,136 @@ input {
   margin: 0.25em;
 }
 
+@media (min-width: 500px) {
+  .messenger {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .messenger {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 350px) {
+  .messenger {
+    font-size: 20px;
+  }
+}
 footer {
   position: fixed;
   bottom: 0;
-  height: 10%;
+  padding-bottom: 5px;
+  height: 11.5%;
   width: 100%;
+
   /* background-color: #014293; */
-  background-color: rgb(0, 50, 77);
-  border-top: 2px solid black;
+  /* background-color: rgb(0, 50, 77); */
+  /* border-top: 2px solid black; */
+}
+
+@media (max-width: 450px) {
+  footer {
+    width: 99.6%;
+    margin: 0px 1px;
+  }
+  .content__footer {
+    padding-right: 16px;
+    padding-left: 3px;
+  }
 }
 
 .input {
-  margin-top: 10px;
+  margin-top: 7px;
+  margin-bottom: 7px;
   flex: 1;
 }
 
 .BlackNavBar {
   background-color: black !important;
+  border-bottom: 1px solid white;
 }
 
 .footer_dark {
+  color: black;
   background-color: black;
+  border-top: 1px solid white;
 }
 
 .iconButton {
   top: 15px;
   left: 10px;
+}
+.content__footer {
+  margin: 0;
+  padding-top: 10px;
+}
+.sendNewMessage {
+  background-color: #fff;
+  width: 98.5%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.sendNewMessage button {
+  width: 36px;
+  height: 36px;
+  background-color: #ecefff;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(0, 50, 77);
+  padding: 0;
+  border-radius: 5px;
+  line-height: 36px;
+  transition: all 0.3s cubic-bezier(0.88, 0.19, 0.37, 1.11);
+}
+
+@media (max-width: 864px) {
+  .sendNewMessage {
+    width: 97%;
+  }
+}
+
+/*@media (max-width: 450px) {
+  .sendNewMessage {
+    width: 90%;
+  }
+}*/
+
+.sendNewMessage > .darkButton {
+  color: black !important;
+}
+.sendNewMessage > .darkButtonSend {
+  background-color: black !important;
+}
+.sendNewMessage button:hover {
+  transform: scale(1.2);
+}
+.sendNewMessage button i {
+  display: block;
+}
+.sendNewMessage input {
+  flex-grow: 1;
+  padding: 0 15px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+#sendMsgBtn {
+  background-color: rgb(0, 50, 77);
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .sendNewMessage {
+    width: 98.5%;
+    max-width: 700px;
+  }
 }

@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+  }
+  html {
+    height: 100%;
+  }
+  
+  #blackbtn{
+  background-color: blanchedalmond;
+  border-radius: 50%;
+  height: 50px;
+  width: 30px;
+  display: inline;
+  box-shadow: inset 0 5px 5px rgb(24, 24, 20), inset 0 -2px 2px rgba(22, 6, 6, 0.18);
+  }
+  #themebtn{
+    display: inline-block;
+      text-decoration: none;
+    font-size: 12px;
+  font-style:bold;
+  font-family:'Gill Sans';
+      color:black;
+      width: 90px;
+      height: 90px;
+  
+      border-radius: 50%;
+      text-align: center;
+      vertical-align: middle;
+      overflow: hidden;
+      background-image: -webkit-linear-gradient(45deg, #709dff 0%, #91fdb7 100%);    
+      background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
+      transition: .4s;
+   
+  }
+  #themebtn:hover{
+    
+    -webkit-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+  .dropdowndiv{
+  position: relative;
+  }
+  body {
+    background-color: aqua;
+    color: beige;
+    padding: 0;
+    height: 100vh;
+  }
+  #theme-options {
+    width: auto;
+    
+    position: relative;
+    height: auto;
+  
+    
+    padding: 2px 0;
+  
+    opacity: 70%;
+    visibility: hidden;
+  border-color: burlywood;
+  
+  border-width: 12px;
+  border-radius: 12px;
+  }
+  #theme-options div {
+    width: 40px;
+  
+    height: 40px;
+    border-radius: 4px;
+    cursor: grab;
+    margin: 2px 10px;
+    border: 4px solid black;
+    display: inline-block;
+    box-shadow: inset 0 5px 5px rgb(20, 20, 19), inset 0 -2px 2px rgba(22, 6, 6, 0.18);
+    transition: .2s;
+  
+  }
+  #theme-options div:hover{
+    box-shadow: none;
+  }
+  
+  
+  
+  #theme-options  #theme-pink {
+  
+    background-color: #ff0040;
+  
+  }
+  #theme-options  #theme-orange {
+    background-color: #6d695c;
+    background-image:
+    repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+    linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+    background-size: 10px 20px;
+  }
+  #theme-options  #theme-purple {
+    background-color: purple;
+  }
+  #theme-options  #theme-green {
+    background-color: green;
+  }
+  #theme-options  #theme-white {
+    background-color: white;
+  }
+  @media screen and (max-width: 700px) {
+   #theme-btn{
+     width:30px;
+   }
+   #theme-options {
+    position: absolute;
+  
+    bottom: 5px;
+    right: 35%;
+    height: 30px;
+     
+     width:30px;
+   }
+   
+    #theme-options #theme-pink,
+    #theme-options #theme-orange,
+    #theme-options #theme-purple,
+    #theme-options #theme-green,
+    #theme-options #theme-white
+     {
+        width: 100%;
+        
+    }
+    #blackbtn{height: 30px;width: 2px;
+        border-radius: 40%;
+    background-color: cornsilk;
+position:relative;}
+  }
+  
+  .App.theme-pink {
+    background-color: brown;
+  }
+  .App.theme-pink .scroll {
+   
+    background-color:#ffcce6;
+    background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+    linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+    background-size: 13px, 29px, 37px, 53px;;
+  }
+  .App.theme-purple {
+    background-color: brown;
+  }
+  .App.theme-purple .scroll {
+    background-color: 	 #ecb3ff;
+    background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+    linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+    linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+    background-size: 13px, 29px, 37px, 53px;;
+  }
+  .App.theme-white{
+    background-color:white;
+  }
+  .App.theme-white .scroll {
+    background-image:url("https://i.redd.it/qwd83nc4xxf41.jpg");
+  }
+  .App.theme-orange {
+    background-color: brown;
+  }
+  .App.theme-orange .scroll {
+    background-color: #6d695c;
+    background-image:
+    repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+    linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+    background-size: 70px 120px;
+  }
+  .App.theme-green {
+    background-color: brown;
+  }
+  .App.theme-green .scroll {
+    background-color:  #b3ffb3	;
+background-image: linear-gradient(90deg, transparent 50%,
+  rgba(255,255,255,.5) 50%);
+background-size: 50px 50px;
+
+
+  }
