@@ -3,15 +3,13 @@ import { useState, useEffect, useRef } from "react";
 import { Button } from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import logo from "./logo.png";
+import MenuIcon from '@material-ui/icons/Menu';
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Messages from "./components/messages/Messages.js";
 import WelcomeDialogBox from "./WelcomeDialogBox";
 import db from "./firebase.js";
 import firebase from "firebase";
-import './switcher.css';
-import ArrowLeftRoundedIcon from '@material-ui/icons/ArrowLeftRounded';
-
 
 function App() {
   const [loading,setLoading]=useState(false)
@@ -20,8 +18,8 @@ function App() {
   const [username, setUsername] = useState("");
   const [openWelcomeDialogBox, setOpenWelcomeDialogBox] = useState(false);
   const [dark, setDark] = useState(false);
-  const[colorTheme,setColorTheme]=useState('theme-white');
   const messagesEndRef = useRef(null);
+  const [click, setClick] = useState(false);
 
   useEffect(() => {
     setOpenWelcomeDialogBox(true);
@@ -37,17 +35,12 @@ function App() {
         setLoading(false)
       });
   }, []);
-  useEffect(()=>{
-    const currentThemeColor=localStorage.getItem('theme-color');
-    if(currentThemeColor){
-      setColorTheme(currentThemeColor);
-    }
-    
-      },[]);
 
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+  
+  const handleClick = () => setClick(!click);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
@@ -66,13 +59,6 @@ function App() {
     setInput("");
   };
 
-  const handleKeyPress = (event) => {
-    //it triggers by pressing the enter key
-    if (event.key === 'Enter') {
-      newMessage(event);
-    }
-  };
-
   const theme = (event) => {
     if (dark === false) {
       document.body.classList.add("dark-bg");
@@ -82,26 +68,68 @@ function App() {
       setDark(false);
     }
   };
-  let check=true;
-  const colorstheme=()=>{
-if(document.getElementById("theme-options")&& check==true)
-    {check=false;
-      document.getElementById("theme-options").style.visibility = "visible";
-  }
-  else if(document.getElementById("theme-options")&& check==false)
-{
-  check=true;
-      document.getElementById("theme-options").style.visibility = "hidden";
-}
-};
 
-const handleClick=(themec)=>{
-  setColorTheme(themec);
-  localStorage.setItem('theme-color',themec)
-    };
   return (
-    <div className={`App ${colorTheme}`}>
-      <nav className={`NavBar ${dark ? "BlackNavBar" : ""}`}>
+    <div className="App">
+        <nav className="navbar">
+        <div className="nav-container">
+        <img
+                className="Logo"
+                aspect-ratio="1/1"
+                height="auto"
+                width="82px"
+                src={logo}
+                alt="messenger-logo"
+            />  
+            <h1 className={`messenger`}>Messenger</h1> 
+          <a href="/" className="nav-logo">
+          
+          </a>
+
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <a
+                href="/"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="/about"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                About Us
+              </a>
+            </li>
+            <li className="nav-item toggle-nav" style={{border: "none"}}>
+                <Button
+                    title="toggle Dark Mode"
+                    variant="contained"
+                    className="dark toggle-button"
+                    onClick={theme}
+                >
+                    <Brightness4Icon/>
+                </Button>
+            </li>
+          </ul>
+          <div className="nav-icon" onClick={handleClick}>
+            <i><MenuIcon style={{fontSize: "30px", marginTop:"3px"}}/></i>
+          </div>
+        </div>
+      </nav>
+      
+      
+     {/* 
+     
+     //=================== old navbar ======================
+     
+     <nav className={`NavBar ${dark ? "BlackNavBar" : ""}`}>
         <div className="flex1">
           <img
             className="Logo"
@@ -113,44 +141,22 @@ const handleClick=(themec)=>{
           />
           <h1 className={`messenger ${dark ? "blackName" : ""}`}>Messenger</h1>
         </div>
-        <div id='theme-options'>
-        
-          <Button id="blackbtn" title="toggle Dark Mode"  className="dark" onClick={theme} ><Brightness4Icon /></Button>
-          
-          <table>
-
-         <tr>
-           
-            <th>
-       <div id='theme-pink' title="dark pink"
-       onClick={()=>handleClick('theme-pink')}
-       /></th>
-        <th><div id='theme-white' title="original"
-       onClick={()=>handleClick('theme-white')}
-       /></th>
-      <th>
-       <div id='theme-orange' title="orange"
-        onClick={()=>handleClick('theme-orange')}/>
-</th>
-    <th>
-       <div id='theme-purple' title="purple"
-       onClick={()=>handleClick('theme-purple')}
-       />
-</th>
-<th>
-       <div id='theme-green' title="green"
-       onClick={()=>handleClick('theme-green')}/>
-</th>
-</tr>
-
-
-
-
-</table>
-
-     </div>
-     <Button id="themebtn" title="Click for various theme color"className="btntheme" onClick={colorstheme} ><ArrowLeftRoundedIcon/><br></br>Theme Store</Button>
-      </nav>
+        <div className="flex2">
+          <Button
+            title="toggle Dark Mode"
+            variant="contained"
+            className="dark"
+            onClick={theme}
+          >
+            <Brightness4Icon />
+          </Button>
+        </div>
+      </nav> 
+      
+      //end of old navbar
+      
+      */}
+    
       {
           loading?<CircularProgress className="loading"/>:
           <>
@@ -189,7 +195,6 @@ const handleClick=(themec)=>{
                     placeholder="Type a message"
                     onChange={(event) => setInput(event.target.value)}
                     value={input}
-                    onKeyPress={handleKeyPress}
                   />
                   <button
                     className={`btnsend ${dark ? "darkButtonSend" : ""}`}
@@ -224,3 +229,4 @@ const genKey = (function () {
 })();
 
 export default App;
+
