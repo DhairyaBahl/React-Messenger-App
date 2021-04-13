@@ -182,7 +182,7 @@ function App() {
             <br />
           </div>
           <div ref={messagesEndRef} />
-          <div className="div__footer">
+          {/* <div className="div__footer"> */}
             <footer className={`${dark ? "footer_dark" : ""}`}>
               <div className="content__footer">
                 <div className="sendNewMessage">
@@ -213,7 +213,7 @@ function App() {
               close={() => setOpenWelcomeDialogBox(false)}
               setUsername={setUsername}
             />
-          </div>
+          {/* </div> */}
         </>
       }
     </div>
