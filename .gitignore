@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 node_modules
+=======
+/node_modules
+node_modules
+src/Thumbs.db
+>>>>>>> master
 .eslintcache
