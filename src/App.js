@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { Button } from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import logo from "./logo.png";
+import MenuIcon from '@material-ui/icons/Menu';
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Messages from "./components/messages/Messages.js";
@@ -18,6 +19,7 @@ function App() {
   const [openWelcomeDialogBox, setOpenWelcomeDialogBox] = useState(false);
   const [dark, setDark] = useState(false);
   const messagesEndRef = useRef(null);
+  const [click, setClick] = useState(false);
 
   useEffect(() => {
     setOpenWelcomeDialogBox(true);
@@ -37,6 +39,8 @@ function App() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+  
+  const handleClick = () => setClick(!click);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
@@ -67,7 +71,65 @@ function App() {
 
   return (
     <div className="App">
-      <nav className={`NavBar ${dark ? "BlackNavBar" : ""}`}>
+        <nav className="navbar">
+        <div className="nav-container">
+        <img
+                className="Logo"
+                aspect-ratio="1/1"
+                height="auto"
+                width="82px"
+                src={logo}
+                alt="messenger-logo"
+            />  
+            <h1 className={`messenger`}>Messenger</h1> 
+          <a href="/" className="nav-logo">
+          
+          </a>
+
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <a
+                href="/"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Home
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                href="/about"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                About Us
+              </a>
+            </li>
+            <li className="nav-item toggle-nav" style={{border: "none"}}>
+                <Button
+                    title="toggle Dark Mode"
+                    variant="contained"
+                    className="dark toggle-button"
+                    onClick={theme}
+                >
+                    <Brightness4Icon/>
+                </Button>
+            </li>
+          </ul>
+          <div className="nav-icon" onClick={handleClick}>
+            <i><MenuIcon style={{fontSize: "30px", marginTop:"3px"}}/></i>
+          </div>
+        </div>
+      </nav>
+      
+      
+     {/* 
+     
+     //=================== old navbar ======================
+     
+     <nav className={`NavBar ${dark ? "BlackNavBar" : ""}`}>
         <div className="flex1">
           <img
             className="Logo"
@@ -89,7 +151,12 @@ function App() {
             <Brightness4Icon />
           </Button>
         </div>
-      </nav>
+      </nav> 
+      
+      //end of old navbar
+      
+      */}
+    
       {
           loading?<CircularProgress className="loading"/>:
           <>
@@ -115,7 +182,7 @@ function App() {
             <br />
           </div>
           <div ref={messagesEndRef} />
-          <div className="div__footer">
+          {/* <div className="div__footer"> */}
             <footer className={`${dark ? "footer_dark" : ""}`}>
               <div className="content__footer">
                 <div className="sendNewMessage">
@@ -146,7 +213,7 @@ function App() {
               close={() => setOpenWelcomeDialogBox(false)}
               setUsername={setUsername}
             />
-          </div>
+          {/* </div> */}
         </>
       }
     </div>
@@ -162,3 +229,4 @@ const genKey = (function () {
 })();
 
 export default App;
+

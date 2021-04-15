@@ -25,38 +25,175 @@ body {
   color: black;
 }
 
-::placeholder {
-  font-weight: bold;
-  opacity: 1;
-  color: black;
+/*====================== new navbar ==========================*/
+
+:root {
+  --background1: rgb(19, 31, 49);
+  --background2: rgba(13, 18, 26, 0.94);
+  --backgroundforapp: rgb(18, 20, 22);
+  --textcolour: rgb(237, 229, 229);
+  --secondarycolor: #72e9bb;
+  --navbarcolor: #f5b921;
+  --navbarhovercolor: #ffdd41;
 }
 
-.NavBar {
-  background-color: rgb(0, 50, 77);
+.navbar {
+  background-color: rgb(9, 13, 19);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 4px 8px 0 rgba(253, 251, 251, 0.2),
+    0 6px 10px 0 rgba(196, 168, 168, 0.844);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  border-bottom: 2px solid black;
-  height: 100px;
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  top: 0px;
-}
-/* rgb(0, 50, 77) */
-.NavBar div.flex1 {
-  display: flex;
-  width: 50vw;
-  margin: 1%;
+  height: 80px;
+  max-width: 1500px;
 }
 
-.NavBar div.flex2 {
-  align-self: center;
-  margin: 1%;
+.nav-logo {
+  color: var(--secondarycolor);
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  flex-grow: 1;
 }
+
+a {
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+.nav-links {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+}
+.fa-code {
+  margin-left: 1rem;
+}
+
+.nav-item {
+  line-height: 40px;
+  margin-right: 1rem;
+  outline: 2px solid var(--secondarycolor);
+}
+
+.toggle-nav {
+  outline: none;
+}
+.nav-item:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.7s ease, black 0.5s ease;
+}
+
+.nav-item:hover:after {
+  width: 100%;
+  background: var(--secondarycolor);
+}
+
+.nav-item a:active {
+  color: var(--secondarycolor);
+  border: 1px solid var(--secondarycolor);
+}
+
+.nav-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1pxsolid #fff;
+    position: absolute;
+    top: 60px;
+    left: -110%;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: rgb(22, 21, 21);
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .nav-item a:active {
+    border: none;
+  }
+  .nav-item {
+    color: var(--secondarycolor);
+    border: none;
+    margin: 25px 0px;
+    outline: none;
+  }
+
+  .nav-item:hover {
+    transform: scale(1.2);
+  }
+
+  .nav-item:hover:after {
+    width: 100%;
+    background: var(--secondarycolor);
+  }
+
+  .toggle-nav:hover:after {
+    background: none;
+  }
+
+  .nav-links {
+    padding: 1.5rem;
+    margin-left: -70px;
+    border: none;
+  }
+
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: rgb(252, 249, 249);
+  }
+
+  .toggle-button {
+    margin-right: 70px !important;
+  }
+}
+
+/* ================== end of new navbar ==================== */
 
 input {
   line-height: 25px;
-  min-width: 500px;
-  width: 50vw;
+  width: 98%;
   border-radius: 30px;
   outline-width: 0;
   padding: 10px;
@@ -76,7 +213,7 @@ input {
   margin: auto;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 450px) {
   .Logo {
     width: auto;
     height: 50px;
@@ -110,17 +247,31 @@ input {
 footer {
   position: fixed;
   bottom: 0;
-  padding-bottom: 5px;
-  height: 11.5%;
+  /* background-color:lightcyan; */
+  padding-bottom: 0;
+  height:9.5%;
   width: 100%;
 
   /* background-color: #014293; */
   /* background-color: rgb(0, 50, 77); */
   /* border-top: 2px solid black; */
 }
+
+@media (max-width: 450px) {
+  footer {
+    width: 99.6%;
+    margin: 0px 1px;
+    height:11.5%;
+  }
+  .content__footer {
+    padding-right: 16px;
+    padding-left: 3px;
+  }
+}
+
 .input {
   margin-top: 7px;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   flex: 1;
 }
 
@@ -130,9 +281,10 @@ footer {
 }
 
 .footer_dark {
-  color: black;
-  background-color: black;
-  border-top: 1px solid white;
+  color: white;
+  /* background-color: black; */
+  /* border-top: 1px solid white; */
+  padding-bottom:5px;
 }
 
 .iconButton {
@@ -140,16 +292,27 @@ footer {
   left: 10px;
 }
 .content__footer {
-  margin: 0 auto;
-  padding-top: 7px;
+  /* margin: 0; */
+  padding-top:8px ;
+  padding-bottom: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin:0;
+  width: 100%;
 }
 .sendNewMessage {
   background-color: #fff;
+  width: 60%;
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
+  height: 100%;
   justify-content: space-between;
   padding: 10px;
   border-radius: 8px;
 }
+
 .sendNewMessage button {
   width: 36px;
   height: 36px;
@@ -165,12 +328,34 @@ footer {
   line-height: 36px;
   transition: all 0.3s cubic-bezier(0.88, 0.19, 0.37, 1.11);
 }
+
+@media (max-width: 864px) {
+  .sendNewMessage {
+    width: 97%;
+  }
+}
+
+/*@media (max-width: 450px) {
+  .sendNewMessage {
+    width: 90%;
+  }
+}*/
+
 .sendNewMessage > .darkButton {
+
+
+  /*  added by Sristi issue137 */
+  background-color: white !important;
   color: black !important;
 }
 .sendNewMessage > .darkButtonSend {
-  background-color: black !important;
+
+  /*  added by Sristi issue137 */
+  background-color: white !important;
+  background-color: white !important;
+  color:black  !important
 }
+
 .sendNewMessage button:hover {
   transform: scale(1.2);
 }
@@ -183,8 +368,27 @@ footer {
   background-color: transparent;
   border: none;
   outline: none;
+
+}
+
+
+
+.footer_dark .sendNewMessage
+{
+  background-color: black;
+}
+
+.footer_dark input,.footer_dark ::placeholder{
+  color:white;
 }
 #sendMsgBtn {
   background-color: rgb(0, 50, 77);
   color: #fff;
+}
+
+@media (max-width: 700px) {
+  .sendNewMessage {
+    width: 98.5%;
+    max-width: 700px;
+  }
 }
