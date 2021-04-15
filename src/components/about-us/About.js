@@ -9,7 +9,7 @@ const About = () => {
     <div>
         <Grid container spacing={2} className="main" id="about">
             <Grid item xs={12} sm={12} md={12} lg={12} style={{marginBottom: "-20px"}}>
-            <h1 id="brand">React Messengar App</h1>
+            <h1 id="brand">React Messenger App</h1>
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={6}>
             <div className="main__img--container">
