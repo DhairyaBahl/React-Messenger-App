@@ -32,7 +32,7 @@ body {
   --background2: rgba(13, 18, 26, 0.94);
   --backgroundforapp: rgb(18, 20, 22);
   --textcolour: rgb(237, 229, 229);
-  --secondarycolor: #72e9bb;
+  --secondarycolor: #8735d0;
   --navbarcolor: #f5b921;
   --navbarhovercolor: #ffdd41;
 }
@@ -249,7 +249,7 @@ footer {
   bottom: 0;
   /* background-color:lightcyan; */
   padding-bottom: 0;
-  height:9.5%;
+  height: 9.5%;
   width: 100%;
 
   /* background-color: #014293; */
@@ -261,7 +261,7 @@ footer {
   footer {
     width: 99.6%;
     margin: 0px 1px;
-    height:11.5%;
+    height: 11.5%;
   }
   .content__footer {
     padding-right: 16px;
@@ -284,7 +284,7 @@ footer {
   color: white;
   /* background-color: black; */
   /* border-top: 1px solid white; */
-  padding-bottom:5px;
+  padding-bottom: 5px;
 }
 
 .iconButton {
@@ -293,12 +293,12 @@ footer {
 }
 .content__footer {
   /* margin: 0; */
-  padding-top:8px ;
+  padding-top: 8px;
   padding-bottom: 0;
   position: fixed;
   left: 0;
   bottom: 0;
-  margin:0;
+  margin: 0;
   width: 100%;
 }
 .sendNewMessage {
@@ -342,18 +342,15 @@ footer {
 }*/
 
 .sendNewMessage > .darkButton {
-
-
   /*  added by Sristi issue137 */
   background-color: white !important;
   color: black !important;
 }
 .sendNewMessage > .darkButtonSend {
-
   /*  added by Sristi issue137 */
   background-color: white !important;
   background-color: white !important;
-  color:black  !important
+  color: black !important;
 }
 
 .sendNewMessage button:hover {
@@ -368,18 +365,15 @@ footer {
   background-color: transparent;
   border: none;
   outline: none;
-
 }
 
-
-
-.footer_dark .sendNewMessage
-{
+.footer_dark .sendNewMessage {
   background-color: black;
 }
 
-.footer_dark input,.footer_dark ::placeholder{
-  color:white;
+.footer_dark input,
+.footer_dark ::placeholder {
+  color: white;
 }
 #sendMsgBtn {
   background-color: rgb(0, 50, 77);
