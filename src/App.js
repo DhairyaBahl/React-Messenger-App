@@ -48,6 +48,10 @@ function App() {
     messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
   };
 
+
+
+  
+
   const newMessage = (event) => {
     event.preventDefault();
     //setMessages([...messages,{message:input,username:username}]);
