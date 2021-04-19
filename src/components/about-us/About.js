@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import logo from "../../logo.png";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import "./Abouts.css";
+
 
 const About = () => {
     return (
