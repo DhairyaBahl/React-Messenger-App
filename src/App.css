@@ -247,14 +247,9 @@ input {
 footer {
   position: fixed;
   bottom: 0;
-  /* background-color:lightcyan; */
   padding-bottom: 0;
   height: 9.5%;
   width: 100%;
-
-  /* background-color: #014293; */
-  /* background-color: rgb(0, 50, 77); */
-  /* border-top: 2px solid black; */
 }
 
 @media (max-width: 450px) {
@@ -287,10 +282,6 @@ footer {
   padding-bottom: 5px;
 }
 
-.iconButton {
-  top: 15px;
-  left: 10px;
-}
 .content__footer {
   /* margin: 0; */
   padding-top: 8px;
@@ -301,8 +292,14 @@ footer {
   margin: 0;
   width: 100%;
 }
+.iconButton {
+  top: 15px;
+  left: 10px;
+}
+
 .sendNewMessage {
-  background-color: #fff;
+  background-color: rgb(235, 235, 235);
+  border: 3px solid #d0d0d0;
   width: 60%;
   max-width: 1400px;
   margin: 0 auto;
@@ -335,19 +332,10 @@ footer {
   }
 }
 
-/*@media (max-width: 450px) {
-  .sendNewMessage {
-    width: 90%;
-  }
-}*/
-
 .sendNewMessage > .darkButton {
-  /*  added by Sristi issue137 */
-  background-color: white !important;
   color: black !important;
 }
 .sendNewMessage > .darkButtonSend {
-  /*  added by Sristi issue137 */
   background-color: white !important;
   background-color: white !important;
   color: black !important;
