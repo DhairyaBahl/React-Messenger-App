@@ -5,7 +5,6 @@ import Brightness4Icon from "@material-ui/icons/Brightness4";
 import logo from "./logo.png";
 import MenuIcon from '@material-ui/icons/Menu';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Messages from "./components/messages/Messages.js";
 import WelcomeDialogBox from "./WelcomeDialogBox";
@@ -47,13 +46,8 @@ function App() {
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
   };
-
-
-
-  
-
   const newMessage = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     //setMessages([...messages,{message:input,username:username}]);
     if (input.trim() !== "") {
       db.collection("messages").add({
@@ -64,7 +58,14 @@ function App() {
     }
     setInput("");
   };
-
+  const handleKeypress = (event) => {
+    console.log("yes")
+    //it triggers by pressing the enter key
+  if (event.key === 'Enter') {
+    console.log("13");
+    newMessage()
+  }
+};
   const theme = (event) => {
     if (dark === false) {
       document.body.classList.add("dark-bg");
@@ -187,6 +188,7 @@ function App() {
                         placeholder="Type a message"
                         onChange={(event) => setInput(event.target.value)}
                         value={input}
+                        onKeyPress={handleKeypress}
                     />
                     <button
                         className={`btnsend ${dark ? "darkButtonSend" : ""}`}
@@ -194,6 +196,7 @@ function App() {
                         type="submit"
                         variant="contained"
                         onClick={newMessage}
+                        
                     >
                         <i className="fa fa-paper-plane"></i>
                     </button>
