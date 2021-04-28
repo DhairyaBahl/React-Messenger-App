@@ -1,0 +1,23 @@
+.contactForm {
+  width: 97%;
+}
+
+.container {
+  margin: 0% 19%;
+}
+
+@media screen and (max-width: 820px) {
+  .contactForm {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contactForm {
+    width: 90%;
+  }
+
+  .container {
+    margin: 0% 14%;
+  }
+}
