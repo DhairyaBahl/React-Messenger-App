@@ -5,12 +5,15 @@ import Brightness4Icon from "@material-ui/icons/Brightness4";
 import logo from "./logo.png";
 import MenuIcon from '@material-ui/icons/Menu';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Messages from "./components/messages/Messages.js";
 import WelcomeDialogBox from "./WelcomeDialogBox";
 import db from "./firebase.js";
 import firebase from "firebase";
 import About from "./components/about-us/About";
+import Footer from "./components/footer/footer";
+import ContactForm from "./components/contactForm/contactForm";
 
 function App() {
   const [loading,setLoading]=useState(false)
@@ -46,8 +49,13 @@ function App() {
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
   };
+
+
+
+  
+
   const newMessage = (event) => {
-    // event.preventDefault();
+    //event.preventDefault();
     //setMessages([...messages,{message:input,username:username}]);
     if (input.trim() !== "") {
       db.collection("messages").add({
@@ -58,6 +66,7 @@ function App() {
     }
     setInput("");
   };
+
   const handleKeypress = (event) => {
     console.log("yes")
     //it triggers by pressing the enter key
@@ -143,6 +152,8 @@ function App() {
       
       <Route path="/about">
       <About />
+      <ContactForm />
+      <Footer />
       </Route>
     
     {/*========================== home page ============================*/}
@@ -187,8 +198,8 @@ function App() {
                         type="text"
                         placeholder="Type a message"
                         onChange={(event) => setInput(event.target.value)}
-                        value={input}
                         onKeyPress={handleKeypress}
+                        value={input}
                     />
                     <button
                         className={`btnsend ${dark ? "darkButtonSend" : ""}`}
@@ -196,7 +207,6 @@ function App() {
                         type="submit"
                         variant="contained"
                         onClick={newMessage}
-                        
                     >
                         <i className="fa fa-paper-plane"></i>
                     </button>
