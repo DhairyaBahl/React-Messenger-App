@@ -1,3 +1,4 @@
+import emailjs from "emailjs-com";
 import React from 'react';
 import {TextField} from '@material-ui/core';
 import {Card, CardHeader, CardContent} from '@material-ui/core';
@@ -11,6 +12,20 @@ import "./contactForm.css";
 
 
 export default function ContactUs() {
+    
+    function sendEmail(e) {
+        e.preventDefault();
+     
+        // NOTE: make sure the below required API KEYS are configured in email js website!
+
+    emailjs.sendForm("SERVICE_ID", "TEMPLATE_ID", e.target, "USER_ID")
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+        e.target.reset()
+    }
 
     return(
         <div style={{color:"#131313"}} lg="12">
@@ -21,7 +36,7 @@ export default function ContactUs() {
           <CardHeader title="Contact Us"/>
         </Card>
         <CardContent>
-            <form>
+            <form onSubmit={sendEmail}>
                         <Grid item md={12} sm={12} xs={12} lg={12}>
                             <TextField
                             margin="dense"
