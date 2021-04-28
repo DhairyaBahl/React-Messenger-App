@@ -374,3 +374,16 @@ footer {
     max-width: 700px;
   }
 }
+
+@media (max-width: 790px) {
+  .sendNewMessage {
+    width: 95%;
+  }
+}
+
+@media (max-width: 430px) {
+  .sendNewMessage {
+    width: 90%;
+    margin-right: 8px;
+  }
+}
