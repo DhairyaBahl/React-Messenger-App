@@ -4,7 +4,7 @@ import { Button } from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import logo from "./logo.png";
 import MenuIcon from '@material-ui/icons/Menu';
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Messages from "./components/messages/Messages.js";
 import WelcomeDialogBox from "./WelcomeDialogBox";
@@ -93,30 +93,30 @@ function App() {
             alt="messenger-logo"
         />  
         <h1 className={`messenger`}>Messenger</h1> 
-      <a href="/" className="nav-logo">
+      <Link href="/" className="nav-logo">
       
-      </a>
+      </Link>
 
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li className="nav-item">
-          <a
-            href="/"
+          <Link
+            to="/"
             activeClassName="active"
             className="nav-links"
             onClick={handleClick}
           >
             Home
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a
-            href="/about"
+          <Link
+            to="/about"
             activeClassName="active"
             className="nav-links"
             onClick={handleClick}
           >
             About Us
-          </a>
+          </Link>
         </li>
         <li className="nav-item toggle-nav" style={{border: "none"}}>
             <Button
