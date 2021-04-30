@@ -4,8 +4,7 @@ import { Button } from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import logo from "./logo.png";
 import MenuIcon from '@material-ui/icons/Menu';
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-
+import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Messages from "./components/messages/Messages.js";
 import WelcomeDialogBox from "./WelcomeDialogBox";
@@ -47,13 +46,8 @@ function App() {
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
   };
-
-
-
-  
-
   const newMessage = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     //setMessages([...messages,{message:input,username:username}]);
     if (input.trim() !== "") {
       db.collection("messages").add({
@@ -64,7 +58,14 @@ function App() {
     }
     setInput("");
   };
-
+  const handleKeypress = (event) => {
+    console.log("yes")
+    //it triggers by pressing the enter key
+  if (event.key === 'Enter') {
+    console.log("13");
+    newMessage()
+  }
+};
   const theme = (event) => {
     if (dark === false) {
       document.body.classList.add("dark-bg");
@@ -92,30 +93,30 @@ function App() {
             alt="messenger-logo"
         />  
         <h1 className={`messenger`}>Messenger</h1> 
-      <a href="/" className="nav-logo">
+      <Link href="/" className="nav-logo">
       
-      </a>
+      </Link>
 
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li className="nav-item">
-          <a
-            href="/"
+          <Link
+            to="/"
             activeClassName="active"
             className="nav-links"
             onClick={handleClick}
           >
             Home
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a
-            href="/about"
+          <Link
+            to="/about"
             activeClassName="active"
             className="nav-links"
             onClick={handleClick}
           >
             About Us
-          </a>
+          </Link>
         </li>
         <li className="nav-item toggle-nav" style={{border: "none"}}>
             <Button
@@ -187,6 +188,7 @@ function App() {
                         placeholder="Type a message"
                         onChange={(event) => setInput(event.target.value)}
                         value={input}
+                        onKeyPress={handleKeypress}
                     />
                     <button
                         className={`btnsend ${dark ? "darkButtonSend" : ""}`}
@@ -194,6 +196,7 @@ function App() {
                         type="submit"
                         variant="contained"
                         onClick={newMessage}
+                        
                     >
                         <i className="fa fa-paper-plane"></i>
                     </button>
