@@ -4,7 +4,7 @@ import { Button } from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import logo from "./logo.png";
 import MenuIcon from '@material-ui/icons/Menu';
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Messages from "./components/messages/Messages.js";
@@ -14,6 +14,8 @@ import firebase from "firebase";
 import About from "./components/about-us/About";
 import Footer from "./components/footer/footer";
 import ContactForm from "./components/contactForm/contactForm";
+import Login from "./components/auth/login";
+import Signup from "./components/auth/signup";
 
 function App() {
   const [loading,setLoading]=useState(false)
@@ -102,30 +104,40 @@ function App() {
             alt="messenger-logo"
         />  
         <h1 className={`messenger`}>Messenger</h1> 
-      <a href="/" className="nav-logo">
+      <Link to="/" className="nav-logo">
       
-      </a>
+      </Link>
 
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li className="nav-item">
-          <a
-            href="/"
+          <Link
+            to="/"
             activeClassName="active"
             className="nav-links"
             onClick={handleClick}
           >
             Home
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a
-            href="/about"
+          <Link
+            to="/login"
+            activeClassName="active"
+            className="nav-links"
+            onClick={handleClick}
+          >
+            Login/Signup
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            to="/about"
             activeClassName="active"
             className="nav-links"
             onClick={handleClick}
           >
             About Us
-          </a>
+          </Link>
         </li>
         <li className="nav-item toggle-nav" style={{border: "none"}}>
             <Button
@@ -148,13 +160,24 @@ function App() {
            
      <Switch>
 
-      {/*========================== about us ============================*/}
+    {/*========================== about us ============================*/}
       
       <Route path="/about">
       <About />
       <ContactForm />
       <Footer />
       </Route>
+      
+    {/*========================== about us ============================*/}
+      
+      <Route path="/login">
+      <Login />
+      </Route>
+
+      <Route path="/signup">
+      <Signup />
+      </Route>
+
     
     {/*========================== home page ============================*/}
 
@@ -196,7 +219,7 @@ function App() {
                     <input
                         className={`input ${dark ? "dark_input" : "light_input"}`}
                         type="text"
-                        placeholder="Type a message"
+                        placeholder="Type Link message"
                         onChange={(event) => setInput(event.target.value)}
                         onKeyPress={handleKeypress}
                         value={input}
