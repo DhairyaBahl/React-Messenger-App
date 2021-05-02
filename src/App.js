@@ -11,7 +11,9 @@ import WelcomeDialogBox from "./WelcomeDialogBox";
 import db from "./firebase.js";
 import firebase from "firebase";
 import About from "./components/about-us/About";
-
+import 'emoji-mart/css/emoji-mart.css';
+import { Picker } from 'emoji-mart';
+import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 function App() {
   const [loading,setLoading]=useState(false)
   const [input, setInput] = useState("");
@@ -21,7 +23,7 @@ function App() {
   const [dark, setDark] = useState(false);
   const messagesEndRef = useRef(null);
   const [click, setClick] = useState(false);
-
+  const [showEmojis, setshowEmojis] = useState(false);
   useEffect(() => {
     setOpenWelcomeDialogBox(true);
   }, []);
@@ -75,6 +77,26 @@ function App() {
       setDark(false);
     }
   };
+  const addEmoji = (e) => {
+    let emoji = e.native;
+    let newinput= [...input,emoji];
+    let newstring=newinput.join("");
+    setInput(newstring);
+  };
+  const emojiToggle = (e) => {
+    console.log("in emojiToggle");
+    if(showEmojis === true)
+    {
+      setshowEmojis(false);
+      console.log("picker not visible");
+    }
+    else
+    {
+      setshowEmojis(true);
+      console.log("picker visible");
+    }
+  };
+  
 
   return (
 
@@ -182,6 +204,9 @@ function App() {
                     <button className={`addfiles ${dark ? "darkButton" : ""}`}>
                         <i className="fa fa-plus"></i>
                     </button>
+                    <button className="EmojiToggle"><InsertEmoticonIcon onClick={emojiToggle}/></button>
+                  { showEmojis && <span className="EmojiPicker"><Picker onSelect={addEmoji}/></span> }
+
                     <input
                         className={`input ${dark ? "dark_input" : "light_input"}`}
                         type="text"
