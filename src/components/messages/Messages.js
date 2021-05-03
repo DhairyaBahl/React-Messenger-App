@@ -21,7 +21,7 @@ const ReadMore = ({ children, length = 180 }) => {
 };
 
 function Messages(props){
-  const isUser=props.messages.username===props.username;
+  const isUser=props.messages.uid===props.uid;
   return (
     <div className="message_div" >
       <h5 className={`sender ${props.dark?"senderDark":""}`} >{`${isUser?"":props.messages.username===null?"Unknown user":props.messages.username}`}</h5>
