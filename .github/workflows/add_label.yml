@@ -1,23 +1,18 @@
-name: Add Labels 
-# The events that triggers the workflow
+name: Check for gssoc participation
+
 on:
   pull_request_target:
-    branches:
-      - master
-    types:
-      - opened
+    types: [opened]
 
 jobs:
-  add-label:
-    name: Add Labels
-    # The machine each job should run
+  auto-response:
     runs-on: ubuntu-latest
-    # The tasks each job should run
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: christianvuerings/add-labels@v1
-        with:
-          labels: |
-            gssoc21
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - uses: derekprior/add-autoresponse@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        respondableId: ${{ github.event.pull_request.node_id }}
+        response: "Are you a GSSOC  participant ? Write YES or NO only in the comment section ."
+        author: ${{ github.event.pull_request.user.login }}
