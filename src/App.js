@@ -23,6 +23,7 @@ function App() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [username, setUsername] = useState("");
+  const [uid, setUid] = useState("");
   const [openWelcomeDialogBox, setOpenWelcomeDialogBox] = useState(false);
   const [dark, setDark] = useState(false);
   const messagesEndRef = useRef(null);
@@ -64,6 +65,7 @@ function App() {
     if (input.trim() !== "") {
       db.collection("messages").add({
         username: username,
+        uid: uid,
         message: input,
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
       });
@@ -199,6 +201,7 @@ function App() {
                 <Messages
                     messages={message}
                     username={username}
+                    uid={uid}
                     dark={dark}
                     key={genKey()}
                 />
@@ -244,6 +247,7 @@ function App() {
                 open={openWelcomeDialogBox}
                 close={() => setOpenWelcomeDialogBox(false)}
                 setUsername={setUsername}
+                setUid={setUid}
                 />
             </div>
             </>

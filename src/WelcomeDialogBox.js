@@ -5,9 +5,9 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
-
+import { v4 as uuidv4 } from "uuid"
 export default function WelcomeDialogBox(props) {
-  const [name, setName] = React.useState("");
+  const [name, setName] = React.useState("");  
   const [err, setErr] = React.useState(false);
   const [txt, setTxt] = React.useState("");
 
@@ -19,6 +19,7 @@ export default function WelcomeDialogBox(props) {
       setErr(false);
       setTxt("");
       props.setUsername(name);
+      props.setUid(uuidv4());
       props.close();
     }
   };
