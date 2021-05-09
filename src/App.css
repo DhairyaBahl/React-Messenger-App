@@ -11,6 +11,7 @@ body {
 }
 
 .messenger {
+ 
   background: -webkit-linear-gradient(
     45deg,
     rgb(133, 29, 186) 15%,
@@ -19,10 +20,11 @@ body {
   align-self: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  
 }
 
 .blackName {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 /*====================== new navbar ==========================*/
@@ -38,8 +40,8 @@ body {
 }
 
 .navbar {
-  background-color: rgb(9, 13, 19);
-  height: 80px;
+  background-color: rgb(255, 255, 255);
+  height: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,15 +50,27 @@ body {
   top: 0;
   z-index: 20;
   box-shadow: 0 4px 8px 0 rgba(253, 251, 251, 0.2),
-    0 6px 10px 0 rgba(196, 168, 168, 0.844);
+    0 6px 10px 0 rgba(173, 173, 173, 0.844);
 }
-
+.nav_dark {
+  background-color: rgb(0, 0, 0);
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 4px 8px 0 rgba(253, 251, 251, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.844);
+}
 .nav-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 80px;
+  height: 0px;
   max-width: 1500px;
 }
 
@@ -82,12 +96,21 @@ a {
 }
 
 .nav-links {
-  color: #fff;
+  /* color: #fff; */
+  background: -webkit-linear-gradient(
+    45deg,
+    rgb(133, 29, 186) 15%,
+    rgba(255, 0, 224, 1) 100%
+  );
+  align-self: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
   border-bottom: 3px solid transparent;
 }
+
 .fa-code {
   margin-left: 1rem;
 }
@@ -95,11 +118,13 @@ a {
 .nav-item {
   line-height: 40px;
   margin-right: 1rem;
-  outline: 2px solid var(--secondarycolor);
+  /* outline: 2px solid var(--secondarycolor); */
 }
 
 .toggle-nav {
   outline: none;
+  background-color: rgba(128, 0, 128, 0);
+
 }
 .nav-item:after {
   content: "";
@@ -109,15 +134,17 @@ a {
   background: transparent;
   transition: width 0.7s ease, black 0.5s ease;
 }
-
+.darkthemeicon {
+  color:rgb(148, 3, 148);
+}
 .nav-item:hover:after {
   width: 100%;
   background: var(--secondarycolor);
 }
 
 .nav-item a:active {
-  color: var(--secondarycolor);
-  border: 1px solid var(--secondarycolor);
+  /* color: var(--secondarycolor); */
+  /* border: 1px solid var(--secondarycolor); */
 }
 
 .nav-icon {
@@ -148,7 +175,7 @@ a {
     border: none;
   }
   .nav-item {
-    color: var(--secondarycolor);
+    /* color: var(--secondarycolor); */
     border: none;
     margin: 25px 0px;
     outline: none;
@@ -160,7 +187,7 @@ a {
 
   .nav-item:hover:after {
     width: 100%;
-    background: var(--secondarycolor);
+    /* background: var(--secondarycolor); */
   }
 
   .toggle-nav:hover:after {
@@ -216,7 +243,7 @@ input {
 @media (max-width: 450px) {
   .Logo {
     width: auto;
-    height: 50px;
+    height: 20px;
     align-self: center;
   }
 }

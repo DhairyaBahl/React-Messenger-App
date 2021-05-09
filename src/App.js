@@ -17,6 +17,7 @@ import ContactForm from "./components/contactForm/contactForm";
 import 'emoji-mart/css/emoji-mart.css';
 import { Picker } from 'emoji-mart';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
+import { purple } from "@material-ui/core/colors";
 
 function App() {
   const [loading,setLoading]=useState(false)
@@ -118,17 +119,17 @@ function App() {
 
     {/*================ NavBar. Common across all routes ======================*/}
 
-    <nav className="navbar">
+    <nav className={`${dark ? "nav_dark" : "navbar"}`}>
     <div className="nav-container">
     <img
             className="Logo"
             aspect-ratio="1/1"
             height="auto"
-            width="82px"
+            width="50px"
             src={logo}
             alt="messenger-logo"
         />  
-        <h1 className={`messenger`}>Messenger</h1> 
+        <h1    style={{fontSize: "25px"}} className={`messenger`}>Messenger</h1> 
       <a href="/" className="nav-logo">
       
       </a>
@@ -157,11 +158,10 @@ function App() {
         <li className="nav-item toggle-nav" style={{border: "none"}}>
             <Button
                 title="toggle Dark Mode"
-                variant="contained"
                 className="dark toggle-button"
                 onClick={theme}
             >
-                <Brightness4Icon/>
+                <Brightness4Icon className="darkthemeicon"/>
             </Button>
         </li>
       </ul>
