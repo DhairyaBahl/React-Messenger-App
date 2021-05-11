@@ -26,7 +26,6 @@ export default function ContactUs() {
     );
     e.target.reset();
   }
-
     return(
         // <div style={{color:"#131313"}} lg="12">
         // <div style={{backgroundColor:"#131313", paddingTop:"100px"}}>
