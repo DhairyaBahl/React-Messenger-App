@@ -28,6 +28,7 @@ function App() {
   const [openWelcomeDialogBox, setOpenWelcomeDialogBox] = useState(false);
   const [dark, setDark] = useState(false);
   const messagesEndRef = useRef(null);
+  const inputElement = useRef(null);
   const [click, setClick] = useState(false);
   const [showEmojis, setshowEmojis] = useState(false);
 
@@ -94,9 +95,10 @@ function App() {
   
   const addEmoji = (e) => {
     let emoji = e.native;
-    let newinput= [...input,emoji];
-    let newstring=newinput.join("");
-    setInput(newstring);
+    let cursorPositionStart = inputElement.current.selectionStart;
+    let newinput= input.slice(0, cursorPositionStart) + emoji + input.slice(cursorPositionStart);
+    setInput(newinput);
+    inputElement.current.focus()
   };
   const emojiToggle = (e) => {
     console.log("in emojiToggle");
@@ -224,6 +226,7 @@ function App() {
                     <button className="EmojiToggle"><InsertEmoticonIcon onClick={emojiToggle}/></button>
                  { showEmojis && <span className="EmojiPicker"><Picker onSelect={addEmoji}/></span> }
                     <input
+                        ref={inputElement}
                         className={`input ${dark ? "dark_input" : "light_input"}`}
                         type="text"
                         placeholder="Type a message"
