@@ -12,12 +12,10 @@ function footer() {
         <div class="footer__links">
             <div>
             <div class="footer-open-source">
-                <h2>Open Source Contribution</h2>
-                <p>Yours contributions are most welcomed!</p>
-                <div class="social__icons github" style={{display: "flex", justifyContent:"center"}}>
-                <a href="https://github.com/DhairyaBahl/React-Messenger-App" class="social__icon--link"
-                ><GitHubIcon style={{marginTop:"15px", fontSize:"30px"}}/></a>
-            </div>
+                <h2 style={{marginBottom:"-10px"}}><a href="https://github.com/DhairyaBahl/React-Messenger-App" class="social__icon--link"
+                ><GitHubIcon/></a>pen Source Contribution</h2>
+                {/* <p style={{marginBottom:"-40px"}}>Yours contributions are most welcomed!</p> */}
+            
             </div>
             </div>
         </div>
@@ -26,8 +24,10 @@ function footer() {
             <div class="footer__logo">
                 <a href="/" id="footer__logo">MESSENGER</a>
             </div>
-            <p class="website__rights">© MESSENGER 2021. All rights reserved.</p>
+            <p class="website__rights" >© MESSENGER 2021. All rights reserved.</p>
             <div class="social__icons">
+                <a href="https://github.com/DhairyaBahl/React-Messenger-App" class="social__icon--link"
+                ><GitHubIcon/></a>
                 <a href="mailto:dhairyabahl5@gmail.com" class="social__icon--link"
                 ><MailIcon style={{fontSize:"30px"}}/></a>
                 <a href="" class="social__icon--link"
