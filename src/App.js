@@ -5,7 +5,7 @@ import Brightness4Icon from "@material-ui/icons/Brightness4";
 import logo from "./logo.png";
 import MenuIcon from '@material-ui/icons/Menu';
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
-
+import Messagesentaudio from "./sound/MessageSound.mp3";
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Messages from "./components/messages/Messages.js";
 import WelcomeDialogBox from "./WelcomeDialogBox";
@@ -70,8 +70,10 @@ function App() {
         message: input,
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
       });
+      new Audio(Messagesentaudio).play();
     }
     setInput("");
+    
   };
 
   const handleKeypress = (event) => {
@@ -236,6 +238,7 @@ function App() {
                         id="sendMsgBtn"
                         type="submit"
                         variant="contained"
+                        crossOrigin="anonymous"
                         onClick={newMessage}
                     >
                         <i className="fa fa-paper-plane"></i>
