@@ -32,7 +32,7 @@ function footer() {
                 ><MailIcon style={{fontSize:"30px"}}/></a>
                 <a href="" class="social__icon--link"
                 ><InstagramIcon style={{fontSize:"30px"}}/></a>
-                <a href="/https://twitter.com/bahldhairya" class="social__icon--link"
+                <a href="https://twitter.com/bahldhairya" class="social__icon--link"
                 ><TwitterIcon style={{fontSize:"30px"}}/></a>
             </div>
             </div>
