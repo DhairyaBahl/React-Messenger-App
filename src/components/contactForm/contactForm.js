@@ -1,31 +1,31 @@
 import emailjs from "emailjs-com";
-import React from 'react';
-import {TextField} from '@material-ui/core';
-import {Card, CardHeader, CardContent} from '@material-ui/core';
-import EmailIcon from '@material-ui/icons/Email';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import SubjectIcon from '@material-ui/icons/Subject';
-import PersonIcon from '@material-ui/icons/Person';
-import { TextareaAutosize } from '@material-ui/core';
-import {Paper, Grid} from '@material-ui/core';
+import React from "react";
+import { TextField } from "@material-ui/core";
+import { Card, CardHeader, CardContent } from "@material-ui/core";
+import EmailIcon from "@material-ui/icons/Email";
+import InputAdornment from "@material-ui/core/InputAdornment";
+import SubjectIcon from "@material-ui/icons/Subject";
+import PersonIcon from "@material-ui/icons/Person";
+import { TextareaAutosize } from "@material-ui/core";
+import { Paper, Grid } from "@material-ui/core";
 import "./contactForm.css";
 
-
 export default function ContactUs() {
-    
-    function sendEmail(e) {
-        e.preventDefault();
-     
-        // NOTE: make sure the below required API KEYS are configured in email js website!
+  function sendEmail(e) {
+    e.preventDefault();
 
-    emailjs.sendForm("SERVICE_ID", "TEMPLATE_ID", e.target, "USER_ID")
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
-        e.target.reset()
-    }
+    // NOTE: make sure the below required API KEYS are configured in email js website!
+
+    emailjs.sendForm("SERVICE_ID", "TEMPLATE_ID", e.target, "USER_ID").then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+    e.target.reset();
+  }
 
     return(
         // <div style={{color:"#131313"}} lg="12">
@@ -144,7 +144,7 @@ export default function ContactUs() {
                         <div className="col_half">
                             <label>Last name</label>
                             <div className="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                                <input type="text" name="last_name" placeholder="Doe" />
+                                <input type="text" name="last_name" placeholder="Doe" required/>
                             </div>
                         </div>
                     </div>
@@ -177,4 +177,3 @@ export default function ContactUs() {
         </div>
     );
 }
-
