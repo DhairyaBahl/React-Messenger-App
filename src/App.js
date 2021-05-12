@@ -18,6 +18,7 @@ import 'emoji-mart/css/emoji-mart.css';
 import { Picker } from 'emoji-mart';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import { purple } from "@material-ui/core/colors";
+import Landing from "./components/Landingpage/LandingPage";
 
 function App() {
   const [loading,setLoading]=useState(false)
@@ -125,15 +126,17 @@ function App() {
 
     <nav className={`${dark ? "nav_dark" : "navbar"}`}>
     <div className="nav-container">
-    <img
+      <a href="/landing">
+        <img
             className="Logo"
             aspect-ratio="1/1"
             height="auto"
             width="50px"
             src={logo}
             alt="messenger-logo"
-        />  
-        <h1    style={{fontSize: "25px"}} className={`messenger`}>Messenger</h1> 
+          />
+        </a>
+        <h1 style={{fontSize: "25px"}} className={`messenger`}>Messenger</h1> 
       <a href="/" className="nav-logo">
       
       </a>
@@ -186,7 +189,13 @@ function App() {
       <ContactForm />
       <Footer />
       </Route>
-    
+      {/*========================== landing page ============================*/}
+
+      <Route path="/landing">
+      <Landing/>
+      <Footer />
+      </Route>
+
     {/*========================== home page ============================*/}
 
       <Route path="/">
