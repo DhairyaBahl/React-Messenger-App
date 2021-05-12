@@ -17,7 +17,7 @@ import ContactForm from "./components/contactForm/contactForm";
 import 'emoji-mart/css/emoji-mart.css';
 import { Picker } from 'emoji-mart';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
-// import { purple } from "@material-ui/core/colors";
+import { purple } from "@material-ui/core/colors";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
 
 function App() {
