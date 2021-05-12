@@ -17,7 +17,8 @@ import ContactForm from "./components/contactForm/contactForm";
 import 'emoji-mart/css/emoji-mart.css';
 import { Picker } from 'emoji-mart';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
-import { purple } from "@material-ui/core/colors";
+// import { purple } from "@material-ui/core/colors";
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
 
 function App() {
   const [loading,setLoading]=useState(false)
@@ -31,6 +32,7 @@ function App() {
   const inputElement = useRef(null);
   const [click, setClick] = useState(false);
   const [showEmojis, setshowEmojis] = useState(false);
+  const { finalTranscript,resetTranscript } = useSpeechRecognition();
 
   useEffect(() => {
     setOpenWelcomeDialogBox(true);
@@ -57,10 +59,6 @@ function App() {
     messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
   };
 
-
-
-  
-
   const newMessage = (event) => {
     //event.preventDefault();
     //setMessages([...messages,{message:input,username:username}]);
@@ -74,7 +72,6 @@ function App() {
       new Audio(Messagesentaudio).play();
     }
     setInput("");
-    
   };
 
   const handleKeypress = (event) => {
@@ -115,6 +112,19 @@ function App() {
       console.log("picker visible");
     }
   };
+
+  useEffect(() => {
+    if(finalTranscript !== "")
+    {
+      setInput(finalTranscript);
+      resetTranscript();
+    }
+  });
+  
+  const Speechtoinput = (e) => {
+    SpeechRecognition.startListening();
+  };
+ 
  
 
   return (
@@ -226,34 +236,39 @@ function App() {
                         <i className="fa fa-plus"></i>
                     </button>
                     <button className="EmojiToggle"><InsertEmoticonIcon onClick={emojiToggle}/></button>
-                 { showEmojis && <span className="EmojiPicker"><Picker onSelect={addEmoji}/></span> }
-                    <input
-                        ref={inputElement}
-                        className={`input ${dark ? "dark_input" : "light_input"}`}
-                        type="text"
-                        placeholder="Type a message"
-                        onChange={(event) => setInput(event.target.value)}
-                        onKeyPress={handleKeypress}
-                        value={input}
-                    />
-                    <button
-                        className={`btnsend ${dark ? "darkButtonSend" : ""}`}
-                        id="sendMsgBtn"
-                        type="submit"
-                        variant="contained"
-                        crossOrigin="anonymous"
-                        onClick={newMessage}
-                    >
-                        <i className="fa fa-paper-plane"></i>
-                    </button>
+                    { showEmojis && <span className="EmojiPicker"><Picker onSelect={addEmoji}/></span> }
+                    {/* <p>{finalTranscript}</p> */}
+                      <input
+                          ref={inputElement}
+                          className={`input ${dark ? "dark_input" : "light_input"}`}
+                          type="text"
+                          placeholder="Type a message"
+                          onChange={(event) => setInput(event.target.value)}
+                          onKeyPress={handleKeypress}
+                          value={input}
+                      />
+
+                      <div className="speak">
+                        <button onClick={Speechtoinput}><i className="fa fa-microphone" ></i></button>
+                      </div>
+                      <button
+                          className={`btnsend ${dark ? "darkButtonSend" : ""}`}
+                          id="sendMsgBtn"
+                          type="submit"
+                          variant="contained"
+                          crossOrigin="anonymous"
+                          onClick={newMessage}
+                      >
+                          <i className="fa fa-paper-plane"></i>
+                      </button>
                     </div>
                 </div>
                 </footer>
                 <WelcomeDialogBox
-                open={openWelcomeDialogBox}
-                close={() => setOpenWelcomeDialogBox(false)}
-                setUsername={setUsername}
-                setUid={setUid}
+                  open={openWelcomeDialogBox}
+                  close={() => setOpenWelcomeDialogBox(false)}
+                  setUsername={setUsername}
+                  setUid={setUid}
                 />
             </div>
             </>

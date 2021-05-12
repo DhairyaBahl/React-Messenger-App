@@ -181,7 +181,7 @@ a {
   .nav-item:hover {
     transform: scale(1.2);
   }
-
+  
   .nav-item:hover:after {
     width: 100%;
     /* background: var(--secondarycolor); */
