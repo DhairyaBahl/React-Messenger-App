@@ -18,6 +18,7 @@ import 'emoji-mart/css/emoji-mart.css';
 import { Picker } from 'emoji-mart';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import { purple } from "@material-ui/core/colors";
+import Faq from "./components/faq/faq";
 
 function App() {
   const [loading,setLoading]=useState(false)
@@ -183,6 +184,7 @@ function App() {
       
       <Route path="/about">
       <About />
+      <Faq />
       <ContactForm />
       <Footer />
       </Route>
