@@ -13,7 +13,7 @@ import db from "./firebase.js";
 import firebase from "firebase";
 import About from "./components/about-us/About";
 import Footer from "./components/footer/footer";
-import ContactForm from "./components/contactForm/contactForm";
+import ContactUs from "./components/contactForm/contactForm.js";
 import 'emoji-mart/css/emoji-mart.css';
 import { Picker } from 'emoji-mart';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
@@ -186,7 +186,7 @@ function App() {
       
       <Route path="/about">
       <About />
-      <ContactForm />
+      <ContactUs apptheme={dark}/>
       <Footer />
       </Route>
       {/*========================== landing page ============================*/}
