@@ -21,6 +21,7 @@ import { purple } from "@material-ui/core/colors";
 import Landing from "./components/Landingpage/LandingPage";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
 import Faq from "./components/faq/faq";
+import Features from "./components/Featurespage/FeaturesPage";
 
 function App() {
   const [loading,setLoading]=useState(false)
@@ -170,6 +171,16 @@ function App() {
         </li>
         <li className="nav-item">
           <Link
+            to="/features"
+            activeClassName="active"
+            className="nav-links"
+            onClick={handleClick}
+          >
+           Features
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
             to="/about"
             activeClassName="active"
             className="nav-links"
@@ -210,6 +221,12 @@ function App() {
 
       <Route path="/landing">
       <Landing/>
+      <Footer />
+      </Route>
+      {/* ============================features page ============================ */}
+
+      <Route path="/features">
+      <Features/>
       <Footer />
       </Route>
 
