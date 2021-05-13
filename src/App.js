@@ -20,6 +20,7 @@ import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import { purple } from "@material-ui/core/colors";
 import Landing from "./components/Landingpage/LandingPage";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
+import Faq from "./components/faq/faq";
 
 function App() {
   const [loading,setLoading]=useState(false)
@@ -201,6 +202,7 @@ function App() {
       
       <Route path="/about">
       <About />
+      <Faq />
       <ContactUs apptheme={dark}/>
       <Footer />
       </Route>
