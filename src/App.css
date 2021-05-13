@@ -162,12 +162,19 @@ a {
   }
 
   .nav-menu.active {
-    background: rgb(22, 21, 21);
     left: 0px;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
   }
+
+  #nav-menu_dark{
+    background: rgb(0, 0, 0);
+  }
+  #nav-menu_light{
+    background: rgb(255, 255, 255);
+  }
+
   .nav-item a:active {
     border: none;
   }
@@ -205,7 +212,27 @@ a {
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
+    /* color: rgb(252, 249, 249); */
+  }
+  .nav-icon_dark {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
     color: rgb(252, 249, 249);
+  }
+  .nav-icon_light {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
   }
 
   .toggle-button {

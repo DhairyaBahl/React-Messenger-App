@@ -156,7 +156,7 @@ function App() {
       
       </a>
 
-      <ul className={click ? "nav-menu active" : "nav-menu"}>
+      <ul className={click ? "nav-menu active" : "nav-menu"} id={dark ? "nav-menu_dark" : "nav-menu_light"}>
         <li className="nav-item">
           <Link
             to="/"
@@ -187,7 +187,8 @@ function App() {
             </Button>
         </li>
       </ul>
-      <div className="nav-icon" onClick={handleClick}>
+      <div className={`nav-icon ${dark ? "nav-icon_dark" : "nav-icon_light"}`}  onClick={handleClick}>
+
         <i><MenuIcon style={{fontSize: "30px", marginTop:"3px"}}/></i>
       </div>
     </div>
