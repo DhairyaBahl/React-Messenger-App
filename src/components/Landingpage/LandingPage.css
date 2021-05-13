@@ -54,21 +54,19 @@
 }
 
 
-button {
+.enter_chat {
   background: #ffffff;
   border-radius: 15px;
   border: none;
   color:#0A7CFF;
   font-size: 1.2em;
   cursor: pointer;
-  /* font-weight: bold; */
-  /* margin: 1em auto; */
   padding: 0.5em 0.8em;
   border: 2px solid #0A7CFF;
   margin-top: 4em;
 }
 
-button:hover {
+.enter_chat:hover {
    color: #ffffff;
    background: #0A7CFF;
    border: 2px solid #0A7CFF;
