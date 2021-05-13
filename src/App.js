@@ -19,7 +19,6 @@ import { Picker } from 'emoji-mart';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import { purple } from "@material-ui/core/colors";
 import Landing from "./components/Landingpage/LandingPage";
-import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
 
 function App() {
   const [loading,setLoading]=useState(false)
@@ -33,8 +32,6 @@ function App() {
   const inputElement = useRef(null);
   const [click, setClick] = useState(false);
   const [showEmojis, setshowEmojis] = useState(false);
-  const { finalTranscript,resetTranscript } = useSpeechRecognition();
-
 
   useEffect(() => {
     setOpenWelcomeDialogBox(true);
@@ -118,18 +115,6 @@ function App() {
       setshowEmojis(true);
       console.log("picker visible");
     }
-  };
- 
-
-  useEffect(() => {
-    if(finalTranscript !== "")
-    {
-      setInput(finalTranscript);
-      resetTranscript();
-    }
-  });
-   const Speechtoinput = (e) => {
-    SpeechRecognition.startListening();
   };
  
 
@@ -260,10 +245,6 @@ function App() {
                         onKeyPress={handleKeypress}
                         value={input}
                     />
-                    <div className="speak">
-                       <button onClick={Speechtoinput}><i className="fa fa-microphone" ></i></button>
-                    </div>
-
                     <button
                         className={`btnsend ${dark ? "darkButtonSend" : ""}`}
                         id="sendMsgBtn"
