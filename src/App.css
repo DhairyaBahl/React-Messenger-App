@@ -168,6 +168,13 @@ a {
     transition: all 0.5s ease;
     z-index: 1;
   }
+  #nav-menu_dark{
+    background: rgb(0, 0, 0);
+  }
+  #nav-menu_light{
+    background: rgb(255, 255, 255);
+  }
+
   .nav-item a:active {
     border: none;
   }
@@ -205,8 +212,14 @@ a {
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
+  }
+  .nav-icon_dark {
     color: rgb(252, 249, 249);
   }
+  .nav-icon_light {
+    color: rgb(0, 0, 0);
+  }
+ 
 
   .toggle-button {
     margin-right: 70px !important;
