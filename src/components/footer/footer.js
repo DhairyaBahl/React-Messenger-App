@@ -5,10 +5,10 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import "./footer.css";
 
-function footer() {
+function Footer(props) {
     return (
         <div>
-        <div class="footer__container">
+        <div className={`${props.apptheme2 ? "footerContainer_dark" :"footerContainer_light"}`}>
         <div class="footer__links">
             <div>
             <div class="footer-open-source">
@@ -24,7 +24,7 @@ function footer() {
             <div class="footer__logo">
                 <a href="/" id="footer__logo">MESSENGER</a>
             </div>
-            <p class="website__rights" >© MESSENGER 2021. All rights reserved.</p>
+            <p class={`website__rights ${props.apptheme2 ? "website__rights_dark" :"website__rights_light"}`} >© MESSENGER 2021. All rights reserved.</p>
             <div class="social__icons">
                 <a href="https://github.com/DhairyaBahl/React-Messenger-App" class="social__icon--link"
                 ><GitHubIcon/></a>
@@ -42,4 +42,4 @@ function footer() {
     )
 }
 
-export default footer;
+export default Footer;

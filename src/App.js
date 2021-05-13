@@ -187,7 +187,7 @@ function App() {
       <Route path="/about">
       <About />
       <ContactUs apptheme={dark}/>
-      <Footer />
+      <Footer apptheme2={dark}/>
       </Route>
       {/*========================== landing page ============================*/}
 
