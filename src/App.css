@@ -11,7 +11,6 @@ body {
 }
 
 .messenger {
- 
   background: -webkit-linear-gradient(
     45deg,
     rgb(133, 29, 186) 15%,
@@ -20,7 +19,6 @@ body {
   align-self: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
 }
 
 .blackName {
@@ -124,7 +122,6 @@ a {
 .toggle-nav {
   outline: none;
   background-color: rgba(128, 0, 128, 0);
-
 }
 .nav-item:after {
   content: "";
@@ -135,7 +132,7 @@ a {
   transition: width 0.7s ease, black 0.5s ease;
 }
 .darkthemeicon {
-  color:rgb(148, 3, 148);
+  color: rgb(148, 3, 148);
 }
 .nav-item:hover:after {
   width: 100%;
@@ -368,6 +365,10 @@ footer {
   color: black !important;
 }
 
+.addfiles {
+  margin-right: 5px;
+}
+
 .sendNewMessage button:hover {
   transform: scale(1.2);
 }
@@ -415,16 +416,15 @@ footer {
   }
 }
 .EmojiToggle {
-  Float: right;
+  float: right;
   border: none;
   margin: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
- }
- .EmojiPicker {
+}
+.EmojiPicker {
   position: absolute;
   bottom: 64px;
- }
- 
+}

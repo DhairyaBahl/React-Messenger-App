@@ -39,11 +39,17 @@
 } */
 /* ------------------------------------------------------------------ */
 
-.contactus_body {
+.contactus_dark {
 	font-family:Verdana, Geneva, sans-serif;
 	font-size:14px;
 	background:#131313;
  
+}
+
+.contactus_light {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	background:#ffffff;
 }
 
 .clearfix:after {
@@ -54,7 +60,7 @@
 	height: 0;
 }
 .form_wrapper {
-	background:#131313;
+	/* background:#131313; */
 	width:800px;
 	max-width:100%;
 	box-sizing:border-box;
@@ -63,18 +69,42 @@
 	position:relative;
 	z-index:1;
 }
+.form_wrapper_light {
+	background:#ffffff;
+}
+.form_wrapper_dark {
+	background:#131313;
+}
 .form_container {
 	padding:15px;
 	border:1px dashed purple;
 }
-.form_wrapper h2 {
-  color: #fff;
+.form_h2 {
+  /* color: #fff; */
 	font-size:1.5em;
 	line-height:1.5em;
 	margin:0;
 }
- label {
-  color: #fff;
+.form_h2_light {
+	color: rgb(0, 0, 0);
+}
+.form_h2_dark {
+	color: rgb(255, 255, 255);
+}
+.form_h3_light {
+	color: rgb(0, 0, 0);
+}
+.form_h3_dark {
+	color: rgb(255, 255, 255);
+}
+ .label_all {
+  /* color: #fff; */
+ }
+ .label_all_light {
+	color: rgb(0, 0, 0);
+ }
+ .label_all_dark {
+	color: rgb(255, 255, 255);
  }
 .form_wrapper .title_container {
 	text-align:center;
@@ -82,8 +112,8 @@
 	padding:15px 0;
 	border-bottom:1px dashed purple;
 }
-.form_wrapper h3 {
-  color: #fff;
+.form_h3 {
+  /* color: #fff; */
 	font-size:1.1em;
 	font-weight:normal;
 	line-height:1.5em;
