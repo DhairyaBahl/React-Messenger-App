@@ -21,6 +21,7 @@ import { purple } from "@material-ui/core/colors";
 import Landing from "./components/Landingpage/LandingPage";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
 import Faq from "./components/faq/faq";
+import Features from "./components/Featurespage/FeaturesPage";
 
 function App() {
   const [loading,setLoading]=useState(false)
@@ -157,7 +158,7 @@ function App() {
       
       </a>
 
-      <ul className={click ? "nav-menu active" : "nav-menu"}>
+      <ul className={click ? "nav-menu active" : "nav-menu"} id={dark ? "nav-menu_dark" : "nav-menu_light"}>
         <li className="nav-item">
           <Link
             to="/"
@@ -166,6 +167,16 @@ function App() {
             onClick={handleClick}
           >
             Home
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            to="/features"
+            activeClassName="active"
+            className="nav-links"
+            onClick={handleClick}
+          >
+           Features
           </Link>
         </li>
         <li className="nav-item">
@@ -188,7 +199,7 @@ function App() {
             </Button>
         </li>
       </ul>
-      <div className="nav-icon" onClick={handleClick}>
+      <div className={`nav-icon ${dark ? "nav-icon_dark" : "nav-icon_light"}`} onClick={handleClick}>
         <i><MenuIcon style={{fontSize: "30px", marginTop:"3px"}}/></i>
       </div>
     </div>
@@ -210,6 +221,12 @@ function App() {
 
       <Route path="/landing">
       <Landing/>
+      <Footer />
+      </Route>
+      {/* ============================features page ============================ */}
+
+      <Route path="/features">
+      <Features/>
       <Footer />
       </Route>
 
