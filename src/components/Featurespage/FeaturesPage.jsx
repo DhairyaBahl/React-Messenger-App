@@ -3,11 +3,11 @@ import "./FeaturesPage.css";
 import sideimage from "./sideimage.png";
 import sideimage3 from "./blacktheme.png";
 import sideimage2 from "./emoji.png";
-function Features() {
+function Features(props) {
    
     return (
         <div>
-            <div className="container">
+            <div className={`${props.apptheme3 ? "container" : "container_light"}`}>
                 <div className="text_side">
                     <div className="main_text">
                         <h1>More ways
@@ -23,7 +23,7 @@ function Features() {
                 </div>
             </div>
 
-            <div className="container">
+            <div className={`${props.apptheme3 ? "container" : "container_light"}`}>
             <div className="image_side2">
                     <img src={sideimage2} />
                     </div>
@@ -31,7 +31,7 @@ function Features() {
                     <div className="min-text">
                         <h3>Custom Reactions</h3>
                     </div>
-                    <div className="main_text2">
+                    <div className={`main_text2 ${props.apptheme3 ? "main_text2_dark" : "main_text2_light"}`}>
                         <h1>Say it with
                         <br></br>
                         any emoji</h1>
@@ -46,12 +46,12 @@ function Features() {
             </div>
             
 
-            <div className="container">
+            <div className={`${props.apptheme3 ? "container" : "container_light"}`}>
                 <div className="text_side">
                 <div className="min-text">
                         <h3>Chat Themes</h3>
                     </div>
-                    <div className="main_text2">
+                    <div className={`main_text2 ${props.apptheme3 ? "main_text2_dark" : "main_text2_light"}`}>
                         <h1>Your chats 
                         <br></br>
                          Your way</h1>
@@ -71,7 +71,7 @@ function Features() {
                 </div>
             </div>
 
-            <div className="container">
+            <div className={`${props.apptheme3 ? "container" : "container_light"}`}>
                 <div className="image_side2">
                         <img src={sideimage} />
                 </div>
@@ -79,7 +79,7 @@ function Features() {
                     <div className="min-text">
                         <h3>Voice Input</h3>
                     </div>
-                    <div className="main_text2">
+                    <div className={`main_text2 ${props.apptheme3 ? "main_text2_dark" : "main_text2_light"}`}>
                         <h1>Stop typing,  
                         <br></br>
                       Start talking!</h1>
