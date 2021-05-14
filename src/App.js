@@ -224,7 +224,7 @@ function App() {
       <About />
       <Faq />
       <ContactUs apptheme={dark}/>
-      <Footer />
+      <Footer apptheme2={dark}/>
       </Route>
       {/*========================== landing page ============================*/}
 
