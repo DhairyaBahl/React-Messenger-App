@@ -2,6 +2,7 @@ import "./App.css";
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import logo from "./logo.png";
 import MenuIcon from "@material-ui/icons/Menu";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
@@ -475,6 +476,14 @@ function App() {
       </a>
 
       <ul className={click ? "nav-menu active" : "nav-menu"} id={dark ? "nav-menu_dark" : "nav-menu_light"}>
+        <li className="nav-item">
+          <Button
+            title="scroll to bottom"
+            onClick={scrollToBottom}
+          > 
+          <KeyboardArrowDownIcon className="darkthemeicon"/>
+          </Button>
+        </li>
         <li className="nav-item">
           <Link
             to="/"
