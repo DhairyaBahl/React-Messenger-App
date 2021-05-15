@@ -235,7 +235,7 @@ function App() {
       {/* ============================features page ============================ */}
 
       <Route path="/features">
-      <Features/>
+      <Features apptheme3={dark}/>
       <Footer />
       </Route>
 
