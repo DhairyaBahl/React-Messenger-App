@@ -5,10 +5,10 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import "./footer.css";
 
-function footer() {
+function footer(props) {
   return (
     <div>
-      <div class="footer__container">
+      <div  className={`${props.apptheme2 ? "footer__container" :"footerContainer_light"}`}>
         <div class="footer__links">
           <div>
             <div class="footer-open-source">
@@ -31,7 +31,7 @@ function footer() {
                 MESSENGER
               </a>
             </div>
-            <p class="website__rights">
+            <p class={`website__rights ${props.apptheme2 ? "website__rights" :"website__rights_light"}`} >
               © MESSENGER 2021. All rights reserved.
             </p>
             <div class="social__icons">
