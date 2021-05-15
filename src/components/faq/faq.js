@@ -6,8 +6,12 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-const Faq = () => {
+const Faq = (params) => {
+    const [expanded, setExpanded] = useState(false);
 
+    const handleChange = (panel) => (event, isExpanded) => {
+        setExpanded(isExpanded ? panel : false);
+    };
     const data = [
         {
             id: "panel1",
@@ -56,7 +60,9 @@ const Faq = () => {
             const { id, question, details } = data;
             return (
                 <Accordion
+                expanded={expanded === id}
                 key={id}
+                onChange={handleChange(id)}
                 style={{ color: 'black', width: '85%', padding: '5px', backgroundColor: "" }}
                 >
                 <AccordionSummary
