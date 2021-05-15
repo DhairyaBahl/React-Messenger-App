@@ -64,6 +64,7 @@
     justify-content: flex-start;
     text-align: left;
     background-image:linear-gradient(83.84deg, #0088FF -6.87%, #A033FF 26.54%, #FF5C87 58.58%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     /* line-height: 5.2rem; */
