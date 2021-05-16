@@ -42,7 +42,7 @@ export default function ContactUs(props) {
                 props.apptheme ? "form_h2_dark" : "form_h2_light"
               }`}
             >
-              Let's get in <span id="touch">touch</span>
+              Lets get in <span id="touch">touch</span>
             </h2>
             <h3
               className={`form_h3 ${
