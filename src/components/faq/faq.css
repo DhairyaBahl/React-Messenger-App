@@ -1,0 +1,8 @@
+#faq_dark {
+    color:white;
+    background-color: black;
+}
+#faq_light {
+    color:rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
