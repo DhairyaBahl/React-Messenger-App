@@ -445,3 +445,18 @@ footer {
   position: absolute;
   bottom: 64px;
 }
+.Speaknow_alert {
+  position: absolute;
+  bottom: 64px;
+  font-size:18px;
+  width:130px;
+  height: 45px;
+  margin-left: -52px;
+  display: flex;
+  color: white;
+  border-radius: 10px;
+  background: rgb(0, 50, 77);  
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgb(255, 0, 0);
+}
