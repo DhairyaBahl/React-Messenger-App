@@ -222,7 +222,7 @@ function App() {
       
       <Route path="/about">
       <About />
-      <Faq />
+      <Faq  apptheme4={dark}/>
       <ContactUs apptheme={dark}/>
       <Footer apptheme2={dark}/>
       </Route>
