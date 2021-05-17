@@ -232,7 +232,7 @@ function App() {
       {/*========================== landing page ============================*/}
 
       <Route path="/landing">
-      <Landing/>
+      <Landing apptheme5={dark}/>
       <Footer />
       </Route>
       {/* ============================features page ============================ */}
