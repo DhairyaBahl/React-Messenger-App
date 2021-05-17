@@ -23,6 +23,7 @@ import Landing from "./components/Landingpage/LandingPage";
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
 import Faq from "./components/faq/faq";
 import Features from "./components/Featurespage/FeaturesPage";
+import Login from "./components/login/login";
 
 function App() {
   const [loading,setLoading]=useState(false)
@@ -201,6 +202,16 @@ function App() {
             About Us
           </Link>
         </li>
+        <li className="nav-item">
+          <Link
+            to="/login"
+            activeClassName="active"
+            className="nav-links"
+            onClick={handleClick}
+          >
+            Login
+          </Link>
+        </li>
         <li className="nav-item toggle-nav" style={{border: "none"}}>
             <Button
                 title="toggle Dark Mode"
@@ -239,6 +250,10 @@ function App() {
 
       <Route path="/features">
       <Features apptheme3={dark}/>
+      <Footer />
+      </Route>
+      <Route path="/login">
+      <Login/>
       <Footer />
       </Route>
 
