@@ -37,6 +37,7 @@ function App() {
   const [click, setClick] = useState(false);
   const [showEmojis, setshowEmojis] = useState(false);
   const { finalTranscript,resetTranscript } = useSpeechRecognition();
+  const [showAlert, setShowAlert] = useState(false);
 
 
   useEffect(() => {
@@ -127,11 +128,13 @@ function App() {
   useEffect(() => {
     if(finalTranscript !== "")
     {
+      setShowAlert(false);
       setInput(finalTranscript);
       resetTranscript();
     }
   });
    const Speechtoinput = (e) => {
+    setShowAlert(true);
     SpeechRecognition.startListening();
   };
  
@@ -222,14 +225,14 @@ function App() {
       
       <Route path="/about">
       <About />
-      <Faq />
+      <Faq  apptheme4={dark}/>
       <ContactUs apptheme={dark}/>
       <Footer apptheme2={dark}/>
       </Route>
       {/*========================== landing page ============================*/}
 
       <Route path="/landing">
-      <Landing/>
+      <Landing apptheme5={dark}/>
       <Footer />
       </Route>
       {/* ============================features page ============================ */}
@@ -290,6 +293,7 @@ function App() {
                     />
                     <div className="speak">
                        <button onClick={Speechtoinput}><i className="fa fa-microphone" ></i></button>
+                       { showAlert && <span className="Speaknow_alert">Speak now</span> }
                     </div>
 
                     <button

@@ -5,8 +5,9 @@ import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import "./faq.css";
 
-const Faq = (params) => {
+function Faq(props) {
     const [expanded, setExpanded] = useState(false);
 
     const handleChange = (panel) => (event, isExpanded) => {
@@ -43,7 +44,7 @@ const Faq = (params) => {
             }}
         >
             <Typography
-            style={{ fontSize: '70px', borderBottom: '3px solid #3e2559', color: "#3e2559" }}
+            style={{ fontSize: '70px', borderBottom: '3px solid #3e2559', color: "purple" }}
             >
             FAQs
             </Typography>
@@ -63,10 +64,11 @@ const Faq = (params) => {
                 expanded={expanded === id}
                 key={id}
                 onChange={handleChange(id)}
-                style={{ color: 'black', width: '85%', padding: '5px', backgroundColor: "" }}
+                style={{width: '85%', padding: '5px'}}
+                id={props.apptheme4 ? "faq_dark" : "faq_light"}
                 >
                 <AccordionSummary
-                    expandIcon={<ExpandMoreIcon style={{ color: "#17b078" }} />}
+                    expandIcon={<ExpandMoreIcon style={{ color: "purple" }} />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
@@ -75,7 +77,7 @@ const Faq = (params) => {
                     </Typography>
                 </AccordionSummary>
                 <AccordionDetails style={{ marginBottom: "0px" }}>
-                    <Typography style={{ fontWeight: 580, color: "#3e2559" }}>{details}</Typography>
+                    <Typography style={{ fontWeight: 580, color: "purple" }}>{details}</Typography>
                 </AccordionDetails>
                 </Accordion>
             );
@@ -83,6 +85,6 @@ const Faq = (params) => {
         </div>
         </Box>
   );
-};
+}
 
 export default Faq;
