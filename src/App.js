@@ -65,10 +65,6 @@ function App() {
     messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
   };
 
-
-
-  
-
   const newMessage = (event) => {
     //event.preventDefault();
     //setMessages([...messages,{message:input,username:username}]);
@@ -281,7 +277,7 @@ function App() {
                         <i className="fa fa-plus"></i>
                     </button>
                     <button className="EmojiToggle"><InsertEmoticonIcon onClick={emojiToggle}/></button>
-                 { showEmojis && <span className="EmojiPicker"><Picker onSelect={addEmoji}/></span> }
+                    { showEmojis && <span className="EmojiPicker"><Picker onSelect={addEmoji}/></span> }
                     <input
                         ref={inputElement}
                         className={`input ${dark ? "dark_input" : "light_input"}`}

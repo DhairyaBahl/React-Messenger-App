@@ -1,10 +1,8 @@
-
 .container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: left;
-    /* border: 2px solid blue; */
     padding: 10vh;
     background: rgb(0, 0, 0);
 }
@@ -14,21 +12,14 @@
 .text_side {
     display: flex;
     flex-direction: column;
-    /* border: 2px solid red; */
     margin-left: 5vw;
 }
 .image_side {
-    /* border: 2px solid green; */
     margin-left: 15vw;
-    /* box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -webkit-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -moz-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63); */
-    /* background: transparent; */
 }
 .image_side img {
     height: 70vh;
     border-radius: 15px;
-    /* border: 2px solid rgb(0, 0, 0); */
     box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
     -webkit-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
     -moz-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
@@ -41,22 +32,16 @@
     background-image:linear-gradient(83.84deg, #0088FF -6.87%, #A033FF 26.54%, #FF5C87 58.58%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* line-height: 5.2rem; */
     font-size: 32px;
-    /* margin-top: 65px;
-    margin-left: 70px; */
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
 .small_text{
-    /* margin-left: 70px; */
     margin-top: -50px;
     font-size: 21px;
     font-weight: bold;
     color: #494949;
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
-
-
 .enter_chat {
   background: #0A7CFF;
   border-radius: 15px;
@@ -81,19 +66,16 @@
         flex-direction:column;
         align-items: center;
         justify-content:left;
-        /* border: 2px solid blue; */
         padding: 10vh;
     }
     .image_side {
-        /* border: 2px solid green; */
-        /* margin-left: 15vw; */
         margin-top: 15vh ;
         margin-left: 1.5vw;
     }
     .image_side img {
         height: 50vh;
         border-radius: 15px;
-        /* border: 2px solid rgb(0, 0, 0); */
+       
     }
 
 }
