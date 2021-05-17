@@ -97,7 +97,7 @@
   padding: 15px;
   font-family: "Hind Madurai", sans-serif;
   font-weight: bold;
-  font-size: 1.1rem; 
+  font-size: 1.1rem;
   word-wrap: break-word;
 }
 
@@ -117,7 +117,7 @@
 }
 
 .senderDark {
-  color: rgb(24, 15, 15) !important;
+  color: white;
 }
 
 .message_div {
@@ -147,10 +147,10 @@
   margin: 0;
   color: rgb(126, 126, 126);
 }
-.read-or-hide{
+.read-or-hide {
   color: rgb(100, 100, 100);
   cursor: pointer;
 }
-.read-or-hide:hover{
+.read-or-hide:hover {
   color: rgb(50, 50, 150);
 }
