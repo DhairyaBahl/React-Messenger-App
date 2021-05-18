@@ -47,7 +47,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -172,10 +172,10 @@ a {
     transition: all 0.5s ease;
     z-index: 1;
   }
-  #nav-menu_dark{
+  #nav-menu_dark {
     background: rgb(0, 0, 0);
   }
-  #nav-menu_light{
+  #nav-menu_light {
     background: rgb(255, 255, 255);
   }
 
@@ -223,7 +223,6 @@ a {
   .nav-icon_light {
     color: rgb(0, 0, 0);
   }
- 
 
   .toggle-button {
     margin-right: 70px !important;
@@ -448,14 +447,14 @@ footer {
 .Speaknow_alert {
   position: absolute;
   bottom: 64px;
-  font-size:18px;
-  width:130px;
+  font-size: 18px;
+  width: 130px;
   height: 45px;
   margin-left: -52px;
   display: flex;
   color: white;
   border-radius: 10px;
-  background: rgb(0, 50, 77);  
+  background: rgb(0, 50, 77);
   align-items: center;
   justify-content: center;
   border: 2px solid rgb(255, 0, 0);
