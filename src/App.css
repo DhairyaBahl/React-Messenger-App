@@ -98,6 +98,7 @@
   margin-right: 2rem;
  }
   
+
  .nav-links {
   /* color: #fff; */
   background: -webkit-linear-gradient(
@@ -121,9 +122,9 @@
  .nav-item {
   line-height: 40px;
   margin-right: 1rem;
-  /* outline: 2px solid var(--secondarycolor); */
  }
   
+
  .toggle-nav {
   outline: none;
   background-color: rgba(128, 0, 128, 0);
@@ -226,6 +227,7 @@
   .nav-icon_light {
     color: rgb(0, 0, 0);
   }
+
   .toggle-button {
     margin-right: 70px !important;
   }
@@ -242,9 +244,14 @@
   border: 1px solid white;
  }
   
- .dark_input {
-  background-color: rgb(140, 140, 140);
- }
+
+.dark_input {
+  background-color: transparent;
+  border: none;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
  .loading {
   position: fixed;
   z-index: 1;
@@ -354,6 +361,20 @@
   padding: 10px;
   border-radius: 8px;
  }
+
+.sendNewMessagedark {
+  background-image: linear-gradient(to right, rgb(24, 17, 17), rgb(85 6 101));
+  border: 3px solid #d0d0d0;
+  width: 60%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+}
   
  .sendNewMessage button {
   width: 36px;
@@ -369,6 +390,37 @@
   border-radius: 5px;
   line-height: 36px;
   transition: all 0.3s cubic-bezier(0.88, 0.19, 0.37, 1.11);
+}
+
+.sendNewMessagedark button {
+  width: 36px;
+  height: 36px;
+  background-color: #ecefff;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(0, 50, 77);
+  padding: 0;
+  border-radius: 5px;
+  line-height: 36px;
+  transition: all 0.3s cubic-bezier(0.88, 0.19, 0.37, 1.11);
+}
+
+@media (max-width: 864px) {
+  .sendNewMessage {
+    width: 97%;
+  }
+}
+
+.sendNewMessagedark > .darkButton {
+  color: black !important;
+}
+.sendNewMessagedark > .darkButtonSend {
+  background-color: white !important;
+  background-color: white !important;
+  color: black !important;
  }
   
  @media (max-width: 864px) {
@@ -471,7 +523,7 @@
   display: flex;
   color: white;
   border-radius: 10px;
-  background: rgb(0, 50, 77);
+  background: rgb(0, 50, 77); 
   align-items: center;
   justify-content: center;
   border: 2px solid rgb(255, 0, 0);
