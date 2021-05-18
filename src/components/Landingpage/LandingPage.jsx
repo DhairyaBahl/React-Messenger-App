@@ -2,9 +2,9 @@ import React from "react";
 import "./LandingPage.css";
 import sideimage from "./sideimage.png";
 
-function Landing() {
+function Landing(props) {
   return (
-    <div className="container">
+    <div className={`${props.apptheme5 ? "container" : "container_light"}`}>
       <div className="text_side">
         <div className="main_text">
           <h1>

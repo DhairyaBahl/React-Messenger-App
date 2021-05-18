@@ -2,3 +2,4 @@
 src/Thumbs.db
 /build/
 /**/.eslintcache
+.env
