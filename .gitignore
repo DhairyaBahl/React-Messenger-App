@@ -1,3 +1,5 @@
 /**/node_modules
 src/Thumbs.db
+/build/
 /**/.eslintcache
+.env

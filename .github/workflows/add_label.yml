@@ -1,0 +1,18 @@
+name: Check for gssoc participation
+
+on:
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  auto-response:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: derekprior/add-autoresponse@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        respondableId: ${{ github.event.pull_request.node_id }}
+        response: "Are you a GSSOC  participant ? Write YES or NO only in the comment section ."
+        author: ${{ github.event.pull_request.user.login }}

@@ -1,17 +1,17 @@
 import firebase from "firebase";
 
-const firebaseConfig={
-  apiKey:"AIzaSyDBvyyqdV630DffF6sVYP6v3TZWZjHxamg",
-  authDomain:"mui-message.firebaseapp.com",
-  databaseURL:"https://mui-message-default-rtdb.firebaseio.com",
-  projectId:"mui-message",
-  storageBucket:"mui-message.appspot.com",
-  messagingSenderId:"506461386312",
-  appId:"1:506461386312:web:45f666e6778fed26d9ca7d",
-  measurementId:"G-HVDGKL164W"
-}
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: "mui-message.firebaseapp.com",
+  databaseURL: process.env.REACT_APP_DB_URL,
+  projectId: "mui-message",
+  storageBucket: "mui-message.appspot.com",
+  messagingSenderId: process.env.REACT_APP_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID
+};
 
-const firebaseApp=firebase.initializeApp(firebaseConfig);
-const db=firebaseApp.firestore();
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebaseApp.firestore();
 
 export default db;
