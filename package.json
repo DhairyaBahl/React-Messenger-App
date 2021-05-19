@@ -12,6 +12,7 @@
     "emoji-mart": "^3.0.1",
     "emoji-picker-react": "^3.4.2",
     "firebase": "^8.2.1",
+    "font-awesome": "^4.7.0",
     "node-sass": "^5.0.0",
     "pattern.css": "^1.0.0",
     "react": "^17.0.1",
