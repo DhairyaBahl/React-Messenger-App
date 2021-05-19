@@ -4,10 +4,10 @@ import { Button } from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import logo from "./logo.png";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
-import MenuIcon from '@material-ui/icons/Menu';
+import MenuIcon from "@material-ui/icons/Menu";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Messagesentaudio from "./sound/MessageSound.mp3";
-import CircularProgress from '@material-ui/core/CircularProgress';
+import CircularProgress from "@material-ui/core/CircularProgress";
 import Messages from "./components/messages/Messages.js";
 import WelcomeDialogBox from "./WelcomeDialogBox";
 import db from "./firebase.js";
@@ -15,12 +15,14 @@ import firebase from "firebase";
 import About from "./components/about-us/About";
 import Footer from "./components/footer/footer";
 import ContactUs from "./components/contactForm/contactForm.js";
-import 'emoji-mart/css/emoji-mart.css';
-import { Picker } from 'emoji-mart';
-import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
+import "emoji-mart/css/emoji-mart.css";
+import { Picker } from "emoji-mart";
+import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import { purple } from "@material-ui/core/colors";
 import Landing from "./components/Landingpage/LandingPage";
-import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
+import SpeechRecognition, {
+  useSpeechRecognition
+} from "react-speech-recognition";
 import Faq from "./components/faq/faq";
 import Features from "./components/Featurespage/FeaturesPage";
  
@@ -263,7 +265,11 @@ function App() {
            <div className="div__footer">
                <footer className={`${dark ? "footer_dark" : ""}`}>
                <div className="content__footer">
-                   <div className="sendNewMessage">
+                   <div
+                        className={` ${
+                          dark ? "sendNewMessagedark" : "sendNewMessage"
+                        }`}
+                      >
                    <button className={`addfiles ${dark ? "darkButton" : ""}`}>
                        <i className="fa fa-plus"></i>
                    </button>
@@ -328,10 +334,10 @@ function App() {
  
 // keys generator:- every new call to this function will give numbs like 0,1,2,3....
 const genKey = (function () {
-var keyCode = 0;
-return function incKey() {
-return keyCode++;
-};
+  var keyCode = 0;
+  return function incKey() {
+    return keyCode++;
+  };
 })();
  
 export default App;
