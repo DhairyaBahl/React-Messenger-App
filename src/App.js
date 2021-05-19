@@ -51,9 +51,10 @@ function App() {
    setLoading(true)
    console.log("setting true",loading)
    db.collection("messages")
-     .orderBy("timestamp", "asc")
+     .orderBy("timestamp", "desc")
+     .limit(50)
      .onSnapshot((snapshot) =>{
-       setMessages(snapshot.docs.map((doc) => doc.data()));
+       setMessages((snapshot.docs.map((doc) => doc.data())).reverse());
        setLoading(false)
      });
  }, []);
