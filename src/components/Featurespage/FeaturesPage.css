@@ -7,7 +7,6 @@ html{
     flex-direction: row;
     align-items: center;
     justify-content: left;
-    /* border: 2px solid blue; */
     padding: 5rem;
     background: rgb(0, 0, 0);
 }
@@ -23,7 +22,6 @@ html{
 .text_side {
     display: flex;
     flex-direction: column;
-    /* border: 2px solid red; */
     margin-left: 15rem;
 }
 .min-text {
@@ -36,17 +34,11 @@ html{
 }
 
 .image_side {
-    /* border: 2px solid green; */
     margin-left: 22vw;
-    /* box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -webkit-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -moz-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63); */
-    /* background: transparent; */
-}
+ }
 .image_side img {
     width : 100%;
     border-radius: 1.5rem;
-    /* border: 2px solid rgb(0, 0, 0); */
     box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
     -webkit-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
     -moz-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
@@ -55,7 +47,6 @@ html{
 .image_side3 img {
     width : 100%;
     border-radius: 1.5rem;
-    /* border: 2px solid rgb(0, 0, 0); */
     box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
     -webkit-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
     -moz-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
@@ -69,21 +60,14 @@ html{
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* line-height: 5.2rem; */
     font-size: 2.7rem;
-    /* margin-top: 65px;
-    margin-left: 70px; */
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
 .main_text2 {
     display: flex;
     justify-content: flex-start;
     text-align: left;
-    /* color: rgb(26, 26, 26); */
-    /* line-height: 5.2rem; */
     font-size: 2.3rem;
-    /* margin-top: 65px;
-    margin-left: 70px; */
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
 .main_text2_dark {
@@ -93,7 +77,6 @@ html{
     color: rgb(26, 26, 26);
 }
 .small_text{
-    /* margin-left: 70px; */
     margin-top: -2rem;
     font-size: 1.9rem;
     font-weight: bold;
@@ -103,11 +86,9 @@ html{
 .text_side2 {
     display: flex;
     flex-direction: column;
-    /* border: 2px solid red; */
     margin-left: 22vw;
 }
 .small_text2{
-    /* margin-left: 70px; */
     margin-top: -2rem;
     font-size: 1.9rem;
     font-weight: lighter;
@@ -115,25 +96,14 @@ html{
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
 .image_side2 {
-    /* border: 2px solid green; */
-    margin-left: 9vw;
-    /* box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -webkit-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -moz-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63); */
-    /* background: transparent; */
+   margin-left: 9vw;
 }
 .image_side3 {
-    /* border: 2px solid green; */
-    margin-left: 17vw;
-    /* box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -webkit-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -moz-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63); */
-    /* background: transparent; */
+  margin-left: 17vw;
 }
 .image_side2 img {
     width : 100%;
     border-radius: 1.5rem;
-    /* border: 2px solid rgb(0, 0, 0); */
     box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
     -webkit-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
     -moz-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
@@ -149,7 +119,6 @@ html{
 .image_side7 img {
     width : 100%;
     border-radius: 1.5rem;
-    /* border: 2px solid rgb(0, 0, 0); */
     box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
     -webkit-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
     -moz-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
@@ -157,7 +126,6 @@ html{
 .image_side7_2 img {
     width : 100%;
     border-radius: 1.5rem;
-    /* border: 2px solid rgb(0, 0, 0); */
     box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
     -webkit-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
     -moz-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
@@ -196,11 +164,7 @@ html{
 @media screen and (max-width : 576px){
     html{
         font-size: 37%;
-    }
-    /* .image_side img{
-        margin-right: 15vw;
-    } */
-    
+    }   
 }
 
 @media screen and (max-width : 420px){
@@ -210,6 +174,5 @@ html{
     .image_side img{
         height : auto;
         margin-bottom: 10rem;
-    }
-    
+    } 
 }

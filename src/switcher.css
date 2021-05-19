@@ -5,67 +5,63 @@
     height: 100%;
   }
   
-  #blackbtn{
-  background-color: blanchedalmond;
-  border-radius: 50%;
-  height: 50px;
-  width: 30px;
-  display: inline;
-  box-shadow: inset 0 5px 5px rgb(24, 24, 20), inset 0 -2px 2px rgba(22, 6, 6, 0.18);
+  #blackbtn {
+    background-color: blanchedalmond;
+    border-radius: 50%;
+    height: 50px;
+    width: 30px;
+    display: inline;
+    box-shadow: inset 0 5px 5px rgb(24, 24, 20), inset 0 -2px 2px rgba(22, 6, 6, 0.18);
   }
-  #themebtn{
+
+  #themebtn {
     display: inline-block;
-      text-decoration: none;
+    text-decoration: none;
     font-size: 12px;
-  font-style:bold;
-  font-family:'Gill Sans';
-      color:black;
-      width: 90px;
-      height: 90px;
-  
-      border-radius: 50%;
-      text-align: center;
-      vertical-align: middle;
-      overflow: hidden;
-      background-image: -webkit-linear-gradient(45deg, #709dff 0%, #91fdb7 100%);    
-      background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
-      transition: .4s;
-   
+    font-style:bold;
+    font-family:'Gill Sans';
+    color:black;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    background-image: -webkit-linear-gradient(45deg, #709dff 0%, #91fdb7 100%);    
+    background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
+    transition: .4s;
   }
-  #themebtn:hover{
-    
+
+  #themebtn:hover {
     -webkit-transform: rotateY(360deg);
     -ms-transform: rotateY(360deg);
     transform: rotateY(360deg);
   }
-  .dropdowndiv{
-  position: relative;
+
+  .dropdowndiv {
+    position: relative;
   }
+
   body {
     background-color: aqua;
     color: beige;
     padding: 0;
     height: 100vh;
   }
+
   #theme-options {
     width: auto;
-    
     position: relative;
     height: auto;
-  
-    
     padding: 2px 0;
-  
     opacity: 70%;
     visibility: hidden;
-  border-color: burlywood;
-  
-  border-width: 12px;
-  border-radius: 12px;
+    border-color: burlywood;
+    border-width: 12px;
+    border-radius: 12px;
   }
   #theme-options div {
     width: 40px;
-  
     height: 40px;
     border-radius: 4px;
     cursor: grab;
@@ -79,14 +75,11 @@
   #theme-options div:hover{
     box-shadow: none;
   }
-  
-  
-  
+
   #theme-options  #theme-pink {
-  
     background-color: #ff0040;
-  
   }
+
   #theme-options  #theme-orange {
     background-color: #6d695c;
     background-image:
@@ -96,27 +89,29 @@
     linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
     background-size: 10px 20px;
   }
+
   #theme-options  #theme-purple {
     background-color: purple;
   }
+
   #theme-options  #theme-green {
     background-color: green;
   }
+
   #theme-options  #theme-white {
     background-color: white;
   }
+
   @media screen and (max-width: 700px) {
    #theme-btn{
      width:30px;
    }
    #theme-options {
     position: absolute;
-  
     bottom: 5px;
     right: 35%;
     height: 30px;
-     
-     width:30px;
+    width:30px;
    }
    
     #theme-options #theme-pink,
@@ -128,10 +123,12 @@
         width: 100%;
         
     }
-    #blackbtn{height: 30px;width: 2px;
-        border-radius: 40%;
-    background-color: cornsilk;
-position:relative;}
+    #blackbtn{
+      height: 30px;
+      width: 2px;
+      border-radius: 40%;
+      background-color: cornsilk;
+      position:relative;}
   }
   
   .App.theme-pink {
@@ -180,9 +177,7 @@ position:relative;}
   }
   .App.theme-green .scroll {
     background-color:  #b3ffb3	;
-background-image: linear-gradient(90deg, transparent 50%,
-  rgba(255,255,255,.5) 50%);
-background-size: 50px 50px;
-
-
-  }
+    background-image: linear-gradient(90deg, transparent 50%,
+    rgba(255,255,255,.5) 50%);
+    background-size: 50px 50px;
+}

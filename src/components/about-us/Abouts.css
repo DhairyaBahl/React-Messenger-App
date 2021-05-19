@@ -52,17 +52,17 @@
 .main__content h2 {
   margin-top: 7rem;
   font-size: 2.9rem;
-  background: #ff8177; /* fallback for old browsers */
+  background: #ff8177; 
   background: -webkit-linear-gradient(
     to right,
     #8735d0,
     #ce40eb
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to right,
     #9240da,
     #d643f3
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -71,19 +71,19 @@
 }
 
 .main__content span {
-  background: #0cebeb; /* fallback for old browsers */
+  background: #0cebeb;
   background: -webkit-linear-gradient(
     to right,
     #29ffc6,
     #20e3b2,
     #0cebeb
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to right,
     #e6285b,
     #ee2b5f,
     #eb2a5d
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
 
   -webkit-background-clip: text;
   -moz-background-clip: text;

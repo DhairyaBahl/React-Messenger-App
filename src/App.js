@@ -25,7 +25,8 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 import Faq from "./components/faq/faq";
 import Features from "./components/Featurespage/FeaturesPage";
- 
+import Login from "./components/login/login";
+
 function App() {
  const [loading,setLoading]=useState(false)
  const [input, setInput] = useState("");
@@ -50,9 +51,10 @@ function App() {
    setLoading(true)
    console.log("setting true",loading)
    db.collection("messages")
-     .orderBy("timestamp", "asc")
+     .orderBy("timestamp", "desc")
+     .limit(50)
      .onSnapshot((snapshot) =>{
-       setMessages(snapshot.docs.map((doc) => doc.data()));
+       setMessages((snapshot.docs.map((doc) => doc.data())).reverse());
        setLoading(false)
      });
  }, []);
@@ -61,37 +63,35 @@ function App() {
    scrollToBottom();
  }, [messages]);
   const handleClick = () => setClick(!click);
- 
- const scrollToBottom = () => {
-   messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
- };
- 
- 
- 
- 
- const newMessage = (event) => {
-   //event.preventDefault();
-   //setMessages([...messages,{message:input,username:username}]);
-   if (input.trim() !== "") {
-     db.collection("messages").add({
-       username: username,
-       uid: uid,
-       message: input,
-       timestamp: firebase.firestore.FieldValue.serverTimestamp()
-     });
-     new Audio(Messagesentaudio).play();
-   }
-   setInput("");
-  
- };
- 
- const handleKeypress = (event) => {
-   console.log("yes")
-   //it triggers by pressing the enter key
- if (event.key === 'Enter') {
-   console.log("13");
-   newMessage()
- }
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
+  };
+
+  const newMessage = (event) => {
+    //event.preventDefault();
+    //setMessages([...messages,{message:input,username:username}]);
+    if (input.trim() !== "") {
+      db.collection("messages").add({
+        username: username,
+        uid: uid,
+        message: input,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      });
+      new Audio(Messagesentaudio).play();
+    }
+    setInput("");
+    
+  };
+
+  const handleKeypress = (event) => {
+    console.log("yes")
+    //it triggers by pressing the enter key
+  if (event.key === 'Enter') {
+    console.log("13");
+    newMessage()
+  }
+
 };
  const theme = (event) => {
    if (dark === false) {
@@ -136,78 +136,95 @@ function App() {
    SpeechRecognition.startListening();
  };
  
- return (
- 
-   <Router>
- 
-   {/*================ NavBar. Common across all routes ======================*/}
- 
-   <nav className={`${dark ? "nav_dark" : "navbar"}`}>
-   <div className="nav-container">
-     <a href="/landing">
-       <img
-           className="Logo"
-           aspect-ratio="1/1"
-           height="auto"
-           width="50px"
-           src={logo}
-           alt="messenger-logo"
-         />
-       </a>
-       <h1 style={{fontSize: "25px"}} className={`messenger`}>Messenger</h1>
-     <a href="/" className="nav-logo">
-    
-     </a>
- 
-     <ul className={click ? "nav-menu active" : "nav-menu"} id={dark ? "nav-menu_dark" : "nav-menu_light"}>
-       {/* <li className="nav-item">
-        
-       </li> */}
-       <li className="nav-item">
-         <Link
-           to="/"
-           activeClassName="active"
-           className="nav-links"
-           onClick={handleClick}
-         >
-           Home
-         </Link>
-       </li>
-       <li className="nav-item">
-         <Link
-           to="/features"
-           activeClassName="active"
-           className="nav-links"
-           onClick={handleClick}
-         >
-          Features
-         </Link>
-       </li>
-       <li className="nav-item">
-         <Link
-           to="/about"
-           activeClassName="active"
-           className="nav-links"
-           onClick={handleClick}
-         >
-           About Us
-         </Link>
-       </li>
-       <li className="nav-item toggle-nav" style={{border: "none"}}>
-           <Button
-               title="toggle Dark Mode"
-               className="dark toggle-button"
-               onClick={theme}
-           >
-               <Brightness4Icon className="darkthemeicon"/>
-           </Button>
-       </li>
-     </ul>
-     <div className={`nav-icon ${dark ? "nav-icon_dark" : "nav-icon_light"}`} onClick={handleClick}>
-       <i><MenuIcon style={{fontSize: "30px", marginTop:"3px"}}/></i>
-     </div>
-   </div>
- </nav>
+
+  return (
+
+    <Router>
+
+    {/*================ NavBar. Common across all routes ======================*/}
+
+    <nav className={`${dark ? "nav_dark" : "navbar"}`}>
+    <div className="nav-container">
+      <a href="/landing">
+        <img
+            className="Logo"
+            aspect-ratio="1/1"
+            height="auto"
+            width="50px"
+            src={logo}
+            alt="messenger-logo"
+          />
+        </a>
+        <h1 style={{fontSize: "25px"}} className={`messenger`}>Messenger</h1> 
+      <a href="/" className="nav-logo">
+      
+      </a>
+
+      <ul className={click ? "nav-menu active" : "nav-menu"} id={dark ? "nav-menu_dark" : "nav-menu_light"}>
+        <li className="nav-item">
+          <Button
+            title="scroll to bottom"
+            onClick={scrollToBottom}
+          > 
+          <KeyboardArrowDownIcon className="darkthemeicon"/>
+          </Button>
+        </li>
+        <li className="nav-item">
+          <Link
+            to="/"
+            activeClassName="active"
+            className="nav-links"
+            onClick={handleClick}
+          >
+            Home
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            to="/features"
+            activeClassName="active"
+            className="nav-links"
+            onClick={handleClick}
+          >
+           Features
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            to="/about"
+            activeClassName="active"
+            className="nav-links"
+            onClick={handleClick}
+          >
+            About Us
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            to="/login"
+            activeClassName="active"
+            className="nav-links"
+            onClick={handleClick}
+          >
+            Login
+          </Link>
+        </li>
+        <li className="nav-item toggle-nav" style={{border: "none"}}>
+            <Button
+                title="toggle Dark Mode"
+                className="dark toggle-button"
+                onClick={theme}
+            >
+                <Brightness4Icon className="darkthemeicon"/>
+            </Button>
+        </li>
+      </ul>
+      <div className={`nav-icon ${dark ? "nav-icon_dark" : "nav-icon_light"}`} onClick={handleClick}>
+        <i><MenuIcon style={{fontSize: "30px", marginTop:"3px"}}/></i>
+      </div>
+    </div>
+  </nav>
+
   {/*========================== End of NavBar ============================*/}
          
     <Switch>
@@ -226,6 +243,11 @@ function App() {
      <Landing/>
      <Footer />
      </Route>
+    {/* ============================Login page ============================ */}
+      <Route path="/login">
+      <Login/>
+      <Footer />
+      </Route>
      {/* ============================features page ============================ */}
  
      <Route path="/features">
@@ -236,7 +258,7 @@ function App() {
    {/*========================== home page ============================*/}
  
      <Route path="/">
-      
+
        <div className="App">
        {
            loading?<CircularProgress className="loading"/>:
@@ -257,6 +279,11 @@ function App() {
                />
                ))}
                <div />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
                <br />
                <br />
                <br />
