@@ -283,6 +283,11 @@ function App() {
                <br />
                <br />
                <br />
+               <br />
+               <br />
+               <br />
+               <br />
+               <br />
            </div>
            <div ref={messagesEndRef} />
            <div className="div__footer">
