@@ -62,37 +62,35 @@ function App() {
    scrollToBottom();
  }, [messages]);
   const handleClick = () => setClick(!click);
- 
- const scrollToBottom = () => {
-   messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
- };
- 
- 
- 
- 
- const newMessage = (event) => {
-   //event.preventDefault();
-   //setMessages([...messages,{message:input,username:username}]);
-   if (input.trim() !== "") {
-     db.collection("messages").add({
-       username: username,
-       uid: uid,
-       message: input,
-       timestamp: firebase.firestore.FieldValue.serverTimestamp()
-     });
-     new Audio(Messagesentaudio).play();
-   }
-   setInput("");
-  
- };
- 
- const handleKeypress = (event) => {
-   console.log("yes")
-   //it triggers by pressing the enter key
- if (event.key === 'Enter') {
-   console.log("13");
-   newMessage()
- }
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
+  };
+
+  const newMessage = (event) => {
+    //event.preventDefault();
+    //setMessages([...messages,{message:input,username:username}]);
+    if (input.trim() !== "") {
+      db.collection("messages").add({
+        username: username,
+        uid: uid,
+        message: input,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      });
+      new Audio(Messagesentaudio).play();
+    }
+    setInput("");
+    
+  };
+
+  const handleKeypress = (event) => {
+    console.log("yes")
+    //it triggers by pressing the enter key
+  if (event.key === 'Enter') {
+    console.log("13");
+    newMessage()
+  }
+
 };
  const theme = (event) => {
    if (dark === false) {

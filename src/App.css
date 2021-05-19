@@ -97,14 +97,18 @@
   text-align: center;
   margin-right: 2rem;
 }
- .nav-links {
-  /* color: #fff; */
+
+
+.nav-links {
+
   background: -webkit-linear-gradient(
     45deg,
     rgb(133, 29, 186) 15%,
     rgba(255, 0, 224, 1) 100%
   );
-  align-self: center;
+
+   align-self: center;
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-decoration: none;
@@ -140,14 +144,12 @@
  .nav-item:hover:after {
   width: 100%;
   background: var(--secondarycolor);
- }
+
+}
+
+.nav-icon {
+
   
- .nav-item a:active {
-  /* color: var(--secondarycolor); */
-  /* border: 1px solid var(--secondarycolor); */
- }
-  
- .nav-icon {
   display: none;
  }
   
@@ -173,6 +175,7 @@
     transition: all 0.5s ease;
     z-index: 1;
   }
+
   #nav-menu_dark {
     background: rgb(0, 0, 0);
   }
@@ -184,7 +187,6 @@
     border: none;
   }
   .nav-item {
-    /* color: var(--secondarycolor); */
     border: none;
     margin: 25px 0px;
     outline: none;
@@ -196,7 +198,7 @@
   
   .nav-item:hover:after {
     width: 100%;
-    /* background: var(--secondarycolor); */
+
   }
   
   .toggle-nav:hover:after {
@@ -236,6 +238,11 @@
   line-height: 25px;
   width: 98%;
   border-radius: 30px;
+  outline-width: 0;
+  padding: 10px;
+  border: 1px solid white;
+ }
+  
 }
 
 .dark_input {
@@ -321,13 +328,10 @@
   
  .footer_dark {
   color: white;
-  /* background-color: black; */
-  /* border-top: 1px solid white; */
   padding-bottom: 5px;
  }
   
  .content__footer {
-  /* margin: 0; */
   padding-top: 8px;
   padding-bottom: 0;
   position: fixed;
@@ -352,7 +356,9 @@
   justify-content: space-between;
   padding: 10px;
   border-radius: 8px;
-}
+
+ }
+
 
 .sendNewMessagedark {
   background-image: linear-gradient(to right, rgb(24, 17, 17), rgb(85 6 101));
@@ -382,6 +388,7 @@
   border-radius: 5px;
   line-height: 36px;
   transition: all 0.3s cubic-bezier(0.88, 0.19, 0.37, 1.11);
+
 }
 
 .sendNewMessagedark button {
@@ -413,6 +420,7 @@
   background-color: white !important;
   background-color: white !important;
   color: black !important;
+
  }
   
  @media (max-width: 864px) {

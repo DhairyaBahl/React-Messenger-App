@@ -24,9 +24,9 @@ function Features(props) {
             </div>
 
             <div className={`${props.apptheme3 ? "container" : "container_light"}`}>
-            <div className="image_side2">
-                    <img src={sideimage2} />
-                    </div>
+                <div className="image_side2">
+                        <img src={sideimage2} />
+                </div>
                 <div className="text_side2">
                     <div className="min-text">
                         <h3>Custom Reactions</h3>
@@ -39,16 +39,13 @@ function Features(props) {
                     <div className="small_text2">
                         <p>Lost for words? Now you can customise your reactions <br></br> with way more emojis to choose from, including 🎉 and 🔥 </p>
                     </div>
-                   
-                    
-                    </div>
-                    
+                </div>
             </div>
             
 
             <div className={`${props.apptheme3 ? "container" : "container_light"}`}>
                 <div className="text_side">
-                <div className="min-text">
+                    <div className="min-text">
                         <h3>Chat Themes</h3>
                     </div>
                     <div className={`main_text2 ${props.apptheme3 ? "main_text2_dark" : "main_text2_light"}`}>
@@ -60,9 +57,6 @@ function Features(props) {
                         <p>Choose from light and dark themes to comfort <br></br> your eyes and chat for long  ❤️ 🏳️‍🌈</p>
                     </div>
                 </div>
-                {/* <div className="image_side3">
-                    <img src={sideimage3} />
-                </div> */}
                 <div className="image_side7">
                     <img src={sideimage} />
                 </div>
@@ -92,6 +86,5 @@ function Features(props) {
             </div>
     );
 }
-
 
 export default Features;
