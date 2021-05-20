@@ -165,11 +165,6 @@ function App() {
             id={dark ? "nav-menu_dark" : "nav-menu_light"}
           >
             <li className="nav-item">
-              <Button title="scroll to bottom" onClick={scrollToBottom}>
-                <KeyboardArrowDownIcon className="darkthemeicon" />
-              </Button>
-            </li>
-            <li className="nav-item">
               <Link
                 to="/"
                 activeClassName="active"
@@ -250,7 +245,7 @@ function App() {
         {/* ============================Login page ============================ */}
         <Route path="/login">
           <Login />
-          <Footer />
+          <Footer apptheme2={dark} />
         </Route>
         {/* ============================features page ============================ */}
 
