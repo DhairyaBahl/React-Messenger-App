@@ -41,7 +41,8 @@ function App() {
  const [showEmojis, setshowEmojis] = useState(false);
  const { finalTranscript,resetTranscript } = useSpeechRecognition();
  const [showAlert, setShowAlert] = useState(false);
- 
+ const [messageCount, setMessageCount] = useState(50);
+ const [scrollTop, setScrollTop] = useState(false);
  
  useEffect(() => {
    setOpenWelcomeDialogBox(true);
@@ -52,16 +53,19 @@ function App() {
    console.log("setting true",loading)
    db.collection("messages")
      .orderBy("timestamp", "desc")
-     .limit(50)
+     .limit(messageCount)
      .onSnapshot((snapshot) =>{
        setMessages((snapshot.docs.map((doc) => doc.data())).reverse());
        setLoading(false)
      });
- }, []);
- 
+   setScrollTop(true);
+ }, [messageCount]);
+
  useEffect(() => {
+   if(scrollTop) return setScrollTop(false);
    scrollToBottom();
- }, [messages]);
+  }, [messages]);
+
   const handleClick = () => setClick(!click);
 
   const scrollToBottom = () => {
@@ -122,7 +126,9 @@ function App() {
      console.log("picker visible");
    }
  };
- 
+ const loadOlderMessages = () => {
+   setMessageCount(prev => prev+50);
+ };
  useEffect(() => {
    if(finalTranscript !== "")
    {
@@ -267,6 +273,7 @@ function App() {
                <br />
                <br />
                <br />
+               <button className="loadOlderMessages" onClick={loadOlderMessages}>Load Older Messages</button>
                <br />
                <br />
                {messages.map((message) => (
