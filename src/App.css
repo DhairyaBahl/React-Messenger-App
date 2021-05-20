@@ -152,85 +152,7 @@
   display: none;
  }
   
- @media screen and (max-width: 960px) {
-  .nav-menu {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-top: 1pxsolid #fff;
-    position: absolute;
-    top: 60px;
-    left: -110%;
-    opacity: 0;
-    transition: all 0.5s ease;
-  }
-  .scrolltobottom {
-    display:none;
-  }
-  .nav-menu.active {
-    background: rgb(22, 21, 21);
-    left: 0px;
-    opacity: 1;
-    transition: all 0.5s ease;
-    z-index: 1;
-  }
-
-  #nav-menu_dark {
-    background: rgb(0, 0, 0);
-  }
-  #nav-menu_light {
-    background: rgb(255, 255, 255);
-  }
-  
-  .nav-item a:active {
-    border: none;
-  }
-  .nav-item {
-    border: none;
-    margin: 25px 0px;
-    outline: none;
-  }
-  
-  .nav-item:hover {
-    transform: scale(1.2);
-  }
-  
-  .nav-item:hover:after {
-    width: 100%;
-
-  }
-  
-  .toggle-nav:hover:after {
-    background: none;
-  }
-  
-  .nav-links {
-    padding: 1.5rem;
-    margin-left: -70px;
-    border: none;
-  }
-  
-  .nav-icon {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
-  .nav-icon_dark {
-    color: rgb(252, 249, 249);
-  }
-  .nav-icon_light {
-    color: rgb(0, 0, 0);
-  }
-
-  .toggle-button {
-    margin-right: 70px !important;
-  }
- }
-  
+ 
  /* ================== end of new navbar ==================== */
   
  input {
@@ -308,9 +230,6 @@
   .content__footer {
     padding-right: 16px;
     padding-left: 3px;
-  }
-  .scrolltobottom {
-    display:none;
   }
  }
   
@@ -425,9 +344,6 @@
   .sendNewMessage {
     width: 97%;
   }
-  .scrolltobottom {
-    display:none;
-  }
  }
   
  .sendNewMessage > .darkButton {
@@ -475,17 +391,11 @@
     width: 98.5%;
     max-width: 700px;
   }
-  .scrolltobottom {
-    display:none;
-  }
  }
   
  @media (max-width: 790px) {
   .sendNewMessage {
     width: 95%;
-  }
-  .scrolltobottom {
-    display:none;
   }
  }
   
@@ -493,9 +403,6 @@
   .sendNewMessage {
     width: 90%;
     margin-right: 8px;
-  }
-  .scrolltobottom {
-    display:none;
   }
  }
  .EmojiToggle {
@@ -559,3 +466,87 @@
 	font-size: 2rem;
  }
  
+ @media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1pxsolid #fff;
+    position: absolute;
+    top: 60px;
+    left: -110%;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .scrolltobottom {
+    left: 45%;
+    right: 45%;
+		bottom: 75px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+  }
+  .nav-menu.active {
+    background: rgb(22, 21, 21);
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  #nav-menu_dark {
+    background: rgb(0, 0, 0);
+  }
+  #nav-menu_light {
+    background: rgb(255, 255, 255);
+  }
+  
+  .nav-item a:active {
+    border: none;
+  }
+  .nav-item {
+    border: none;
+    margin: 25px 0px;
+    outline: none;
+  }
+  
+  .nav-item:hover {
+    transform: scale(1.2);
+  }
+  
+  .nav-item:hover:after {
+    width: 100%;
+
+  }
+  
+  .toggle-nav:hover:after {
+    background: none;
+  }
+  
+  .nav-links {
+    padding: 1.5rem;
+    margin-left: -70px;
+    border: none;
+  }
+  
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+  .nav-icon_dark {
+    color: rgb(252, 249, 249);
+  }
+  .nav-icon_light {
+    color: rgb(0, 0, 0);
+  }
+
+  .toggle-button {
+    margin-right: 70px !important;
+  }
+ }
+  
