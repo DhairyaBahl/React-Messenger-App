@@ -210,7 +210,10 @@ function App() {
                 className="dark toggle-button"
                 onClick={theme}
               >
-                <Brightness4Icon className="darkthemeicon" />
+                <Brightness4Icon
+                  className="darkthemeicon"
+                  style={{ border: "none", fontSize: "25px" }}
+                />
               </Button>
             </li>
           </ul>
