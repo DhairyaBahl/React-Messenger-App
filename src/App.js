@@ -245,7 +245,7 @@ function App() {
         {/* ============================Login page ============================ */}
         <Route path="/login">
           <Login />
-          <Footer />
+          <Footer apptheme2={dark} />
         </Route>
         {/* ============================features page ============================ */}
 
