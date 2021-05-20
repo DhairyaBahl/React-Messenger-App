@@ -165,11 +165,6 @@ function App() {
             id={dark ? "nav-menu_dark" : "nav-menu_light"}
           >
             <li className="nav-item">
-              <Button title="scroll to bottom" onClick={scrollToBottom}>
-                <KeyboardArrowDownIcon className="darkthemeicon" />
-              </Button>
-            </li>
-            <li className="nav-item">
               <Link
                 to="/"
                 activeClassName="active"
