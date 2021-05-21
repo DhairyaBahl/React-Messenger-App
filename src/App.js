@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, lazy, Suspense } from "react";
 import { Button } from "@material-ui/core";
 import Brightness4Icon from "@material-ui/icons/Brightness4";
 import logo from "./logo.png";
@@ -8,24 +8,34 @@ import MenuIcon from "@material-ui/icons/Menu";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Messagesentaudio from "./sound/MessageSound.mp3";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import Messages from "./components/messages/Messages.js";
 import WelcomeDialogBox from "./WelcomeDialogBox";
 import db from "./firebase.js";
 import firebase from "firebase";
-import About from "./components/about-us/About";
-import Footer from "./components/footer/footer";
-import ContactUs from "./components/contactForm/contactForm.js";
 import "emoji-mart/css/emoji-mart.css";
 import { Picker } from "emoji-mart";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import { purple } from "@material-ui/core/colors";
-import Landing from "./components/Landingpage/LandingPage";
 import SpeechRecognition, {
   useSpeechRecognition
 } from "react-speech-recognition";
-import Faq from "./components/faq/faq";
-import Features from "./components/Featurespage/FeaturesPage";
 import Login from "./components/login/login";
+
+// import About from "./components/about-us/About";
+// import Footer from "./components/footer/footer";
+// import ContactUs from "./components/contactForm/contactForm.js";
+//  import Messages from "./components/messages/Messages.js";
+// import Landing from "./components/Landingpage/LandingPage";
+// import Faq from "./components/faq/faq";
+// import Features from "./components/Featurespage/FeaturesPage";
+
+
+const Messages  = lazy( () => import("./components/messages/Messages.js"));
+const Faq  = lazy( () => import("./components/faq/faq"));
+const Landing  = lazy( () => import("./components/Landingpage/LandingPage"));
+const Features  = lazy( () => import("./components/Featurespage/FeaturesPage"));
+const About  = lazy( () => import("./components/about-us/About"));
+const Footer  = lazy( () => import("./components/footer/footer"));
+const ContactUs  = lazy( () => import("./components/contactForm/contactForm.js"));
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -210,10 +220,7 @@ function App() {
                 className="dark toggle-button"
                 onClick={theme}
               >
-                <Brightness4Icon
-                  className="darkthemeicon"
-                  style={{ border: "none", fontSize: "25px" }}
-                />
+                <Brightness4Icon className="darkthemeicon" />
               </Button>
             </li>
           </ul>
@@ -231,6 +238,7 @@ function App() {
       {/*========================== End of NavBar ============================*/}
 
       <Switch>
+      <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', marginTop:'50px'}}>Loading...</div>}>
         {/*========================== about us ============================*/}
 
         <Route path="/about">
@@ -353,14 +361,9 @@ function App() {
                       </div>
                     </div>
                   </footer>
-                  <div
-                    className={dark ? "scrolltobottomdark" : "scrolltobottom"}
-                  >
+                  <div className="scrolltobottom">
                     <Button title="scroll to bottom" onClick={scrollToBottom}>
-                      <KeyboardArrowDownIcon
-                        className={dark ? "scrollicondark" : "scrollicon"}
-                        style={{ width: "20px", height: "40px" }}
-                      />
+                      <KeyboardArrowDownIcon className="scrollicon" />
                     </Button>
                   </div>
                   <WelcomeDialogBox
@@ -374,6 +377,7 @@ function App() {
             )}
           </div>
         </Route>
+     </Suspense>
       </Switch>
     </Router>
   );
