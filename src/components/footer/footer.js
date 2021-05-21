@@ -6,9 +6,15 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import "./footer.css";
 
 function footer(props) {
+  var date = new Date();
+  var year = date.getFullYear();
   return (
     <div>
-      <div  className={`${props.apptheme2 ? "footer__container" :"footerContainer_light"}`}>
+      <div
+        className={`${
+          props.apptheme2 ? "footer__container" : "footerContainer_light"
+        }`}
+      >
         <div class="footer__links">
           <div>
             <div class="footer-open-source">
@@ -31,8 +37,12 @@ function footer(props) {
                 MESSENGER
               </a>
             </div>
-            <p class={`website__rights ${props.apptheme2 ? "website__rights" :"website__rights_light"}`} >
-              © MESSENGER 2021. All rights reserved.
+            <p
+              class={`website__rights ${
+                props.apptheme2 ? "website__rights" : "website__rights_light"
+              }`}
+            >
+              © MESSENGER {year}. All rights reserved.
             </p>
             <div class="social__icons">
               <a

@@ -210,7 +210,10 @@ function App() {
                 className="dark toggle-button"
                 onClick={theme}
               >
-                <Brightness4Icon className="darkthemeicon" />
+                <Brightness4Icon
+                  className="darkthemeicon"
+                  style={{ border: "none", fontSize: "25px" }}
+                />
               </Button>
             </li>
           </ul>
@@ -350,9 +353,14 @@ function App() {
                       </div>
                     </div>
                   </footer>
-                  <div className="scrolltobottom">
+                  <div
+                    className={dark ? "scrolltobottomdark" : "scrolltobottom"}
+                  >
                     <Button title="scroll to bottom" onClick={scrollToBottom}>
-                      <KeyboardArrowDownIcon className="scrollicon" />
+                      <KeyboardArrowDownIcon
+                        className={dark ? "scrollicondark" : "scrollicon"}
+                        style={{ width: "20px", height: "40px" }}
+                      />
                     </Button>
                   </div>
                   <WelcomeDialogBox
