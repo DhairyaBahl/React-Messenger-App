@@ -31,12 +31,12 @@ const About = () => {
             <Grid item xs={12} sm={12} md={6} lg={6} style={{marginTop: "7rem"}}>
             <div className="main__content motive-top" style={{display:"flex", justifyContent:"center"}} >
                     <h2>
-                    <span>MOTIVE</span>
+                    OF OUR WEBSITE
                     </h2>
             </div>
             <div className="main__content motive" style={{display:"flex", justifyContent:"center"}} >
                     <h2>
-                    OF OUR WEBSITE
+                    <span>MOTIVE</span>
                     </h2>
             </div>
             </Grid>
