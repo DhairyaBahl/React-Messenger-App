@@ -9,7 +9,7 @@ Here is the link to the deployed app :- https://mui-message.firebaseapp.com
 
 ### We are now part of GSSoC 2021 !
 [![GSSoC](https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png)](https://gssoc.girlscript.tech)
-We got accepted for the GSSoc 2021 and activelty looking for new participants,please feel free to ask questions in the discussion section of this repository and if you want to be our mentor please mention in the discussion.
+We got accepted for the GSSoc 2021 and are actively looking for new participants, please feel free to ask questions in the discussion section of this repository and if you want to be our mentor please mention in the discussion.
 
 ## Motive
 
@@ -21,15 +21,16 @@ You can test this project in your create-react-app feature by replacing the file
 
 ## Supported Platforms
 
-This app can be built on any platform. It can be Windows, linux , MacOS or any other. You only need the create-react-app feature and rest is in the Dependencies section.
+This app can be built on any platform. It can be Windows, Linux , MacOS or any other. You only need the create-react-app feature and rest is in the Dependencies section.
 
 ## Dependencies
 
-I am Writing down the Dependencies for beginners, so that they can look into it and then understand and install them if they want to.
+I am writing down the Dependencies for beginners, so that they can look into it and then understand and install them if they want to.
 
 * firebase ( for the deployment  )
 * node js and node package manager must be installed.
 * @material-ui/icons and @material-ui/core
+* react router
 
 ## Connect with me
 
@@ -51,7 +52,7 @@ Anybody can contribute to this project. Just take an issue, give your ideas, wor
 Kindly refer to the contributing.md file. All the contributing guidelines are written over there.
 
 ## 3. Is there any need to assign myself to the issue before starting to work on the issue ?
-It is better to wait until you are assigned to the issue. Although if you are sure that no-one is working on the issue then you can start working on the issue.
+It is better to wait until you are assigned to the issue. Although if you are make sure that no-one is working on the issue then you can start working on the issue.
 
 <h2>Contributors:</h2>
 
