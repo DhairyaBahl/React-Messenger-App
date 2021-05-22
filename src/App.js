@@ -242,7 +242,7 @@ function App() {
         {/*========================== about us ============================*/}
 
         <Route path="/about">
-          <About />
+          <About apptheme5={dark} />
           <Faq apptheme4={dark} />
           <ContactUs apptheme={dark} />
           <Footer apptheme2={dark} />
