@@ -410,6 +410,12 @@ footer {
   position: absolute;
   bottom: 64px;
 }
+.KeyboardPicker {
+  position: absolute;
+  width: 800px;
+  bottom: 64px;
+}
+
 .Speaknow_alert {
   position: absolute;
   bottom: 64px;

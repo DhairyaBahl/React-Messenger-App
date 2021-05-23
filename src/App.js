@@ -19,6 +19,11 @@ import SpeechRecognition, {
     useSpeechRecognition
 } from "react-speech-recognition";
 import Login from "./components/login/login";
+import Keyboard from "react-simple-keyboard";
+import "react-simple-keyboard/build/css/index.css";
+
+
+
 
 // import About from "./components/about-us/About";
 // import Footer from "./components/footer/footer";
@@ -49,10 +54,13 @@ function App() {
     const inputElement = useRef(null);
     const [click, setClick] = useState(false);
     const [showEmojis, setshowEmojis] = useState(false);
+    const [showKeyboard, setshowKeybord] = useState(false);
     const { finalTranscript, resetTranscript } = useSpeechRecognition();
     const [showAlert, setShowAlert] = useState(false);
     const [messageCount, setMessageCount] = useState(50);
     const [scrollTop, setScrollTop] = useState(false);
+    const [layout, setLayout] = useState("default");
+  const keyboard = useRef();
 
     useEffect(() => {
         setOpenWelcomeDialogBox(true);
@@ -134,6 +142,26 @@ function App() {
             console.log("picker visible");
         }
     };
+    // const addKeyboard = (e) => {
+    //     let keyboard = e.native;
+    //     let cursorPositionStart = inputElement.current.selectionStart;
+    //     let newinput =
+    //         input.slice(0, cursorPositionStart) +
+    //         keyboard +
+    //         input.slice(cursorPositionStart);
+    //     setInput(newinput);
+    //     inputElement.current.focus();
+    // };
+    const keyboardToggle = (e) => {
+        console.log("in keyboardToggle");
+        if (showKeyboard === true) {
+            setshowKeybord(false);
+            console.log("picker not visible");
+        } else {
+            setshowKeybord(true);
+            console.log("picker visible");
+        }
+    };
     const loadOlderMessages = () => {
         setMessageCount((prev) => prev + 50);
     };
@@ -148,7 +176,30 @@ function App() {
         setShowAlert(true);
         SpeechRecognition.startListening();
     };
-
+    const handleShift = () => {
+        const newLayoutName = layout === "default" ? "shift" : "default";
+        setLayout(newLayoutName);
+      };
+    
+      const onKeyPress = button => {
+        console.log("Button pressed", button);
+    
+        /**
+         * If you want to handle the shift and caps lock buttons
+         */
+        if (button === "{shift}" || button === "{lock}") handleShift();
+      };
+      const onChange = input => {
+        setInput(input);
+        console.log("Input changed", input);
+      };
+    
+      const onChangeInput = (event) => {
+        const input = event.target.value;
+        setInput(input);
+        keyboard.current.setInput(input);
+      };
+    
     return (
         <Router>
             {/*================ NavBar. Common across all routes ======================*/}
@@ -307,6 +358,7 @@ function App() {
                                         <br />
                                     </div>
                                     <div ref={messagesEndRef} />
+                                   
                                     <div className="div__footer">
                                         <footer className={`${dark ? "footer_dark" : ""}`}>
                                             <div className="content__footer">
@@ -325,6 +377,22 @@ function App() {
                                                     {showEmojis && (
                                                         <span className="EmojiPicker">
                                                             <Picker onSelect={addEmoji} />
+                                                        </span>
+                                                    )}
+                                                    <button className="KeyboardToggle">
+                                                        <i className="fa fa-keyboard-o" onClick={keyboardToggle} ></i>
+                                                    </button>
+                                                    {showKeyboard && (
+                                                        <span className="KeyboardPicker">
+                                                             <input
+                                                                onChange={onChangeInput}
+                                                            />
+                                                                <Keyboard
+                                                                        keyboardRef={r => (keyboard.current = r)}
+                                                                        layoutName={layout}
+                                                                        onChange={onChange}
+                                                                        onKeyPress={onKeyPress}
+                                                                    />
                                                         </span>
                                                     )}
                                                     <input
