@@ -19,6 +19,7 @@ import SpeechRecognition, {
   useSpeechRecognition
 } from "react-speech-recognition";
 import Login from "./components/login/login";
+import useLocalStorage from "./customHooks/useLocalStorage";
 
 // import About from "./components/about-us/About";
 // import Footer from "./components/footer/footer";
@@ -37,25 +38,27 @@ const Footer = lazy(() => import("./components/footer/footer"));
 const ContactUs = lazy(() => import("./components/contactForm/contactForm.js"));
 
 function App() {
-  const [loading, setLoading] = useState(false);
-  const [input, setInput] = useState("");
-  const [messages, setMessages] = useState([]);
-  const [username, setUsername] = useState("");
-  const [uid, setUid] = useState("");
-  const [openWelcomeDialogBox, setOpenWelcomeDialogBox] = useState(false);
-  const [dark, setDark] = useState(false);
-  const messagesEndRef = useRef(null);
-  const inputElement = useRef(null);
-  const [click, setClick] = useState(false);
-  const [showEmojis, setshowEmojis] = useState(false);
-  const { finalTranscript, resetTranscript } = useSpeechRecognition();
-  const [showAlert, setShowAlert] = useState(false);
-  const [messageCount, setMessageCount] = useState(50);
-  const [scrollTop, setScrollTop] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [input, setInput] = useState("");
+    const [messages, setMessages] = useState([]);
+    const [username, setUsername] = useLocalStorage("username", "");
+    const [uid, setUid] = useLocalStorage("uid", "");
+    const [openWelcomeDialogBox, setOpenWelcomeDialogBox] = useState(false);
+    const [dark, setDark] = useLocalStorage("dark", false);
+    const messagesEndRef = useRef(null);
+    const inputElement = useRef(null);
+    const [click, setClick] = useState(false);
+    const [showEmojis, setshowEmojis] = useState(false);
+    const { finalTranscript, resetTranscript } = useSpeechRecognition();
+    const [showAlert, setShowAlert] = useState(false);
+    const [messageCount, setMessageCount] = useState(50);
+    const [scrollTop, setScrollTop] = useState(false);
 
-  useEffect(() => {
-    setOpenWelcomeDialogBox(true);
-  }, []);
+    useEffect(() => {
+        if(!username || !uid)
+        setOpenWelcomeDialogBox(true);
+    }, []);
+
 
   useEffect(() => {
     setLoading(true);

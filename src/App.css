@@ -48,7 +48,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -273,14 +273,14 @@ footer {
 
 .sendNewMessagedark {
   background-image: linear-gradient(to right, rgb(24, 17, 17), rgb(85 6 101));
-  border: 3px solid #d0d0d0;
-  width: 60%;
-  max-width: 1400px;
+  border: 2px solid #d0d0d0;
+   width: 60%;
+  max-width: 1400px; 
   margin: 0 auto;
   display: flex;
-  height: 100%;
-  justify-content: space-between;
-  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
   border-radius: 8px;
   color: white;
 }
