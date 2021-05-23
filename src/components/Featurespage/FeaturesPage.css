@@ -1,6 +1,3 @@
-html{
-    font-size: 62.5%;
-}
 
 .container {
     display: flex;
@@ -25,7 +22,7 @@ html{
     margin-left: 15rem;
 }
 .min-text {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: rgb(124, 124, 124);
     font-weight: lighter;
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;;
@@ -39,17 +36,17 @@ html{
 .image_side img {
     width : 100%;
     border-radius: 1.5rem;
-    box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -webkit-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -moz-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
+    box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+    -webkit-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+    -moz-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
 
 }
 .image_side3 img {
     width : 100%;
     border-radius: 1.5rem;
-    box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -webkit-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -moz-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
+    box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+    -webkit-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+    -moz-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
 }
 
 .main_text {
@@ -101,12 +98,29 @@ html{
 .image_side3 {
   margin-left: 17vw;
 }
+
+.image_side7 img {
+    width : 100%;
+    border-radius: 1.5rem;
+    box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+    -webkit-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+    -moz-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+}
+
+.image_side3 img {
+    width : 100%;
+    border-radius: 1.5rem;
+    box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+    -webkit-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+    -moz-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+}
+
 .image_side2 img {
     width : 100%;
     border-radius: 1.5rem;
-    box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -webkit-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -moz-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
+    box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+    -webkit-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+    -moz-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
 }
 
 .image_side7 {
@@ -119,16 +133,16 @@ html{
 .image_side7 img {
     width : 100%;
     border-radius: 1.5rem;
-    box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -webkit-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -moz-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
+    box-shadow: 0px -1px 50px -3px rgb(106, 101, 145);
+    -webkit-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+    -moz-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
 }
 .image_side7_2 img {
     width : 100%;
     border-radius: 1.5rem;
-    box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -webkit-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
-    -moz-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
+    box-shadow: 0px -1px 50px -3px rgba(56, 54, 54, 0.63);
+    -webkit-box-shadow: 0px -1px 50px -3px rgb(106, 101, 145);
+    -moz-box-shadow: 0px -1px 50px -3px rgb(106, 101, 145);
 }
 
 @media screen and (max-width: 998px)
