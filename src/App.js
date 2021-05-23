@@ -19,6 +19,7 @@ import SpeechRecognition, {
     useSpeechRecognition
 } from "react-speech-recognition";
 import Login from "./components/login/login";
+import useLocalStorage from "./customHooks/useLocalStorage";
 
 // import About from "./components/about-us/About";
 // import Footer from "./components/footer/footer";
@@ -41,10 +42,10 @@ function App() {
     const [loading, setLoading] = useState(false);
     const [input, setInput] = useState("");
     const [messages, setMessages] = useState([]);
-    const [username, setUsername] = useState("");
-    const [uid, setUid] = useState("");
+    const [username, setUsername] = useLocalStorage("username", "");
+    const [uid, setUid] = useLocalStorage("uid", "");
     const [openWelcomeDialogBox, setOpenWelcomeDialogBox] = useState(false);
-    const [dark, setDark] = useState(false);
+    const [dark, setDark] = useLocalStorage("dark", false);
     const messagesEndRef = useRef(null);
     const inputElement = useRef(null);
     const [click, setClick] = useState(false);
@@ -55,6 +56,7 @@ function App() {
     const [scrollTop, setScrollTop] = useState(false);
 
     useEffect(() => {
+        if(!username || !uid)
         setOpenWelcomeDialogBox(true);
     }, []);
 
