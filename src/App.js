@@ -21,8 +21,7 @@ import SpeechRecognition, {
 import Login from "./components/login/login";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
-
-
+import useLocalStorage from "./customHooks/useLocalStorage";
 
 
 // import About from "./components/about-us/About";
@@ -46,10 +45,10 @@ function App() {
     const [loading, setLoading] = useState(false);
     const [input, setInput] = useState("");
     const [messages, setMessages] = useState([]);
-    const [username, setUsername] = useState("");
-    const [uid, setUid] = useState("");
+    const [username, setUsername] = useLocalStorage("username", "");
+    const [uid, setUid] = useLocalStorage("uid", "");
     const [openWelcomeDialogBox, setOpenWelcomeDialogBox] = useState(false);
-    const [dark, setDark] = useState(false);
+    const [dark, setDark] = useLocalStorage("dark", false);
     const messagesEndRef = useRef(null);
     const inputElement = useRef(null);
     const [click, setClick] = useState(false);
@@ -63,6 +62,7 @@ function App() {
   const keyboard = useRef();
 
     useEffect(() => {
+        if(!username || !uid)
         setOpenWelcomeDialogBox(true);
     }, []);
 
