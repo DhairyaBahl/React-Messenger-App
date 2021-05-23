@@ -309,7 +309,7 @@ function App() {
                     </Route>
                     {/* ============================Login page ============================ */}
                     <Route exact path="/login">
-                        <Login />
+                        <Login apptheme={dark}/>
                         <Footer apptheme2={dark} />
                     </Route>
                     {/* ============================features page ============================ */}
