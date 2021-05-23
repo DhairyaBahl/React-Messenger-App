@@ -17,7 +17,13 @@
 
 .main {
   padding: 20px 4rem;
+  background-color: rgb(0, 0, 0);
 }
+
+.main_light {
+    padding: 20px 4rem;
+    background-color: white;
+  }
 
 .main__content {
   color: #fff;
