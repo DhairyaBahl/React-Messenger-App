@@ -16,12 +16,14 @@ import { Picker } from "emoji-mart";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import { purple } from "@material-ui/core/colors";
 import SpeechRecognition, {
+
     useSpeechRecognition
 } from "react-speech-recognition";
 import Login from "./components/login/login";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import useLocalStorage from "./customHooks/useLocalStorage";
+
 
 
 // import About from "./components/about-us/About";
@@ -31,6 +33,7 @@ import useLocalStorage from "./customHooks/useLocalStorage";
 // import Landing from "./components/Landingpage/LandingPage";
 // import Faq from "./components/faq/faq";
 // import Features from "./components/Featurespage/FeaturesPage";
+
 
 
 const Messages = lazy(() => import("./components/messages/Messages.js"));
@@ -293,7 +296,7 @@ function App() {
                     {/*========================== about us ============================*/}
 
                     <Route exact path="/about">
-                        <About />
+                        <About apptheme5={dark} />
                         <Faq apptheme4={dark} />
                         <ContactUs apptheme={dark} />
                         <Footer apptheme2={dark} />
@@ -447,14 +450,19 @@ function App() {
             </Switch>
         </Router>
     );
+
+
+
 }
 
 // keys generator:- every new call to this function will give numbs like 0,1,2,3....
 const genKey = (function () {
+
     var keyCode = 0;
     return function incKey() {
         return keyCode++;
     };
+
 })();
 
 export default App;
