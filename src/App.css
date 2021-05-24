@@ -150,10 +150,10 @@ a {
 
 @media (max-width: 500px) {
   .navbar {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .nav_dark {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 
