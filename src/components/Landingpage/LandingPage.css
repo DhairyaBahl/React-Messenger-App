@@ -14,13 +14,13 @@
     justify-content: left;
     padding: 10vh;
 }
-.text_side {
+.text_side1 {
     display: flex;
     flex-direction: column;
-    margin-left: 5vw;
+    margin-left:10vw;
 }
 .image_side {
-    margin-left: 15vw;
+    margin-left: 5vw;
 }
 .image_side img {
     height: 70vh;
@@ -30,7 +30,7 @@
     -moz-box-shadow: 0px -1px 36px -3px rgba(105,105,105,0.63);
 }
 
-.main_text {
+.main_text1 {
     display: flex;
     justify-content: flex-start;
     text-align: left;
@@ -40,9 +40,9 @@
     font-size: 32px;
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
-.small_text{
+.small_text1{
     margin-top: -50px;
-    font-size: 21px;
+    font-size: 20px;
     font-weight: bold;
     color: #494949;
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
