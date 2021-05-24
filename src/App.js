@@ -372,13 +372,14 @@ function App() {
                                                         <i className="fa fa-keyboard-o" onClick={keyboardToggle} ></i>
                                                     </button>
                                                     {showKeyboard && (
-                                                        <span className="KeyboardPicker">
-                                                             <input
+                                                        <span className={`${dark ? "KeyboardPicker_dark" : "KeyboardPicker"}`}>
+                                                             {/* <input
                                                                 onChange={onChangeInput}
-                                                            />
+                                                            /> */}
                                                                 <Keyboard
                                                                         keyboardRef={r => (keyboard.current = r)}
                                                                         layoutName={layout}
+                                                                        
                                                                         onChange={onChange}
                                                                         onKeyPress={onKeyPress}
                                                                     />
