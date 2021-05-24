@@ -15,26 +15,11 @@ import "emoji-mart/css/emoji-mart.css";
 import { Picker } from "emoji-mart";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import { purple } from "@material-ui/core/colors";
-import SpeechRecognition, {
-
-    useSpeechRecognition
-} from "react-speech-recognition";
+import SpeechRecognition, {useSpeechRecognition} from "react-speech-recognition";
 import Login from "./components/login/login";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import useLocalStorage from "./customHooks/useLocalStorage";
-
-
-
-// import About from "./components/about-us/About";
-// import Footer from "./components/footer/footer";
-// import ContactUs from "./components/contactForm/contactForm.js";
-//  import Messages from "./components/messages/Messages.js";
-// import Landing from "./components/Landingpage/LandingPage";
-// import Faq from "./components/faq/faq";
-// import Features from "./components/Featurespage/FeaturesPage";
-
-
 
 const Messages = lazy(() => import("./components/messages/Messages.js"));
 const Faq = lazy(() => import("./components/faq/faq"));
@@ -274,7 +259,7 @@ function App() {
                                 className="dark toggle-button"
                                 onClick={theme}
                             >
-                                <Brightness4Icon className="darkthemeicon" />
+                                <Brightness4Icon className="darkthemeicon" style={{ border: "none", fontSize: "25px" }} />
                             </Button>
                         </li>
                     </ul>
@@ -451,13 +436,10 @@ function App() {
         </Router>
     );
 
-
-
 }
 
 // keys generator:- every new call to this function will give numbs like 0,1,2,3....
 const genKey = (function () {
-
     var keyCode = 0;
     return function incKey() {
         return keyCode++;
