@@ -3,11 +3,13 @@ import 'font-awesome/css/font-awesome.min.css';
 import "./login.css";
 import loginIllustartion from "./logo.png";
 
-export default function Login() {
+export default function Login(props) {
 
     return(
 
-<div className="container_login">
+<div className={`${
+          props.apptheme ? "container_login" : "container_login_light"
+        }`}>
   <div className="illustration_img">
     <img src={loginIllustartion}></img>
   </div>
@@ -15,7 +17,7 @@ export default function Login() {
     <form className="login_form">
       <h2  style={{fontSize:"27px"}} className="title">Welcome</h2>
 
-      <h1 style={{fontSize:"18px", marginBottom:"30px"}}>Sign in to your account</h1>
+      <h1 style={{fontSize:"18px", marginBottom:"30px",color:"#333"}}>Sign in to your account</h1>
 
       <div className="input-div one">
           <div className="i">
