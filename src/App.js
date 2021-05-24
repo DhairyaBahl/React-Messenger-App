@@ -364,7 +364,7 @@ function App() {
                                                         <InsertEmoticonIcon onClick={emojiToggle} />
                                                     </button>
                                                     {showEmojis && (
-                                                        <span className="EmojiPicker">
+                                                        <span className={`${dark ? "EmojiPicker_dark" : "EmojiPicker"}`}>
                                                             <Picker onSelect={addEmoji} />
                                                         </span>
                                                     )}
