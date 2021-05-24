@@ -280,16 +280,13 @@ footer {
 
 .sendNewMessagedark {
   background-image: linear-gradient(to right, rgb(24, 17, 17), rgb(85 6 101));
-  border: 3px solid #d0d0d0;
+  border: 2px solid #d0d0d0;
   width: 60%;
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  height: 100%;
-  justify-content: space-between;
-  padding: 10px;
-  border-radius: 8px;
-  color: white;
+  padding: 2px;
+  border-radius: 8px; 
+  color: white;  margin: 0 auto;  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sendNewMessage button {
@@ -421,6 +418,14 @@ footer {
   position: absolute;
   width: 800px;
   bottom: 64px;
+}
+.KeyboardPicker_dark {
+  position: absolute;
+  width: 800px;
+  bottom: 70px;
+  color: black;
+  background-color: transparent;
+
 }
 
 .Speaknow_alert {
