@@ -17,6 +17,8 @@ import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import { purple } from "@material-ui/core/colors";
 import SpeechRecognition, {useSpeechRecognition} from "react-speech-recognition";
 import Login from "./components/login/login";
+import Signup from "./components/signup/signup";
+
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import useLocalStorage from "./customHooks/useLocalStorage";
@@ -254,6 +256,16 @@ function App() {
                                 Login
               </Link>
                         </li>
+                        <li className="nav-item">
+                            <Link
+                                to="/signup"
+                                activeClassName="active"
+                                className="nav-links"
+                                onClick={handleClick}
+                            >
+                                Signup
+              </Link>
+                        </li>
                         <li className="nav-item toggle-nav" style={{ border: "none" }}>
                             <Button
                                 title="toggle Dark Mode"
@@ -297,6 +309,10 @@ function App() {
                     <Route exact path="/login">
                         <Login apptheme={dark}/>
                         <Footer apptheme2={dark} />
+                    </Route>
+                    <Route exact path="/signup">
+                        <Signup />
+                        <Footer />
                     </Route>
                     {/* ============================features page ============================ */}
 
