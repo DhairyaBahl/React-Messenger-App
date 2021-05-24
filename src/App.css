@@ -242,7 +242,7 @@ footer {
 }
 
 .BlackNavBar {
-  background-color: black !important;
+  background-color: black ;
   border-bottom: 1px solid white;
 }
 
@@ -409,6 +409,9 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.KeyboardToggle{
+  margin: 4px;
 }
 .EmojiPicker {
   position: absolute;
