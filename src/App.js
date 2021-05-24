@@ -20,14 +20,15 @@ import Login from "./components/login/login";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import useLocalStorage from "./customHooks/useLocalStorage";
+import About from "./components/about-us/About";
+import Footer from "./components/footer/footer";
+import ContactUs from "./components/contactForm/contactForm.js";
+ import Messages from "./components/messages/Messages.js";
+import Landing from "./components/Landingpage/LandingPage";
+import Faq from "./components/faq/faq";
+import Features from "./components/Featurespage/FeaturesPage";
 
-const Messages = lazy(() => import("./components/messages/Messages.js"));
-const Faq = lazy(() => import("./components/faq/faq"));
-const Landing = lazy(() => import("./components/Landingpage/LandingPage"));
-const Features = lazy(() => import("./components/Featurespage/FeaturesPage"));
-const About = lazy(() => import("./components/about-us/About"));
-const Footer = lazy(() => import("./components/footer/footer"));
-const ContactUs = lazy(() => import("./components/contactForm/contactForm.js"));
+
 
 function App() {
     const [loading, setLoading] = useState(false);
