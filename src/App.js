@@ -291,7 +291,7 @@ function App() {
 
                     <Route exact path="/landing">
                         <Landing apptheme={dark}/>
-                        <Footer />
+                        <Footer apptheme2={dark}/>
                     </Route>
                     {/* ============================Login page ============================ */}
                     <Route exact path="/login">

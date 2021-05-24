@@ -5,17 +5,17 @@ import sideimage from "./sideimage.png";
 function Landing(props) {
   return (
     <div className={`${props.apptheme ? "container" : "container_light"}`}>
-      <div className="text_side">
-        <div className="main_text">
+      <div className="text_side1">
+        <div className="main_text1">
           <h1>
             Hang out
             <br></br>
             whenever,<br></br>wherever
           </h1>
         </div>
-        <div className="small_text">
+        <div className="small_text1">
           <p>
-            Messenger makes it easy and fun to stay close to your<br></br>{" "}
+            Messenger makes it easy and fun to stay close to your
             favourite people.
           </p>
          </div>
