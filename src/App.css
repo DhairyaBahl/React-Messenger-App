@@ -61,7 +61,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -146,12 +146,19 @@ a {
 
 .nav-icon {
   display: none;
- }
-  
- 
- /* ================== end of new navbar ==================== */
-  
- input {
+}
+
+@media (max-width: 500px) {
+  .navbar,
+  .nav-menu,
+  .nav_dark {
+    font-size: large;
+  }
+}
+
+/* ================== end of new navbar ==================== */
+
+input {
   line-height: 25px;
   width: 98%;
   border-radius: 30px;
@@ -226,9 +233,9 @@ footer {
     padding-right: 16px;
     padding-left: 3px;
   }
- }
-  
- .input {
+}
+
+.input {
   margin-top: 7px;
   margin-bottom: 7px;
   flex: 1;
@@ -336,9 +343,9 @@ footer {
   .sendNewMessage {
     width: 97%;
   }
- }
-  
- .sendNewMessage > .darkButton {
+}
+
+.sendNewMessage > .darkButton {
   color: black !important;
 }
 .sendNewMessage > .darkButtonSend {
@@ -383,21 +390,21 @@ footer {
     width: 98.5%;
     max-width: 700px;
   }
- }
-  
- @media (max-width: 790px) {
+}
+
+@media (max-width: 790px) {
   .sendNewMessage {
     width: 95%;
   }
- }
-  
- @media (max-width: 430px) {
+}
+
+@media (max-width: 430px) {
   .sendNewMessage {
     width: 90%;
     margin-right: 8px;
   }
- }
- .EmojiToggle {
+}
+.EmojiToggle {
   float: right;
   border: none;
   margin: 0;
@@ -468,12 +475,12 @@ footer {
   color: white;
   cursor: pointer;
   border-radius: 50px;
-	border: none;
-	padding: 10px 20px;
-	font-size: 2rem;
- }
- 
- @media screen and (max-width: 960px) {
+  border: none;
+  padding: 10px 20px;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 960px) {
   .nav-menu {
     display: flex;
     flex-direction: column;
@@ -488,10 +495,10 @@ footer {
   .scrolltobottom {
     left: 45%;
     right: 45%;
-		bottom: 75px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+    bottom: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .nav-menu.active {
     background: rgb(22, 21, 21);
@@ -507,7 +514,7 @@ footer {
   #nav-menu_light {
     background: rgb(255, 255, 255);
   }
-  
+
   .nav-item a:active {
     border: none;
   }
@@ -516,26 +523,25 @@ footer {
     margin: 25px 0px;
     outline: none;
   }
-  
+
   .nav-item:hover {
     transform: scale(1.2);
   }
-  
+
   .nav-item:hover:after {
     width: 100%;
-
   }
-  
+
   .toggle-nav:hover:after {
     background: none;
   }
-  
+
   .nav-links {
     padding: 1.5rem;
     margin-left: -70px;
     border: none;
   }
-  
+
   .nav-icon {
     display: block;
     position: absolute;
@@ -555,4 +561,4 @@ footer {
   .toggle-button {
     margin-right: 70px !important;
   }
- }
+}
