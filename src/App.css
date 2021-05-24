@@ -48,7 +48,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
   position: sticky;
   top: 0;
   z-index: 20;
@@ -418,6 +418,12 @@ footer {
   position: absolute;
   bottom: 64px;
 }
+.KeyboardPicker {
+  position: absolute;
+  width: 800px;
+  bottom: 64px;
+}
+
 .Speaknow_alert {
   position: absolute;
   bottom: 64px;
