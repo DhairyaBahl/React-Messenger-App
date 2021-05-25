@@ -15,7 +15,7 @@ import "emoji-mart/css/emoji-mart.css";
 import { Picker } from "emoji-mart";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import { purple } from "@material-ui/core/colors";
-import SpeechRecognition, {useSpeechRecognition} from "react-speech-recognition";
+import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 import Login from "./components/login/login";
 import Signup from "./components/signup/signup";
 
@@ -25,7 +25,7 @@ import useLocalStorage from "./customHooks/useLocalStorage";
 import About from "./components/about-us/About";
 import Footer from "./components/footer/footer";
 import ContactUs from "./components/contactForm/contactForm.js";
- import Messages from "./components/messages/Messages.js";
+import Messages from "./components/messages/Messages.js";
 import Landing from "./components/Landingpage/LandingPage";
 import Faq from "./components/faq/faq";
 import Features from "./components/Featurespage/FeaturesPage";
@@ -50,12 +50,16 @@ function App() {
     const [messageCount, setMessageCount] = useState(50);
     const [scrollTop, setScrollTop] = useState(false);
     const [layout, setLayout] = useState("default");
-  const keyboard = useRef();
+    const keyboard = useRef();
 
     useEffect(() => {
-        if(!username || !uid)
-        setOpenWelcomeDialogBox(true);
+        if (!username || !uid)
+            setOpenWelcomeDialogBox(true);
     }, []);
+
+    useEffect(() => {
+        localStorage.setItem('messages', messages);
+    }, [messages]);
 
     useEffect(() => {
         setLoading(true);
@@ -170,27 +174,27 @@ function App() {
     const handleShift = () => {
         const newLayoutName = layout === "default" ? "shift" : "default";
         setLayout(newLayoutName);
-      };
-    
-      const onKeyPress = button => {
+    };
+
+    const onKeyPress = button => {
         console.log("Button pressed", button);
-    
+
         /**
          * If you want to handle the shift and caps lock buttons
          */
         if (button === "{shift}" || button === "{lock}") handleShift();
-      };
-      const onChange = input => {
+    };
+    const onChange = input => {
         setInput(input);
         console.log("Input changed", input);
-      };
-    
-      const onChangeInput = (event) => {
+    };
+
+    const onChangeInput = (event) => {
         const input = event.target.value;
         setInput(input);
         keyboard.current.setInput(input);
-      };
-    
+    };
+
     return (
         <Router>
             {/*================ NavBar. Common across all routes ======================*/}
@@ -302,12 +306,12 @@ function App() {
                     {/*========================== landing page ============================*/}
 
                     <Route exact path="/landing">
-                        <Landing apptheme={dark}/>
-                        <Footer apptheme2={dark}/>
+                        <Landing apptheme={dark} />
+                        <Footer apptheme2={dark} />
                     </Route>
                     {/* ============================Login page ============================ */}
                     <Route exact path="/login">
-                        <Login apptheme={dark}/>
+                        <Login apptheme={dark} />
                         <Footer apptheme2={dark} />
                     </Route>
                     <Route exact path="/signup">
@@ -363,7 +367,7 @@ function App() {
                                         <br />
                                     </div>
                                     <div ref={messagesEndRef} />
-                                   
+
                                     <div className="div__footer">
                                         <footer className={`${dark ? "footer_dark" : ""}`}>
                                             <div className="content__footer">
@@ -389,16 +393,16 @@ function App() {
                                                     </button>
                                                     {showKeyboard && (
                                                         <span className={`${dark ? "KeyboardPicker_dark" : "KeyboardPicker"}`}>
-                                                             {/* <input
+                                                            {/* <input
                                                                 onChange={onChangeInput}
                                                             /> */}
-                                                                <Keyboard
-                                                                        keyboardRef={r => (keyboard.current = r)}
-                                                                        layoutName={layout}
-                                                                        
-                                                                        onChange={onChange}
-                                                                        onKeyPress={onKeyPress}
-                                                                    />
+                                                            <Keyboard
+                                                                keyboardRef={r => (keyboard.current = r)}
+                                                                layoutName={layout}
+
+                                                                onChange={onChange}
+                                                                onKeyPress={onKeyPress}
+                                                            />
                                                         </span>
                                                     )}
                                                     <input
