@@ -417,6 +417,11 @@ footer {
   position: absolute;
   bottom: 64px;
 }
+.EmojiPicker_dark {
+  position: absolute;
+  bottom: 64px;
+  margin-left: -250px;
+}
 .KeyboardPicker {
   position: absolute;
   width: 800px;
