@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "../../logo.png";
 import Grid from "@material-ui/core/Grid";
 import "./Abouts.css";
+import { ReactComponent as Logo } from "../../about-1.svg";
 
 
 const About = (props) => {
@@ -13,9 +13,7 @@ const About = (props) => {
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={6}>
                     <div className="main__img--container">
-                        <img
-                            src={logo}
-                            alt="Nature"
+                        <Logo
                             className="responsive jewel"
                         />
                     </div>
