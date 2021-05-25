@@ -48,7 +48,7 @@
   width: 100%;
   margin-top: 50px;
   max-width: 400px;
-  height: auto;
+  height: 350px;
   overflow: hidden;
   transform: translatey(0px);
   -webkit-filter: drop-shadow(5px 5px 15px rgb(29, 28, 28));
