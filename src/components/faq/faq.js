@@ -64,7 +64,7 @@ function Faq(props) {
                 expanded={expanded === id}
                 key={id}
                 onChange={handleChange(id)}
-                style={{width: '85%', padding: '5px', fontSize: '2rem', boxShadow: "1px 0px 8px #000"}}
+                style={{width: '85%', padding: '5px', fontSize: '2rem' }}
                 id={props.apptheme4 ? "faq_dark" : "faq_light"}
                 >
                 <AccordionSummary
