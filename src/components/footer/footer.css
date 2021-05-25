@@ -23,7 +23,10 @@
   font-size: 1.8rem;
   margin-left: 78px;
 }
-
+#footer__logo:hover {
+  color: #ff1b4c;
+  transform: scale(1.6);
+}
 .footer__links {
   width: 100%;
   max-width: 1000px;
