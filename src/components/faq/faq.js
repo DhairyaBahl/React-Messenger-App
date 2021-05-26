@@ -43,6 +43,44 @@ function Faq(props) {
                     marginBottom: "40px",
                 }}
             >
+
+            FAQs
+            </Typography>
+        </Box>
+        <div
+            style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+            }}
+        >
+            {data.map((data) => {
+            const { id, question, details } = data;
+            return (
+                <Accordion
+                expanded={expanded === id}
+                key={id}
+                onChange={handleChange(id)}
+                style={{width: '85%', padding: '5px' }}
+                id={props.apptheme4 ? "faq_dark" : "faq_light"}
+                >
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon style={{ color: "purple" }} />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                >
+                    <Typography style={{ fontWeight: "bold" }}>
+                    {question}
+                    </Typography>
+                </AccordionSummary>
+                <AccordionDetails style={{ marginBottom: "0px" }}>
+                    <Typography style={{ fontWeight: 580, color: "purple" }}>{details}</Typography>
+                </AccordionDetails>
+                </Accordion>
+            );
+            })}
+        </div>
                 <Typography
                     style={{ fontSize: '70px', borderBottom: '3px solid #3e2559', color: "purple" }}
                 >
@@ -64,7 +102,7 @@ function Faq(props) {
                             expanded={expanded === id}
                             key={id}
                             onChange={handleChange(id)}
-                            style={{ width: '85%', padding: '5px' }}
+                            style={{ width: '85%', padding: '5px', fontSize: '2rem' }}
                             id={props.apptheme4 ? "faq_dark" : "faq_light"}
                         >
                             <AccordionSummary
@@ -72,12 +110,12 @@ function Faq(props) {
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
                             >
-                                <Typography style={{ fontWeight: "bold" }}>
+                                <Typography style={{ fontWeight: "bold", fontSize: "1.5rem" }}>
                                     {question}
                                 </Typography>
                             </AccordionSummary>
-                            <AccordionDetails style={{ marginBottom: "0px" }}>
-                                <Typography style={{ fontWeight: 580, color: "purple" }}>{details}</Typography>
+                            <AccordionDetails style={{ marginBottom: "0px", padding: "20px 16px", borderTop: "1px solid #f52e59" }}>
+                                <Typography style={{ fontWeight: 580, color: "purple", , fontSize: "1.5rem" }}>{details}</Typography>
                             </AccordionDetails>
                         </Accordion>
                     );
