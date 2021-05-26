@@ -20,7 +20,7 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 import Login from "./components/login/login";
 import Signup from "./components/signup/signup";
-
+import Forget from "./components/forgetpass/forget";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import useLocalStorage from "./customHooks/useLocalStorage";
