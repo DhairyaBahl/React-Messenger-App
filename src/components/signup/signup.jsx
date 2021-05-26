@@ -43,7 +43,7 @@ export default function Signup(props) {
       </div>
       
 
-      <a className="anc" href="#"><span style={{color:"blue"}}>Already have an account?</span></a>
+      <a className="anc" href="/login"><span style={{color:"blue"}}>Already have an account?</span></a>
 
       <div className="loginbutton">
         <input type="submit" className="btn_login" value="Signup"></input>

@@ -44,7 +44,7 @@ export default function Login(props) {
       </div>
 
       <div id="alternativeLogin">
-        <a className="anc" href="#"> Create your account! </a>
+        <a className="anc" href="/signup"> Create your account! </a>
       </div>
 
       {/* <div className="icons">
