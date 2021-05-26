@@ -18,7 +18,7 @@ import { purple } from "@material-ui/core/colors";
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 import Login from "./components/login/login";
 import Signup from "./components/signup/signup";
-
+import Forget from "./components/forgetpass/forget";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import useLocalStorage from "./customHooks/useLocalStorage";
@@ -317,6 +317,10 @@ function App() {
                     <Route exact path="/signup">
                         <Signup />
                         <Footer />
+                    </Route>
+                    <Route exact path="/forget">
+                        <Forget apptheme={dark}/>
+                        <Footer apptheme2={dark}/>
                     </Route>
                     {/* ============================features page ============================ */}
 
