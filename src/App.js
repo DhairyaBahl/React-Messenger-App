@@ -20,7 +20,7 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 import Login from "./components/login/login";
 import Signup from "./components/signup/signup";
-import Forget from "./components/forgetpass/forget";
+
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import useLocalStorage from "./customHooks/useLocalStorage";
@@ -332,6 +332,10 @@ function App() {
             <Signup />
             <Footer apptheme2={dark} />
           </Route>
+          <Route exact path="/forget">
+             <Forget apptheme={dark}/>
+             <Footer apptheme2={dark}/>
+          </Route>
           {/* ============================features page ============================ */}
 
           <Route exact path="/features">
@@ -355,120 +359,6 @@ function App() {
                       className="loadOlderMessages"
                       onClick={loadOlderMessages}
                     >
-                        <i>
-                            <MenuIcon style={{ fontSize: "30px", marginTop: "3px" }} />
-                        </i>
-                    </div>
-                </div>
-            </nav>
-
-            {/*========================== End of NavBar ============================*/}
-
-            <Switch>
-                <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>Loading...</div>}>
-                    {/*========================== about us ============================*/}
-
-                    <Route exact path="/about">
-                        <About apptheme5={dark} />
-                        <Faq apptheme4={dark} />
-                        <ContactUs apptheme={dark} />
-                        <Footer apptheme2={dark} />
-                    </Route>
-                    {/*========================== landing page ============================*/}
-
-                    <Route exact path="/landing">
-                        <Landing apptheme={dark} />
-                        <Footer apptheme2={dark} />
-                    </Route>
-                    {/* ============================Login page ============================ */}
-                    <Route exact path="/login">
-                        <Login apptheme={dark} />
-                        <Footer apptheme2={dark} />
-                    </Route>
-                    <Route exact path="/signup">
-                        <Signup />
-                        <Footer />
-                    </Route>
-                    <Route exact path="/forget">
-                        <Forget apptheme={dark}/>
-                        <Footer apptheme2={dark}/>
-                    </Route>
-                    {/* ============================features page ============================ */}
-
-                    <Route exact path="/features">
-                        <Features apptheme3={dark} />
-                        <Footer apptheme2={dark} />
-                    </Route>
-
-                    {/*========================== home page ============================*/}
-
-                    <Route exact path="/">
-                        <div className="App">
-                            {loading ? (
-                                <CircularProgress className="loading" />
-                            ) : (
-                                <>
-                                    <div className="scroll">
-                                        <br />
-                                        <br />
-                                        <br />
-                                        <button
-                                            className="loadOlderMessages"
-                                            onClick={loadOlderMessages}
-                                        >
-                                            Load Older Messages
-                  </button>
-                                        <br />
-                                        <br />
-                                        {messages.map((message) => (
-                                            <Messages
-                                                messages={message}
-                                                username={username}
-                                                uid={uid}
-                                                dark={dark}
-                                                key={genKey()}
-                                            />
-                                        ))}
-                                        <div />
-                                        <br />
-                                        <br />
-                                        <br />
-                                        <br />
-                                        <br />
-                                        <br />
-                                        <br />
-                                        <br />
-                                        <br />
-                                        <br />
-                                    </div>
-                                    <div ref={messagesEndRef} />
-
-                                    <div className="div__footer">
-                                        <footer className={`${dark ? "footer_dark" : ""}`}>
-                                            <div className="content__footer">
-                                                <div
-                                                    className={` ${dark ? "sendNewMessagedark" : "sendNewMessage"
-                                                        }`}
-                                                >
-                                                    <button
-                                                        className={`addfiles ${dark ? "darkButton" : ""}`}
-                                                    >
-                                                        <i className="fa fa-plus"></i>
-                                                    </button>
-                                                    <button className="EmojiToggle">
-                                                        <InsertEmoticonIcon onClick={emojiToggle} />
-                                                    </button>
-                                                    {showEmojis && (
-                                                        <span className={`${dark ? "EmojiPicker_dark" : "EmojiPicker"}`}>
-                                                            <Picker onSelect={addEmoji} />
-                                                        </span>
-                                                    )}
-                                                    <button className="KeyboardToggle">
-                                                        <i className="fa fa-keyboard-o" onClick={keyboardToggle} ></i>
-                                                    </button>
-                                                    {showKeyboard && (
-                                                        <span className={`${dark ? "KeyboardPicker_dark" : "KeyboardPicker"}`}>
-                                                            {/* <input
                       Load Older Messages
                     </button>
                     <br />
