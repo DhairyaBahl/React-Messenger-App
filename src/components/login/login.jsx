@@ -37,7 +37,7 @@ export default function Login(props) {
         </div>
       </div>
 
-      <a className="anc" href="#"><span style={{color:"red"}}>Forgot Password?</span></a>
+      <a className="anc" href="/forget"><span style={{color:"red"}}>Forgot Password?</span></a>
 
       <div className="loginbutton">
         <input type="submit" className="btn_login" value="Login"></input>
