@@ -274,6 +274,7 @@ footer {
   display: flex;
   height: 100%;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
   border-radius: 8px;
 }
@@ -300,6 +301,7 @@ footer {
   font-size: 16px;
   color: rgb(0, 50, 77);
   padding: 0;
+  border: 3px solid #d0d0d0;
   border-radius: 5px;
   line-height: 36px;
   transition: all 0.3s cubic-bezier(0.88, 0.19, 0.37, 1.11);
