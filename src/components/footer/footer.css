@@ -130,11 +130,13 @@
     width: 100%;
   }
   .website__rights {
+    font-size: medium;
     margin-bottom: 2rem;
     margin-left: 0em;
   }
   #footer__logo {
     margin-left: 0px;
+    font-size: medium;
   }
   .social__icon--link {
     font-size: 30px;
