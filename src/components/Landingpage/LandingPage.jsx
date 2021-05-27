@@ -23,7 +23,7 @@ function Landing(props) {
             <a href="/"><button className="enter_chat">Enter the Chat</button></a>
           </div>
             </div>
-            <div className="image_side">
+            <div className="image_sideyy">
                 <img src={sideimage} />
       </div>
     </div>
