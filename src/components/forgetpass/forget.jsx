@@ -14,7 +14,7 @@ export default function Forget(props) {
         <img src={forgetIllustration} width="300px" height="300px"></img>
       </div>
       <div className="forget-content">
-        <form>
+        <form action = "/reset">
           <h1 style={{ fontSize: "30px" }} className="title">
             Forgot Password?
           </h1>
