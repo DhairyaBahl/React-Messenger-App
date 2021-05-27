@@ -5,7 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px -4px 8px 0 rgb(253 251 251 / 20%), 0px -6px 10px 0 rgb(0 0 0 / 84%);
+  box-shadow: 0px -4px 8px 0 rgb(253 251 251 / 20%),
+    0px -6px 10px 0 rgb(0 0 0 / 84%);
 }
 .footerContainer_light {
   background-color: #ffffff;
@@ -14,7 +15,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px -4px 8px 0 rgb(253 251 251 / 20%), 0px -6px 10px 0 rgb(173 173 173 / 84%);
+  box-shadow: 0px -4px 8px 0 rgb(253 251 251 / 20%),
+    0px -6px 10px 0 rgb(173 173 173 / 84%);
 }
 #footer__logo {
   color: #9e37d1;
@@ -133,5 +135,8 @@
   }
   #footer__logo {
     margin-left: 0px;
+  }
+  .social__icon--link {
+    font-size: 30px;
   }
 }
