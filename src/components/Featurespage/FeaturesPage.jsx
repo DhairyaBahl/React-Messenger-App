@@ -18,7 +18,7 @@ function Features(props) {
                         <p>Messenger has everything you need to feel <br></br> closer to your favourite people.</p>
                     </div>
                 </div>
-                <div className="image_side">
+                <div className="image_sidem">
                     <img src={sideimage} />
                 </div>
             </div>

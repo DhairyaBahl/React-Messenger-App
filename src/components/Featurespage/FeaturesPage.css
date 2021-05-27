@@ -31,15 +31,34 @@
     text-transform: uppercase;
 }
 
-.image_side {
+.image_sidem {
     margin-left: 22vw;
  }
-.image_side img {
+ @keyframes float {
+    0% {
+      filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.6));
+      transform: translatey(0px);
+    }
+    50% {
+      filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.2));
+      transform: translatey(-20px);
+    }
+    100% {
+      filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.6));
+      transform: translatey(0px);
+    }
+  }
+.image_sidem img {
     width : 80%;
     border-radius: 1.5rem;
     box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
     -webkit-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
     -moz-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+    overflow: hidden;
+  transform: translatey(0px);
+  -webkit-filter: drop-shadow(5px 5px 15px rgb(29, 28, 28));
+  filter: drop-shadow(5px 5px 15px rgb(34, 33, 33));
+	animation: float 3.38s ease-in-out infinite;
 
 }
 .image_side3 img {
@@ -48,6 +67,11 @@
     box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
     -webkit-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
     -moz-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+    overflow: hidden;
+  transform: translatey(0px);
+  -webkit-filter: drop-shadow(5px 5px 15px rgb(29, 28, 28));
+  filter: drop-shadow(5px 5px 15px rgb(34, 33, 33));
+	animation: float 3.38s ease-in-out infinite;
 }
 
 .main_text {
@@ -106,6 +130,11 @@
     box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
     -webkit-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
     -moz-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+    overflow: hidden;
+  transform: translatey(0px);
+  -webkit-filter: drop-shadow(5px 5px 15px rgb(29, 28, 28));
+  filter: drop-shadow(5px 5px 15px rgb(34, 33, 33));
+	animation: float 3.38s ease-in-out infinite;
 }
 
 .image_side3 img {
@@ -114,6 +143,11 @@
     box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
     -webkit-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
     -moz-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+    overflow: hidden;
+  transform: translatey(0px);
+  -webkit-filter: drop-shadow(5px 5px 15px rgb(29, 28, 28));
+  filter: drop-shadow(5px 5px 15px rgb(34, 33, 33));
+	animation: float 3.38s ease-in-out infinite;
 }
 
 .image_side2 img {
@@ -122,6 +156,11 @@
     box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
     -webkit-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
     -moz-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+    overflow: hidden;
+  transform: translatey(0px);
+  -webkit-filter: drop-shadow(5px 5px 15px rgb(29, 28, 28));
+  filter: drop-shadow(5px 5px 15px rgb(34, 33, 33));
+	animation: float 3.38s ease-in-out infinite;
 }
 
 .image_side7 {
@@ -137,6 +176,11 @@
     box-shadow: 0px -1px 50px -3px rgb(106, 101, 145);
     -webkit-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
     -moz-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+    overflow: hidden;
+  transform: translatey(0px);
+  -webkit-filter: drop-shadow(5px 5px 15px rgb(29, 28, 28));
+  filter: drop-shadow(5px 5px 15px rgb(34, 33, 33));
+	animation: float 3.38s ease-in-out infinite;
 }
 .image_side7_2 img {
     width : 100%;
@@ -144,6 +188,11 @@
     box-shadow: 0px -1px 50px -3px rgba(56, 54, 54, 0.63);
     -webkit-box-shadow: 0px -1px 50px -3px rgb(106, 101, 145);
     -moz-box-shadow: 0px -1px 50px -3px rgb(106, 101, 145);
+    overflow: hidden;
+  transform: translatey(0px);
+  -webkit-filter: drop-shadow(5px 5px 15px rgb(29, 28, 28));
+  filter: drop-shadow(5px 5px 15px rgb(34, 33, 33));
+	animation: float 3.38s ease-in-out infinite;
 }
 
 @media screen and (max-width: 998px)
