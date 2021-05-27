@@ -29,7 +29,9 @@ body {
 .speak {
   margin-right: 5px;
 }
-
+.copy{
+  margin-right: -1rem;
+}
 /*====================== new navbar ==========================*/
 
 :root {

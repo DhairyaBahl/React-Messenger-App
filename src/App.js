@@ -32,6 +32,7 @@ import Messages from "./components/messages/Messages.js";
 import Landing from "./components/Landingpage/LandingPage";
 import Faq from "./components/faq/faq";
 import Features from "./components/Featurespage/FeaturesPage";
+import CopyToClipboard from "react-copy-to-clipboard";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -51,6 +52,8 @@ function App() {
   const [messageCount, setMessageCount] = useState(50);
   const [scrollTop, setScrollTop] = useState(false);
   const [layout, setLayout] = useState("default");
+  const [value, setValue] = useState("");
+  const [status, setStatus] = useState(false);
   const keyboard = useRef();
 
   useEffect(() => {
@@ -439,6 +442,16 @@ function App() {
                               />
                             </span>
                           )}
+                             <input
+        type="text"
+        onChange={(e) => {
+          setValue(e.target.value);
+          setStatus(false);
+        }}
+      />
+      <CopyToClipboard text={value} onCopy={() => setStatus(true)}>
+        <button className="copy">  <i className="fa fa-copy"></i> </button>
+      </CopyToClipboard>
                           <input
                             ref={inputElement}
                             className={`input ${
@@ -458,6 +471,10 @@ function App() {
                               <span className="Speaknow_alert">Speak now</span>
                             )}
                           </div>
+                       
+ 
+      {/* {status && <p style={{ color: "red" }}> Copied!!!</p>} */}
+    
 
                           <button
                             className={`btnsend ${
@@ -468,6 +485,7 @@ function App() {
                             variant="contained"
                             crossOrigin="anonymous"
                             onClick={newMessage}
+                            
                           >
                             <i className="fa fa-paper-plane"></i>
                           </button>
