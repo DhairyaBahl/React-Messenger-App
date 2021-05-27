@@ -21,6 +21,7 @@ import SpeechRecognition, {
 import Login from "./components/login/login";
 import Signup from "./components/signup/signup";
 import Forget from "./components/forgetpass/forget";
+import Reset from "./components/resetpass/reset";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 import useLocalStorage from "./customHooks/useLocalStorage";
@@ -334,6 +335,10 @@ function App() {
           </Route>
           <Route exact path="/forget">
              <Forget apptheme={dark}/>
+             <Footer apptheme2={dark}/>
+          </Route>
+          <Route exact path="/reset">
+             <Reset apptheme={dark}/>
              <Footer apptheme2={dark}/>
           </Route>
           {/* ============================features page ============================ */}
