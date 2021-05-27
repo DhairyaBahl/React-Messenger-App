@@ -330,7 +330,7 @@ function App() {
             <Footer apptheme2={dark} />
           </Route>
           <Route exact path="/signup">
-            <Signup />
+            <Signup apptheme={dark}/>
             <Footer apptheme2={dark} />
           </Route>
           <Route exact path="/forget">
