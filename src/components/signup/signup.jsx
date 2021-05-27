@@ -7,7 +7,9 @@ export default function Signup(props) {
 
     return(
 
-<div className= "container_login">
+<div className={`${
+          props.apptheme ? "container_signup" : "container_signup_light"
+        }`}>
   <div className="illustration_img">
     <img src={loginIllustartion}></img>
   </div>
@@ -15,7 +17,7 @@ export default function Signup(props) {
     <form className="login_form">
       <h2  style={{fontSize:"27px"}} className="title">Welcome To Messenger</h2>
 
-      <h1 style={{fontSize:"18px", marginBottom:"30px",color:"#333"}}>Create an account</h1>
+      <h1 style={{fontSize:"18px", marginBottom:"30px"}}>Create an account</h1>
     <div className="input-div pass">
             <div className="i"> 
                 <i className="fa fa-envelope"></i>
