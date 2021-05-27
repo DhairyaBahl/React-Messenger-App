@@ -19,11 +19,8 @@ function footer(props) {
           <div>
             <div class="footer-open-source">
               <h2 style={{ marginBottom: "-10px" }}>
-                <a
-                  href="https://github.com/DhairyaBahl/React-Messenger-App"
-                  class="social__icon--link"
-                >
-                  <GitHubIcon />
+                <a href="https://github.com/DhairyaBahl/React-Messenger-App">
+                  <GitHubIcon style={{ fontSize: "20px", color: "#9e37d1" }} />
                 </a>
                 pen Source Contribution
               </h2>
@@ -49,22 +46,22 @@ function footer(props) {
                 href="https://github.com/DhairyaBahl/React-Messenger-App"
                 class="social__icon--link"
               >
-                <GitHubIcon />
+                <GitHubIcon style={{ fontSize: "25px" }} />
               </a>
               <a
                 href="mailto:dhairyabahl5@gmail.com"
                 class="social__icon--link"
               >
-                <MailIcon style={{ fontSize: "30px" }} />
+                <MailIcon style={{ fontSize: "25px" }} />
               </a>
               <a href="" class="social__icon--link">
-                <InstagramIcon style={{ fontSize: "30px" }} />
+                <InstagramIcon style={{ fontSize: "25px" }} />
               </a>
               <a
                 href="https://twitter.com/bahldhairya"
                 class="social__icon--link"
               >
-                <TwitterIcon style={{ fontSize: "30px" }} />
+                <TwitterIcon style={{ fontSize: "25px" }} />
               </a>
             </div>
           </div>
