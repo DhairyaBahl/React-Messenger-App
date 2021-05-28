@@ -487,10 +487,10 @@ footer {
 
 .loadOlderMessages {
   margin: 0 auto;
-  color: #eb2a5d;
+  color: #9240da;
   cursor: pointer;
   border-radius: 5px;
-  border: 3px solid #eb2a5d;
+  border: 3px solid #9240da;
   padding: 10px 20px;
   font-size: 1.75rem;
   font-weight: bold;
@@ -502,10 +502,10 @@ footer {
   }
   
   .loadOlderMessages:hover {
-    background: linear-gradient( to right, #e6285b, #ee2b5f, #eb2a5d );
+    background: linear-gradient( to right, #9240da, #d643f3 );
     color: rgb(255, 255, 255);
     border: 3px solid rgb(255, 255, 255);
-    box-shadow: 0 4px 8px 0 #ee2b5f, 0px -1px 5px -3px #ee2b5f, 0 6px 10px 0 #e6285b;
+    box-shadow: 0 4px 8px 0 #9240da, 0px -1px 5px -3px #d643f3, 0 6px 10px 0 #8735d0;
 }
 
 @media screen and (max-width: 960px) {
