@@ -1,6 +1,8 @@
 import emailjs from "emailjs-com";
 import React from "react";
 import "./contactForm.css";
+import Email from 'react-email-autocomplete';
+
 
 export default function ContactUs(props) {
     function sendEmail(e) {
@@ -99,10 +101,11 @@ export default function ContactUs(props) {
                                     <span>
                                         <i aria-hidden="true" class="fa fa-envelope"></i>
                                     </span>
-                                    <input
+                                  
+                                    <Email  placeholder="johndoe@gmail.com"
                                         type="email"
                                         name="email"
-                                        placeholder="johndoe@gmail.com"
+                                       
                                         required
                                     />
                                 </div>
