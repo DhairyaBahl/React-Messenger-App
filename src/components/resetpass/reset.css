@@ -110,6 +110,17 @@
   color:purple;
 }
 
+.container_reset .btn_reset{
+  background: -webkit-linear-gradient(
+      45deg,
+      rgb(133, 29, 186) 15%,
+      rgba(255, 0, 224, 1) 100%
+    );
+}
+.container_reset .btn_reset:hover{
+	background-position: right;
+  color:rgb(0, 0, 0);
+}
   @media screen and (max-width: 998px) {
     form {
       width: 250px;
