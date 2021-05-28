@@ -34,9 +34,12 @@ import Faq from "./components/faq/faq";
 import Features from "./components/Featurespage/FeaturesPage";
 import LoadingBar from 'react-top-loading-bar'
 
+
 import { Notifications } from 'react-push-notification';
 
-import {CopyToClipboard} from 'react-copy-to-clipboard';
+
+import CopyToClipboard from 'react-copy-to-clipboard';
+
 
 
 function App() {
