@@ -214,4 +214,7 @@ textarea:focus {
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
+  .row.clearfix {
+    width: inherit;
+  }
 }
