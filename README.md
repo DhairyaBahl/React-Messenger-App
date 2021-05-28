@@ -35,32 +35,33 @@ I am writing down the Dependencies for beginners, so that they can look into it 
 # Installation and Setup
 
 1. Fork the Repository
-	<img src="./public/fork_button.jpg" alt="fork button image"/>
+
+	<img height="50" src="./public/fork_button.jpg" alt="fork button image"/>
 
 2. Clone the Forked Repository to your local machine.
-```
-git clone https://github.com/<your GitHub user name>/React-Messenger-App.git.
-```
+	```
+	git clone https://github.com/<your GitHub user name>/React-Messenger-App.git.
+	```
 
 3. Change the directory to React-Messenger-App.
-```bash
-cd React-Messenger-App
-```
+	```bash
+	cd React-Messenger-App
+	```
 
 4. Add remote to the Original Repository.
-```
-git add remote https://github.com/DhairyaBahl/React-Messenger-App.git
-```
+	```
+	git add remote https://github.com/DhairyaBahl/React-Messenger-App.git
+	```
 
 5. Install the dependecies.
-```node
-npm install
-```
+	```node
+	npm install
+	```
 
 6. Run the application.
-```node
-npm start
-```
+	```node
+	npm start
+	```
 
 7. The app starts on `localhost:3000`. If not, [Click here](http://localhost:3000) to open the app in browser.
 
