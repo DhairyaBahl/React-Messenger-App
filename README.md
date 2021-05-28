@@ -1,4 +1,4 @@
-# React-Messenger-App
+> # React-Messenger-App
 ![logo](https://miro.medium.com/max/3176/1*h-xRzZOCHk8jTlEa8M42GA.png)
 ##
 [![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)    [![forthebadge](https://forthebadge.com/images/badges/made-with-crayons.svg)](https://forthebadge.com)    [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
@@ -7,23 +7,23 @@ This is a Messenger App, made with react, styled with the help of material-ui an
 
 Here is the link to the deployed app :- https://mui-message.firebaseapp.com
 
-### We are now part of GSSoC 2021 !
+>## We are now part of GSSoC 2021 !
 [![GSSoC](https://raw.githubusercontent.com/GirlScriptSummerOfCode/MentorshipProgram/master/GSsoc%20Type%20Logo%20Black.png)](https://gssoc.girlscript.tech)
 We got accepted for the GSSoc 2021 and are actively looking for new participants, please feel free to ask questions in the discussion section of this repository and if you want to be our mentor please mention in the discussion.
 
-## Motive
+# Motive
 
 This Repository is created with a motive to guide beginners with the open-source and with big react projects. I have already created some issues for the beginners so that they can work on them and even make there first contribution in this repository.
 
-## Instructions
+# Instructions
 
 You can test this project in your create-react-app feature by replacing the files.
 
-## Supported Platforms
+# Supported Platforms
 
 This app can be built on any platform. It can be Windows, Linux , MacOS or any other. You only need the create-react-app feature and rest is in the Dependencies section.
 
-## Dependencies
+# Dependencies
 
 I am writing down the Dependencies for beginners, so that they can look into it and then understand and install them if they want to.
 
@@ -32,14 +32,46 @@ I am writing down the Dependencies for beginners, so that they can look into it 
 * @material-ui/icons and @material-ui/core
 * react router
 
-## Connect with me
+# Installation and Setup
+
+1. Fork the Repository
+	<img src="./public/fork_button.jpg" alt="fork button image"/>
+
+2. Clone the Forked Repository to your local machine.
+```
+git clone https://github.com/<your GitHub user name>/React-Messenger-App.git.
+```
+
+3. Change the directory to React-Messenger-App.
+```bash
+cd React-Messenger-App
+```
+
+4. Add remote to the Original Repository.
+```
+git add remote https://github.com/DhairyaBahl/React-Messenger-App.git
+```
+
+5. Install the dependecies.
+```node
+npm install
+```
+
+6. Run the application.
+```node
+npm start
+```
+
+7. The app starts on `localhost:3000`. If not, [Click here](http://localhost:3000) to open the app in browser.
+
+# Connect with me
 
 * [Twitter](https://twitter.com/bahldhairya)
 * [Medium](https://medium.com/@dhairyabahl5)
 * [Gmail](dhairyabahl5@gmail.com)
 * [LinkedIn](https://www.linkedin.com/in/dhairya-bahl)
 
-## Show your support
+# Show your support
 
 Give a ⭐ if you like this web-app.
 
@@ -49,12 +81,12 @@ Give a ⭐ if you like this web-app.
 Anybody can contribute to this project. Just take an issue, give your ideas, work on the issue and I am always here to guide you throughout the process ❤ .
 
 ## 2. What are the steps to make my first contribution ?
-Kindly refer to the contributing.md file. All the contributing guidelines are written over there.
+Kindly refer to the [contributing.md](/contributing.md) file. All the contributing guidelines are written over there.
 
 ## 3. Is there any need to assign myself to the issue before starting to work on the issue ?
 It is better to wait until you are assigned to the issue. Although if you are make sure that no-one is working on the issue then you can start working on the issue.
 
-<h2>Contributors:</h2>
+# Contributors:
 
 ### Credits goes to these people:✨
 
