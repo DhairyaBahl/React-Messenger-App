@@ -32,6 +32,7 @@ import Messages from "./components/messages/Messages.js";
 import Landing from "./components/Landingpage/LandingPage";
 import Faq from "./components/faq/faq";
 import Features from "./components/Featurespage/FeaturesPage";
+import LoadingBar from 'react-top-loading-bar'
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -52,6 +53,7 @@ function App() {
   const [scrollTop, setScrollTop] = useState(false);
   const [layout, setLayout] = useState("default");
   const keyboard = useRef();
+  const [progress, setProgress] = useState(0)
 
   useEffect(() => {
     if (!username || !uid) setOpenWelcomeDialogBox(true);
@@ -159,6 +161,7 @@ function App() {
   };
   const loadOlderMessages = () => {
     setMessageCount((prev) => prev + 50);
+    setProgress(100);
   };
   useEffect(() => {
     if (finalTranscript !== "") {
@@ -357,12 +360,14 @@ function App() {
               ) : (
                 <>
                   <div className="scroll">
+                  <LoadingBar color=' red' progress={progress} onLoaderFinished={() => setProgress(0)} />
                     <br />
                     <br />
                     <br />
                     <button
                       className="loadOlderMessages"
                       onClick={loadOlderMessages}
+                      
                     >
                       Load Older Messages
                     </button>
