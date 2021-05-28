@@ -33,7 +33,11 @@ import Landing from "./components/Landingpage/LandingPage";
 import Faq from "./components/faq/faq";
 import Features from "./components/Featurespage/FeaturesPage";
 import LoadingBar from 'react-top-loading-bar'
+
 import { Notifications } from 'react-push-notification';
+
+import {CopyToClipboard} from 'react-copy-to-clipboard';
+
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -55,6 +59,8 @@ function App() {
   const [layout, setLayout] = useState("default");
   const keyboard = useRef();
   const [progress, setProgress] = useState(0)
+  const [value, setValue] = useState("");
+  const [status, setStatus] = useState(false);
 
   useEffect(() => {
     if (!username || !uid) setOpenWelcomeDialogBox(true);
@@ -446,6 +452,20 @@ function App() {
                               />
                             </span>
                           )}
+                          <input
+                              type="text"
+                              onChange={(e) => {
+                                setValue(e.target.value);
+                                setStatus(false);
+                              }}
+                            />
+                            <CopyToClipboard text={value} onCopy={() => setStatus(true)}>
+                              <button className="copy">  <i
+                              className="fa fa-copy"
+                            ></i></button>
+                            </CopyToClipboard>
+                      
+                            
                           <input
                             ref={inputElement}
                             className={`input ${
