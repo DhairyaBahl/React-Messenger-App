@@ -33,6 +33,7 @@ import Landing from "./components/Landingpage/LandingPage";
 import Faq from "./components/faq/faq";
 import Features from "./components/Featurespage/FeaturesPage";
 import LoadingBar from 'react-top-loading-bar'
+import { Notifications } from 'react-push-notification';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -394,8 +395,9 @@ function App() {
                     <br />
                     <br />
                   </div>
+                  
                   <div ref={messagesEndRef} />
-
+                  <Notifications />
                   <div className="div__footer">
                     <footer className={`${dark ? "footer_dark" : ""}`}>
                       <div className="content__footer">
