@@ -33,7 +33,7 @@ import Landing from "./components/Landingpage/LandingPage";
 import Faq from "./components/faq/faq";
 import Features from "./components/Featurespage/FeaturesPage";
 import LoadingBar from 'react-top-loading-bar'
-import {CopyToClipboard} from 'react-copy-to-clipboard';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 function App() {
   const [loading, setLoading] = useState(false);
