@@ -341,6 +341,11 @@
     -moz-box-shadow: none;
   }
 
+  .btn_login,
+  .anc {
+    font-size: medium;
+  }
+
   .illustration_img img {
     display: none;
   }
