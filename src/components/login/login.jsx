@@ -1,7 +1,7 @@
 import React from "react";
 import "font-awesome/css/font-awesome.min.css";
 import "./login.css";
-import loginIllustartion from "./logo.png";
+import loginIllustartion from "./logo1.svg";
 
 export default function Login(props) {
   return (
@@ -68,3 +68,4 @@ export default function Login(props) {
     </div>
   );
 }
+
