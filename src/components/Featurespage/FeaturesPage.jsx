@@ -14,7 +14,7 @@ function Features(props) {
                         <br></br>
                         to stay <br></br>connected</h1>
                     </div>
-                    <div className="small_text">
+                    <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
                         <p>Messenger has everything you need to feel <br></br> closer to your favourite people.</p>
                     </div>
                 </div>
@@ -36,7 +36,7 @@ function Features(props) {
                         <br></br>
                         any <span style={{ color: 'rgb(133, 29, 186)' }}>emoji</span></h1>
                     </div>
-                    <div className="small_text2">
+                    <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
                         <p>Lost for words? Now you can customise your reactions <br></br> with way more emojis to choose from, including 🎉 and 🔥 </p>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ function Features(props) {
                             <br></br>
                          Your way</h1>
                     </div>
-                    <div className="small_text2">
+                    <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
                         <p>Choose from light and dark themes to comfort <br></br> your eyes and chat for long  ❤️ 🏳️‍🌈</p>
                     </div>
                 </div>
@@ -78,7 +78,7 @@ function Features(props) {
                         <br></br>
                       Start <span style={{ color: 'rgb(133, 29, 186)' }}>talking!</span></h1>
                     </div>
-                    <div className="small_text2">
+                    <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
                         <p>Switching from typing to talking comes with <br></br>a range of benefits🔥 </p>
                     </div>
                 </div>

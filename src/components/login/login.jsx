@@ -18,7 +18,6 @@ export default function Login(props) {
           <h2 style={{ fontSize: "27px" }} className="title">
             Welcome
           </h2>
-
           <h1 style={{ fontSize: "18px", marginBottom: "30px" }}>
             Sign in to your account
           </h1>
