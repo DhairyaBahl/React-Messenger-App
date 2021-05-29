@@ -4,7 +4,7 @@ import sideimage from "./sideimage.png";
 
 function Landing(props) {
   return (
-    <div className={`${props.apptheme ? "container" : "container_light"}`}>
+    <div className={`${props.apptheme ? "landing_container" : "landing_container_light"}`}>
       <div className="text_side1">
         <div className="main_text1">
           <h1>

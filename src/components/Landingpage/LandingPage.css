@@ -1,18 +1,21 @@
-.container {
+html {
+  font-size: 16px !important;
+}
+.landing_container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: left;
-    padding: 10vh;
+    padding: 10vh 0;
     background: rgb(0, 0, 0);
 }
-.container_light{
+.landing_container_light{
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: left;
-    padding: 10vh;
+    padding: 10vh 0vh;
 }
 @keyframes float {
     0% {
@@ -56,7 +59,7 @@
     background-image:linear-gradient(83.84deg, #0088FF -6.87%, #A033FF 26.54%, #FF5C87 58.58%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 32px;
+    font-size: 2rem;
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
 .small_text1{
