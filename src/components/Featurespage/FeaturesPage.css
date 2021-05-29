@@ -117,6 +117,13 @@
     color: #696969;
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
+.small_text2_dark{
+    margin-top: -2rem;
+    font-size: 1.9rem;
+    font-weight: lighter;
+    color: beige;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
 .image_side2 {
    margin-left: 9vw;
 }

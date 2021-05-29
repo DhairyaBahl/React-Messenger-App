@@ -1,16 +1,24 @@
 #faq_dark {
-    color:white;
-    background-color: #101214;
+  color: white;
+  background-color: #101214;
 }
 #faq_light {
-    color:rgb(0, 0, 0);
-    background-color: rgb(233, 228, 228);
+  color: rgb(0, 0, 0);
+  background-color: rgb(233, 228, 228);
 }
 
 #dark {
-    background-color: black; 
+  background-color: black;
 }
 
 #light {
-    background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+}
+
+@media (max-width: 600px) {
+  .faq,
+  #faq_dark,
+  #faq_light {
+    font-size: medium;
+  }
 }

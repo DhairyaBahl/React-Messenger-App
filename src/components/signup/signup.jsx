@@ -25,9 +25,8 @@ export default function Signup(props) {
                             {/* <div className="div">
                 <input type="mail" placeholder="E-mail" className="input"></input>
             </div> */}
-                            <div className="div">
-                                <Email className="input" placeholder="Enter email" />
-                            </div>
+                        <div className="div">
+                            <Email className = {`${props.apptheme ? "input1" : "input1_light"}`}  placeholder="Enter email" />
                         </div>
                         <div className="input-div one">
                             <div className="i">
