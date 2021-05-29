@@ -24,7 +24,6 @@ body {
 
 .blackName {
   color: rgb(0, 0, 0);
-  
 }
 
 .speak {
@@ -245,7 +244,7 @@ footer {
 }
 
 .BlackNavBar {
-  background-color: black ;
+  background-color: black;
   border-bottom: 1px solid white;
 }
 
@@ -287,8 +286,10 @@ footer {
   border: 2px solid #d0d0d0;
   width: 60%;
   padding: 2px;
-  border-radius: 8px; 
-  color: white;  margin: 0 auto;  display: flex;
+  border-radius: 8px;
+  color: white;
+  margin: 0 auto;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -415,8 +416,8 @@ footer {
   align-items: center;
   justify-content: center;
 }
-.KeyboardToggle{
-  margin: 4px;
+.KeyboardToggle {
+  margin: 0 0 0 5px;
 }
 .EmojiPicker {
   position: absolute;
@@ -438,7 +439,6 @@ footer {
   bottom: 70px;
   color: black;
   background-color: transparent;
-
 }
 
 .Speaknow_alert {
@@ -500,6 +500,7 @@ footer {
   transition: all 0.5s ease-in-out;
   box-shadow: 0px -1px 5px -3px rgb(106, 101, 145);
   -webkit-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+
     -moz-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
   }
   
@@ -508,6 +509,7 @@ footer {
     color: rgb(255, 255, 255);
     border: 3px solid rgb(255, 255, 255);
     box-shadow: 0 4px 8px 0 #9240da, 0px -1px 5px -3px #d643f3, 0 6px 10px 0 #8735d0;
+
 }
 
 @media screen and (max-width: 960px) {
