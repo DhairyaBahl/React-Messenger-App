@@ -25,7 +25,7 @@
   cursor: pointer;
   text-decoration: none;
   font-size: 1.8rem;
-  margin-left: 78px;
+  margin: 0 auto;
 }
 #footer__logo:hover {
   color: #ff1b4c;
@@ -53,6 +53,7 @@
 .footer-open-source h2 {
   margin-bottom: 10px;
   font-size: 26px;
+  text-align: center;
   color: #9e37d1;
 }
 
@@ -96,6 +97,7 @@
 
 .website__rights {
   color: #fff;
+  text-align: center;
 }
 .website__rights_light {
   color: rgb(0, 0, 0);
