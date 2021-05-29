@@ -31,6 +31,15 @@
   color: #ff1b4c;
   transform: scale(1.6);
 }
+#footer__logo--link {
+  color: #9e37d1;
+  font-size: 26px;
+}
+#footer__logo--link:hover {
+  color: #ff1b4c;
+  transform: scale(1.6);
+  margin-right: 0.3em;
+}
 .footer__links {
   width: 100%;
   max-width: 1000px;
