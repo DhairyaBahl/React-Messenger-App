@@ -382,6 +382,8 @@ footer {
 .footer_dark input,
 .footer_dark ::placeholder {
   color: white;
+  border: none;
+  background: none;
 }
 #sendMsgBtn {
   background-color: rgb(0, 50, 77);
