@@ -245,6 +245,17 @@
   color:purple;
 }
 
+.container_signup .btn_login{
+  background: -webkit-linear-gradient(
+      45deg,
+      rgb(133, 29, 186) 15%,
+      rgba(255, 0, 224, 1) 100%
+    );
+}
+.container_signup .btn_login:hover{
+	background-position: right;
+  color:rgb(0, 0, 0);
+}
 
 @media screen and (max-width: 1100px){
 	.container_login{
