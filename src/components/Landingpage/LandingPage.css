@@ -72,6 +72,20 @@
     color: #494949;
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
+.small_text2{
+  margin-top: -2rem;
+  font-size: 1.9rem;
+  font-weight: lighter;
+  color: #494949;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+.small_text2_dark{
+  margin-top: -2rem;
+  font-size: 1.9rem;
+  font-weight: lighter;
+  color: beige;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
 .enter_chat {
   background: #0A7CFF;
   border-radius: 15px;
