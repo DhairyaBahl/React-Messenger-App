@@ -13,9 +13,9 @@ function Landing(props) {
             whenever,<br></br>wherever
           </h1>
         </div>
-        <div className="small_text1">
+        <div className={`${props.apptheme ? "small_text2_dark" : "small_text2"}`}>
           <p>
-            Messenger makes it easy and fun to stay close to your
+            Messenger makes it easy and fun to <br/>stay close to your
             favourite people.
           </p>
          </div>
