@@ -2,6 +2,7 @@ import React from "react";
 import 'font-awesome/css/font-awesome.min.css';
 import "./signup.css";
 import loginIllustartion from "./logo.png";
+import Email from 'react-email-autocomplete';
 
 export default function Signup(props) {
 
@@ -22,8 +23,11 @@ export default function Signup(props) {
             <div className="i"> 
                 <i className="fa fa-envelope"></i>
             </div>
-            <div className="div">
+            {/* <div className="div">
                 <input type="mail" placeholder="E-mail" className="input"></input>
+            </div> */}
+            <div className="div">
+              <Email className="input" placeholder="Enter email"/>
             </div>
         </div>
       <div className="input-div one">

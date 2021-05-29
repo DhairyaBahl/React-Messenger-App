@@ -32,6 +32,15 @@ import Messages from "./components/messages/Messages.js";
 import Landing from "./components/Landingpage/LandingPage";
 import Faq from "./components/faq/faq";
 import Features from "./components/Featurespage/FeaturesPage";
+import LoadingBar from 'react-top-loading-bar'
+
+
+import { Notifications } from 'react-push-notification';
+
+
+import CopyToClipboard from 'react-copy-to-clipboard';
+
+
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -52,6 +61,9 @@ function App() {
   const [scrollTop, setScrollTop] = useState(false);
   const [layout, setLayout] = useState("default");
   const keyboard = useRef();
+  const [progress, setProgress] = useState(0)
+  const [value, setValue] = useState("");
+  const [status, setStatus] = useState(false);
 
   useEffect(() => {
     if (!username || !uid) setOpenWelcomeDialogBox(true);
@@ -159,6 +171,7 @@ function App() {
   };
   const loadOlderMessages = () => {
     setMessageCount((prev) => prev + 50);
+    setProgress(100);
   };
   useEffect(() => {
     if (finalTranscript !== "") {
@@ -357,12 +370,14 @@ function App() {
               ) : (
                 <>
                   <div className="scroll">
+                  <LoadingBar color=' red' progress={progress} onLoaderFinished={() => setProgress(0)} />
                     <br />
                     <br />
                     <br />
                     <button
                       className="loadOlderMessages"
                       onClick={loadOlderMessages}
+                      
                     >
                       Load Older Messages
                     </button>
@@ -389,8 +404,9 @@ function App() {
                     <br />
                     <br />
                   </div>
+                  
                   <div ref={messagesEndRef} />
-
+                  <Notifications />
                   <div className="div__footer">
                     <footer className={`${dark ? "footer_dark" : ""}`}>
                       <div className="content__footer">
@@ -439,6 +455,20 @@ function App() {
                               />
                             </span>
                           )}
+                          <input
+                              type="text"
+                              onChange={(e) => {
+                                setValue(e.target.value);
+                                setStatus(false);
+                              }}
+                            />
+                            <CopyToClipboard text={value} onCopy={() => setStatus(true)}>
+                              <button className="copy">  <i
+                              className="fa fa-copy"
+                            ></i></button>
+                            </CopyToClipboard>
+                      
+                            
                           <input
                             ref={inputElement}
                             className={`input ${

@@ -74,3 +74,12 @@
 .read-or-hide:hover {
   color: rgb(50, 50, 150);
 }
+
+@media (max-width: 500px) {
+  .msgs,
+  .sender,
+  .senderDark,
+  .time-stamp {
+    font-size: medium;
+  }
+}
