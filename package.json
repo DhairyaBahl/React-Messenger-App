@@ -10,6 +10,7 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
     "axios": "^0.21.1",
+    "create-react-app": "^4.0.3",
     "emailjs-com": "^2.6.4",
     "emoji-mart": "^3.0.1",
     "emoji-picker-react": "^3.4.2",
