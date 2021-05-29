@@ -110,6 +110,11 @@
   position: relative;
   height: 45px;
 }
+.input1 {
+  background-color: black;
+  border: transparent;
+
+}
 
 .input-div > div > h5 {
   position: absolute;
