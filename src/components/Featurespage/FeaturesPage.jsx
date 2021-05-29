@@ -10,12 +10,12 @@ function Features(props) {
             <div className={`${props.apptheme3 ? "container" : "container_light"}`}>
                 <div className="text_side">
                     <div className="main_text">
-                        <h1>More ways
+                        <h1>A better way
                         <br></br>
                         to stay <br></br>connected</h1>
                     </div>
                     <div className="small_text">
-                        <p>Messenger has everything you need to feel <br></br> closer to your favourite people.</p>
+                        <p>Messenger brings you <br></br>closer to your favourite people.</p>
                     </div>
                 </div>
                 <div className="image_side">
@@ -37,7 +37,7 @@ function Features(props) {
                         any <span style={{ color: 'rgb(133, 29, 186)' }}>emoji</span></h1>
                     </div>
                     <div className="small_text2">
-                        <p>Lost for words? Now you can customise your reactions <br></br> with way more emojis to choose from, including 🎉 and 🔥 </p>
+                        <p>Customize your REACTIONS. <br></br> Why write when you have so many emojis to choose from. Including 🎉 and 🔥 </p>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@ function Features(props) {
                          Your way</h1>
                     </div>
                     <div className="small_text2">
-                        <p>Choose from light and dark themes to comfort <br></br> your eyes and chat for long  ❤️ 🏳️‍🌈</p>
+                        <p>What do you choose? Light or Dark <br></br> Comfort you eyes with the NEW Dark theme. Switch anytime.  ❤️ 🏳️‍🌈</p>
                     </div>
                 </div>
                 <div className="image_side7">
@@ -79,7 +79,7 @@ function Features(props) {
                       Start <span style={{ color: 'rgb(133, 29, 186)' }}>talking!</span></h1>
                     </div>
                     <div className="small_text2">
-                        <p>Switching from typing to talking comes with <br></br>a range of benefits🔥 </p>
+                        <p>Why bother to type when you can talk? <br></br> Try the vioice input NOW 🔥 </p>
                     </div>
                 </div>
             </div>

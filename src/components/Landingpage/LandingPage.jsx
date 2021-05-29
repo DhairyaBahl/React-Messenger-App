@@ -14,9 +14,8 @@ function Landing(props) {
           </h1>
         </div>
         <div className="small_text1">
-          <p>
-            Messenger makes it easy and fun to stay close to your
-            favourite people.
+          <p>  
+            Stay closer to your loved ones. It&apos;s EASY &amp; more FUN with Messenger. 
           </p>
          </div>
          <div>
