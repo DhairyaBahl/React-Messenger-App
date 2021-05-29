@@ -33,11 +33,6 @@ import Landing from "./components/Landingpage/LandingPage";
 import Faq from "./components/faq/faq";
 import Features from "./components/Featurespage/FeaturesPage";
 import LoadingBar from 'react-top-loading-bar'
-
-
-import { Notifications } from 'react-push-notification';
-
-
 import CopyToClipboard from 'react-copy-to-clipboard';
 
 
@@ -300,18 +295,36 @@ function App() {
                         className={`nav-icon ${dark ? "nav-icon_dark" : "nav-icon_light"}`}
                         onClick={handleClick}
                     >
-                        <i>
-                            <MenuIcon style={{ fontSize: "30px", marginTop: "3px" }} />
-                        </i>
-                    </div>
-                </div>
-            </nav>
-
-            {/*========================== End of NavBar ============================*/}
-
-            <Switch>
-                <Suspense
-                    fallback={
+                      Load Older Messages
+                    </button>
+                    <br />
+                    <br />
+                    {messages.map((message) => (
+                      <Messages
+                        messages={message}
+                        username={username}
+                        uid={uid}
+                        dark={dark}
+                        key={genKey()}
+                      />
+                    ))}
+                    <div />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                  </div>
+                  
+                  <div ref={messagesEndRef} />
+                  <div className="div__footer">
+                    <footer className={`${dark ? "footer_dark" : ""}`}>
+                      <div className="content__footer">
                         <div
                             style={{
                                 display: "flex",
