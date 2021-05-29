@@ -308,6 +308,7 @@
     display: none;
   }
 
+
   .login-content {
     justify-content: center;
   }
@@ -340,6 +341,7 @@
   .illustration_img img {
     display: none;
   }
+
 
   .login-content {
     justify-content: center;
@@ -396,3 +398,4 @@
     }
 
 }
+
