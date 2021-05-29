@@ -7,7 +7,7 @@ export default function Login(props) {
 
     return (
 
-        <div className={`${props.apptheme ? "container_login" : "container_login_light"
+        <div className={`${props.apptheme ? "container_login" : "container_loginlight"
             }`}>
             <div className="illustration_img">
                 <img src={loginIllustartion}></img>
