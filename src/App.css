@@ -516,7 +516,7 @@ footer {
   .nav-menu {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     border-top: 1pxsolid #fff;
     position: absolute;
     top: 60px;
@@ -561,7 +561,7 @@ footer {
   }
 
   .nav-item:hover:after {
-    width: 100%;
+    width: 90%;
   }
 
   .toggle-nav:hover:after {
