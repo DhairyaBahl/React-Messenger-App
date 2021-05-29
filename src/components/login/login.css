@@ -5,6 +5,18 @@
 	box-sizing: border-box;
 } */
 
+.dark {
+    background-color: black;
+    padding: 30px 0px;
+}
+
+.light {
+    background-color: white;
+    padding: 30px 0px;
+}
+
+
+
 .container_login{
     width: 70vw;
     height: 70vh;
