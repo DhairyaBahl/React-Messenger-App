@@ -20,7 +20,7 @@ function footer(props) {
             <div class="footer-open-source">
               <h2 style={{ marginBottom: "-10px" }}>
                 <a href="https://github.com/DhairyaBahl/React-Messenger-App">
-                  <GitHubIcon style={{ fontSize: "20px", color: "#9e37d1" }} />
+                  <GitHubIcon id="footer__logo--link"style={{ fontSize: "26px" }} />
                 </a>
                 pen Source Contribution
               </h2>
