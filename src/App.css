@@ -284,7 +284,7 @@ footer {
 .sendNewMessagedark {
   background-image: linear-gradient(to right, rgb(24, 17, 17), rgb(85 6 101));
   border: 2px solid #d0d0d0;
-  width: 60%;
+  width: 97%;
   padding: 2px;
   border-radius: 8px;
   color: white;
@@ -561,7 +561,7 @@ footer {
   }
 
   .nav-item:hover:after {
-    width: 90%;
+    width: 100%;
   }
 
   .toggle-nav:hover:after {
