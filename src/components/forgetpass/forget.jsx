@@ -1,7 +1,7 @@
 import React from "react";
 import 'font-awesome/css/font-awesome.min.css';
 import "./forget.css";
-import forgetIllustration from "./forget.png";
+import forgetIllustration from "./forget.svg";
 
 export default function Forget(props) {
 
@@ -11,7 +11,7 @@ export default function Forget(props) {
           props.apptheme ? "container_forget" : "container_forget_light"
         }`}>
       <div className="forget_illustration">
-        <img src={forgetIllustration} width="300px" height="300px"></img>
+        <img src={forgetIllustration} width="500px" height="500px"></img>
       </div>
       <div className="forget-content">
         <form action = "/reset">
