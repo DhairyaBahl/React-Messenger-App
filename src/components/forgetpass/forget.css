@@ -52,6 +52,10 @@
 .forget_illustration{
     margin-right: 5rem;
 }
+.input2{
+  background-color: black;
+  border: transparent;
+}
 
 .forget-content .input-div{
 	position: relative;
