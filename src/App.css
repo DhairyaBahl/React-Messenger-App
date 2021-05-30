@@ -515,6 +515,7 @@ footer {
 
 @media screen and (max-width: 960px) {
   .nav-menu {
+    margin: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -536,7 +537,7 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .nav-menu.active {
+  .nav-menu:active {
     background: rgb(22, 21, 21);
     left: 0px;
     opacity: 1;
