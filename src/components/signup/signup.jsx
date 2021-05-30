@@ -54,6 +54,7 @@ export default function Signup(props) {
                         <div className="loginbutton">
                             <input type="submit" className="btn_login" value="Signup"></input>
                         </div>
+                        </div>
                     </form>
                 </div>
             </div>
