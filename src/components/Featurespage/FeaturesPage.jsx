@@ -65,14 +65,20 @@ function Features(props) {
                          Your way</h1>
                     </div>
                     <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
-                        <p>Choose from light and dark themes to comfort <br></br> your eyes and chat for long  ❤️ 🏳️‍🌈</p>
+                        <Fade top duration={1500} delay={300}>
+                            <p>Choose from light and dark themes to comfort <br></br> your eyes and chat for long  ❤️ 🏳️‍🌈</p>
+                        </Fade>
                     </div>
                 </div>
                 <div className="image_side7">
-                    <img src={sideimage} />
+                    <Fade right duration={1500} delay={300}>
+                        <img src={sideimage} />
+                    </Fade>
                 </div>
                 <div className="image_side7_2">
-                    <img src={sideimage3} />
+                    <Fade right duration={1500} delay={300}>
+                        <img src={sideimage3} />
+                    </Fade>
                 </div>
             </div>
 
