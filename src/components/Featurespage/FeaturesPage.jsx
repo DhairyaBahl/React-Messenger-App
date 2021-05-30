@@ -14,7 +14,7 @@ function Features(props) {
                         <br></br>
                         to stay <br></br>connected</h1>
                     </div>
-                    <div className="small_text">
+                    <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
                         <p>Messenger brings you <br></br>closer to your favourite people.</p>
                     </div>
                 </div>
@@ -36,7 +36,7 @@ function Features(props) {
                         <br></br>
                         any <span style={{ color: 'rgb(133, 29, 186)' }}>emoji</span></h1>
                     </div>
-                    <div className="small_text2">
+                    <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
                         <p>Customize your REACTIONS. <br></br> Why write when you have so many emojis to choose from. Including 🎉 and 🔥 </p>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ function Features(props) {
                             <br></br>
                          Your way</h1>
                     </div>
-                    <div className="small_text2">
+                    <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
                         <p>What do you choose? Light or Dark <br></br> Comfort you eyes with the NEW Dark theme. Switch anytime.  ❤️ 🏳️‍🌈</p>
                     </div>
                 </div>
@@ -79,6 +79,7 @@ function Features(props) {
                       Start <span style={{ color: 'rgb(133, 29, 186)' }}>talking!</span></h1>
                     </div>
                     <div className="small_text2">
+                    <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
                         <p>Why bother to type when you can talk? <br></br> Try the vioice input NOW 🔥 </p>
                     </div>
                 </div>

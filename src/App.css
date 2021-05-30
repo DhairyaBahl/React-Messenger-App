@@ -30,7 +30,7 @@ body {
   margin-right: 5px;
 }
 .copy {
-  margin-right: -1rem
+  margin-right: -1rem;
 }
 /*====================== new navbar ==========================*/
 
@@ -50,10 +50,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 9999;
   box-shadow: 0 4px 8px 0 rgba(253, 251, 251, 0.2),
     0 6px 10px 0 rgba(173, 173, 173, 0.844);
 }
@@ -63,10 +63,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 9999;
   box-shadow: 0 4px 8px 0 rgba(253, 251, 251, 0.2),
     0 6px 10px 0 rgba(0, 0, 0, 0.844);
 }
@@ -328,7 +328,7 @@ footer {
 }
 
 @media (max-width: 864px) {
-  .sendNewMessage {
+  .sendNewMessage, .sendNewMessagedark{
     width: 97%;
   }
 }
@@ -343,7 +343,7 @@ footer {
 }
 
 @media (max-width: 864px) {
-  .sendNewMessage {
+  .sendNewMessage, .sendNewMessagedark{
     width: 97%;
   }
 }
@@ -382,6 +382,8 @@ footer {
 .footer_dark input,
 .footer_dark ::placeholder {
   color: white;
+  border: none;
+  background: none;
 }
 #sendMsgBtn {
   background-color: rgb(0, 50, 77);
@@ -389,20 +391,20 @@ footer {
 }
 
 @media (max-width: 700px) {
-  .sendNewMessage {
+  .sendNewMessage, .sendNewMessagedark{
     width: 98.5%;
     max-width: 700px;
   }
 }
 
 @media (max-width: 790px) {
-  .sendNewMessage {
+  .sendNewMessage, .sendNewMessagedark{
     width: 95%;
   }
 }
 
 @media (max-width: 430px) {
-  .sendNewMessage {
+  .sendNewMessage, .sendNewMessagedark{
     width: 90%;
     margin-right: 8px;
   }
@@ -496,27 +498,28 @@ footer {
   padding: 10px 20px;
   font-size: 1.75rem;
   font-weight: bold;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   transition: all 0.5s ease-in-out;
   box-shadow: 0px -1px 5px -3px rgb(106, 101, 145);
   -webkit-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
 
-    -moz-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
-  }
-  
-  .loadOlderMessages:hover {
-    background: linear-gradient( to right, #9240da, #d643f3 );
-    color: rgb(255, 255, 255);
-    border: 3px solid rgb(255, 255, 255);
-    box-shadow: 0 4px 8px 0 #9240da, 0px -1px 5px -3px #d643f3, 0 6px 10px 0 #8735d0;
+  -moz-box-shadow: 0px -1px 36px -3px rgb(106, 101, 145);
+}
 
+.loadOlderMessages:hover {
+  background: linear-gradient(to right, #9240da, #d643f3);
+  color: rgb(255, 255, 255);
+  border: 3px solid rgb(255, 255, 255);
+  box-shadow: 0 4px 8px 0 #9240da, 0px -1px 5px -3px #d643f3,
+    0 6px 10px 0 #8735d0;
 }
 
 @media screen and (max-width: 960px) {
   .nav-menu {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     border-top: 1pxsolid #fff;
     position: absolute;
     top: 60px;
@@ -580,7 +583,7 @@ footer {
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
-    font-size: 1.8rem;
+    font-size: 3rem;
     cursor: pointer;
   }
   .nav-icon_dark {
