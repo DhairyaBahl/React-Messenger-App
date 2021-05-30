@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import "./Abouts.css";
 import { ReactComponent as Logo } from "../../about-1.svg";
 import { ReactComponent as Logo2 } from "../../about-2.svg";
-
+import { Fade } from 'react-reveal';
 
 const About = (props) => {
     return (
@@ -14,17 +14,21 @@ const About = (props) => {
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={6}>
                     <div className="main__img--container">
-                        <Logo
-                            className="responsive jewel"
-                        />
+                        <Fade left duration={1500}>
+                            <Logo
+                                className="responsive jewel"
+                            />
+                        </Fade>
                     </div>
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={6}>
                     <div className="main__content">
-                        <h2>
-                            This is a <span>Messenger App</span>, made with <span>React</span>, styled with the help of <span>Material-UI</span> and deployed with the help of <span>Firebase.</span>
+                        <Fade top duration={1500}>
+                            <h2>
+                                This is a <span>Messenger App</span>, made with <span>React</span>, styled with the help of <span>Material-UI</span> and deployed with the help of <span>Firebase.</span>
 
-                        </h2>
+                            </h2>
+                        </Fade>
                     </div>
                 </Grid>
                 <Grid item xs={12} sm={12} md={12} lg={12} style={{ marginBottom: "-20px" }}>
