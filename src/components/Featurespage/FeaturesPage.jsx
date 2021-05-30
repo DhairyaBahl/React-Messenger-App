@@ -32,7 +32,9 @@ function Features(props) {
 
             <div className={`${props.apptheme3 ? "container" : "container_light"}`}>
                 <div className="image_side2">
-                    <img src={sideimage2} />
+                    <Fade left duration={1500} delay={300}>
+                        <img src={sideimage2} />
+                    </Fade>
                 </div>
                 <div className="text_side2">
                     <div className="min-text">
@@ -44,7 +46,9 @@ function Features(props) {
                         any <span style={{ color: 'rgb(133, 29, 186)' }}>emoji</span></h1>
                     </div>
                     <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
-                        <p>Lost for words? Now you can customise your reactions <br></br> with way more emojis to choose from, including 🎉 and 🔥 </p>
+                        <Fade top duration={1500} delay={300}>
+                            <p>Lost for words? Now you can customise your reactions <br></br> with way more emojis to choose from, including 🎉 and 🔥 </p>
+                        </Fade>
                     </div>
                 </div>
             </div>
