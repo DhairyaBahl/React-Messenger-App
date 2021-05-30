@@ -115,7 +115,7 @@
   #brand {
     margin-top: 40px;
     margin-bottom: -20px;
-    font-size: 1.8rem;
+    font-size: 5rem;
   }
   .main {
     background-color: #131313;
@@ -129,7 +129,7 @@
   .main__content h2 {
     margin-top: 40px;
     padding: 10px !important;
-    font-size: 2rem;
+    font-size: 4rem;
   }
 
   .motive-top {
