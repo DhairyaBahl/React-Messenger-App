@@ -16,7 +16,7 @@ import { Picker } from "emoji-mart";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import { purple } from "@material-ui/core/colors";
 import SpeechRecognition, {
-  useSpeechRecognition,
+  useSpeechRecognition
 } from "react-speech-recognition";
 import Login from "./components/login/login";
 import Signup from "./components/signup/signup";
@@ -32,10 +32,8 @@ import Messages from "./components/messages/Messages.js";
 import Landing from "./components/Landingpage/LandingPage";
 import Faq from "./components/faq/faq";
 import Features from "./components/Featurespage/FeaturesPage";
-import LoadingBar from 'react-top-loading-bar'
-import CopyToClipboard from 'react-copy-to-clipboard';
-
-
+import LoadingBar from "react-top-loading-bar";
+import CopyToClipboard from "react-copy-to-clipboard";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -56,7 +54,7 @@ function App() {
   const [scrollTop, setScrollTop] = useState(false);
   const [layout, setLayout] = useState("default");
   const keyboard = useRef();
-  const [progress, setProgress] = useState(0)
+  const [progress, setProgress] = useState(0);
   const [value, setValue] = useState("");
   const [status, setStatus] = useState(false);
 
@@ -100,7 +98,7 @@ function App() {
         username: username,
         uid: uid,
         message: input,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
       });
       new Audio(Messagesentaudio).play();
     }
@@ -144,16 +142,7 @@ function App() {
       console.log("picker visible");
     }
   };
-  // const addKeyboard = (e) => {
-  //     let keyboard = e.native;
-  //     let cursorPositionStart = inputElement.current.selectionStart;
-  //     let newinput =
-  //         input.slice(0, cursorPositionStart) +
-  //         keyboard +
-  //         input.slice(cursorPositionStart);
-  //     setInput(newinput);
-  //     inputElement.current.focus();
-  // };
+
   const keyboardToggle = (e) => {
     console.log("in keyboardToggle");
     if (showKeyboard === true) {
@@ -311,7 +300,7 @@ function App() {
               style={{
                 display: "flex",
                 justifyContent: "center",
-                marginTop: "50px",
+                marginTop: "50px"
               }}
             >
               Loading...
@@ -338,16 +327,16 @@ function App() {
             <Footer apptheme2={dark} />
           </Route>
           <Route exact path="/signup">
-            <Signup apptheme={dark}/>
+            <Signup apptheme={dark} />
             <Footer apptheme2={dark} />
           </Route>
           <Route exact path="/forget">
-             <Forget apptheme={dark}/>
-             <Footer apptheme2={dark}/>
+            <Forget apptheme={dark} />
+            <Footer apptheme2={dark} />
           </Route>
           <Route exact path="/reset">
-             <Reset apptheme={dark}/>
-             <Footer apptheme2={dark}/>
+            <Reset apptheme={dark} />
+            <Footer apptheme2={dark} />
           </Route>
           {/* ============================features page ============================ */}
 
@@ -365,14 +354,17 @@ function App() {
               ) : (
                 <>
                   <div className="scroll">
-                  <LoadingBar color=' red' progress={progress} onLoaderFinished={() => setProgress(0)} />
+                    <LoadingBar
+                      color=" red"
+                      progress={progress}
+                      onLoaderFinished={() => setProgress(0)}
+                    />
                     <br />
                     <br />
                     <br />
                     <button
                       className="loadOlderMessages"
                       onClick={loadOlderMessages}
-                      
                     >
                       Load Older Messages
                     </button>
@@ -399,7 +391,7 @@ function App() {
                     <br />
                     <br />
                   </div>
-                  
+
                   <div ref={messagesEndRef} />
                   <div className="div__footer">
                     <footer className={`${dark ? "footer_dark" : ""}`}>
@@ -450,19 +442,22 @@ function App() {
                             </span>
                           )}
                           <input
-                              type="text"
-                              onChange={(e) => {
-                                setValue(e.target.value);
-                                setStatus(false);
-                              }}
-                            />
-                            <CopyToClipboard text={value} onCopy={() => setStatus(true)}>
-                              <button className="copy">  <i
-                              className="fa fa-copy"
-                            ></i></button>
-                            </CopyToClipboard>
-                      
-                            
+                            type="text"
+                            onChange={(e) => {
+                              setValue(e.target.value);
+                              setStatus(false);
+                            }}
+                          />
+                          <CopyToClipboard
+                            text={value}
+                            onCopy={() => setStatus(true)}
+                          >
+                            <button className="copy">
+                              {" "}
+                              <i className="fa fa-copy"></i>
+                            </button>
+                          </CopyToClipboard>
+
                           <input
                             ref={inputElement}
                             className={`input ${
@@ -498,9 +493,14 @@ function App() {
                         </div>
                       </div>
                     </footer>
-                    <div className="scrolltobottom">
+                    <div
+                      className={dark ? "scrolltobottomdark" : "scrolltobottom"}
+                    >
                       <Button title="scroll to bottom" onClick={scrollToBottom}>
-                        <KeyboardArrowDownIcon className="scrollicon" />
+                        <KeyboardArrowDownIcon
+                          className={dark ? "scrollicondark" : "scrollicon"}
+                          style={{ width: "20px", height: "40px" }}
+                        />
                       </Button>
                     </div>
                     <WelcomeDialogBox
