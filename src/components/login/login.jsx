@@ -7,17 +7,6 @@ export default function Login(props) {
 
 
     return (
-
-        <div className={`${props.apptheme ? "dark" : "light"}`}>
-            <div className={`${props.apptheme ? "container_login" : "container_login_light"}`}>
-                <div className="illustration_img">
-                    <img src={loginIllustartion}></img>
-                </div>
-                <div className="login-content">
-                    <form className="login_form">
-                        <h2 style={{ fontSize: "27px" }} className="title">Welcome</h2>
-
-
         <div className={`${props.apptheme ? "container_login" : "container_loginlight"
             }`}>
             <div className="illustration_img">
@@ -62,7 +51,6 @@ export default function Login(props) {
                     </form>
                   </div>
              </div>
-         </div>
        
        
     );
