@@ -3,8 +3,12 @@ import 'font-awesome/css/font-awesome.min.css';
 import "./signup.css";
 import loginIllustartion from "./logo.svg";
 import Email from 'react-email-autocomplete';
+import GoogleLogin from 'react-google-login';
 
 export default function Signup(props) {
+    const responseGoogle = (response) => {
+        console.log(response);
+      }
 
     return (
         <div className={`${props.apptheme ? "dark" : "light"}`}>
@@ -56,6 +60,13 @@ export default function Signup(props) {
                             <input type="submit" className="btn_login" value="Signup"></input>
                         </div>
                         </div>
+                        <GoogleLogin
+    clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+    
+    onSuccess={responseGoogle}
+    onFailure={responseGoogle}
+    cookiePolicy={'single_host_origin'}
+  />
                     </form>
                 </div>
             </div>
