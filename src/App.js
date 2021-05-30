@@ -281,7 +281,7 @@ function App() {
             <li className="nav-item toggle-nav" style={{ border: "none" }}>
               <Button
                 title="toggle Dark Mode"
-                className="dark toggle-button"
+                className="dark "
                 onClick={theme}
               >
                 <Brightness4Icon
@@ -461,6 +461,7 @@ function App() {
                               className="fa fa-copy"
                             ></i></button>
                             </CopyToClipboard>
+                            {status && <p className="copied_status"> Copied!!!</p>}
                       
                             
                           <input
