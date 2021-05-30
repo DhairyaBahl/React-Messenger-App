@@ -186,13 +186,13 @@ input {
   margin: auto;
 }
 
-@media (max-width: 450px) {
-  .Logo {
-    width: auto;
-    height: 20px;
-    align-self: center;
-  }
+
+.Logo {
+  width: auto;
+  height: 50px;
+  align-self: center;
 }
+
 
 .messenger {
   font-weight: bold;
