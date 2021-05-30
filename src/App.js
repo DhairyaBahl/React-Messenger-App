@@ -442,21 +442,19 @@ function App() {
                             </span>
                           )}
                           <input
-                            type="text"
-                            onChange={(e) => {
-                              setValue(e.target.value);
-                              setStatus(false);
-                            }}
-                          />
-                          <CopyToClipboard
-                            text={value}
-                            onCopy={() => setStatus(true)}
-                          >
-                            <button className="copy">
-                              {" "}
-                              <i className="fa fa-copy"></i>
-                            </button>
-                          </CopyToClipboard>
+                              type="text"
+                              onChange={(e) => {
+                                setValue(e.target.value);
+                                setStatus(false);
+                              }}
+                            />
+                            <CopyToClipboard text={value} onCopy={() => setStatus(true)}>
+                              <button className="copy">  <i
+                              className="fa fa-copy"
+                            ></i></button>
+                            </CopyToClipboard>
+                            {status && <p className="copied_status"> Copied!!!</p>}
+                      
 
                           <input
                             ref={inputElement}
