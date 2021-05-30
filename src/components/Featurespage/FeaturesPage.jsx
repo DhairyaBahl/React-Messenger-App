@@ -84,7 +84,9 @@ function Features(props) {
 
             <div className={`${props.apptheme3 ? "container" : "container_light"}`}>
                 <div className="image_side2">
-                    <img src={sideimage} />
+                    <Fade left duration={1500} delay={300}>
+                        <img src={sideimage} />
+                    </Fade>
                 </div>
                 <div className="text_side2">
                     <div className="min-text">
@@ -96,7 +98,9 @@ function Features(props) {
                       Start <span style={{ color: 'rgb(133, 29, 186)' }}>talking!</span></h1>
                     </div>
                     <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
-                        <p>Switching from typing to talking comes with <br></br>a range of benefits🔥 </p>
+                        <Fade top duration={1500} delay={300}>
+                            <p>Switching from typing to talking comes with <br></br>a range of benefits🔥 </p>
+                        </Fade>
                     </div>
                 </div>
             </div>
