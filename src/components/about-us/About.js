@@ -36,16 +36,21 @@ const About = (props) => {
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={6}>
                     <div className="main__img--container">
-                        <Logo2
-                            className="responsive jewel"
-                        />
+                        <Fade left duration={1500} delay={500}>
+                            <Logo2
+                                className="responsive jewel"
+                            />
+                        </Fade>
                     </div>
+
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={6} >
                     <div className="main__content" >
-                        <h2>
-                            This Repository is created with a motive to <span>guide beginners</span> with the <span>open-source</span> and with big <span>react projects</span> .
+                        <Fade top duration={1500}>
+                            <h2>
+                                This Repository is created with a motive to <span>guide beginners</span> with the <span>open-source</span> and with big <span>react projects</span> .
                     </h2>
+                        </Fade>
                     </div>
                 </Grid>
 
