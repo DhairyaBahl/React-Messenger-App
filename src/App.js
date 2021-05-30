@@ -34,7 +34,7 @@ import Faq from "./components/faq/faq";
 import Features from "./components/Featurespage/FeaturesPage";
 import LoadingBar from 'react-top-loading-bar'
 import CopyToClipboard from 'react-copy-to-clipboard';
-
+import { MentionsInput, Mention } from 'react-mentions'
 
 
 function App() {
@@ -401,6 +401,9 @@ function App() {
                   </div>
                   
                   <div ref={messagesEndRef} />
+                  <Mention
+    trigger="@"
+  />
                   <div className="div__footer">
                     <footer className={`${dark ? "footer_dark" : ""}`}>
                       <div className="content__footer">
