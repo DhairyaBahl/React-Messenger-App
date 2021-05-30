@@ -284,7 +284,7 @@ footer {
 .sendNewMessagedark {
   background-image: linear-gradient(to right, rgb(24, 17, 17), rgb(85 6 101));
   border: 2px solid #d0d0d0;
-  width: 97%;
+  width: 60%;
   padding: 2px;
   border-radius: 8px;
   color: white;
@@ -328,7 +328,7 @@ footer {
 }
 
 @media (max-width: 864px) {
-  .sendNewMessage {
+  .sendNewMessage, .sendNewMessagedark{
     width: 97%;
   }
 }
@@ -343,7 +343,7 @@ footer {
 }
 
 @media (max-width: 864px) {
-  .sendNewMessage {
+  .sendNewMessage, .sendNewMessagedark{
     width: 97%;
   }
 }
@@ -391,20 +391,20 @@ footer {
 }
 
 @media (max-width: 700px) {
-  .sendNewMessage {
+  .sendNewMessage, .sendNewMessagedark{
     width: 98.5%;
     max-width: 700px;
   }
 }
 
 @media (max-width: 790px) {
-  .sendNewMessage {
+  .sendNewMessage, .sendNewMessagedark{
     width: 95%;
   }
 }
 
 @media (max-width: 430px) {
-  .sendNewMessage {
+  .sendNewMessage, .sendNewMessagedark{
     width: 90%;
     margin-right: 8px;
   }
