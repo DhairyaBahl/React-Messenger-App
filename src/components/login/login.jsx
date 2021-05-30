@@ -4,10 +4,12 @@ import "./login.css";
 import loginIllustartion from "./logo1.svg";
 
 export default function Login(props) {
+
+
     return (
+
         <div className={`${props.apptheme ? "dark" : "light"}`}>
-            <div className={`${props.apptheme ? "container_login" : "container_login_light"
-                }`}>
+            <div className={`${props.apptheme ? "container_login" : "container_login_light"}`}>
                 <div className="illustration_img">
                     <img src={loginIllustartion}></img>
                 </div>
@@ -57,14 +59,11 @@ export default function Login(props) {
                             <a className="anc" href="/signup"> Create your account! </a>
                         </div>
 
-                        {/* <div className="icons">
-        <a href="#" id="facebookIcon"></a>
-        <a href="#" id="twitterIcon"></a>
-        <a href="#" id="googleIcon"></a>
-      </div> */}
                     </form>
-                </div>
-            </div>
-        </div>
+                  </div>
+             </div>
+         </div>
+       
+       
     );
 }

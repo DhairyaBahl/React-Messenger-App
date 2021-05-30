@@ -30,6 +30,7 @@ export default function Signup(props) {
                             <Email className = {`${props.apptheme ? "input1" : "input1_light"}`}  placeholder="Enter email" />
 
                         </div>
+                        </div>
                         <div className="input-div one">
                             <div className="i">
                                 <i className="fa fa-user"></i>
@@ -59,6 +60,7 @@ export default function Signup(props) {
                 </div>
             </div>
         </div>
+       
 
     );
 }
