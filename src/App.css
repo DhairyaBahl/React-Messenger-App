@@ -581,8 +581,7 @@ footer {
     display: block;
     position: absolute;
     top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
+    right: 15px;
     font-size: 3rem;
     cursor: pointer;
   }
