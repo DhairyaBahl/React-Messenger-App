@@ -3,23 +3,30 @@ import "./FeaturesPage.css";
 import sideimage from "./sideimage.png";
 import sideimage3 from "./blacktheme.png";
 import sideimage2 from "./emoji.png";
+import { Fade } from 'react-reveal';
+
 function Features(props) {
 
     return (
         <div>
             <div className={`${props.apptheme3 ? "container" : "container_light"}`}>
                 <div className="text_side">
+
                     <div className="main_text">
                         <h1>More ways
                         <br></br>
                         to stay <br></br>connected</h1>
                     </div>
                     <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
-                        <p>Messenger has everything you need to feel <br></br> closer to your favourite people.</p>
+                        <Fade top duration={1500}>
+                            <p>Messenger has everything you need to feel <br></br> closer to your favourite people.</p>
+                        </Fade>
                     </div>
                 </div>
                 <div className="image_sidem">
-                    <img src={sideimage} />
+                    <Fade right duration={1500}>
+                        <img src={sideimage} />
+                    </Fade>
                 </div>
             </div>
 
