@@ -461,6 +461,7 @@ function App() {
                               className="fa fa-copy"
                             ></i></button>
                             </CopyToClipboard>
+                            {status && <p className="copied_status"> Copied!!!</p>}
                       
                             
                           <input
