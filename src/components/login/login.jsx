@@ -2,41 +2,39 @@ import React from "react";
 import "font-awesome/css/font-awesome.min.css";
 import "./login.css";
 import loginIllustartion from "./logo1.svg";
+import { Fade } from 'react-reveal';
 
 export default function Login(props) {
-
-
     return (
-
-        <div className={`${props.apptheme ? "dark" : "light"}`}>
-            <div className={`${props.apptheme ? "container_login" : "container_login_light"}`}>
-                <div className="illustration_img">
-                    <img src={loginIllustartion}></img>
-                </div>
-                <div className="login-content">
-                    <form className="login_form">
-                        <h2 style={{ fontSize: "27px" }} className="title">Welcome</h2>
-
-
-        <div className={`${props.apptheme ? "container_login" : "container_loginlight"
-            }`}>
+        <div
+            className={`${props.apptheme ? "container_login" : "container_login_light"
+                }`}
+        >
             <div className="illustration_img">
-                <img src={loginIllustartion}></img>
+                <Fade right duration={1500}>
+                    <img src={loginIllustartion}></img>
+                </Fade>
             </div>
             <div className="login-content">
                 <form className="login_form">
-                    <h2 style={{ fontSize: "27px" }} className="title">Welcome</h2>
-
-                    <h1 style={{ fontSize: "18px", marginBottom: "30px" }}>Sign in to your account</h1>
-
-
+                    <Fade top duration={1500}>
+                        <h2 style={{ fontSize: "27px" }} className="title">
+                            Welcome
+          </h2>
+                        <h1 style={{ fontSize: "18px", marginBottom: "30px" }}>
+                            Sign in to your account
+          </h1>
 
                         <div className="input-div one">
                             <div className="i">
                                 <i className="fa fa-user"></i>
                             </div>
                             <div className="div">
-                                <input type="text" placeholder="Username" className="input"></input>
+                                <input
+                                    type="text"
+                                    placeholder="Username"
+                                    className="input"
+                                ></input>
                             </div>
                         </div>
 
@@ -45,25 +43,32 @@ export default function Login(props) {
                                 <i className="fa fa-lock"></i>
                             </div>
                             <div className="div">
-                                <input type="password" placeholder="Password" className="input"></input>
+                                <input
+                                    type="password"
+                                    placeholder="Password"
+                                    className="input"
+                                ></input>
                             </div>
                         </div>
 
-                        <a className="anc" href="/forget"><span style={{ color: "red" }}>Forgot Password?</span></a>
+                        <a className="anc" href="/forget">
+                            <span style={{ color: "red" }}>Forgot Password?</span>
+                        </a>
 
                         <div className="loginbutton">
                             <input type="submit" className="btn_login" value="Login"></input>
                         </div>
 
                         <div id="alternativeLogin">
-                            <a className="anc" href="/signup"> Create your account! </a>
+                            <a className="anc" href="/signup">
+                                {" "}
+              Create your account!{" "}
+                            </a>
                         </div>
-
-                    </form>
-                  </div>
-             </div>
-         </div>
-       
-       
+                    </Fade>
+                </form>
+            </div>
+        </div>
     );
 }
+
