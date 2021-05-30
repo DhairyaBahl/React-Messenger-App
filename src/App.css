@@ -284,8 +284,8 @@ footer {
 .sendNewMessagedark {
   background-image: linear-gradient(to right, rgb(24, 17, 17), rgb(85 6 101));
   border: 2px solid #d0d0d0;
-  width: 60%;
-  padding: 2px;
+  width: 61%;
+  padding: 3px;
   border-radius: 8px;
   color: white;
   margin: 0 auto;
