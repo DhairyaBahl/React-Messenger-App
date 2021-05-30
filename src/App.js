@@ -281,7 +281,7 @@ function App() {
             <li className="nav-item toggle-nav" style={{ border: "none" }}>
               <Button
                 title="toggle Dark Mode"
-                className="dark toggle-button"
+                className="dark "
                 onClick={theme}
               >
                 <Brightness4Icon
