@@ -21,9 +21,6 @@
   word-wrap: break-word;
 }
 
-.msgs:hover {
-  box-shadow: 0px 0px 20px rgb(245, 125, 143);
-}
 
 .sender {
   font-family: "Fjord One", serif;
@@ -45,17 +42,28 @@
 }
 
 .user {
-  background-color: rgb(233, 236, 22);
   margin-left: auto;
   margin-right: 10px;
+  background: #A1FFCE;  
+  background: -webkit-linear-gradient(to bottom, #FAFFD1, #A1FFCE); 
+  background: linear-gradient(to bottom, #FAFFD1, #A1FFCE); 
+  transition: all 0.4s ease-in-out;
 }
 
 .user:hover {
-  box-shadow: 2px 2px 20px rgb(11, 69, 88);
+  box-shadow: 2px -5px 6px 0 #ff6196, 2px 2px 11px 0 #A1FFCE;
 }
 
 .guest {
   margin-left: 10px;
+  background: #83a4d4;  
+  background: -webkit-linear-gradient(to bottom, #b6fbff, #83a4d4);
+  background: linear-gradient(to bottom, #b6fbff, #83a4d4); 
+  transition: all 0.2s ease-in-out;
+}
+
+.guest:hover {
+  box-shadow: 2px -5px 6px 0 hsl(212deg 100% 67%), 2px 2px 11px 0 #8735d0;
 }
 
 .time-stamp {
