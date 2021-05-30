@@ -39,7 +39,7 @@ function Faq(props) {
   return (
     <Box
       id={props.apptheme4 ? "dark" : "light"}
-      style={{ paddingBottom: "100px", marginBottom: "-300px" }}
+      style={{ paddingBottom: "100px"}}
     >
       <Box
         style={{
