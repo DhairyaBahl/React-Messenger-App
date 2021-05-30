@@ -8,7 +8,7 @@ import { Fade } from 'react-reveal';
 const About = (props) => {
     return (
         <div>
-            <Grid container spacing={2} className={`${props.apptheme5 ? "main" : "main_light"}`} id="about">
+            <Grid container className={`${props.apptheme5 ? "about_main" : "about_main_light"}`} id="about">
                 <Grid item xs={12} sm={12} md={12} lg={12} style={{ marginBottom: "-20px" }}>
                     <h1 id="brand">React Messenger App</h1>
                 </Grid>
