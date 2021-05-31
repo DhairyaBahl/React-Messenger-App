@@ -1,0 +1,117 @@
+@import "../../../theme/utils/animations.scss";
+@import "../../../theme/utils/mixins.scss";
+
+.bi.bi-dropdown {
+  @apply bg-white py-2 shadow-lg rounded;
+  @include slideTopIn(0.35s);
+  min-width: 8rem;
+
+  ul {
+    @apply m-0 p-0;
+
+    li {
+      @apply list-none;
+
+      // Button
+      &.bi-dd-btn .bi.bi-btn {
+        @apply m-0 justify-start text-default-darker;
+        transition: color 0.3s ease-out;
+
+        &:hover {
+          @apply text-primary;
+        }
+      }
+
+      // Link
+      &.bi-dd-link .bi.bi-link {
+        @apply block py-2 px-4 no-underline text-default-darker;
+        transition: color 0.3s ease-out;
+
+        .bi.bi-icon + span {
+          @apply ml-2;
+        }
+
+        span + .bi.bi-icon {
+          @apply mr-2;
+        }
+
+        &:hover {
+          @apply text-primary;
+        }
+      }
+
+      // Divider
+      &.bi-dd-divider {
+        @apply border-r-0 border-t-0 border-l-0 border-b border-solid border-default-light;
+      }
+    }
+  }
+}
+
+
+// ----------------------------
+// Arrow pointer placement
+// ----------------------------
+.bi.bi-floater.float-top-center .bi.bi-dropdown {
+  @apply mb-2;
+
+  &.bi-dd-arrow {
+    @include make-arrow-pointer('top-center');
+  }
+}
+
+.bi.bi-floater.float-top-left .bi.bi-dropdown {
+  @apply mb-2;
+
+  &.bi-dd-arrow {
+    @include make-arrow-pointer('top-left');
+  }
+}
+
+.bi.bi-floater.float-top-right .bi.bi-dropdown {
+  @apply mb-2;
+
+  &.bi-dd-arrow {
+    @include make-arrow-pointer('top-right');
+  }
+}
+
+.bi.bi-floater.float-bottom-center .bi.bi-dropdown {
+  @apply mt-2;
+
+  &.bi-dd-arrow {
+    @include make-arrow-pointer('bottom-center');
+  }
+}
+
+.bi.bi-floater.float-bottom-left .bi.bi-dropdown {
+  @apply mt-2;
+
+  &.bi-dd-arrow {
+    @include make-arrow-pointer('bottom-left');
+  }
+}
+
+.bi.bi-floater.float-bottom-right .bi.bi-dropdown {
+  @apply mt-2;
+
+  &.bi-dd-arrow {
+    @include make-arrow-pointer('bottom-right');
+  }
+}
+
+.bi.bi-floater.float-left-center .bi.bi-dropdown {
+  @apply mr-2;
+
+  &.bi-dd-arrow {
+    @include make-arrow-pointer('left-center');
+  }
+}
+
+.bi.bi-floater.float-right-center .bi.bi-dropdown {
+  @apply ml-2;
+
+  &.bi-dd-arrow {
+    @include make-arrow-pointer('right-center');
+  }
+}
