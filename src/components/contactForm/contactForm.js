@@ -42,7 +42,7 @@ export default function ContactUs(props) {
             </h3>
                     </div>
                     {/* Contact-form */}
-                    <form onSubmit={sendEmail}>
+                    <form onSubmit={sendEmail} className = "form-content">
                         <div className="row clearfix">
                             <div className="col_half">
                                 {/* First Name Attribute */}
