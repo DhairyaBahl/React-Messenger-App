@@ -16,9 +16,9 @@ export default function Signup(props) {
         <div className={`${props.apptheme ? "container_signup" : "container_signup_light"
             }`}>
             <div className="illustration_img">
-                <Fade right duration={1500}>
+              
                     <img src={loginIllustartion}></img>
-                </Fade>
+                
             </div>
             <div className="login-content">
                 <form className="login_form">
