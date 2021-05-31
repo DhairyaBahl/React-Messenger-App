@@ -6,7 +6,23 @@ import Email from 'react-email-autocomplete';
 import { Fade } from 'react-reveal';
 import GoogleLogin from 'react-google-login';
 
+
 export default function Signup(props) {
+  return (
+    <div className={`${props.apptheme ? "dark" : "light"}`}>
+      <div
+        className={`${
+          props.apptheme ? "container_signup" : "container_signup_light"
+        }`}
+      >
+        <div className="illustration_img">
+          <img src={loginIllustartion}></img>
+        </div>
+        <div className="login-content">
+          <form className="login_form">
+            <h2 style={{ fontSize: "27px" }} className="title">
+              Welcome To Messenger
+            </h2>
 
     const responseGoogle = (response) => {
         console.log(response);
@@ -70,7 +86,8 @@ export default function Signup(props) {
             <a className="anc" href="/login">
               <span style={{ color: "blue" }}>Already have an account?</span>
             </a>
-
+            <div className="loginbutton">
+              <input type="submit" className="btn_login" value="Signup"></input>
                         <div className="loginbutton">
                             <input type="submit" className="btn_login" value="Signup"></input>
                         </div>
@@ -86,6 +103,6 @@ export default function Signup(props) {
             </div>
           </form>
         </div>
-
     );
 }
+
