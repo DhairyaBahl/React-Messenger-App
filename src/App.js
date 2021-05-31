@@ -363,7 +363,7 @@ function App() {
                     <br />
                     <br />
                     <button
-                      className="loadOlderMessages"
+                     className={`${dark ? "loadOlderMessages_dark" : "loadOlderMessages"}`}
                       onClick={loadOlderMessages}
                     >
                       Load Older Messages
@@ -454,6 +454,7 @@ function App() {
                             ></i></button>
                             </CopyToClipboard>
                             {status && <p className="copied_status"> Copied!!!</p>}
+
 
                           <input
                             ref={inputElement}
