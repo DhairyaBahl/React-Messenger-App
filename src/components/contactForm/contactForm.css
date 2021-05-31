@@ -25,6 +25,7 @@
   margin: 0 auto 0;
   position: relative;
   z-index: 1;
+  margin-bottom: 2rem;
 }
 .form_wrapper_light {
   background: #ffffff;
@@ -184,6 +185,11 @@ textarea:focus {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media (max-width: 998px) {
+  .form-content{
+    width: 100%;
+  }
 }
 @media (max-width: 600px) {
   .form_wrapper .col_half {
