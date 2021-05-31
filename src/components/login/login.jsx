@@ -11,9 +11,9 @@ export default function Login(props) {
                 }`}
         >
             <div className="illustration_img">
-                <Fade right duration={1500}>
+                
                     <img src={loginIllustartion}></img>
-                </Fade>
+               
             </div>
             <div className="login-content">
                 <form className="login_form">
