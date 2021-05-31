@@ -25,8 +25,7 @@ const About = (props) => {
                     <div className="main__content">
                         <Fade top duration={1500}>
                             <h2>
-                                This is a <span>Messenger App</span>, made with <span>React</span>, styled with the help of <span>Material-UI</span> and deployed with the help of <span>Firebase.</span>
-
+                            <span>Messenger</span> is a <span>React</span> based app, styled with <span>Material-UI</span>, and deployed using <span>Firebase.</span>
                             </h2>
                         </Fade>
                     </div>
@@ -48,7 +47,7 @@ const About = (props) => {
                     <div className="main__content" >
                         <Fade top duration={1500}>
                             <h2>
-                                This Repository is created with a motive to <span>guide beginners</span> with the <span>open-source</span> and with big <span>react projects</span> .
+                            This Repository is created with the motive to <span>guide beginners</span> through <span>open-source</span> &amp; familiarize them with professional <span>React projects</span> .
                     </h2>
                         </Fade>
                     </div>

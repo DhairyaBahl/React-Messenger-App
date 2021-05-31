@@ -89,10 +89,11 @@ export default function Signup(props) {
     onFailure={responseGoogle}
     cookiePolicy={'single_host_origin'}
   />
+                    </div>
                     </Fade>
                 </form>
             </div>
-        
+
         </div>
     );
 }
