@@ -5,6 +5,9 @@ import loginIllustartion from "./logo.svg";
 import Email from "react-email-autocomplete";
 import { Fade } from "react-reveal";
 import GoogleLogin from "react-google-login";
+import LoginGithub from 'react-login-github';
+
+
 
 
 export default function Signup(props) {
@@ -12,6 +15,8 @@ export default function Signup(props) {
   const responseGoogle = (response) => {
     console.log(response);
   };
+  const onSuccess = response => console.log(response);
+const onFailure = response => console.error(response);
 
   return (
     <div
@@ -59,18 +64,7 @@ export default function Signup(props) {
               </div>
             </div>
 
-            <div className="input-div pass">
-              <div className="i">
-                <i className="fa fa-lock"></i>
-              </div>
-              <div className="div">
-                <input
-                  type="password"
-                  placeholder="Password"
-                  className="input"
-                ></input>
-              </div>
-            </div>
+         
             <div className="input-div pass">
               <div className="i">
                 <i className="fa fa-lock"></i>
@@ -90,9 +84,7 @@ export default function Signup(props) {
 
             <div className="loginbutton">
               <input type="submit" className="btn_login" value="Signup"></input>
-                        <div className="loginbutton">
-                            <input type="submit" className="btn_login" value="Signup"></input>
-                        </div>
+                       
                         <GoogleLogin
     clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
    
@@ -100,6 +92,11 @@ export default function Signup(props) {
     onFailure={responseGoogle}
     cookiePolicy={'single_host_origin'}
   />
+   <LoginGithub clientId="ac56fad434a3a3c1561e"
+   
+   className="login_git"
+    onSuccess={onSuccess}
+    onFailure={onFailure}/>
                     </div>
                     </Fade>
                 </form>

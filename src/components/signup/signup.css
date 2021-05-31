@@ -16,7 +16,7 @@
 
 .container_signup{
     width: 70vw;
-    height: 70vh;
+    height: 80vh;
     display:flex;
     flex-direction: row;
     justify-content: center;
@@ -37,7 +37,7 @@
 .container_signup_light{
 
 	width: 70vw;
-    height: 70vh;
+    height: 80vh;
     display:flex;
     flex-direction: row;
     justify-content: center;
@@ -273,7 +273,17 @@
   background-position: right;
   color: purple;
 }
-
+.login_git{
+  padding: 15px;
+  width: 200px;
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.671);
+  color: rgb(94, 94, 94);
+  border: transparent;
+  box-shadow: -1px 2px 1px 1px rgba(133,133,133,0.75);
+-webkit-box-shadow: -1px 2px 1px 1px rgba(133,133,133,0.75);
+-moz-box-shadow: -1px 2px 1px 1px rgba(133,133,133,0.75);
+}
 .container_signup .btn_login {
   background: -webkit-linear-gradient(
     45deg,
