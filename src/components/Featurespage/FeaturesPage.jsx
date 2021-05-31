@@ -11,15 +11,14 @@ function Features(props) {
         <div>
             <div className={`${props.apptheme3 ? "container" : "container_light"}`}>
                 <div className="text_side">
-
-                    <div className="main_text">
-                        <h1>More ways
+                  <div className="main_text">
+                        <h1>A better way
                         <br></br>
                         to stay <br></br>connected</h1>
                     </div>
                     <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
                         <Fade top duration={1500}>
-                            <p>Messenger has everything you need to feel <br></br> closer to your favourite people.</p>
+                          <p>Messenger brings you <br></br>closer to your favourite people.</p>
                         </Fade>
                     </div>
                 </div>
@@ -47,7 +46,7 @@ function Features(props) {
                     </div>
                     <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
                         <Fade top duration={1500} delay={300}>
-                            <p>Lost for words? Now you can customise your reactions <br></br> with way more emojis to choose from, including 🎉 and 🔥 </p>
+                          <p>Customize your REACTIONS. <br></br> Why write when you have so many emojis to choose from. Including 🎉 and 🔥 </p>
                         </Fade>
                     </div>
                 </div>
@@ -66,7 +65,7 @@ function Features(props) {
                     </div>
                     <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
                         <Fade top duration={1500} delay={300}>
-                            <p>Choose from light and dark themes to comfort <br></br> your eyes and chat for long  ❤️ 🏳️‍🌈</p>
+                          <p>What do you choose? Light or Dark <br></br> Comfort you eyes with the NEW Dark theme. Switch anytime.  ❤️ 🏳️‍🌈</p>
                         </Fade>
                     </div>
                 </div>
@@ -99,7 +98,7 @@ function Features(props) {
                     </div>
                     <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
                         <Fade top duration={1500} delay={300}>
-                            <p>Switching from typing to talking comes with <br></br>a range of benefits🔥 </p>
+                          <p>Why bother to type when you can talk? <br></br> Try the vioice input NOW 🔥 </p>
                         </Fade>
                     </div>
                 </div>
