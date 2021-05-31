@@ -136,8 +136,10 @@
   height: 45px;
 }
 .input1 {
-  background-color: black;
+  
   border: transparent;
+ background-color: black;
+ color:#999;
 
 }
 
