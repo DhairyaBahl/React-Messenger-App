@@ -1,0 +1,25 @@
+@mixin make-icon-color($color: 'default') {
+    &.icon-#{$color} {
+      color: theme('colors.#{$color}');
+    }
+  }
+  
+  .bi.bi-icon {
+    @apply box-content;
+  
+    + .bi.bi-icon {
+      @apply ml-1;
+    }
+  
+    // ----------------------------
+    // COLORS
+    // ----------------------------
+    @include make-icon-color('default');
+    @include make-icon-color('primary');
+    @include make-icon-color('secondary');
+    @include make-icon-color('info');
+    @include make-icon-color('success');
+    @include make-icon-color('warning');
+    @include make-icon-color('danger');
+  }
+  
