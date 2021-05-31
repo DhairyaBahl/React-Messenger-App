@@ -37,6 +37,7 @@ import LoadingBar from "react-top-loading-bar";
 import CopyToClipboard from "react-copy-to-clipboard";
 import { MentionsInput, Mention } from "react-mentions";
 import reactReveal from "react-reveal";
+import Pick from 'react-giphy-picker'
 
 function App() {
   const [loading, setLoading] = useState(false);
