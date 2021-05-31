@@ -68,7 +68,9 @@
 	animation: float 3.38s ease-in-out infinite;
 } 
 
-
+.imput2{
+  color :white;
+}
 .forget-content .input-div {
   position: relative;
   display: grid;
