@@ -6,6 +6,7 @@ import Email from "react-email-autocomplete";
 import { Fade } from "react-reveal";
 import GoogleLogin from "react-google-login";
 
+
 export default function Signup(props) {
   const responseGoogle = (response) => {
     console.log(response);
@@ -85,7 +86,6 @@ export default function Signup(props) {
             <a className="anc" href="/login">
               <span style={{ color: "blue" }}>Already have an account?</span>
             </a>
-
             <div className="loginbutton">
               <input type="submit" className="btn_login" value="Signup"></input>
             </div>

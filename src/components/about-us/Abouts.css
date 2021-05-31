@@ -15,34 +15,34 @@
   width: 100%;
 } 
 
-.about_main {
-  padding: 20px 4rem;
+.main {
+  padding: 4rem;
   background-color: rgb(0, 0, 0);
 }
 
-.about_main_light {
-    padding: 1em 2em;
-    background-color: white;
-  }
+.main_light {
+  padding: 4rem;
+  background-color: white;
+}
 
 .main__content {
   color: #fff;
   width: 100%;
 }
 @keyframes float {
-    0% {
-      filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.6));
-      transform: translatey(0px);
-    }
-    50% {
-      filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.2));
-      transform: translatey(-20px);
-    }
-    100% {
-      filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.6));
-      transform: translatey(0px);
-    }
+  0% {
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.6));
+    transform: translatey(0px);
   }
+  50% {
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.2));
+    transform: translatey(-20px);
+  }
+  100% {
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.6));
+    transform: translatey(0px);
+  }
+}
 
 .responsive {
   width: 100%;
@@ -53,23 +53,15 @@
   transform: translatey(0px);
   -webkit-filter: drop-shadow(5px 5px 15px rgb(29, 28, 28));
   filter: drop-shadow(5px 5px 15px rgb(34, 33, 33));
-	animation: float 3.38s ease-in-out infinite;
+  animation: float 3.38s ease-in-out infinite;
 }
 
 .main__content h2 {
   margin-top: 7rem;
   font-size: 2.9rem;
-  background: #ff8177; 
-  background: -webkit-linear-gradient(
-    to right,
-    #8735d0,
-    #ce40eb
-  ); 
-  background: linear-gradient(
-    to right,
-    #9240da,
-    #d643f3
-  ); 
+  background: #ff8177;
+  background: -webkit-linear-gradient(to right, #8735d0, #ce40eb);
+  background: linear-gradient(to right, #9240da, #d643f3);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -79,18 +71,8 @@
 
 .main__content span {
   background: #0cebeb;
-  background: -webkit-linear-gradient(
-    to right,
-    #29ffc6,
-    #20e3b2,
-    #0cebeb
-  ); 
-  background: linear-gradient(
-    to right,
-    #e6285b,
-    #ee2b5f,
-    #eb2a5d
-  ); 
+  background: -webkit-linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);
+  background: linear-gradient(to right, #e6285b, #ee2b5f, #eb2a5d);
 
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -115,7 +97,7 @@
   #brand {
     margin-top: 40px;
     margin-bottom: -20px;
-    font-size: 2.75rem;
+    font-size: 1.8rem;
   }
   .main {
     background-color: #131313;
@@ -129,7 +111,7 @@
   .main__content h2 {
     margin-top: 40px;
     padding: 10px !important;
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .motive-top {
@@ -147,7 +129,7 @@
   .motive {
     margin-top: -90px !important;
 
-    font: 100;
+    font: 50;
   }
   .motive h2 {
     font-size: 25px;
