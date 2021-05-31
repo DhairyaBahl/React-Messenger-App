@@ -612,7 +612,7 @@ footer {
   .nav-icon {
     display: block;
     position: absolute;
-    top: 0;
+    top: 15px;
     right: 15px;
     font-size: 3rem;
     cursor: pointer;
