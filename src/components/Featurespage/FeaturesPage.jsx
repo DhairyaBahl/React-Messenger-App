@@ -3,29 +3,37 @@ import "./FeaturesPage.css";
 import sideimage from "./sideimage.png";
 import sideimage3 from "./blacktheme.png";
 import sideimage2 from "./emoji.png";
+import { Fade } from 'react-reveal';
+
 function Features(props) {
 
     return (
         <div>
             <div className={`${props.apptheme3 ? "container" : "container_light"}`}>
                 <div className="text_side">
-                    <div className="main_text">
+                  <div className="main_text">
                         <h1>A better way
                         <br></br>
                         to stay <br></br>connected</h1>
                     </div>
                     <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
-                        <p>Messenger brings you <br></br>closer to your favourite people.</p>
+                        <Fade top duration={1500}>
+                          <p>Messenger brings you <br></br>closer to your favourite people.</p>
+                        </Fade>
                     </div>
                 </div>
                 <div className="image_sidem">
-                    <img src={sideimage} />
+                    <Fade right duration={1500}>
+                        <img src={sideimage} />
+                    </Fade>
                 </div>
             </div>
 
             <div className={`${props.apptheme3 ? "container" : "container_light"}`}>
                 <div className="image_side2">
-                    <img src={sideimage2} />
+                    <Fade left duration={1500} delay={300}>
+                        <img src={sideimage2} />
+                    </Fade>
                 </div>
                 <div className="text_side2">
                     <div className="min-text">
@@ -37,7 +45,9 @@ function Features(props) {
                         any <span style={{ color: 'rgb(133, 29, 186)' }}>emoji</span></h1>
                     </div>
                     <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
-                        <p>Customize your REACTIONS. <br></br> Why write when you have so many emojis to choose from. Including 🎉 and 🔥 </p>
+                        <Fade top duration={1500} delay={300}>
+                          <p>Customize your REACTIONS. <br></br> Why write when you have so many emojis to choose from. Including 🎉 and 🔥 </p>
+                        </Fade>
                     </div>
                 </div>
             </div>
@@ -54,20 +64,28 @@ function Features(props) {
                          Your way</h1>
                     </div>
                     <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
-                        <p>What do you choose? Light or Dark <br></br> Comfort you eyes with the NEW Dark theme. Switch anytime.  ❤️ 🏳️‍🌈</p>
+                        <Fade top duration={1500} delay={300}>
+                          <p>What do you choose? Light or Dark <br></br> Comfort you eyes with the NEW Dark theme. Switch anytime.  ❤️ 🏳️‍🌈</p>
+                        </Fade>
                     </div>
                 </div>
                 <div className="image_side7">
-                    <img src={sideimage} />
+                    <Fade right duration={1500} delay={300}>
+                        <img src={sideimage} />
+                    </Fade>
                 </div>
                 <div className="image_side7_2">
-                    <img src={sideimage3} />
+                    <Fade right duration={1500} delay={300}>
+                        <img src={sideimage3} />
+                    </Fade>
                 </div>
             </div>
 
             <div className={`${props.apptheme3 ? "container" : "container_light"}`}>
                 <div className="image_side2">
-                    <img src={sideimage} />
+                    <Fade left duration={1500} delay={300}>
+                        <img src={sideimage} />
+                    </Fade>
                 </div>
                 <div className="text_side2">
                     <div className="min-text">
@@ -78,9 +96,10 @@ function Features(props) {
                         <br></br>
                       Start <span style={{ color: 'rgb(133, 29, 186)' }}>talking!</span></h1>
                     </div>
-                    <div className="small_text2">
                     <div className={`${props.apptheme3 ? "small_text2_dark" : "small_text2"}`}>
-                        <p>Why bother to type when you can talk? <br></br> Try the vioice input NOW 🔥 </p>
+                        <Fade top duration={1500} delay={300}>
+                          <p>Why bother to type when you can talk? <br></br> Try the vioice input NOW 🔥 </p>
+                        </Fade>
                     </div>
                 </div>
             </div>

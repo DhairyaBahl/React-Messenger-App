@@ -53,13 +53,27 @@
     -moz-box-shadow: 1px 1px 28px 1px rgba(179,179,179,0.36);
     background-color: rgb(255, 255, 255) !important;
 }
-
+@keyframes float {
+  0% {
+    filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.6));
+    transform: translatey(0px);
+  }
+  50% {
+    filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.2));
+    transform: translatey(-20px);
+  }
+  100% {
+    filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.6));
+    transform: translatey(0px);
+  }
+}
 .illustration_img img{
 	width: 30vw;
   height: 60vh;
   margin-right: 20px;
-  /* border: 2px solid blue; */
-  /* border: 2px solid rgb(150, 151, 86); */
+  overflow: hidden;
+  transform: translatey(0px);
+	animation: float 3.38s ease-in-out infinite;
 }
 .div ::placeholder {
   font-size: 14px;
@@ -122,8 +136,10 @@
   height: 45px;
 }
 .input1 {
-  background-color: black;
+  
   border: transparent;
+ background-color: black;
+ color:#999;
 
 }
 
