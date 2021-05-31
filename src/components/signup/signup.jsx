@@ -6,9 +6,7 @@ import Email from "react-email-autocomplete";
 import { Fade } from "react-reveal";
 import GoogleLogin from "react-google-login";
 
-
 export default function Signup(props) {
-
   const responseGoogle = (response) => {
     console.log(response);
   };
@@ -80,21 +78,23 @@ export default function Signup(props) {
 
             <div className="loginbutton">
               <input type="submit" className="btn_login" value="Signup"></input>
-                       
-                        </div>
-                        <GoogleLogin
-    clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
-   
-    onSuccess={responseGoogle}
-    onFailure={responseGoogle}
-    cookiePolicy={'single_host_origin'}
-  />
-                    </div>
-                    </Fade>
-                </form>
+              <div className="loginbutton">
+                <input
+                  type="submit"
+                  className="btn_login"
+                  value="Signup"
+                ></input>
+              </div>
+              <GoogleLogin
+                clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+                onSuccess={responseGoogle}
+                onFailure={responseGoogle}
+                cookiePolicy={"single_host_origin"}
+              />
             </div>
-
-        </div>
-    );
+          </Fade>
+        </form>
+      </div>
+    </div>
+  );
 }
-
