@@ -86,6 +86,11 @@ function App() {
 
   const handleClick = () => setClick(!click);
 
+  const handlelogout = () => {
+    setClick(!click);
+    localStorage.removeItem("RMA-username");
+  };
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
   };
@@ -259,6 +264,16 @@ function App() {
             </li>
             <li className="nav-item">
               <Link
+                to="/landing"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handlelogout}
+              >
+                Logout
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
                 to="/signup"
                 activeClassName="active"
                 className="nav-links"
@@ -363,7 +378,9 @@ function App() {
                     <br />
                     <br />
                     <button
-                     className={`${dark ? "loadOlderMessages_dark" : "loadOlderMessages"}`}
+                      className={`${
+                        dark ? "loadOlderMessages_dark" : "loadOlderMessages"
+                      }`}
                       onClick={loadOlderMessages}
                     >
                       Load Older Messages
