@@ -33,11 +33,10 @@ import Landing from "./components/Landingpage/LandingPage";
 import Faq from "./components/faq/faq";
 import Features from "./components/Featurespage/FeaturesPage";
 
-import LoadingBar from 'react-top-loading-bar'
-import CopyToClipboard from 'react-copy-to-clipboard';
-import { MentionsInput, Mention } from 'react-mentions'
-
-
+import LoadingBar from "react-top-loading-bar";
+import CopyToClipboard from "react-copy-to-clipboard";
+import { MentionsInput, Mention } from "react-mentions";
+import reactReveal from "react-reveal";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -93,6 +92,7 @@ function App() {
   const handlelogout = () => {
     setClick(!click);
     localStorage.removeItem("RMA-username");
+    setUsername("");
   };
 
   const scrollToBottom = () => {
@@ -100,8 +100,6 @@ function App() {
   };
 
   const newMessage = (event) => {
-    //event.preventDefault();
-    //setMessages([...messages,{message:input,username:username}]);
     if (input.trim() !== "") {
       db.collection("messages").add({
         username: username,
@@ -184,10 +182,7 @@ function App() {
 
   const onKeyPress = (button) => {
     console.log("Button pressed", button);
-
-    /**
-     * If you want to handle the shift and caps lock buttons
-     */
+    //If you want to handle the shift and caps lock buttons
     if (button === "{shift}" || button === "{lock}") handleShift();
   };
   const onChange = (input) => {
@@ -256,36 +251,43 @@ function App() {
                 About Us
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                to="/login"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Login
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/landing"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handlelogout}
-              >
-                Logout
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/signup"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Signup
-              </Link>
-            </li>
+            {username && (
+              <li className="nav-item">
+                <Link
+                  to="/landing"
+                  activeClassName="active"
+                  className="nav-links"
+                  onClick={handlelogout}
+                >
+                  Logout
+                </Link>
+              </li>
+            )}
+            {!username && (
+              <>
+                <li className="nav-item">
+                  <Link
+                    to="/login"
+                    activeClassName="active"
+                    className="nav-links"
+                    onClick={handleClick}
+                  >
+                    Login
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    to="/signup"
+                    activeClassName="active"
+                    className="nav-links"
+                    onClick={handleClick}
+                  >
+                    Signup
+                  </Link>
+                </li>
+              </>
+            )}
+
             <li className="nav-item toggle-nav" style={{ border: "none" }}>
               <Button
                 title="toggle Dark Mode"
@@ -414,9 +416,7 @@ function App() {
                   </div>
 
                   <div ref={messagesEndRef} />
-                  <Mention
-    trigger="@"
-  />
+                  <Mention trigger="@" />
                   <div className="div__footer">
                     <footer className={`${dark ? "footer_dark" : ""}`}>
                       <div className="content__footer">
@@ -466,19 +466,24 @@ function App() {
                             </span>
                           )}
                           <input
-                              type="text"
-                              onChange={(e) => {
-                                setValue(e.target.value);
-                                setStatus(false);
-                              }}
-                            />
-                            <CopyToClipboard text={value} onCopy={() => setStatus(true)}>
-                              <button className="copy">  <i
-                              className="fa fa-copy"
-                            ></i></button>
-                            </CopyToClipboard>
-                            {status && <p className="copied_status"> Copied!!!</p>}
-
+                            type="text"
+                            onChange={(e) => {
+                              setValue(e.target.value);
+                              setStatus(false);
+                            }}
+                          />
+                          <CopyToClipboard
+                            text={value}
+                            onCopy={() => setStatus(true)}
+                          >
+                            <button className="copy">
+                              {" "}
+                              <i className="fa fa-copy"></i>
+                            </button>
+                          </CopyToClipboard>
+                          {status && (
+                            <p className="copied_status"> Copied!!!</p>
+                          )}
 
                           <input
                             ref={inputElement}
