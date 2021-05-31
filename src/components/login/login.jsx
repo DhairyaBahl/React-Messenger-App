@@ -54,10 +54,13 @@ export default function Login(props) {
                         <a className="anc" href="/forget">
                             <span style={{ color: "red" }}>Forgot Password?</span>
                         </a>
+            <a className="anc" href="/forget">
+              <span style={{ color: "red" }}>Forgot Password?</span>
+            </a>
 
-                        <div className="loginbutton">
-                            <input type="submit" className="btn_login" value="Login"></input>
-                        </div>
+            <div className="loginbutton">
+              <input type="submit" className="btn_login" value="Login"></input>
+            </div>
 
                         <div id="alternativeLogin">
                             <a className="anc" href="/signup">
@@ -71,4 +74,3 @@ export default function Login(props) {
         </div>
     );
 }
-

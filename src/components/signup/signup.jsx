@@ -1,5 +1,5 @@
 import React from "react";
-import 'font-awesome/css/font-awesome.min.css';
+import "font-awesome/css/font-awesome.min.css";
 import "./signup.css";
 import loginIllustartion from "./logo.svg";
 import Email from 'react-email-autocomplete';
@@ -7,12 +7,12 @@ import { Fade } from 'react-reveal';
 import GoogleLogin from 'react-google-login';
 
 export default function Signup(props) {
+
     const responseGoogle = (response) => {
         console.log(response);
       }
       
     return (
-
         <div className={`${props.apptheme ? "container_signup" : "container_signup_light"
             }`}>
             <div className="illustration_img">
@@ -54,9 +54,22 @@ export default function Signup(props) {
                                 <input type="password" placeholder="Password" className="input"></input>
                             </div>
                         </div>
+            <div className="input-div pass">
+              <div className="i">
+                <i className="fa fa-lock"></i>
+              </div>
+              <div className="div">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  className="input"
+                ></input>
+              </div>
+            </div>
 
-
-                        <a className="anc" href="/login"><span style={{ color: "blue" }}>Already have an account?</span></a>
+            <a className="anc" href="/login">
+              <span style={{ color: "blue" }}>Already have an account?</span>
+            </a>
 
                         <div className="loginbutton">
                             <input type="submit" className="btn_login" value="Signup"></input>
@@ -71,6 +84,7 @@ export default function Signup(props) {
                     </Fade>
                 </form>
             </div>
+          </form>
         </div>
 
     );
