@@ -44,6 +44,7 @@ const onFailure = response => console.error(response);
               {/* <div className="div">
                 <input type="mail" placeholder="E-mail" className="input"></input>
             </div> */}
+           
               <div className="div">
                 <Email
                   className={`${props.apptheme ? "input1" : "input1_light"}`}
@@ -64,7 +65,7 @@ const onFailure = response => console.error(response);
               </div>
             </div>
 
-         
+
             <div className="input-div pass">
               <div className="i">
                 <i className="fa fa-lock"></i>
@@ -78,13 +79,16 @@ const onFailure = response => console.error(response);
               </div>
             </div>
 
+
             <a className="anc" href="/login">
               <span style={{ color: "blue" }}>Already have an account?</span>
             </a>
 
             <div className="loginbutton">
               <input type="submit" className="btn_login" value="Signup"></input>
-                       
+
+                        </div>
+
                         <GoogleLogin
     clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
    
@@ -101,6 +105,7 @@ const onFailure = response => console.error(response);
                     </Fade>
                 </form>
             </div>
+
         </div>
     );
 }
