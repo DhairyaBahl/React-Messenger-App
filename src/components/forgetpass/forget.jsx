@@ -2,6 +2,7 @@ import React from "react";
 import 'font-awesome/css/font-awesome.min.css';
 import "./forget.css";
 import forgetIllustration from "./forget.svg";
+import Email from 'react-email-autocomplete';
 
 export default function Forget(props) {
 
@@ -25,12 +26,10 @@ export default function Forget(props) {
               <i className="fa fa-envelope icon"></i>
             </div>
             <div className="div">
-              <input
-                type="email"
-                placeholder="name@example.com"
-                className="input"
-              ></input>
+           
+            <Email className="input2" placeholder="Enter email" />
             </div>
+            
           </div>
           <div className="submitbutton">
             <input type="submit" className="btn_forget" value="Submit"></input>
