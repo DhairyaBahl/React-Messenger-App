@@ -19,6 +19,8 @@ import SpeechRecognition, {
     useSpeechRecognition
 } from "react-speech-recognition";
 import Login from "./components/login/login";
+import FlipMove from 'react-flip-move';
+import { Flip } from "@material-ui/icons";
 
 // import About from "./components/about-us/About";
 // import Footer from "./components/footer/footer";
@@ -149,8 +151,8 @@ function App() {
         SpeechRecognition.startListening();
     };
 
-    return (
-        <Router>
+    return (   
+            <Router>
             {/*================ NavBar. Common across all routes ======================*/}
 
             <nav className={`${dark ? "nav_dark" : "navbar"}`}>
@@ -269,6 +271,7 @@ function App() {
 
                     <Route exact path="/">
                         <div className="App">
+                            <FlipMove enterAnimation="accordionHorizontal" leaveAnimation="accordionHorizontal">
                             {loading ? (
                                 <CircularProgress className="loading" />
                             ) : (
@@ -285,6 +288,7 @@ function App() {
                   </button>
                                         <br />
                                         <br />
+                                           <FlipMove enterAnimation="elevator" leaveAnimation="elevator" />
                                         {messages.map((message) => (
                                             <Messages
                                                 messages={message}
@@ -373,6 +377,7 @@ function App() {
                                     </div>
                                 </>
                             )}
+                            </FlipMove>
                         </div>
                     </Route>
                 </Suspense>
@@ -388,5 +393,9 @@ const genKey = (function () {
         return keyCode++;
     };
 })();
-
+{/* <FlipMove>
+{messages.map(({ id, message }) => (
+  <Message key={id} username={username} message={message} />
+))}
+</FlipMove> */}
 export default App;
