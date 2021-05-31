@@ -247,11 +247,16 @@
     }
     .text_side {
         justify-self: left;
+        text-align: center;
         margin-left: 0px;
     }
     .text_side2 {
         justify-self: right;
         margin-right: 0px;
+    }
+    .main_text,
+    .main_text2 {
+        justify-content: center;
     }
 }
 
