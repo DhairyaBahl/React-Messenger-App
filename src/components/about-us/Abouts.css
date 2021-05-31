@@ -1,7 +1,5 @@
 /*about*/
-html {
-  font-size: 16px!important;
-}
+
 #brand {
   display: flex;
   justify-content: space-evenly;
@@ -125,6 +123,9 @@ html {
 }
 
 @media (max-width: 480px) {
+  html {
+  font-size: 16px!important;
+  }
   .motive-top {
     margin-top: -60px !important;
   }
