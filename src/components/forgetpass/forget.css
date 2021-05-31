@@ -93,6 +93,12 @@
   font-family: "poppins", sans-serif;
 }
 
+.input2{
+  background:none;
+  border: none;
+  color:white;
+  margin-top: 1rem;
+}
 .icon {
   color: #999;
   margin-top: 2rem;
