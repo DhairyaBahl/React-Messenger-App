@@ -9,9 +9,7 @@ import LoginGithub from 'react-login-github';
 
 
 
-
 export default function Signup(props) {
-
   const responseGoogle = (response) => {
     console.log(response);
   };
@@ -87,6 +85,7 @@ const onFailure = response => console.error(response);
             <div className="loginbutton">
               <input type="submit" className="btn_login" value="Signup"></input>
 
+
                         </div>
 
                         <GoogleLogin
@@ -104,9 +103,8 @@ const onFailure = response => console.error(response);
                     </div>
                     </Fade>
                 </form>
-            </div>
 
-        </div>
-    );
+      </div>
+    </div>
+  );
 }
-
