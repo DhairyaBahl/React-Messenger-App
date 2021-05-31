@@ -1,7 +1,7 @@
 import React from "react";
 import "font-awesome/css/font-awesome.min.css";
 import "./reset.css";
-import forgetIllustration from "../forgetpass/forget.png";
+import resetIllustration from "./reset.svg";
 
 export default function Reset(props) {
   return (
@@ -11,7 +11,7 @@ export default function Reset(props) {
       }`}
     >
       <div className="reset_illustration">
-        <img src={forgetIllustration} width="300px" height="300px"></img>
+        <img src={resetIllustration} width="450px" height="450px"></img>
       </div>
       <div className="reset-content">
         <form>

@@ -363,7 +363,7 @@ function App() {
                     <br />
                     <br />
                     <button
-                      className="loadOlderMessages"
+                     className={`${dark ? "loadOlderMessages_dark" : "loadOlderMessages"}`}
                       onClick={loadOlderMessages}
                     >
                       Load Older Messages
