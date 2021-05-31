@@ -34,15 +34,12 @@ export default function Signup(props) {
               <div className="i">
                 <i className="fa fa-envelope"></i>
               </div>
-              {/* <div className="div">
-                <input type="mail" placeholder="E-mail" className="input"></input>
-            </div> */}
-           
               <div className="div">
-                <Email
-                  className={`${props.apptheme ? "input1" : "input1_light"}`}
-                  placeholder="Enter email"
-                />
+                <input
+                  type="mail"
+                  placeholder="E-mail"
+                  className="input"
+                ></input>
               </div>
             </div>
             <div className="input-div one">
@@ -70,28 +67,19 @@ export default function Signup(props) {
                 ></input>
               </div>
             </div>
-           
 
             <a className="anc" href="/login">
               <span style={{ color: "blue" }}>Already have an account?</span>
             </a>
-
             <div className="loginbutton">
               <input type="submit" className="btn_login" value="Signup"></input>
-              <div className="loginbutton">
-                <input
-                  type="submit"
-                  className="btn_login"
-                  value="Signup"
-                ></input>
-              </div>
-              <GoogleLogin
-                clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
-                onSuccess={responseGoogle}
-                onFailure={responseGoogle}
-                cookiePolicy={"single_host_origin"}
-              />
             </div>
+            <GoogleLogin
+              clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
+              cookiePolicy={"single_host_origin"}
+            />
           </Fade>
         </form>
       </div>
