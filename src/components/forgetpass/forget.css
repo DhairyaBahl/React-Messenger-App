@@ -1,60 +1,58 @@
-.container_forget{
-    width: 70vw;
-    height: 70vh;
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    grid-gap :5rem;
-    margin-top: 5rem;
-    margin-left: 10rem;
-    margin-bottom: 5rem;
-    padding: 0 2rem;
-    border-radius: 20px;
-    box-shadow: 1px 1px 28px 1px rgba(179,179,179,0.36);
-    -webkit-box-shadow: 1px 1px 28px 1px rgba(179,179,179,0.36);
-    -moz-box-shadow: 1px 1px 28px 1px rgba(179,179,179,0.36);
-    background-color: rgb(0, 0, 0);
-    color:white;
+.container_forget {
+  width: 70vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 5rem;
+  margin-top: 5rem;
+  margin-left: 10rem;
+  margin-bottom: 5rem;
+  padding: 0 2rem;
+  border-radius: 20px;
+  box-shadow: 1px 1px 28px 1px rgba(179, 179, 179, 0.36);
+  -webkit-box-shadow: 1px 1px 28px 1px rgba(179, 179, 179, 0.36);
+  -moz-box-shadow: 1px 1px 28px 1px rgba(179, 179, 179, 0.36);
+  background-color: rgb(0, 0, 0);
+  color: white;
 }
-.container_forget_light{
-
-	width: 70vw;
-    height: 70vh;
-    display:flex;
-    grid-gap :5rem;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5rem;
-    margin-left: 10rem;
-    margin-bottom: 5rem;
-    padding: 0 2rem;
-    border-radius: 20px;
-    box-shadow: 1px 1px 28px 1px rgba(179,179,179,0.36);
-    -webkit-box-shadow: 1px 1px 28px 1px rgba(179,179,179,0.36);
-    -moz-box-shadow: 1px 1px 28px 1px rgba(179,179,179,0.36);
-    background-color: rgb(255, 255, 255);
-    
+.container_forget_light {
+  width: 70vw;
+  height: 70vh;
+  display: flex;
+  grid-gap: 5rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  margin-left: 10rem;
+  margin-bottom: 5rem;
+  padding: 0 2rem;
+  border-radius: 20px;
+  box-shadow: 1px 1px 28px 1px rgba(179, 179, 179, 0.36);
+  -webkit-box-shadow: 1px 1px 28px 1px rgba(179, 179, 179, 0.36);
+  -moz-box-shadow: 1px 1px 28px 1px rgba(179, 179, 179, 0.36);
+  background-color: rgb(255, 255, 255);
 }
 
-.div ::placeholder{
+.div ::placeholder {
   font-size: 14px;
 }
 
-.forget-content{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+.forget-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* .forget_illustration{
     margin-right: 5rem;
 } */
 
-.forget-content .input-div{
-	position: relative;
+.forget-content .input-div {
+  position: relative;
   display: grid;
   grid-template-columns: 7% 93%;
   margin: 8px 0;
@@ -62,93 +60,112 @@
   border-bottom: 2px solid #d9d9d9;
 }
 
-.input-div > div > input{
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	border: none;
-	outline: none;
-	background: none;
-	padding: 0.5rem 0.7rem;
-	font-size: 1.2rem;
-	color: #555;
-	font-family: 'poppins', sans-serif;
+.input-div > div > input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.5rem 0.7rem;
+  font-size: 1.2rem;
+  color: #555;
+  font-family: "poppins", sans-serif;
 }
 
 .icon {
-    color: #999;
-    margin-top: 2rem;
-  }
-.submitbutton
-{
+  color: #999;
+  margin-top: 2rem;
+}
+.submitbutton {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
 }
-.btn_forget{
-	display: block;
-	width: 100%;
-	height: 45px;
-	border-radius: 25px;
-	outline: none;
-	border: none;
-	background-color: rgba(0, 0, 0, 0.877);
-	background-size: 200%;
-	font-size: 1rem;
-	color: #fff;
-	font-family: 'Poppins', sans-serif;
-	text-transform: uppercase;
-	margin: 2rem 0;
-	cursor: pointer;
-	transition: .5s;
+.btn_forget {
+  display: block;
+  width: 100%;
+  height: 45px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.877);
+  background-size: 200%;
+  font-size: 1rem;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  cursor: pointer;
+  transition: 0.5s;
 }
-.btn_forget:hover{
-	background-position: right;
-  color:purple;
+.btn_forget:hover {
+  background-position: right;
+  color: purple;
 }
 
-.container_forget .btn_forget{
+.container_forget .btn_forget {
   background: -webkit-linear-gradient(
-      45deg,
-      rgb(133, 29, 186) 15%,
-      rgba(255, 0, 224, 1) 100%
-    );
+    45deg,
+    rgb(133, 29, 186) 15%,
+    rgba(255, 0, 224, 1) 100%
+  );
 }
-.container_forget .btn_forget:hover{
-	background-position: right;
-  color:rgb(0, 0, 0);
+.container_forget .btn_forget:hover {
+  background-position: right;
+  color: rgb(0, 0, 0);
 }
 
-  @media screen and (max-width: 998px) {
-    form {
-      width: 250px;
-      margin-right: 7rem;
-      display:grid;
-      justify-content: center;
-      grid-auto-columns: max-content;
-    }
-    .container_forget_light {
-        width: 70vw;
-        height: 70vh;
-    }
-  
-    .forget_illustration img {
-      display: none;
-    }
-    .email-text{
-      font-size: 2rem;
-    }
-    .btn_forget{
-      font-size: 1.5rem;
-    }
-    .forget-content {
-      justify-content: center;
-    }
-    .icon{
-      margin-top: 3rem;
-      font-size: 1.8rem;
-    }
+@media screen and (max-width: 998px) {
+  .container_forget {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 5rem;
+    margin:0;
   }
+  .container_forget_light {
+    width: 100% !important;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 5rem;
+    margin:0;
+  }
+  form {
+    width: 250px;
+    margin-right: 7rem;
+    display: grid;
+    justify-content: center;
+    grid-auto-columns: max-content;
+  }
+  .container_forget_light {
+    width: 70vw;
+    height: 70vh;
+  }
+
+  .forget_illustration img {
+    display: none;
+  }
+  .email-text {
+    font-size: 2rem;
+  }
+  .btn_forget {
+    font-size: 1.5rem;
+  }
+  .forget-content {
+    justify-content: center;
+  }
+  .icon {
+    margin-top: 3.5rem;
+    font-size: 1.8rem;
+  }
+}
