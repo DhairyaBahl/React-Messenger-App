@@ -38,6 +38,7 @@ export default function WelcomeDialogBox(props) {
             margin="dense"
             id="name"
             label="Name"
+            backgroundColor="black"
             fullWidth
             onChange={(e) => setName(e.target.value)}
             onKeyPress={(e) => { if(e.key==='Enter') enterName() }}
