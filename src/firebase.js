@@ -11,11 +11,7 @@ const firebaseConfig={
   measurementId:"G-HVDGKL164W"
 }
 
+const firebaseApp=firebase.initializeApp(firebaseConfig);
+const db=firebaseApp.firestore();
 
-
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-const database = firebaseApp.firestore();
-const authentication = firebaseApp.auth();
-const provider = new firebase.auth.GoogleAuthProvider();
-
-export { database, authentication, provider };
+export default db;
