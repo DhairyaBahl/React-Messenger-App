@@ -43,7 +43,7 @@ export default function ContactUs(props) {
                     </div>
                     {/* Contact-form */}
                     <form onSubmit={sendEmail} className = "form-content">
-                        <div className="row clearfix">
+                        <div className="row">
                             <div className="col_half">
                                 {/* First Name Attribute */}
                                 <label
@@ -87,7 +87,7 @@ export default function ContactUs(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="row clearfix">
+                        <div className="row">
                             <div className="col_half">
                                 {/* Email Attribute */}
                                 <label
@@ -132,7 +132,7 @@ export default function ContactUs(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="row clearfix">
+                        <div className="row">
                             <div>
                                 {/* Comments Attribute */}
                                 <label

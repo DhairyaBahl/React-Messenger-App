@@ -91,6 +91,13 @@
 .form_wrapper .textarea_field {
   position: relative;
 }
+@media screen and (max-width: 600px) {
+  .form_wrapper .input_field,
+  .form_wrapper .textarea_field {
+    position: relative;
+    max-width: 275px;
+  }
+}
 .form_wrapper .input_field > span,
 .form_wrapper .textarea_field > span {
   position: absolute;

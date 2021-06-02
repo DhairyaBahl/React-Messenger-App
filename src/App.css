@@ -557,13 +557,17 @@ footer {
     transition: all 0.5s ease;
   }
   .scrolltobottom {
-    left: 45%;
-    right: 45%;
+    right: 10px;
     bottom: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  .scrolltobottomdark {
+    right: 10px;
+    bottom: 75px;
+  }
+
   .nav-menu.active {
     background: rgb(22, 21, 21);
     left: 0px;
