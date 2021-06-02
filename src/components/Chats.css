@@ -1,0 +1,25 @@
+.chats {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    border: 1px solid rgb(250, 249, 249);
+  }
+  
+  .chats:hover {
+    background-color: rgb(236, 233, 233);
+  }
+  
+  .chats__info > h3 {
+    margin-bottom: 8px;
+  }
+  
+  .chats__info {
+    margin-left: 10px;
+  }
+  
+  a {
+    text-decoration: none !important;
+    color: black;
+  }
+  
