@@ -539,7 +539,12 @@ footer {
   box-shadow: 0 4px 8px 0 #9240da, 0px -1px 5px -3px #d643f3, 0 6px 10px 0 #8735d0;
 }
  
-
+.wlcm_dark{
+  background-color: black;
+}
+.wlcm_light{
+  background-color: white;
+}
 @media screen and (max-width: 960px) {
   .nav-menu {
     margin: 0px;

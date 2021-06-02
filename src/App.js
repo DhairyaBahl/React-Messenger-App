@@ -536,6 +536,7 @@ function App() {
                       </Button>
                     </div>
                     <WelcomeDialogBox
+                      className={dark ? "wlcm_dark" : "wlcm_light"}
                       open={openWelcomeDialogBox}
                       close={() => setOpenWelcomeDialogBox(false)}
                       setUsername={setUsername}
