@@ -41,6 +41,8 @@ import reactReveal from "react-reveal";
 import Pick from 'react-giphy-picker'
 
 import Geolocation from "react-geolocation";
+import SelectSearch from 'react-select-search';
+
 
 
 function App() {
