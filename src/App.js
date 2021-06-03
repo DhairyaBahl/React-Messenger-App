@@ -37,8 +37,12 @@ import LoadingBar from "react-top-loading-bar";
 import CopyToClipboard from "react-copy-to-clipboard";
 import { MentionsInput, Mention } from "react-mentions";
 import reactReveal from "react-reveal";
+
+import Pick from 'react-giphy-picker'
+
 import Geolocation from "react-geolocation";
 import SelectSearch from 'react-select-search';
+
 
 
 function App() {
@@ -534,6 +538,7 @@ function App() {
                       </Button>
                     </div>
                     <WelcomeDialogBox
+                      className={dark ? "wlcm_dark" : "wlcm_light"}
                       open={openWelcomeDialogBox}
                       close={() => setOpenWelcomeDialogBox(false)}
                       setUsername={setUsername}
